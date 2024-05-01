@@ -1,0 +1,117 @@
+﻿{
+    // Mensagens de notificação
+    "travelingMerchant": "O Comerciante Viajante chegou",
+    "queenSauce": "Rainha do Molho está no ar hoje!",
+    "checkLiving": "Vivendo da Terra está no ar hoje!",
+    "noSignal": "Não há sinal de TV hoje...",
+    "checkRerun": "Rainha do Molho (reprise) está no ar hoje!",
+    "luckyDay": "Dia de Sorte!",
+    "unluckyDay": "Dia de Azar!",
+
+    // Festivais
+    "fMsg": "{{fest}} Hoje!",
+    "festival": "Festival",
+    "EggFestival": "Festival dos Ovos",
+    "FlowerDance": "Dança das Flores",
+    "Luau": "Luau",
+    "MoonlightJellies": "Dança das Águas-vivas à Luz da Lua",
+    "ValleyFair": "Feira do Vale",
+    "SpiritsEve": "Véspera dos Espíritos",
+    "IceFestival": "Festival do Gelo",
+    "WinterStar": "Festa da Estrela do Inverno",
+    "NightMarket": "Mercado Noturno",
+    "SecretSantaReminder": "{{charName}} é o seu Papai Noel secreto",
+
+    "Salmonberry": "Temporada de Amoras",
+    "Seashells": "Conchas na beira do mar",
+    "Blackberry": "Temporada de Amoras",
+
+    // Climas
+    "weather-rain": "chuva",
+    "weather-sunny": "ensolarado",
+    "weather-tstorm": "tempestades",
+    "weather-snow": "neve",
+    "weather-wind": "ventania",
+    "weather-festival": "ensolarado para o {{festivalName}}",
+    "weather-wedding": "casamento",
+    "weather-greenrain": "chuva verde",
+
+    // Localizações
+    "CaveMushroom": "Cogumelos da Caverna prontos para a colheita",
+    "CaveFruit": "Frutas da Caverna prontas para a colheita",
+
+    "birthday": "Aniversário de {{charName}}!",
+    "weather": "O clima de amanhã será {{weather}}.",
+    "bookseller": "O vendedor de livros está na cidade!",
+    "birthdayReminder": "Não esqueça de dar um presente de aniversário para {{charName}} hoje!",
+    "toolPickup": "{{toolName}} está pronto para ser retirado",
+    "springOnion": "{{count}} cebolinhas crescendo na Floresta",
+    "readyHarvest": "{{cropName}} pronto para colheita",
+    "greenhouse_crops": "Plantas da estufa prontas para colheita",
+    "autoGrabber": "O coletor automático tem itens para colher",
+    "hayMessage": "Os silos têm {{hayAmt}} unidades de feno",
+    "noHayMessage": "Não há feno nos silos.",
+    "FishPond": "Lagos de Peixes prontos para a colheita.",
+
+    // Campos do GMCM
+    "gmcmNotDurTitle": "Duração da Notificação",
+    "gmcmNotDurDesc": "A quantidade de ticks que as mensagens aparecem. Note que 7000 ticks equivalem a 10 minutos. Este valor é limitado entre 0 e 14000 ticks.",
+    "gmcmNotifTimeTitle": "Tempo da Notificação",
+    "gmcmNotifTimeDesc": "O horário em que as notificações de início do dia aparecem. Recomendamos deixar isso às 6h. Limitado entre 6h e 14h.",
+    "gmcmNotifOnBirthTitle": "Notificar nos Aniversários",
+    "gmcmNotifOnBirthDesc": "Ative para ser notificado sobre aniversários",
+    "gmcmNotifOnBirthRemindTitle": "Lembrete de Notificação de Aniversário",
+    "gmcmNotifOnBirthRemindDesc": "Ative para ser lembrado de dar um presente naquele dia",
+    "gmcmNotifOnBirthRemindTimeTitle": "Horário do Lembrete de Aniversário",
+    "gmcmNotifOnBirthRemindTimeDesc": "O horário em que o lembrete de aniversário aparecerá. Limitado entre 9h e 19h. (a maioria dos NPCs não estará disponível após este ponto). Note que valores terminando em 60-99 não funcionarão no jogo.",
+    "gmcmNotifOnFestivalTitle": "Notificações de Festival",
+    "gmcmNotifOnFestivalDesc": "Ative para ser informado se hoje é um festival",
+    "gmcmNotifOnMerchantTitle": "Notificações do Comerciante Viajante",
+    "gmcmNotifOnMerchantDesc": "Ative para ser informado se o comerciante viajante chegou",
+
+    "gmcmNotifyBooksellerTitle": "Notificação de Chegada do Vendedor de Livros",
+    "gmcmNotifyBooksellerDesc": "Ative para ser informado se o vendedor de livros chegou",
+
+    "gmcmNotifOnToolTitle": "Notificações de Atualização de Ferramentas",
+    "gmcmNotifOnToolDesc": "Ative para ser informado se você tem uma ferramenta esperando para ser retirada.",
+
+    "gmcmNotifOnGLuckTitle": "Notificações de Sorte Máxima",
+    "gmcmNotifOnGLucklDesc": "Ative para ser informado se você tem sorte máxima naquele dia.",
+
+    "gmcmNotifOnBLuckTitle": "Notificações de Sorte Mínima",
+    "gmcmNotifOnBLucklDesc": "Ative para ser informado se você tem sorte mínima naquele dia.",
+
+    "gmcmNotifShowHayCountTitle": "Mostrar Contagem Diária de Feno",
+    "gmcmNotifShowHayCountDesc": "Ative para receber notificações da contagem de feno diária.",
+    "gmcmNotifEmptyHayTitle": "Mostrar Feno Vazio",
+    "gmcmNotifEmptyHayDesc": "Ative para receber notificações se estiver sem feno. Observação: este deve estar ativado para ser informado se estiver sem feno.",
+
+    "gmcmNotifWeatNDTitle": "Mostrar Tempo do Próximo Dia",
+    "gmcmNotifWeatNDDesc": "Ative para receber notificações e ver qual será o tempo no próximo dia.",
+    "gmcmRemindTimeForNWDTitle": "Horário do Lembrete de Tempo",
+    "gmcmRemindTimeForNWDDesc": "O horário em que as notificações do lembrete do tempo aparecerão. Limitado entre 9h e 2h.",
+
+    "gmcmNotifTVChanTitle": "Notificar Canais de TV",
+    "gmcmNotifTVChanDesc": "Ative para receber notificações dos canais de TV de hoje.",
+    "gmcmNotifSpringOnionTitle": "Mostrar Contagem de Cebolinha",
+    "gmcmNotifSpringOnionDesc": "Ative para receber notificações da contagem de cebolinha.",
+
+    "gmcmNotifFarmCaveTitle": "Notificar para Caverna da Fazenda",
+    "gmcmNotifFarmCaveDesc": "Ative para receber notificações para a colheita na caverna da fazenda.",
+    "gmcmNotifGreenCropTitle": "Notificar para Colheitas da Estufa",
+    "gmcmNotifGreenCropDesc": "Ative para receber notificações para a colheita das plantas na estufa.",
+
+    "gmcmNotifFarmProdTitle": "Notificar para Produção na Fazenda",
+    "gmcmNotifFarmProdDesc": "Ative para receber notificações para a produção na fazenda.",
+
+    "gmcmNotifShedProdTitle": "Notificar para Produção no Celeiro",
+    "gmcmNotifShedProdDesc": "Ative para receber notificações para as máquinas no celeiro.",
+    "gmcmNotifGreenProdTitle": "Notificar para Produção na Estufa",
+    "gmcmNotifGreenProdDesc": "Ative para receber notificações para as máquinas na estufa.",
+
+    "gmcmNotifCellarProdTitle": "Notificar para Produção na Adega",
+    "gmcmNotifCellarProdDesc": "Ative para receber notificações para as máquinas na adega.",
+    "gmcmNotifBarnProdTitle": "Notificar para Produção no Celeiro",
+    "gmcmNotifBarnProdDesc": "Ative para receber notificações para as máquinas no celeiro."
+}
+

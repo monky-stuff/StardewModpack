@@ -1,0 +1,18 @@
+{
+   "Name": "Robin Portrait - Robin Romance Support", // https://www.nexusmods.com/stardewvalley/mods/3587
+   "Author": "OhoDavi & coldazrael",
+   "Version": "1.0",
+   "Description": "Ohodavi's Robin Portrait with Robin Romance with Veronica Support.",
+   "UniqueID": "OhoDavi.RobinRomancePortrait",
+   "MinimumApiVersion": "2.6-beta.15", // https://smapi.io/
+   "UpdateKeys": ["Nexus:3587"], 
+   "ContentPackFor": {
+      "UniqueID": "Pathoschild.ContentPatcher", // https://www.nexusmods.com/stardewvalley/mods/1915
+      "MinimumVersion": "1.4-beta.3"
+   },
+   "Dependencies": [
+      {
+           "UniqueID": "Fonz.Ram",
+      }
+	],
+}

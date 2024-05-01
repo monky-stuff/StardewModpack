@@ -1,0 +1,101 @@
+{
+  
+// Lines for the Casino Vendor, highly disapproving of the farmer being there
+  "CasinoVendor1": "ああ、あなたですか。ただのウィンドウショッピングですか？",
+  "CasinoVendor2": "あなたのゴールドはここでは価値がないことを理解していますよね？",
+  "CasinoVendor3": "以前は会員カードを受け取る人をもっと厳選していました。",
+  "CasinoVendor4": "全てのアイテムが販売されています…条件さえ満たせば。",
+ 
+// Line for the Traveling Merchant during Festival of Ice
+  "TravelerIce": "ああ、私の珍しい発見にとって完璧な背景です！今日だけ、友達。",
+  
+// Lines for the Raccoon. "Bobo" is what she calls you.
+  "Raccoon1": "私たちは種を持っています、おひとよしさん。",
+  "Raccoon2": "種が欲しいですか、おひとよしさん？",
+  "Raccoon3": "おそらく、あなたはこれらの種を持っていないでしょう。",
+  
+// Lines for the Joja Cashiers, friendly but canned. "Join us and thrive" is a reference to JojaMart's "Join Us. Thrive" slogan so the awkwardness is intentional,
+  "JojaCashier1": "Jojaマートへようこそ！今日はいかがお過ごしですか？",
+  "JojaCashier2": "Jojaマートの会員になれば、さらにお得になりますよ！",
+  "JojaCashier3": "私たちと一緒に特別オファーで栄えましょう！",
+  "JojaCashier4": "素敵な一日をお過ごしのことと思います。他にご用はありますか？",
+  
+// Line for the Star Token Exchanger at the Stardew Valley Fair
+  "StarToken": "やあ！スターデューバレーまつりで最高の戦利品を手に入れるために、ここでスタートークンを交換しましょう！",
+  
+// Lines for Pierre at various festivals
+  "PierreJellyfish": "ゲッコウクラゲのように輝く珍しいアイテム！見逃さないで！",
+  "PierreEgg": "独占販売のアイテムがあります！日が暮れる前に手に入れて！",
+  "PierreFeast": "祝祭の品々であなたの休日を温かくしましょう！なくなる前に手に入れて！",
+  "PierreFlower": "最後のダンス前に、これらの美しい花でダンスパートナーを魅了しましょう！",
+  "PierreLuau": "{{FarmName}}農場を町の話題にするためのエキゾチックな装飾品！手に入れることができる間に！",
+  "PierreSpirit": "最も恐ろしい納屋を作るためのスプーキーな装飾品！消え去る前に手に入れて！",
+
+// Line for the clinic, made generic because it could be spoken by either Harvey or Maru.
+  "Clinic": "健康とエネルギーのトニックを揃えております。",
+  
+// Alex  
+  "AlexIceCream": "暑い日に冷たいアイスクリームはどう？",
+	
+// Descriptions for Generic Mod Config Menu
+  "config.HatMouse.name": "はっとまうす",
+  "config.HatMouse.description": "シンダーサップの森ではっとまうすのポートレートを有効にします。",
+
+  "config.Raccoon.name": "アライグマ",
+  "config.Raccoon.description": "シンダーサップの森で解除可能なアライグマのトレーダーのポートレートを有効にします。",
+
+  "config.DesertTrader.name": "砂漠のトレーダー",
+  "config.DesertTrader.description": "砂漠のトレーダーのポートレートを有効にします。",
+
+  "config.Casino.name": "カジノのベンダー",
+  "config.Casino.description": "隠された砂漠カジノでQiコインの交換者のポートレートを有効にします。",
+
+  "config.VolcanoDwarf.name": "火山のドワーフ",
+  "config.VolcanoDwarf.description": "火山ダンジョンの5階で見つかるドワーフのトレーダーのポートレートを有効にします。",
+
+  "config.IslandTrader.name": "島のトレーダー",
+  "config.IslandTrader.description": "ジンジャーアイランドで解除可能な島のトレーダーのポートレートを有効にします。",
+
+  "config.Traveler.name": "旅する商人",
+  "config.Traveler.description": "シンダーサップの森で金曜日と日曜日に現れる旅する商人のポートレートを有効にします。",
+
+  "config.Bookseller.name": "本屋",
+  "config.Bookseller.description": "季節に2回町を訪れる本屋のポートレートを有効にします。",
+
+  "config.StarToken.name": "スタートークン交換者",
+  "config.StarToken.description": "スターデューバレーまつりでスタートークン交換者のポートレートを有効にします。",
+
+  "config.DecorBoat.name": "装飾品の売り手",
+  "config.DecorBoat.description": "夜の市で装飾品の売り手のポートレートを有効にします。",
+
+  "config.MagicBoat.name": "魔法の行商人",
+  "config.MagicBoat.description": "夜の市で魔法の行商人のポートレートを有効にします。",
+
+  "config.EggShop.name": "カリコエッグの売り手",
+  "config.EggShop.description": "砂漠フェスティバルでカリコエッグの売り手のポートレートを有効にします。",
+
+  "config.PierreFestival.name": "祭りでのピエール",
+  "config.PierreFestival.description": "全ての祭りでピエールのスタンドのポートレートを有効にします。",
+
+  "config.section.JojaMart.name": "JojaMartのレジ係",
+  "config.JojaCashier.name": "ポートレートを有効にする",
+  "config.JojaCashier.description": "SVEを使用している場合は常に無効になります。",
+
+  "config.JojaShift.name": "シフトをランダムに変更する",
+  "config.JojaShift.description": "レジ係がデフォルトのレジ係と別の人物とランダムに交代します。SVEを使用している場合は常に無効になります。",
+
+  "config.section.Theater.name": "劇場スタッフ",
+
+  "config.MovieTicket.name": "チケット売り場の係員",
+  "config.MovieTicket.description": "映画館のチケット売り場の係員のポートレートを有効にします。",
+
+  "config.MovieConcession.name": "売店の係員",
+  "config.MovieConcession.description": "映画館の売店の係員のポートレートを有効にします。",
+
+  "config.MovieShift.name": "シフトをランダムに変更する",
+  "config.MovieShift.description": "スタッフメンバーが毎日ランダムに職務を交代します。SVEを使用している場合は常に無効になります。",
+
+  
+}
+
+

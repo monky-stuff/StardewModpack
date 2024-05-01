@@ -1,0 +1,9 @@
+{
+    "DestroyRingChestsCommand": "Remove quaisquer baús de anéis restantes usados para armazenar os anéis dos jogadores. Quaisquer itens contidos neles serão deixados aos seus pés.",
+    "OpenForgeCommand": "Abre o menu da forja.",
+    "RingsName": "Anéis",
+    "RingsTooltip": "Quantos slots de anéis estão disponíveis.",
+    "BonusTrinketName": "Berloque bônus",
+    "BonusTrinketTooltip": "Se você ganha dois slots de berloques pelo preço de um."
+}
+

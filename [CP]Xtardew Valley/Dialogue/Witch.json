@@ -1,0 +1,13 @@
+﻿{
+"Changes":[
+{
+"LogName":"Wizard",
+"Action":"EditData",
+"Target":"Characters/Dialogue/Wizard",
+"Entries":{
+	"wizard_event1": "Ha, vou ter isso em mente.$1",
+	"wizard_event2": "Sim, parece que há mais dedos verdes no vale do que não. Isso vem de viver tão perto da natureza, eu acho.",
+},
+},
+]
+}

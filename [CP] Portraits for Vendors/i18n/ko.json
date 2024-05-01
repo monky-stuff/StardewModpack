@@ -1,0 +1,101 @@
+{
+  
+// Lines for the Casino Vendor, highly disapproving of the farmer being there
+  "CasinoVendor1": "아, 당신이군요. 그냥 구경만 하러 왔나요?",
+  "CasinoVendor2": "당신의 골드가 여기선 아무 가치가 없다는 걸 알고 있죠?",
+  "CasinoVendor3": "우리는 클럽 카드를 받는 사람들을 예전엔 더 까다롭게 골랐어요.",
+  "CasinoVendor4": "모든 아이템을 살 수 있습니다… 자격이 있다면요.",
+
+// Line for the Traveling Merchant during Festival of Ice
+  "TravelerIce": "아, 내 가장 드문 발견품에 완벽한 배경이네요! 오늘만, 친구.",
+  
+// Lines for the Raccoon. "Bobo" is what she calls you.
+  "Raccoon1": "우리는 씨앗을 가지고 있어요, 보보.",
+  "Raccoon2": "씨앗을 원하나요, 보보?",
+  "Raccoon3": "아마 당신은 이 씨앗을 가지고 있지 않을 거예요.",
+
+// Lines for the Joja Cashiers, friendly but canned. "Join us and thrive" is a reference to JojaMart's "Join Us. Thrive" slogan so the awkwardness is intentional,
+  "JojaCashier1": "조자마트에 오신 것을 환영합니다! 오늘 기분은 어떠세요?",
+  "JojaCashier2": "조자마트 회원이시라면 더 많은 할인을 받을 수 있어요!",
+  "JojaCashier3": "우리와 함께하고 특별한 상품들을 위한 우리의 특별한 제안에 동참하세요!",
+  "JojaCashier4": "오늘 좋은 하루를 보내고 계시길 바랍니다. 다른 무엇을 도와드릴까요?",
+
+// Line for the Star Token Exchanger at the Stardew Valley Fair
+  "StarToken": "여기요! 스타듀 밸리 품평회에서 제공하는 최고의 전리품을 얻기 위해 스타 토큰을 교환하세요!",
+
+// Lines for Pierre at various festivals
+  "PierreJellyfish": "달빛 해파리처럼 빛나는 희귀한 아이템들! 놓치지 마세요!",
+  "PierreEgg": "독점 판매 아이템! 해가 지기 전에 구입하세요, 아니면 놓칠 거예요!",
+  "PierreFeast": "축제 선물로 휴일을 따뜻하게! 다 팔리기 전에 가져가세요!",
+  "PierreFlower": "마지막 춤 전에 이 아름다운 꽃들로 당신의 댄스 파트너를 매료시키세요!",
+  "PierreLuau": "{{FarmName}} 농장을 마을의 화제로 만들어 줄 이국적인 장식품들! 구할 수 있는 동안 가져가세요!",
+  "PierreSpirit": "가장 무서운 헛간을 만들기 위한 소름 끼치는 장식품들! 사라지기 전에 가져가세요!",
+
+// Line for the clinic, made generic because it could be spoken by either Harvey or Maru.
+  "Clinic": "건강과 에너지 토닉을 여러 가지 준비해두었습니다.",
+
+// Alex  
+  "AlexIceCream": "이런 더운 날에 시원한 아이스크림은 어때요?",
+
+// Descriptions for Generic Mod Config Menu
+  "config.HatMouse.name": "모자생쥐",
+  "config.HatMouse.description": "잉걸불 수액 숲에서 모자생쥐의 초상화를 활성화합니다.",
+
+  "config.Raccoon.name": "너구리",
+  "config.Raccoon.description": "잉걸불 수액 숲에서 해금 가능한 너구리 상인의 초상화를 활성화합니다.",
+
+  "config.DesertTrader.name": "사막 상인",
+  "config.DesertTrader.description": "사막 상인의 초상화를 활성화합니다.",
+
+  "config.Casino.name": "카지노 벤더",
+  "config.Casino.description": "숨겨진 사막 카지노에서 Qi 코인 교환자의 초상화를 활성화합니다.",
+
+  "config.VolcanoDwarf.name": "화산 드워프",
+  "config.VolcanoDwarf.description": "화산 던전 5층에서 발견된 드워프 상인의 초상화를 활성화합니다.",
+
+  "config.IslandTrader.name": "섬 상인",
+  "config.IslandTrader.description": "진저 섬에서 해금 가능한 섬 상인의 초상화를 활성화합니다.",
+
+  "config.Traveler.name": "여행하는 상인",
+  "config.Traveler.description": "잉걸불 수액 숲에서 금요일과 일요일에 나타나는 여행하는 상인의 초상화를 활성화합니다.",
+
+  "config.Bookseller.name": "서적상",
+  "config.Bookseller.description": "계절마다 두 번 마을을 방문하는 서적상의 초상화를 활성화합니다.",
+
+  "config.StarToken.name": "스타 토큰 교환자",
+  "config.StarToken.description": "스타듀 밸리 품평회에서 스타 토큰 교환자의 초상화를 활성화합니다.",
+
+  "config.DecorBoat.name": "장식품 판매자",
+  "config.DecorBoat.description": "야시장에서 장식품 판매자의 초상화를 활성화합니다.",
+
+  "config.MagicBoat.name": "마법 상인",
+  "config.MagicBoat.description": "야시장에서 마법 상인의 초상화를 활성화합니다.",
+
+  "config.EggShop.name": "칼리코 달걀 판매자",
+  "config.EggShop.description": "사막 축제에서 칼리코 달걀 판매자의 초상화를 활성화합니다.",
+
+  "config.PierreFestival.name": "축제에서의 피에르",
+  "config.PierreFestival.description": "모든 축제에서 피에르의 부스 초상화를 활성화합니다.",
+
+  "config.section.JojaMart.name": "조자마트의 계산원",
+  "config.JojaCashier.name": "초상화 활성화",
+  "config.JojaCashier.description": "SVE를 사용하는 경우 항상 비활성화됩니다.",
+
+  "config.JojaShift.name": "근무 교대를 무작위로 설정",
+  "config.JojaShift.description": "표준 계산원과 다른 사람 사이에서 무작위로 교체됩니다. SVE를 사용하는 경우 항상 비활성화됩니다.",
+
+  "config.section.Theater.name": "극장 스태프",
+
+  "config.MovieTicket.name": "티켓 판매원",
+  "config.MovieTicket.description": "영화관의 티켓 판매원 초상화를 활성화합니다.",
+
+  "config.MovieConcession.name": "매점 담당자",
+  "config.MovieConcession.description": "영화관의 매점 담당자 초상화를 활성화합니다.",
+
+  "config.MovieShift.name": "근무 교대를 무작위로 설정",
+  "config.MovieShift.description": "스태프 멤버들이 매일 무작위로 업무를 교대합니다. SVE를 사용하는 경우 항상 비활성화됩니다.",
+
+  
+}
+
+

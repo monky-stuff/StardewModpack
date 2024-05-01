@@ -1,0 +1,65 @@
+{
+  "DisableToolDeliveryService": false,
+  "DisableToolShipmentService": false,
+  "ToolShipmentServiceFee": 0,
+  "ToolShipmentServicePercentFee": 0,
+  "DisableQuestService": false,
+  "QuestServiceFee": 0,
+  "DisableGiftService": false,
+  "MinimumFriendshipPointsToSendGift": 0,
+  "GiftServiceFee": 0,
+  "GiftServicePercentFee": 0,
+  "GiftChoicePageSize": 5,
+  "EnableJealousyFromMailedGifts": false,
+  "EnableGiftToNpcWithMaxFriendship": false,
+  "ShowDialogOnItemDelivery": false,
+  "DisablePerPlayerConfig": false,
+  "EnableAskToUpgradeTool": false,
+  "PlayerRecoveryConfig": {
+    "-213875731074262109": {
+      "PlayerName": "cumalot",
+      "DisableRecoveryConfigInGameChanges": false,
+      "EnableRecoveryService": true,
+      "RecoverAllItems": true,
+      "RecoverForFree": false,
+      "DisableClearLostItemsOnRandomRecovery": false
+    },
+    "5776272364212084824": {
+      "PlayerName": "paulista",
+      "DisableRecoveryConfigInGameChanges": false,
+      "EnableRecoveryService": false,
+      "RecoverAllItems": false,
+      "RecoverForFree": false,
+      "DisableClearLostItemsOnRandomRecovery": false
+    },
+    "6753624302727877258": {
+      "PlayerName": "",
+      "DisableRecoveryConfigInGameChanges": false,
+      "EnableRecoveryService": true,
+      "RecoverAllItems": true,
+      "RecoverForFree": false,
+      "DisableClearLostItemsOnRandomRecovery": false
+    },
+    "6107565886245177144": {
+      "PlayerName": "curioso",
+      "DisableRecoveryConfigInGameChanges": false,
+      "EnableRecoveryService": false,
+      "RecoverAllItems": false,
+      "RecoverForFree": false,
+      "DisableClearLostItemsOnRandomRecovery": false
+    },
+    "-7751609704683534393": {
+      "PlayerName": "Aniversário³",
+      "DisableRecoveryConfigInGameChanges": false,
+      "EnableRecoveryService": false,
+      "RecoverAllItems": false,
+      "RecoverForFree": false,
+      "DisableClearLostItemsOnRandomRecovery": false
+    }
+  },
+  "DisableRecoveryConfigInGameChanges": false,
+  "EnableRecoveryService": false,
+  "RecoverAllItems": false,
+  "RecoverForFree": false,
+  "DisableClearLostItemsOnRandomRecovery": false
+}

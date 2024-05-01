@@ -1,0 +1,18 @@
+{
+	"Changes":[
+		{
+			"LogName":"Leah Marriage",
+			"Action":"EditData",
+			"Target":"Characters/Dialogue/MarriageDialogueLeah",
+			"Entries":{
+				"Rainy_Night_5": "Finalmente você chegou em casa... eu te desejei o dia todo.$4#$b#Não demora muito pra vir pra cama.$4",
+				"Good_4": "Hmmm... você está com um cheiro bom hoje.$4#$e#Eu ainda não entendi porque eu gosto tanto do seu cheiro...#$b#Talvez seja coisa de feromônio?$7",
+				"Indoor_Night_5": "Hoje eu estava pensando em fazer uma pintura da gente fazendo amor.$4#$b#Bom, não é pra vender a ideia, claro, mas sexo entre pessoas que se amam é algo lindo.#$b#Eu quero tentar capturá-lo em uma pintura.#$b#Eu preciso comprar uma câmera para podermos fazer material de referência.$4",	
+				"Rainy_Night_4": "Que bom que você está em casa... é uma boa noite para se enfiar debaixo das cobertas e ficar quente.#$b#Além disso, estive especialmente excitada o dia todo... melhor você estar preparado.$4",
+				"fall_10": "Você acha que Emily gosta do trabalho dela no Saloon? Hmm, eu me pergunto se ela vai parar de trabalhar lá em breve...#$e#Sempre tive a sensação de que ela está destinada a mais do que servir mesas.",	
+				
+				
+			}
+		}
+	]
+}

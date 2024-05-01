@@ -1,0 +1,23 @@
+{
+    "Name": "Xtardew P&S ",
+    "Author": "Pseudodiego",
+    "Version": "0.1",
+    "Description": "Xtardew P&S",
+    "UniqueID": "Pseudodiego.NudeNPC",
+    "UpdateKeys": [""],
+    "ContentPackFor": {
+       "UniqueID": "Pathoschild.ContentPatcher"
+	   },
+	   "Dependencies": [
+	   {
+      "UniqueID": "Poltergeister.SeasonalCuteCharacters",
+      "IsRequired": false
+		},
+		{
+      "UniqueID": "FlashShifter.StardewValleyExpandedCP",
+      "IsRequired": false
+		},
+	]
+    }
+ 
+ 

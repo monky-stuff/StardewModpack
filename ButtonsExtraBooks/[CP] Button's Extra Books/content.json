@@ -1,0 +1,57 @@
+{
+    "Format": "2.0.0",
+    "Changes": [
+	
+		// TEXTURES //
+		{
+			"Action": "Load",
+			"FromFile": "assets/Books/sheet.png",
+			"Target": "Mods/{{ModId}}/Books"
+		},
+		
+		{
+			"Action": "Load",
+			"FromFile": "assets/Icons/PowersTab.png",
+			"Target": "Mods/{{ModId}}/Icons/PowersTab"
+		},
+		
+		// POWERS TAB //
+		{
+			"Action": "Include",
+			"FromFile": "patches/powers.json"
+		},
+		
+		// BOOK ITEMS //
+		{
+			"Action": "Include",
+			"FromFile": "patches/books.json"
+		},
+		
+		// SHOP EDITS //
+		{
+			"Action": "Include",
+			"FromFile": "patches/shops.json"
+		},
+		
+		// MAIL //
+		{
+			"Action": "EditData",
+			"Target": "Data/mail",
+			"Entries": {
+				"{{ModId}}_Mail_ArtisanGrange": "@,^^  {{i18n: Mail.ArtisanGrange.Text}}%item id (O){{ModId}}_Book_ArtisanMachines 1%%[#]{{i18n: Mail.ArtisanGrange.Title}}"
+			}
+		},
+		
+		// DIALOGUE CHANGES //
+		{
+			"Action": "EditData",
+			"Target": "Strings/StringsFromCSFiles",
+			"Entries": {
+				"NPC.cs.3987": "{{i18n: Dialogue.EnoughGifts}}"
+			},
+			"When": {
+				"Spiderbuttons.ButtonsExtraBooksCore/ConfigEnableExtraGifts": true
+			}
+		},
+    ]
+}

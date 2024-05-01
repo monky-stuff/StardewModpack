@@ -1,0 +1,102 @@
+{
+  
+// Lines for the Casino Vendor, highly disapproving of the farmer being there
+  "CasinoVendor1": "Ah, é você. Aqui apenas para olhar, imagino?",
+  "CasinoVendor2": "Você percebe que seu ouro não tem valor aqui, não é?",
+  "CasinoVendor3": "Costumávamos ser mais criteriosos sobre quem recebia um Cartão do Clube.",
+  "CasinoVendor4": "Todos os itens estão à venda... Contanto que você os conquiste.",
+  
+// Line for the Traveling Merchant during Festival of Ice
+  "TravelerIce": "Ah, o cenário perfeito para algumas das minhas descobertas mais raras! Apenas hoje, amigo.",
+  
+// Lines for the Raccoon. "Bobo" is what she calls you.
+  "Raccoon1": "Temos sementes, bobo.",
+  "Raccoon2": "Quer algumas sementes, bobo?",
+  "Raccoon3": "Você não tem essas sementes, talvez.",  
+  
+// Lines for the Joja Cashiers, friendly but canned. "Join us and thrive" is a reference to JojaMart's "Join Us. Thrive" slogan so the awkwardness is intentional,
+  "JojaCashier1": "Bem-vindo ao MercadoJoja! Como você está hoje?",
+  "JojaCashier2": "Lembre-se, como membro do MercadoJoja, você obtém mais por menos!",
+  "JojaCashier3": "Junte-se a nós e aproveite nossas ofertas especiais para itens selecionados!",
+  "JojaCashier4": "Espero que esteja tendo um ótimo dia. Está pronto para finalizar a compra?",
+
+// Line for the Star Token Exchanger at the Stardew Valley Fair
+  "StarToken": "Olá! Troque seus tokens estelares aqui para pegar os melhores prêmios que a Feira tem a oferecer!",
+  
+// Lines for Pierre at various festivals
+  "PierreJellyfish": "Itens raros que brilham como uma água-viva da lua! Não perca!",
+  "PierreEgg": "Itens exclusivos à venda! Pegue-os antes do fim do dia, ou perderá a oportunidade!",
+  "PierreFeast": "Guloseimas festivas para aquecer suas celebrações! Pegue as suas enquanto durarem!",
+  "PierreFlower": "Flores lindas para encantar seu par de dança! Pegue antes da última dança!",
+  "PierreLuau": "Decorações exóticas para fazer da Fazenda {{FarmName}} o assunto da cidade! Pegue enquanto pode!",
+  "PierreSpirit": "Decorações assustadoras para construir o celeiro mais assustador! Pegue antes que desapareçam!",
+
+// Line for the clinic, made generic because it could be spoken by either Harvey or Maru.
+  "Clinic": "Temos uma seleção de tônicos de saúde e energia.",
+  
+// Alex  
+  "AlexIceCream": "Que tal um sorvete gelado para vencer o calor?",
+
+	
+// Descriptions for Generic Mod Config Menu
+  "config.HatMouse.name": "Rato de Chapéu",
+  "config.HatMouse.description": "Ativa o retrato para o Rato de chapéu na Floresta Cinzaseiva.",
+
+  "config.Raccoon.name": "Guaxinim",
+  "config.Raccoon.description": "Ativa o retrato para o comerciante Guaxinim desbloqueável na Floresta Cinzaseiva.",
+    
+  "config.DesertTrader.name": "Comerciante do Deserto",
+  "config.DesertTrader.description": "Ativa o retrato para o comerciante do deserto.",
+
+  "config.Casino.name": "Vendedor do Cassino",
+  "config.Casino.description": "Ativa o retrato para o trocador de Moedas Qi no cassino escondido no deserto.",
+
+  "config.VolcanoDwarf.name": "Anão do Vulcão",
+  "config.VolcanoDwarf.description": "Ativa o retrato para o comerciante anão encontrado no 5º andar da Masmorra do Vulcão.",
+
+  "config.IslandTrader.name": "Comerciante da Ilha",
+  "config.IslandTrader.description": "Ativa o retrato para o comerciante de pássaros desbloqueável na Ilha Gengibre.",
+
+  "config.Traveler.name": "Mercador Viajante",
+  "config.Traveler.description": "Ativa o retrato para o mercador viajante que aparece às sextas e domingos na Floresta de Cindersap.",
+
+  "config.Bookseller.name": "Vendedor de Livros",
+  "config.Bookseller.description": "Ativa o retrato para o vendedor de livros que visita a cidade duas vezes por estação.",
+
+  "config.StarToken.name": "Mercador de Tokens Estelares",
+  "config.StarToken.description": "Ativa o retrato para o Mercador de Tokens Estelares na Feira do Vale Estrelado.",
+  
+  "config.DecorBoat.name": "Vendedor de Decorações",
+  "config.DecorBoat.description": "Ativa o retrato para o vendedor de decorações no Mercado Noturno.",
+  
+  "config.MagicBoat.name": "Ambulante Mágico",
+  "config.MagicBoat.description": "Ativa o retrato para o ambulante mágico no Mercado Noturno.",
+  
+  "config.EggShop.name": "Comerciante de Ovos",
+  "config.EggShop.description": "Ativa o retrato para o comerciante de ovos Calico no Festival do Deserto.",  
+  
+  "config.PierreFestival.name": "Pierre nos festivais",
+  "config.PierreFestival.description": "Ativa retratos para a barraca do Pierre durante todos os festivais.",
+  
+  "config.section.JojaMart.name": "Caixa do MercadoJoja",
+  
+  "config.JojaCashier.name": "Ativar retrato", 
+  "config.JojaCashier.description": "Sempre desativado se estiver usando SVE.",
+  
+  "config.JojaShift.name": "Alternar turnos aleatoriamente",
+  "config.JojaShift.description": "Faz com que o caixa alterne aleatoriamente entre o caixa padrão e um caixa alternativo todos os dias. Sempre desativado se estiver usando SVE.",
+  
+  "config.section.Theater.name": "Equipe do Teatro",
+  
+  "config.MovieTicket.name": "Caixa da Bilheteria",
+  "config.MovieTicket.description": "Ativa o retrato para o caixa da bilheteria do cinema.",
+  
+  "config.MovieConcession.name": "Atendente de Concessão",
+  "config.MovieConcession.description": "Ativa o retrato para o atendente do balcão de concessões do cinema.",
+  
+  "config.MovieShift.name": "Alternar funções aleatoriamente",
+  "config.MovieShift.description": "Faz com que os membros da equipe alternem aleatoriamente suas funções todos os dias. Sempre desativado se estiver usando SVE.",
+  
+}
+
+

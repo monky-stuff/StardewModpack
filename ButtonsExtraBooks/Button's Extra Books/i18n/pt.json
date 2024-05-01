@@ -1,0 +1,36 @@
+{
+  // UI //
+  "Config.SectionTitle.General": "Configurações Gerais",
+  "Config.SectionTitle.Books": "Configurações dos Livros",
+  "Config.SectionTitle.Debug": "Configurações de Depuração",
+  
+  // GENERAL SETTINGS //
+  "Config.General.AlwaysAvailable.Name": "Livros Sempre Disponíveis",
+  "Config.General.AlwaysAvailable.Description": "Se ativado, todos os livros estarão sempre disponíveis na loja de livros sem a necessidade de cumprir determinados requisitos.",
+  
+  "Config.General.Enabled.Name": "Ativado",
+  "Config.General.Enabled.Description": "Se desativado, este livro e seus poderes não estarão disponíveis.",
+  
+  // BOOK SETTINGS //
+  "Config.Books.Luck.Title": "Sorte de Principiante",
+  "Config.Books.LuckBonus.Name": "Bônus de Sorte",
+  "Config.Books.LuckBonus.Description": "Quantidade de sorte adicionada após ler o livro Sorte de Principiante.",
+  
+  "Config.Books.ExtraGifts.Title": "Livro do Altruísmo",
+  
+  "Config.Books.TreesIgnoreSeason.Title": "Silvicultura de Inverno",
+  
+  "Config.Books.ArtisanMachines.Title": "Manual da Guilda dos Artesãos",
+  "Config.Books.ArtisanMachinesGrangeMustWin.Name": "Vitória Obrigatória na Exposição",
+  "Config.Books.ArtisanMachinesGrangeMustWin.Description": "Se ativado, sua exposição na feira deve ficar em 1º lugar além de ter 6 ou mais produtos artesanais.",
+  "Config.Books.ArtisanMachinesBonus.Name": "Bônus de Velocidade das Máquinas",
+  "Config.Books.ArtisanMachinesBonus.Description": "Percentual de diminuição do tempo de processamento das máquinas que produzem produtos artesanais.",
+  
+  "Config.Books.GiantCrops.Title": "Melões Gigantes!",
+  "Config.Books.GiantCropsBonus.Name": "Chance de Colheita Gigante",
+  "Config.Books.GiantCropsBonus.Description": "Percentual de chance de que as colheitas formem uma colheita gigante durante a noite.",
+  
+  // DEBUG SETTINGS //
+  "Config.Debug.EnableDebugBook.Name": "Ativar Livro de Depuração",
+  "Config.Debug.EnableDebugBook.Description": "Se ativado, um livro de depuração estará disponível na loja de Pierre que removerá todos os seus poderes concedidos por este mod."
+}

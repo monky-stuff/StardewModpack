@@ -1,0 +1,33 @@
+{
+    "Changes": [
+    {
+        "LogName": "Leo",
+        "Action": "EditData",
+        "Target": "Characters/Dialogue/Leo",
+        "Entries":
+        {
+            "Mon": "Oi... Tudo bem?",
+             "Mon2": "Você... encontrou algumas Nozes Douradas hoje?#$e#Não... não compartilhe comigo. Minha família mais precisa delas.$3#$e#Vou encontrar o suficiente para mim .",
+             "Mon4": "Aprendi muito com minha família de papagaios...#$b#Mas tenho certeza que há muito mais por aí que não conheço.$s",
+             "Tue": "Quando Sun está com raiva, é bom estar na selva.#$e#Sun não consegue nos encontrar sob as folhas. Nós o enganamos! Haha...$h",
+             "Tue2": "Willy é seu amigo?#$e#...Ele é legal.#$e#Eu não sou tão tímido com ele.",
+             "Ter4": "...Minha cabana? Não, eu não conseguiria construí-la sozinho.$3#$e#Os papagaios são bons ajudantes. Eles me ajudam muito. Você sabe?#$e#Eles ajudam você , também?",
+             "Qua": "...Desculpe... estou tímido hoje.$3",
+             "Wed2": "Tenha cuidado no vulcão... os espíritos não gostam de estranhos.",
+             "Qua4": "...@, pássaros voam da sua casa para cá?$3",
+             "Qui": "Você conheceu outros como você?#$b#Eu não converso muito com eles. Me sinto mais seguro com minha própria espécie...$3",
+            "Thu2": "Você conhece mangas? Elas são... mmmmm! Deliciosas!$h#$e#Uma vez eu comi elas todos os dias. Minha árvore favorita as cultivava.#$b#...Mas então, o céu ficou louco... e quebrou a árvore com um raio.$s#$e#...Mais árvores podem crescer de novo, certo?",
+             "Thu4": "Oh, @! Você está aqui!$h#$e#Estou feliz que você continue vindo tanto aqui.",
+             "Sex": "Uma vez... eu estava no topo do vulcão à noite e vi luzes muito, muito distantes.#$b#Eu me pergunto se existem outras famílias de pássaros por aí?$3",
+             "Fri2": "Às vezes eu vejo um homem velho, com... como se chama? Óculos.#$e#Acho que ele não sabe que estou aqui.$3",
+             "Fri4": "Será que consigo ver sua casa do topo do vulcão?",
+             "Sat": "...Estou triste hoje.$s#$e#Vá em frente... divirta-se. Deixe-me ficar triste.$s",
+             "Sat2": "...Você vem aqui de barco? Willy também?#$e#Não... Eu não posso andar de barco. Com muito medo...$s#$e#Mãe... Pai ...$s",
+             "Sat4": "Estou com medo de andar de barco, porque...$s#$b#...mas, você acha que Willy poderia me ajudar a tentar?",
+             "Sun": "Quando chove, pássaros estranhos me visitam.#$b#Tento falar com eles... mas eles voam para longe.$s#$b#Acho que eles não querem ser amigos... $s",
+             "Sun2": "Eu vi uma velha do outro lado da ilha. E você?$3#$e#...Sou tímido com ela. E com medo.$s#$e#Eu não acho que ela quer ser amigo de pássaros.$s#$e#Mas você quer.",
+             "Sun4": "Não tenha medo dos gorilas se você os ver.#$b#Apenas seja legal com eles. Eles serão legais com você.",
+             "summer_Mon": "Hm? Você pergunta sobre meu... aniversário?$3#$b#Hum... que estação é essa? Eu não tenho... o que é? Um calendário.$3#$e #Oh, agora é verão? É... verão 26! Os papagaios me disseram que eu eclodi naquele dia."
+        }
+    }]
+}

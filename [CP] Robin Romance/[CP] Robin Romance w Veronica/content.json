@@ -1,0 +1,1607 @@
+{
+	"Format": "1.24.0",
+	"ConfigSchema": {
+		"EnableFemaleFarmerPregnancy": {
+			"AllowValues": "True, False",
+			"Default": "False",
+			"Description": "Usa o PregnancyRole do kdau para permitir que as fazendeiras engravidem quando casadas com Robin. Também força a adoção para fazendeiros se casados com Robin."
+		},
+		"EnableRobinAltSprites": {
+			"AllowValues": "True, False",
+			"Default": "False",
+			"Description": "Usa os sprites alternativos de Shadowfire1223 para Robin, incluindo um vestido de noiva alternativo."
+		},
+		"EnableRRomanceAdditionalDialogue": {
+			"AllowValues": "True, False",
+			"Default": "True",
+			"Description": "Sugere-se que seja ativado, a menos que haja um conflito de mods. Corrige, substitui e adiciona diálogos e eventos de outros personagens para refletir a nova história de Robin, além de adicionar Veronica (se ativado) ao mundo."
+		},
+		"DisableOnlyFamily": {
+			"AllowValues": "True, False",
+			"Default": "False",
+			"Description": "Desativa o diálogo adicional do RRomance em membros da família de Robin. Altamente sugerido para não usar, a menos que haja um conflito de mod."
+		},
+		"DisableOnlyNonFamily": {
+			"AllowValues": "True, False",
+			"Default": "False",
+			"Description": "Desativa o diálogo adicional do RRomance em não membros da família de Robin. Altamente sugerido para não usar, a menos que haja um conflito de mod."
+		},
+		"EnableVeronica": {
+			"AllowValues": "True, False",
+			"Default": "True",
+			"Description": "Adiciona Veronica ao jogo no lugar de Robin. Se desabilitado, haverá duas Robins, a original e a datável. Sprites e retratos de Veronica por Shadowfire1223."
+		},
+		"EnableExpandedSupport": {
+			"AllowValues": "True, False",
+			"Default": "True",
+			"Description": "Expanded já funcionará com este mod, mas a história pode não corresponder, especialmente em relação a Robin e Veronica. O que esta opção faz é fazer com que algumas áreas do Expanded estejam em conformidade com este mod (assim Veronica aparecerá no lugar de Robin, o nome de Veronica será usado onde deveria estar, etc.). Se ocorrerem erros com Expanded E Robin ou Veronica, desative esta opção."
+		},
+		"14HeartFix": {
+			"AllowValues": "True, False",
+			"Default": "True",
+			"Description": "Deve corrigir problemas com o evento de 14 corações travando ocasionalmente. Se você ainda tiver problemas com o evento de 14 corações de Robin, desative essa opção. O som/música pode soar desligado ao selecioanr as opções, enquanto ele tocará corretamente com isso desativado. Quando desligado, o evento de 14 corações tende a falhar se você alternar muito ou rápido demais entre as opções(geralmente na terceira vez)."
+		},
+		"EnableRandomMeme": {
+			"AllowValues": "True, False",
+			"Default": "False",
+			"Description": "Permite uma única resposta de meme que você provavelmente não encontrará logo de cara."
+		},
+		/*"IncompleteSeasonalSupport": {
+			"AllowValues": "True, False",
+			"Default": "False",
+			"Description": "Adds Robin's kissing sprite for seasonal outfit mods, but the kissing sprite uses her regular clothes. Flower Dance and Wedding Dress sprites should function without this option.",
+		},*/
+		"ParentNoun": {
+			"AllowBlank": true,
+			"Default": "parent",
+			"Description": "Funciona apenas com [CP] Gender Neutrality Mod. Altera os pronomes sem maiúsculo que o player será tratado. Exemplos incluem: pai, mãe, guardião, progenitor, etc. Tradutor: Não ligo para neutro, se vira se for usar"
+		},
+		//Gender Neutrality Support - Config Options taken directly from Hana.GenderNeutralityMod
+		"SubjectivePronoun": {
+			"AllowBlank": true,
+			"Default": "they",
+			"Description": "Funciona apenas com [CP] Gender Neutrality Mod. O pronome pessoal do caso reto sem maiúsculo a ser usado. Exemplos incluem: ele, ela, eles, etc. Tradutor: Não ligo para neutro, se vira se for usar"
+		},
+		"CapitalSubjectivePronoun": {
+			"AllowBlank": true,
+			"Default": "They",
+			"Description": "Funciona apenas com [CP] Gender Neutrality Mod. O pronome pessoal do caso reto com maiúsculo a ser usado. Exemplos incluem: Ele, Ela, Eles, etc. Nota Especial: A primeira letra deve ser maiúscula. Tradutor: Não ligo para neutro, se vira se for usar"
+		},
+		"SpouseNoun": {
+			"AllowBlank": true,
+			"Default": "partner",
+			"Description": "Funciona apenas com [CP] Gender Neutrality Mod. O substantivo que as pessoas usarão para descrever seu estado civil. Exemplos: marido, esposa, cônjuge, companheiro, etc. Nota do Tradutor: Não ligo para neutro, se vira se for usar"
+		}
+	},
+	"Changes": [
+		{
+			"LogName": "Sprites",
+			"Action": "Load",
+			"Target": "Characters/Ram",
+			"FromFile": "assets/characters/Ram.png",
+			"When": {
+				"EnableRobinAltSprites": "False"
+			}
+		},
+		{
+			"LogName": "Sprites_Alt",
+			"Action": "Load",
+			"Target": "Characters/Ram",
+			"FromFile": "assets/characters/Ram_Alt.png",
+			"When": {
+				"EnableRobinAltSprites": "True"
+			}
+		},
+		{
+			"LogName": "Portraits",
+			"Action": "Load",
+			"Target": "Portraits/Ram",
+			"FromFile": "assets/portraits/Ram.png"
+		},
+		{
+			"LogName": "Dialogue",
+			"Action": "Load",
+			"Target": "Characters/Dialogue/Ram",
+			"FromFile": "assets/characters/dialogue/Ram.json"
+		},
+		{
+			"LogName": "MarriageDialogue",
+			"Action": "Load",
+			"Target": "Characters/Dialogue/MarriageDialogueRam",
+			"FromFile": "assets/characters/dialogue/MarriageDialogueRam.json"
+		},
+		{
+			"LogName": "Schedule",
+			"Action": "Load",
+			"Target": "Characters/schedules/Ram",
+			"FromFile": "assets/characters/schedules/Ram.json"
+		},
+		{
+			"LogName": "NPC Dispositions",
+			"Action": "EditData",
+			"Target": "Data/NPCDispositions",
+			"Entries": {
+				"Ram": "adult/neutral/outgoing/positive/female/datable/null/Town/fall 21/Sebastian 'filho' Maru 'filha'/LeahHouse 13 5 2/Robin"
+			}
+		},
+		{
+			"LogName": "Gift tastes",
+			"Action": "EditData",
+			"Target": "Data/NPCGiftTastes",
+			"Entries": {
+				"Ram": "Para mim? Nossa, adorei!/224 426 636/Obrigada! Que legal!/-6 -79 424 709/Hã... por quê?/16 330/Mas o quê?... Isto é horrível!/2/Obrigada. Isto pode ser útil.// "
+			}
+		},
+		/*
+		{
+			"LogName": "Testing4",
+			"Action": "EditImage",
+			"Target": "Characters/Ram",
+			"FromFile": "Assets/Characters/Ram.png",
+			"FromArea": { "X": 0, "Y": 289, "Width": 48, "Height": 32 },
+			"ToArea": { "X": 0, "Y": 289, "Width": 48, "Height": 32 },
+			"When": {
+				"HasMod": "Poltergeister.SeasonalCuteCharacters",
+			},
+		},
+		{
+			"LogName": "Testing4",
+			"Action": "EditImage",
+			"Target": "Characters/Ram",
+			"FromFile": "Assets/Characters/Ram.png",
+			"FromArea": { "X": 0, "Y": 289, "Width": 64, "Height": 96 },
+			"ToArea": { "X": 0, "Y": 289, "Width": 64, "Height": 96 },
+			"When": {
+				"HasMod": "Poltergeister.SeasonalCuteCharacters",
+			},
+		},
+		
+		{
+			"LogName": "Testing5",
+			"Action": "EditImage",
+			"Target": "Characters/Ram",
+			"FromFile": "Assets/Characters/Ram.png",
+			"FromArea": { "X": 0, "Y": 225, "Width": 16, "Height": 32 },
+			"ToArea": { "X": 0, "Y": 225, "Width": 16, "Height": 32 },
+			"When": {
+				"IncompleteSeasonalSupport": "True",
+			},
+		},
+		
+		{
+			"LogName": "Testing5AltSprites",
+			"Action": "EditImage",
+			"Target": "Characters/Ram",
+			"FromFile": "Assets/Characters/Ram.png",
+			"FromArea": { "X": 0, "Y": 225, "Width": 16, "Height": 32 },
+			"ToArea": { "X": 0, "Y": 225, "Width": 16, "Height": 32 },
+			"When": {
+				"IncompleteSeasonalSupport": "True",
+				"EnableRobinAltSprites": "True",
+			},
+		},
+		*/
+		{
+			"LogName": "NoVeronicaDialogueChange",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Ram",
+			"When": {
+				"EnableVeronica": "False"
+			},
+			"Entries": {
+				"Introduction": "Oi @!$1#$b#Pode ser exaustivo conhecer todos na cidade, mas vale a pena. Há muita gente boa aqui no Vale!$0",
+				"Tue4": "Eu ficaria feliz em te ajudar a aprender um pouco de marcenaria, mas estou ocupada no momento."
+			}
+		},
+		{
+			"LogName": "Rainy Dialogue",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Rainy",
+			"Entries": {
+				"Ram": "Ótimo, madeira molhada.$2#$b#Parece um bom dia para se aconchegar perto do fogo e ficar dentro de casa.$1"
+			}
+		},
+		{
+			"LogName": "Engagement Dialogue",
+			"Action": "EditData",
+			"Target": "Data/EngagementDialogue",
+			"Entries": {
+				"Ram0": "Haha, a terceira vez é o charme, certo?",
+				"Ram1": "Nunca pensei que pudesse amar novamente. Mas com você...#$b#Serei a esposa mais feliz do mundo.$1"
+			}
+		},
+		{
+			"LogName": "MarriageDialogue",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/MarriageDialogue",
+			"Entries": {
+				"Rainy_Day_Ram": "Uma caminhada de manhã cedo na chuva é bom. Você deveria vir comigo um dia. É bom para a alma.",
+				"Rainy_Night_Ram": "Tirei o dia de folga por causa da chuva. Fiquei dentro de casa e joguei o dia todo.#$b#Quais jogos? Ah, apenas um pequeno jogo de multiplas escolhas onde você pode conquistar o mundo.#$b#Acabei curando todas as crianças transformadas em pombas ao mesmo tempo em que consegui negociar uma paz duradoura entre todos os países.#$b#Foi uma conquista muito rara. Demorei um pouco para alcançá-la.#$b#Desculpe, acho que divaguei um pouco, hein?$2",
+				"Indoor_Day_Ram": "Sua -- nossa -- fazenda é tão legal. E essa casa é tão aconchegante...#$b#Sabe o que seria perfeito? Um banco de balanço na varanda. Então poderíamos sentar juntos e ver o pôr do sol...#$b#Sim, e de mãos dadas, exatamente como estamos fazendo agora. Tudo bem, talvez um pouco mais, mas estou tentando me concentrar em uma ideia séria aqui!$9",
+				"Indoor_Night_Ram": "*Bocejo*... Estou pronta para dormir. Você poderia me abraçar até que eu durma?",
+				"Outdoor_Ram": "É um bom dia para trabalhar ao ar livre. Você não concorda?",
+				"spring_Ram": "A primavera sempre traz novas ideias e oportunidades. Fico imaginando o que vai acontecer este ano.",
+				"fall_Ram": "Adoro as férias e o friozinho. E você vai parar com a agricultura em breve, então poderemos passar mais tempo juntos!",
+				"summer_Ram": "O verão é a melhor época do ano para trabalhar. Pode estar quente, mas pelo menos não tenho que lidar com muita chuva.",
+				"winter_Ram": "Brr... Estou congelando, você poderia me abraçar e me aquecer?",
+				"spouseRoom_Ram": "Eu adoraria ter um torno, mas não posso colocá-lo aqui...#$b#Hmm, talvez eu devesse construir um galpão de trabalho para não ter que ir sempre até a marcenaria."
+			}
+		},
+		{
+			"LogName": "Community Center Complete Dialogue",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Ram",
+			"Entries": {
+				"Town_49_24": "É tão bom saber que o centro comunitário foi consertado!#$b#Eu gosto de vir aqui e pensar em projetos que eu poderia fazer para melhorar o centro comunitário para todos."
+			},
+			"When": {
+				"IsCommunityCenterComplete": "True"
+			}
+		},
+		{
+			"LogName": "Joja Warehouse Complete Dialogue",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Ram",
+			"Entries": {
+				"Town_49_24": "Eu não posso acreditar que eles assumiram o centro comunitário. Quanto tempo você acha que vai levar antes que eles me tirem dos negócios?$3#$b#Talvez esteja na hora de eu me mudar.$2"
+			},
+			"When": {
+				"IsJojaMartComplete": "True"
+			}
+		},
+		//Added 11_21
+		{
+			"LogName": "Veronica",
+			"Action": "Include",
+			"FromFile": "Assets/Veronica/AddVeronica.json",
+			"When": {
+				"EnableVeronica": "True"
+			}
+		},
+		{
+			"LogName": "Additional Dialogue",
+			"Action": "Include",
+			"FromFile": "Assets/R_Romance Additional Dialogue/RamAddendum.json",
+			"When": {
+				"EnableRRomanceAdditionalDialogue": "True"
+			}
+		},
+		//Events
+		{
+			"LogName": "Ram4Heart",
+			"Action": "EditData",
+			"Target": "Data/Events/Forest",
+			"Entries": {
+				"336474/f Ram 1000/t 600 1800/w sunny": "FlowerDance/39 13/Ram 38 12 2 farmer 60 14 3/skippable/showFrame Ram 40/animate Ram false true 600 43 41 43 42 46 47 43 41 43 42/pause 400/move farmer -12 0 3/move farmer 0 -2 3/pause 10000/stopAnimation Ram 40/stopMusic/screenFlash 1.8/showFrame Ram 0/pause 1200/move Ram 1 0 1/showFrame Ram 19/pause 1200/showFrame Ram 4/speak Ram \"O que você está fazendo aqui @?!$3#$b#Há quanto tempo você estava parado aí?$2\"/move farmer -8 0 3 false/pause 500/move Ram -1 0 3/pause 350/emote Ram 60/faceDirection Ram 1/speak Ram \"Estou sozinha desde o divórcio. Gosto de dançar, mas não há ninguém com quem dançar.$2#$b#Eu estava sozinha esta noite, então pensei em vir aqui e dançar onde ninguém me visse.$2\"/question fork1 \"Eu sou patética, não sou?#Não, você não é.#Sim, você não é meio velha para estar dançando a 'dança da flor'?#Por que dançar sozinha? Nós podemos dançar juntos!#Se seus amigos não dançam, então eles não são meus amigos.\"/fork danceInsultRam/speak Ram \"Sério? Obrigada. Umm... Já que estamos aqui, você quer dançar comigo?$6\"/emote farmer 32/pause 500/playMusic event1/animate farmer false true 600 26 27 26 27 28 27 28 27 30 31 30 31 26 27 26 27 28 27 28 27/animate Ram false true 600 43 41 43 42 46 47 43 41 43 42/pause 7500/fade fadeOut/end",
+				"danceInsultRam": "playMusic event1/speak Ram \"Sim, você tem razão. Estou tão envergonhada. Sou uma mulher adulta, está na hora de agir como uma.$2\"/emote Ram 28/emote farmer 32/pause 500/fade fadeout/end"
+			}
+		},
+		{
+			"LogName": "RamOld6Heart",
+			"Action": "EditData",
+			"Target": "Data/Events/ScienceHouse",
+			"Entries": {
+				"336473/f Ram 1500/t 900 2200": "none/5 18/farmer 6 24 0 Ram 2 20 1 Sebastian 4 20 3 Demetrius 18 20 1/skippable/emote Sebastian 12/emote Ram 28/speak Sebastian \"Por que você está aqui mãe?! Você ESCOLHEU sair!$a\"/speak Ram \"Sebastian, isso não é justo! Eu... eu não-$2\"/move Demetrius -13 0 1/move Demetrius 0 -1 0/move Demetrius -2 0 3/faceDirection Demetrius 2/pause 200/speak Demetrius \"Eu ouvi gritos, o que está acontecendo?\"/speak Sebastian \"Nada. Estou indo para o meu quarto.\"/move Sebastian 0 2 2/move Sebastian 2 0 2/pause 500/question null \"Uma mãe que abandona os filhos não os ama, certo?#Depende da situação.#Se sua mãe foi embora ou não, não importa. Ela está parada na sua frente agora.\"/pause 1400/speak Sebastian \"Eu... desculpa mãe.\"/emote Sebastian 28/move Sebastian 2 0 1/move Sebastian 0 -2 0/move Sebastian 4 0 1/move Sebastian 0 2 2/warp Sebastian 26 11 2/speak Ram \"Tião...$2#$b#Obrigado @. Lamento que você tenha que ver isso.\"/speak Demetrius \"Ele vai superar isso. Não se preocupe muito.$h\"/speak Ram \"Obrigado Demetrius, eu acho que eu deveria ir então. Quer que eu te acompanhe @?\"/move Ram 4 0 1/move Ram 0 3 2/warp Sebastian 12 22 0/move Sebastian 0 -2 0/move Sebastian -4 0 3/move Sebastian 0 3 3/faceDirection Ram 1/speak Sebastian \"Desculpe mãe, fui muito duro com você. Eu também te amo.\"/emote Ram 32/emote Sebastian 32/faceDirection farmer 2/warp farmer 19 20 3/fade fadeout/end"
+			},
+			"Enabled": false
+		},
+		{
+			"LogName": "Ram6Heart",
+			"Action": "EditData",
+			"Target": "Data/Events/ScienceHouse",
+			"Entries": {
+				"336473/f Ram 1500/t 900 2200": "echos/5 18/farmer 6 24 0 Ram 2 20 1 Sebastian 4 20 3 Demetrius 22 20 1/skippable/emote Sebastian 12/emote Ram 28/speak Sebastian \"Por que você não vê que eu não sou preguiçoso? Faço muitos trabalhos de programação. Eu ganho um bom dinheiro.$a\"/speak Ram \"Sebastian, eu acredito em você! Mas estou preocupada que você esteja definhando no porão.$2\"/move Demetrius -17 0 1/move Demetrius 0 -1 0/move Demetrius -2 0 3/faceDirection Demetrius 2/pause 200/speak Demetrius \"Eu ouvi gritos. O que está acontecendo?\"/speak Sebastian \"Nada. Estou indo para o meu quarto.\"/move Sebastian 0 2 2/move Sebastian 2 0 2/pause 500/question fork2 \"Mamãe não acha que meu trabalho é 'real'. Você concorda que é isso que ela está dizendo, certo?#Não, ela só está preocupada que você passe todo o seu tempo no porão.#Não é sobre o que você faz para viver, Sebastian. Sua mãe está apenas preocupada com as cobranças que podem estar te dominando.#Os pais simplesmente não entendem!\"/fork ninetiesDis/pause 1400/speak Sebastian \"Estou bem mãe. Estou bem com a minha vida do jeito que está.$s\"/emote Sebastian 28/move Sebastian 2 0 1/move Sebastian 0 -2 0/move Sebastian 4 0 1/move Sebastian 0 2 2/warp Sebastian -30 -30/speak Ram \"Tião...$2#$b#Obrigada, @. Sinto muito que você teve que ver isso.\"/speak Demetrius \"Não se preocupe, Robin. Um dia ele vai ver o quão orgulhosa dele você realmente está.$h\"/speak Ram \"Obrigada, Demetrius. Acho que eu já vou indo.#$b#Quer que eu te acompanhe até a saída, @?\"/move Ram 4 0 1/move Ram 0 3 2/warp Sebastian 12 22 0/move Sebastian 0 -2 0/move Sebastian -4 0 3/move Sebastian 0 3 3/faceDirection Ram 1/speak Sebastian \"Mãe... Estou feliz que você se importe, mas lembre-se de respeitar o estilo de vida que escolhi.$h\"/speak Ram \"Claro. Eu te amo Sebastian, e estou muito orgulhosa de você.$1\"/emote Ram 32/emote Sebastian 32/faceDirection farmer 2/warp farmer -25 -25/fade fadeout/end",
+				"ninetiesDis": "pause 1400/speak Sebastian \"@ entende. Obrigado @.$s\"/emote Sebastian 28/move Sebastian 2 0 1/move Sebastian 0 -2 0/move Sebastian 4 0 1/move Sebastian 0 2 2/warp Sebastian -30 -30/speak Ram \"Tião...$2#$b#Lamento que você tenha que ver isso, @. Talvez eu seja velha demais para entender a geração mais jovem.\"/speak Demetrius \"Não se preocupe Robin. Um dia ele vai ver o quão orgulhosa dele você realmente está, mesmo que vocês dois não possam se entender agora.$h\"/speak Ram \"Obrigada, Demetrius. Acho que eu já vou indo.#$b#Quer que eu te acompanhe até a saída, @?\"/move Ram 4 0 1/move Ram 0 3 2/warp Sebastian 12 22 0/move Sebastian 0 -2 0/move Sebastian -4 0 3/move Sebastian 0 3 3/faceDirection Ram 1/speak Sebastian \"Mãe... Estou feliz que você se importe, mas lembre-se de respeitar o estilo de vida que escolhi.$h\"/speak Ram \"Claro. Eu te amo Sebastian, e estou muito orgulhosa de você.$1\"/emote Ram 32/emote Sebastian 32/faceDirection farmer 2/warp farmer -25 -25/fade fadeout/end"
+			},
+			"Enabled": true
+		},
+		{
+			"LogName": "Ram8HeartCorrected",
+			"Action": "EditData",
+			"Target": "Data/Events/Mountain",
+			"Entries": {
+				"336471/f Ram 2000/t 600 1400/w sunny": "none/11 30/Ram 7 30 3 Harvey -3000 -3000 2 farmer 15 40 2/skippable/move farmer 0 -10 0/move farmer -7 0 3/positionOffset farmer 0 5/emote Ram 8/pause 1000/faceDirection Ram 1 false/pause 200/speak Ram \"Ei, @! O que você está fazendo aqui fora?$1\"/pause 1000/emote Ram 16/pause 1000/question fork1 \"Você acha que poderia me dar uma mão em um projeto em que estou trabalhando?#Sim#Não\"/fork nohelpRam/speak Ram \"Obrigada! Me siga. Primeiro precisamos cortar um pedaço específico de madeira...$1\"/pause 200/move Ram 0 -1 0/move Ram 5 0 1/move Ram 0 -3 0/warp Ram -30 -30/positionOffset farmer 0 -5/move farmer 4 0 1/move farmer 0 -4 0/warp farmer -25 -25/pause 2400/playSound ow/pause 800/playMusic playful/warp Ram 12 26 2/move Ram 0 4 2/move Ram -1 0 1/warp farmer 12 26 2/faceDirection farmer 2/emote farmer 12/move farmer 0 4 2/positionOffset farmer 0 -10/faceDirection farmer 3/emote Ram 28/speak Ram \"Eu sinto muito, @!$2\"/question fork2 \"Eu deveria ter sido mais cuidadosa. Você me perdoa?#Não se preocupe, foi minha culpa. Minha mão escorregou.#Perdoar e esquecer, certo?#Não. Foi sua culpa. Estou indo embora!\"/fork noforgiveRam/speak Ram \"Obrigada.$0\"/speak Ram \"*pega no pulso* Tem certeza que está bem? Sua mão quase foi serrada.\"/pause 3500/move Ram -1 0 3/shake Ram 2400/speak Ram \"Hm...$6\"/emote Ram 60/pause 200/speak Ram \"Talvez você devesse ir ver Harvey, só por precaução. Você está sangrando um pouco.\"/globalFade/viewport -1000 -1000/playMusic none/changeLocation Hospital/playMusic sweet/warp Ram 15 8/warp Harvey 15 6/warp farmer 14 6/positionOffset farmer 0 20/faceDirection Ram 0/faceDirection Harvey 3/faceDirection farmer 1 false/pause 200/viewport 15 7/pause 200/speak Harvey \"Então você se machucou usando uma serra, certo? Vamos dar uma olhada.#$b#Receio que sua 'namorada' precise sair enquanto eu te examino.\"/question fork1 \"O quê você responde?#Está tudo bem, ela pode ficar.#Uh, ela não é minha namorada. De qualquer forma, ele está certo. Você se importaria de sair Robin?#Uh, nós não estamos, hum, bem... Tudo bem se ela ficar -- se ela quiser, claro.\"/fork rejectHospitalRam/speak Harvey \"Oh, desculpe. *risos*$h\"/speak Harvey \"Coloquei um anti-séptico no seu corte. E você parece estar em dia com suas vacinas, então apenas mantenha um curativo e você ficará bem.$0\"/faceDirection Harvey 2/pause 700/faceDirection Harvey 3/question fork1 \"Então, o que aconteceu?#Eu estava brincando com a serra. Foi minha culpa, doutor.#Foi a Robin quem fez isso comigo! É tudo culpa dela!#Ninguém tem culpa, doutor. Acidentes acontecem.\"/fork blameRam/speak Harvey \"Ok, você parece bem, então você está livre para ir. Eu sugiro que você tenha mais cuidado com ferramentas elétricas.#$b#Se precisar de mais ajuda médica, é só marcar uma consulta!$h\"/move Harvey 0 1 2/move Harvey -5 0 3/move Harvey 0 5 0/doAction 10 13/move Harvey 0 8 2/warp Harvey -30 -30 0/move Ram 0 -2 3/speak Ram \"Estou feliz que você esteja bem, @. Eu estava muito preocupada. Eu vou te acompanhar até sua casa.\"/move farmer 0 1 2/move farmer -4 0 3/move farmer 0 5 0/move farmer 0 7 0/warp farmer -25 -25/move Ram 0 1 2/move Ram -5 0 3/move Ram 0 6 2/emote Ram 28/pause 2400/emote Ram 20/pause 200/move Ram 0 7 2/warp Ram -20 -20/fade fadeout/end",
+				"nohelpRam": "speak Ram \"Certo, até mais tarde!$1\"/positionOffset farmer 0 -5/move farmer 7 0 1 false/move farmer 0 10 2 false/warp farmer -30 -30/pause 200/fade fadeout/end",
+				"noforgiveRam": "move farmer 3 0 1/move farmer 0 10 2/warp farmer -30 -30/emote Ram 28/fade fadeout/end"
+			}
+		},
+		{
+			"LogName": "Ram8HeartHospitalForkCorrected",
+			"Action": "EditData",
+			"Target": "Data/Events/Hospital",
+			"Entries": {
+				"rejectHospitalRam": "speak Ram \"Certo, me avise se houver algo que eu possa fazer.\"/move Ram 0 -1 0/move Ram -5 0 3/move Ram 0 5 2/doAction 10 13/move Ram 0 7 2/warp Ram -30 -30/speak Harvey \"%Além de um pequeno corte, você está ileso.\"/fade fadeout/end",
+				"blameRam": "emote Ram 28/speak Harvey \"Se isso for verdade, sugiro que você mantenha distância dela, @. Deixe-me saber se você tiver quaisquer outros problemas, caso contrário, você pode ir.\"/fade fadeout/end"
+			}
+		},
+		// Ram8HeartHospitalForkCorrected was taken from the user "theminigame" on Nexus who reported this issue with a solution to fix it.
+		{
+			"LogName": "Ram10Heart",
+			"Action": "EditData",
+			"Target": "Data/Events/Mountain",
+			"Entries": {
+				"336475/f Ram 2500/t 1800 2300": "starshoot/15 10/Ram 15 10 2 farmer 0 13 1/skippable/move farmer 15 0 1/move farmer 0 -1 0/pause 200/speak Ram \"Oi, @! Eu sei que está um pouco frio lá fora, mas não há nada como estar nas montanhas à noite.#$b#Já faz um tempo que quero te mostrar como que é.#$b#Não se preocupe, vou acender uma fogueira para não morrermos congelados.\"/addBigProp 15 11 146/addLantern 0 15 11 1/pause 2400/doAction 15 11/pause 20/speak Ram \"Aqui vamos nós.\"/pause 200/move farmer -1 0 3/move farmer 0 -2 0/move farmer 0 0 1/move Ram 0 0 3/pause 2400/speak Ram \"Se você ficar tão perto, não sei se precisaremos de uma fogueira para nos mantermos aquecidos.$9\"/move Ram 1 0 3/speak Ram \"Depois do meu divórcio, eu não achava que fosse possível amar novamente.$2#$b#E então você se mudou para a cidade.$1#$b#A maneira como você cuidou de sua fazenda me impressionou. E quando você não precisava de nenhum trabalho em sua fazenda, você ainda vinha, mesmo que apenas para dizer oi.$0\"/move Ram -1 0 3/speak Ram \"*segura as mãos* Você dançou comigo na floresta. Você me confortou quando eu estava tendo problemas com Sebastian.#$b#E você quase me deu sua mão quando tentou me ajudar com meu projeto de marcenaria.\"/pause 20/faceDirection Ram 1 false/faceDirection Ram 3 false/speak Ram \"Eu te amo, @.$7\"/pause 200/question fork1 \"Como você se sente?#Eu também te amo.#Eu acho que você não entendeu direito. Eu só quero ser seu amigo.\"/fork rejectRam/positionOffset farmer 10 0/positionOffset Ram 0 -4/animate Ram true false 5000 25/animate farmer false false 5000 101/pause 2400/stopAnimation farmer/move Ram 1 0 3/speak Ram \"Acho que isso é o começo de algo grande!$1\"/speak Ram \"Aqui, tome um pouco de chocolate. Vou pegar alguns marshmallows para assar também.\"/pause 2400/question null \"Tem certeza que quer ficar comigo? Uma mãe solteira com 2 filhos e 2 casamentos.#Claro! Acho você incrível!#Sim. Você é incrível e linda. Faremos uma, grande, misturada e feliz família!\"/playMusic musicboxsong/speak Ram \"...$7\"/move farmer 1 0 1/positionOffset farmer 10 0/positionOffset Ram 0 -2/animate Ram true true 5000 25/animate farmer false true 5000 101/pause 2400/fade fadeout/end",
+				"rejectRam": "stopMusic/speak Ram \"Oh, me desculpe. Uh... Vou indo então. Desculpa...\"/faceDirection Ram 1/move Ram 1 0 1/move Ram 0 2 2/move Ram -11 0 3/move Ram 0 5 2/pause 200/faceDirection Ram 0/pause 1000/faceDirection Ram 2/pause 100/faceDirection farmer 2/emote Ram 28/pause 1000/move Ram 0 10 2/fade fadeout/end"
+			}
+		},
+		{
+			"LogName": "Robin 14 Heart Event",
+			"Action": "EditData",
+			"Target": "Data/Events/Beach",
+			"Entries": {
+				"32391290/f Ram 3500/t 600 1800/w sunny": "none/47 24/farmer 47 24 2 Maru 47 11 2 Sebastian 45 11 2 Ram 47 10 2/skippable/positionOffset farmer 0 -12/move Maru 0 12 2/faceDirection farmer 0 false/speak Maru \"Aproveitando a brisa do mar, @?\"/faceDirection farmer 2 false/pause 1600/faceDirection farmer 0 false/pause 500/speak Maru \"Mamãe escolheu um bom dia para um piquenique, não foi?\"/pause 800/faceDirection farmer 2 false/move Maru -1 0 1/move Maru 0 1 2/speak Maru \"Quando eu era criança, queria construir um carro anfíbio e explorar o que havia no fundo do oceano.#$b#Parece bobo agora que estou mais velha.$s\"/question fork2 \"#Não deixe que seus sonhos sejam sonhos Maru!#Não é uma ideia boba. Você é uma inventora incrível. Eu não me surpreenderia se você construísse um amanhã.#Crianças são engraçadas, eu acho.\"/fork Maru_Mean/friendship Maru 250/speak Maru \"Obrigada.#$b#Mas agora tenho outros sonhos. Há muito na Vila Pelicanos para explorar.#$b#E se você continuar insistindo em entrar nas minas, terei que criar alguns dispositivos para garantir que você chegue em casa com segurança.$h\"/move Sebastian 0 13 2/pause 500/animate Sebastian true true 1000 16 21 22/pause 3000/speak Maru \"*tosse*#$b#Apaga isso Sebastian!$a\"/stopAnimation Sebastian 14/pause 500/faceDirection Sebastian 1/speak Sebastian \"Desculpa.$a\"/speak Maru \"Por que você se deu ao trabalho de aparecer se tudo que você vai fazer é fumar?$a\"/speak Sebastian \"Eu não sei. Mamãe me pediu, então eu acho que...$2\"/speak Maru \"E quando foi a última vez que você se importou com alguma coisa?$a\"/faceDirection Sebastian 2/pause 500/resetVariable/question fork2 \"#Ele veio, não foi, Maru? E ele é... fami... De qualquer forma, sua mãe queria que estivessemos aqui.#Seja legal, Maru.#...\"/fork sayNothing/friendship Sebastian 250/speak Sebastian \"...$2\"/speak Maru \"...$2\"/speak Sebastian \"...$0\"/move Ram 0 13 2/move Ram 1 0 1/move Ram 0 1 2/pause 500/faceDirection Ram 3/faceDirection farmer 1 false/positionOffset farmer 10 0/animate farmer false true 1000 101/animate Ram true true 1000 25/pause 1000/stopAnimation farmer 4/stopAnimation Ram 12/pause 500/faceDirection farmer 2 false/faceDirection Ram 2/pause 500/speak Ram \"Obrigada a todos por terem vindo.$6\"/pause 500/speak Ram \"Eu trouxe a comida, então vamos nos preparar, certo?\"/playMusic SettlingIn/move Ram 0 -2 0/move Ram -1 0 3/move Ram 0 -3 0/move Ram 1 0 2/viewport move 5 -5 500/move farmer 3 0 1/move farmer 0 -5 0/move farmer -1 0 2/move Maru 0 -4 0/move Maru 1 0 1/move Sebastian 5 0 1/move Sebastian 0 -4 3/pause 800/textAboveHead Sebastian \"Você quer meus dentes-de-leão, Maru?\"/pause 3000/emote Maru 20/pause 500/emote Ram 32/pause 500/fade fadeout/globalFadeToClear 0.005/pause 300/speak Maru \"Essa foi uma excelente refeição!$h#$b#Você mesma fez, mãe?\"/pause 500/speak Sebastian \"Confesso que estava gostoso.$4\"/speak Ram \"Obrigada pessoal.$1#$b#Eu posso ter feito isso, mas @ foi quem plantou tudo isso.$n\"/pause 1500/speak Sebastian \"Então, por que você queria que nos reuníssemos aqui?\"/speak Ram \"Somos uma família, Tião. Eu queria que nós começássemos a agir como uma.#$b#Isso é pedir muito?$2\"/speak Sebastian \"Bem...\"/pause 1000/resetVariable/question fork1 \"Você tem 4 opções para escolher. Use 'Próxima Opção' para ver as outras opções.#Pegue um tomate cereja e jogue em Sebastian#Próxima Opção\"/fork rejectTomato/playMusic Tropical Jam/playSound coin/shake Sebastian 500/speak Sebastian \"Porquê você fez isso?$a\"/speak Maru \"*Joga o último tomate cereja em Sebastian*$h\"/playSound coin/jump Sebastian 2/pause 300/speak Sebastian \"Agora você vai pagar por isso!\"/emote Sebastian 16/emote Maru 32/pause 500/move Maru 0 5 1/move Sebastian 0 5 3/pause 300/move Maru 1 0 1/move Sebastian -1 0 3/playSound slosh/shake Maru 500/speak Sebastian \"*Joga água em Maru*$h\"/pause 300/playSound slosh/shake Sebastian 500/speak Maru \"Haha! Tome isso!$h\"/pause 300/positionOffset Ram 20 0/speak Ram \"*segura sua mão*$1\"/faceDirection Sebastian 0/speak Sebastian \"*Pega um tomate cereja escondido no bolso e joga*$h\"/playSound coin/jump farmer 2/faceDirection Sebastian 3/move farmer 2 0 2/move farmer 0 6 3/faceDirection Sebastian 1/move Ram 3 0 2/move Ram 0 5 3/speak Ram \"Vamos nos unir, @!$1\"/move Maru 0 -1 1/move Maru 1 0 2/emote Maru 8/speak Sebastian \"Vamos mana, vamos dar a eles tudo o que temos!$h^Vamos mana, vamos dar a elas tudo o que temos!$h\"/faceDirection Maru 1/emote Maru 32/emote Sebastian 32/speak Ram \"Nós vamos ensinar àqueles dois quem é que manda!$1\"/emote Ram 32/emote farmer 32/pause 800/message \"Depois de um longo dia, é hora de ir para casa e se secar.\"/fade fadeout/end",
+				"sayNothing": "playMusic desolate/speak Sebastian \"Eu acho que isso foi um erro.$a#$b#Estou indo embora.$n\"/pause 500/speak Maru \"...\"/move Ram 0 2 2/faceDirection Sebastian 0/emote Sebastian 40/faceDirection Sebastian 2/speak Sebastian \"*Resmungando* Acho que vou ficar um pouco.\"/move Ram 0 11 2/move Ram 1 0 1/move Ram 0 1 2/pause 500/faceDirection Ram 3/faceDirection farmer 1 false/positionOffset farmer 10 0/animate farmer false true 1000 101/animate Ram true true 1000 25/pause 1000/stopAnimation farmer 4/stopAnimation Ram 12/pause 500/faceDirection farmer 2 false/faceDirection Ram 2/pause 500/speak Ram \"Obrigada a todos por terem vindo.$6\"/pause 500/speak Ram \"Eu trouxe a comida, então vamos nos preparar, certo?\"/playMusic SettlingIn/move Ram 0 -2 0/move Ram -1 0 3/move Ram 0 -3 0/move Ram 1 0 2/viewport move 5 -5 500/move farmer 3 0 1/move farmer 0 -5 0/move farmer -1 0 2/move Maru 0 -4 0/move Maru 1 0 1/move Sebastian 5 0 1/move Sebastian 0 -4 3/pause 800/textAboveHead Sebastian \"Você quer meus dentes-de-leão, Maru?\"/pause 3000/emote Maru 20/pause 500/emote Ram 32/pause 500/fade fadeout/globalFadeToClear 0.005/pause 300/speak Maru \"Essa foi uma excelente refeição!$h#$b#Você mesma fez, mãe?\"/pause 500/speak Sebastian \"Confesso que estava gostoso.$4\"/speak Ram \"Obrigada pessoal.$1#$b#Eu posso ter feito isso, mas @ foi quem plantou tudo isso.$n\"/pause 1500/speak Sebastian \"Então, por que você queria que nos reuníssemos aqui?\"/speak Ram \"Somos uma família, Tião. Eu queria que nós começássemos a agir como uma.#$b#Isso é pedir muito?$2\"/speak Sebastian \"Bem...\"/pause 1000/resetVariable/question fork1 \"Você tem 4 opções para escolher. Use 'Próxima Opção' para ver as outras opções.#Pegue um tomate cereja e jogue em Sebastian#Próxima Opção\"/fork rejectTomato/playMusic Tropical Jam/playSound coin/shake Sebastian 500/speak Sebastian \"Porquê você fez isso?$a\"/speak Maru \"*Joga o último tomate cereja em Sebastian*$h\"/playSound coin/jump Sebastian 2/pause 300/speak Sebastian \"Agora você vai pagar por isso!\"/emote Sebastian 16/emote Maru 32/pause 500/move Maru 0 5 1/move Sebastian 0 5 3/pause 300/move Maru 1 0 1/move Sebastian -1 0 3/playSound slosh/shake Maru 500/speak Sebastian \"*Joga água em Maru*$h\"/pause 300/playSound slosh/shake Sebastian 500/speak Maru \"Haha! Tome isso!$h\"/pause 300/positionOffset Ram 20 0/speak Ram \"*segura sua mão*$1\"/faceDirection Sebastian 0/speak Sebastian \"*Pega um tomate cereja escondido no bolso e joga*$h\"/playSound coin/jump farmer 2/faceDirection Sebastian 3/move farmer 2 0 2/move farmer 0 6 3/faceDirection Sebastian 1/move Ram 3 0 2/move Ram 0 5 3/speak Ram \"Vamos nos unir, @!$1\"/move Maru 0 -1 1/move Maru 1 0 2/emote Maru 8/speak Sebastian \"Vamos mana, vamos dar a eles tudo o que temos!$h^Vamos mana, vamos dar a elas tudo o que temos!$h\"/faceDirection Maru 1/emote Maru 32/emote Sebastian 32/speak Ram \"Nós vamos ensinar àqueles dois quem é que manda!$1\"/emote Ram 32/emote farmer 32/pause 800/message \"Depois de um longo dia, é hora de ir para casa e se secar.\"/fade fadeout/end",
+				"Maru_Mean": "playMusic desolate/speak Maru \"Sim, apenas um sonho bobo.$s#$b#*suspiro*#$b#Acho que só temos que esperar a mamãe aparecer agora.\"/pause 500/move Sebastian 0 13 2/pause 500/animate Sebastian true true 1000 16 21 22/pause 3000/speak Maru \"*tosse*#$b#Apaga isso Sebastian!$a\"/stopAnimation Sebastian 14/pause 500/faceDirection Sebastian 1/speak Sebastian \"Desculpa.$a\"/speak Maru \"Por que você se deu ao trabalho de aparecer se tudo que você vai fazer é fumar?$a\"/speak Sebastian \"Eu não sei. Mamãe me pediu, então eu acho que...$2\"/speak Maru \"E quando foi a última vez que você se importou com alguma coisa?$a\"/faceDirection Sebastian 2/pause 500/resetVariable/question fork2 \"#Ele veio, não foi, Maru? E ele é... fami... De qualquer forma, sua mãe queria que estivessemos aqui.#Seja legal, Maru.#...\"/fork sayNothing/friendship Sebastian 250/speak Sebastian \"...$2\"/speak Maru \"...$2\"/speak Sebastian \"...$0\"/move Ram 0 13 2/move Ram 1 0 1/move Ram 0 1 2/pause 500/faceDirection Ram 3/faceDirection farmer 1 false/positionOffset farmer 10 0/animate farmer false true 1000 101/animate Ram true true 1000 25/pause 1000/stopAnimation farmer 4/stopAnimation Ram 12/pause 500/faceDirection farmer 2 false/faceDirection Ram 2/pause 500/speak Ram \"Obrigada a todos por terem vindo.$6\"/pause 500/speak Ram \"Eu trouxe a comida, então vamos nos preparar, certo?\"/playMusic SettlingIn/move Ram 0 -2 0/move Ram -1 0 3/move Ram 0 -3 0/move Ram 1 0 2/viewport move 5 -5 500/move farmer 3 0 1/move farmer 0 -5 0/move farmer -1 0 2/move Maru 0 -4 0/move Maru 1 0 1/move Sebastian 5 0 1/move Sebastian 0 -4 3/pause 800/textAboveHead Sebastian \"Você quer meus dentes-de-leão, Maru?\"/pause 3000/emote Maru 20/pause 500/emote Ram 32/pause 500/fade fadeout/globalFadeToClear 0.005/pause 300/speak Maru \"Essa foi uma excelente refeição!$h#$b#Você mesma fez, mãe?\"/pause 500/speak Sebastian \"Confesso que estava gostoso.$4\"/speak Ram \"Obrigada pessoal.$1#$b#Eu posso ter feito isso, mas @ foi quem plantou tudo isso.$n\"/pause 1500/speak Sebastian \"Então, por que você queria que nos reuníssemos aqui?\"/speak Ram \"Somos uma família, Tião. Eu queria que nós começássemos a agir como uma.#$b#Isso é pedir muito?$2\"/speak Sebastian \"Bem...\"/pause 1000/resetVariable/question fork1 \"Você tem 4 opções para escolher. Use 'Próxima Opção' para ver as outras opções.#Pegue um tomate cereja e jogue em Sebastian#Próxima Opção\"/fork rejectTomato/playMusic Tropical Jam/playSound coin/shake Sebastian 500/speak Sebastian \"Porquê você fez isso?$a\"/speak Maru \"*Joga o último tomate cereja em Sebastian*$h\"/playSound coin/jump Sebastian 2/pause 300/speak Sebastian \"Agora você vai pagar por isso!\"/emote Sebastian 16/emote Maru 32/pause 500/move Maru 0 5 1/move Sebastian 0 5 3/pause 300/move Maru 1 0 1/move Sebastian -1 0 3/playSound slosh/shake Maru 500/speak Sebastian \"*Joga água em Maru*$h\"/pause 300/playSound slosh/shake Sebastian 500/speak Maru \"Haha! Tome isso!$h\"/pause 300/positionOffset Ram 20 0/speak Ram \"*segura sua mão*$1\"/faceDirection Sebastian 0/speak Sebastian \"*Pega um tomate cereja escondido no bolso e joga*$h\"/playSound coin/jump farmer 2/faceDirection Sebastian 3/move farmer 2 0 2/move farmer 0 6 3/faceDirection Sebastian 1/move Ram 3 0 2/move Ram 0 5 3/speak Ram \"Vamos nos unir, @!$1\"/move Maru 0 -1 1/move Maru 1 0 2/emote Maru 8/speak Sebastian \"Vamos mana, vamos dar a eles tudo o que temos!$h^Vamos mana, vamos dar a elas tudo o que temos!$h\"/faceDirection Maru 1/emote Maru 32/emote Sebastian 32/speak Ram \"Nós vamos ensinar àqueles dois quem é que manda!$1\"/emote Ram 32/emote farmer 32/pause 800/message \"Depois de um longo dia, é hora de ir para casa e se secar.\"/fade fadeout/end",
+				"rejectTomato": "playMusic desolate/stopMusic/pause 500/resetVariable/question fork1 \"#Acho que todos podemos concordar que estamos aqui porque amamos sua mãe.#Próxima Opção\"/fork rejectDiplomacy/playMusic Cavern/speak Sebastian \"Bem, hmm...$4\"/speak Ram \"Tudo bem,Tião. Você não precisa falar.#$b#Mas eu amo muito vocês dois e @.$9\"/pause 1000/speak Maru \"Eu te amo, mãe. E você também não é tão ruim, @.\"/emote Maru 20/speak Sebastian \"De qualquer forma, obrigado pela comida.\"/pause 300/speak Sebastian \"Vamos, Maru. Eu te acompanho até em casa.\"/shake Maru 500/emote Maru 20/move Maru -7 0 3/move Maru 0 -13 0/move Sebastian 0 2 2/move Sebastian -10 0 3/move Sebastian 0 -3 0/pause 1000/faceDirection Sebastian 1/speak Sebastian \"Cuide bem da mamãe, @.$a\"/pause 2000/speak Sebastian \"Contanto que você a mantenha sorrindo como hoje, então acho que Maru estava certa.$4\"/pause 500/faceDirection Sebastian 0/pause 500/move Sebastian 0 -11 0/emote farmer 20/faceDirection farmer 3 false/faceDirection Ram 1/speak Ram \"Isso foi melhor do que o esperado.$7\"/pause 800/positionOffset Ram 20 -2/animate farmer true true 2000 101/animate Ram false true 2000 25/pause 4000/positionOffset Ram -20 2/stopAnimation Ram 4/stopAnimation farmer/speak Ram \"Eu te amo muito. Mais do que você poderia imaginar, @.$7\"/pause 500/speak Ram \"Vamos para casa, @.$9\"/move Ram -1 0 3/pause 1000/faceDirection Ram 1/speak Ram \"O que há de errado?\"/move farmer -1 0 3/emote farmer 40/question null \"#As crianças foram para casa. Ninguém mais está por perto. Talvez você e eu devêssemos ficar aqui um pouco mais.#Eu sabia, desde o primeiro dia que me mudei para cá, que você era única. Eu te amo, Robin.#Hoje foi legal. É... uma pena que tenha que acabar tão cedo.#...\"/positionOffset farmer -15 2/animate farmer true true 2000 101/animate Ram false true 2000 25/pause 3000/fade fadeout/end",
+				"rejectDiplomacy": "playMusic desolate/stopMusic/resetVariable/question fork1 \"#Segure a mão de Robin#Próxima Opção\"/fork rejectHand/playMusic desolate/speak Ram \"Se você não quer estar aqui-$2\"/speak Maru \"Não é isso, certo, Sebastian?$2\"/speak Sebastian \"Você não entendeu, Maru. Você nunca teve dois padrastos antes.$a^Você não entendeu, Maru. Você nunca teve uma madrasta antes.$a\"/speak Maru \"...$2\"/pause 800/speak Sebastian \"Eu pensei que @ era apenas um novo vizinho.^Eu pensei que @ era apenas uma nova vizinha.#$b#E agora ele é meu padrasto. É estranho, certo, mana?^E agora ela é minha madrasta. É estranho, né, mana?\"/emote Maru 20/emote Maru 28/speak Maru \"É estranho, mas...#$b#Mas você quase nunca me chamou de 'mana' a não ser agora, quando quer que eu concorde com você. E somos parentes de sangue.$a#$b#Então eu acho que o problema está em você, irmão.\"/emote Sebastian 12/move Sebastian 0 2 2/move Sebastian -10 0 3/move Sebastian 0 -4 0/emote farmer 28/move farmer 0 -1 3/move farmer -8 0 3/faceDirection Sebastian 1/resetVariable/question fork1 \"Você tem 3 opções para escolher. Use 'Próxima Opção' para ver as outras opções.#Sua irmã e sua mãe te amam, Sebastian. Não seja assim. Volte e vamos comer alguma sobremesa.#Próxima Opção\"/fork SebWhine2/pause 1000/move farmer 8 0 2/move farmer 0 1 2/emote farmer 28/positionOffset Ram 15 0/speak Ram \"*Segura a mão$2*\"/emote Sebastian 28/move Sebastian 0 4 2/move Sebastian 10 0 1/move Sebastian 0 -2 3/pause 1000/speak Sebastian \"Peço desculpa a vocês.$s\"/emote farmer 32/emote Ram 32/emote Maru 32/pause 2000/emote Sebastian 32/pause 500/speak Sebastian \"Cadê a sobremesa, @?$4\"/speak Ram \"Sobremesa? Do que ela está falando, querido?^Sobremesa? Do que ela está falando, querida?\"/speak Maru \"É torta de ruibarbo? Certo?$4\"/emote Maru 16/emote farmer 60/question null \"#Desculpa, Maru, a torta era uma mentira.#Umm...\"/stopMusic/speak Maru \"Não!$5\"/shake Maru 500/playMusic playful/move Sebastian 0 2 3/move Sebastian -4 0 0/move Sebastian 0 -2 1/speak Sebastian \"*segura a irmã*$2\"/pause 800/speak Sebastian \"Acho que minha irmã precisa de alguns doces imediatamente! Ou ela pode enlouquecer.$1\"/speak Ram \"O que nós faremos, @?\"/question null \"#Ok, vamos pegar uma sobremesa!#Acho que tenho ruibarbo guardado em casa. Vamos fazer uma torta!\"/speak Maru \"Isso!$1\"/emote Maru 20/faceDirection Ram 1/faceDirection farmer 3 false/speak Ram \"Eu te amo, @.\"/positionOffset Ram 0 -7/animate farmer true true 2000 101/animate Ram false true 2000 25/pause 3000/fade fadeout/end",
+				"SebWhine": "playMusic desolate/stopMusic/resetVariable/question fork1 \"#Sua irmã e sua mãe te amam, Sebastian. Não seja assim. Volte e vamos comer alguma sobremesa.#Próxima Opção\"/fork SebWhine2/playMusic desolate/pause 1000/move farmer 8 0 2/move farmer 0 1 2/emote farmer 28/positionOffset Ram 15 0/speak Ram \"*Segura a mão$2*\"/emote Sebastian 28/move Sebastian 0 4 2/move Sebastian 10 0 1/move Sebastian 0 -2 3/pause 1000/speak Sebastian \"Peço desculpa a vocês.$s\"/emote farmer 32/emote Ram 32/emote Maru 32/pause 2000/emote Sebastian 32/pause 500/speak Sebastian \"Cadê a sobremesa, @?$4\"/speak Ram \"Sobremesa? Do que ela está falando, querido?^Sobremesa? Do que ela está falando, querida?\"/speak Maru \"É torta de ruibarbo? Certo?$4\"/emote Maru 16/emote farmer 60/question null \"#Desculpa, Maru, a torta era uma mentira.#Umm...\"/stopMusic/speak Maru \"Não!$5\"/shake Maru 500/playMusic playful/move Sebastian 0 2 3/move Sebastian -4 0 0/move Sebastian 0 -2 1/speak Sebastian \"*segura a irmã*$2\"/pause 800/speak Sebastian \"Acho que minha irmã precisa de alguns doces imediatamente! Ou ela pode enlouquecer.$1\"/speak Ram \"O que nós faremos, @?\"/question null \"#Ok, vamos pegar uma sobremesa!#Acho que tenho ruibarbo guardado em casa. Vamos fazer uma torta!\"/speak Maru \"Isso!$1\"/emote Maru 20/faceDirection Ram 1/faceDirection farmer 3 false/speak Ram \"Eu te amo, @.\"/positionOffset Ram 0 -7/animate farmer true true 2000 101/animate Ram false true 2000 25/pause 3000/fade fadeout/end",
+				"SebWhine2": "playMusic desolate/stopMusic/resetVariable/question fork1 \"#Você não precisa gostar de mim, mas não continue desrespeitando sua... Por favor, seja mais gentil com sua mãe e irmã.#Próxima Opção\"/fork SebWhine3/playMusic desolate/move farmer 8 0 2/move farmer 0 1 2/emote farmer 28/positionOffset Ram 15 0/speak Ram \"*Segura a mão$2*\"/emote Sebastian 28/move Sebastian 0 4 2/move Sebastian 10 0 1/move Sebastian 0 -2 3/pause 1000/speak Sebastian \"Peço desculpa a vocês.$s\"/emote farmer 32/emote Ram 32/emote Maru 32/pause 2000/emote Sebastian 32/pause 500/speak Ram \"Chega dessa conversa séria. Vamos nos divertir!$1\"/playMusic Tropical Jam/pause 1000/speak Ram \"Você trouxe a bola de vôlei, @?\"/emote farmer 36/emote farmer 28/speak Maru \"Talvez seja melhor que você tenha esquecido, @.$3#$b#Acho que deixei algumas pistolas de água em algum lugar aqui, eu modifiquei com o Elliot no verão passado.#$b#Você achará isso muito mais divertido do que sua pistola de água comum.$1\"/speak Sebastian \"Você nunca deixa de me surpreender, Maru.$1\"/shake Sebastian 250/emote Sebastian 60/speak Sebastian \"Você faz algumas invenções divertidas.$4\"/emote Maru 20/pause 500/move Maru 0 -9 0/move Maru 2 0 0/faceDirection Maru 0/warp Maru -30 -30/move Sebastian 0 -9 0/move Sebastian -1 0 0/faceDirection Sebastian 0/warp Sebastian -25 -25/faceDirection Ram 1/faceDirection farmer 3 false/speak Ram \"Eu não vejo o Sebastian cumprimentá-la assim desde que eles eram mais jovens.#$b#O que exatamente há em você que é tão... tão... adorável?$7\"/positionOffset Ram 0 -7/animate farmer true false 2000 101/animate Ram false false 2000 25/pause 4000/speak Ram \"Eu te amo, @. E eu estou tão feliz que você faz parte da minha família!$9\"/warp Sebastian 49 11/move Sebastian 1 0 2/move Sebastian 0 2 2/warp Maru 49 11/move Maru 1 0 2/move Sebastian 0 4 0/playSound pullItemFromWater/speak Sebastian \"Maru, Não!$5#$b#Quem disse que você pode começar a atirar?$2#$b#Mamãe e @ ainda nem pegaram as armas.$4\"/move Maru 1 0 2/move Maru 0 3 2/move Sebastian 0 6 3/move Sebastian -2 0 1/move Maru 0 9 3/speak Maru \"Eu vou vencer a batalha de hoje!$1\"/faceDirection Ram 2/faceDirection farmer 2 false/speak Sebastian \"Espera. Que batalha? Eu pensei que nós estávamos-\"/speak Maru \"*Dispara água*$1\"/playSound pullItemFromWater/shake Sebastian 300/speak Sebastian \"Tudo bem, então tome isso!$1\"/playSound pullItemFromWater/shake Maru 500/speak Maru \"Tiro de sorte!$5\"/emote Ram 20/emote farmer 20/pause 800/fade fadeout/end",
+				"SebWhine3": "playMusic desolate/stopMusic/resetVariable/question fork1 \"#...#Voltar para a primeira opção\"/fork SebWhine/move Sebastian 0 -10 0/move farmer 8 0 2/move farmer 0 1 2/emote farmer 28/speak Maru \"Esse é o meu irmão.$2\"/pause 500/speak Ram \"Está tudo bem, @. Tenho certeza que ele virá um dia.$2#$b#Vamos tentar aproveitar o resto do nosso tempo juntos, certo, Maru?\"/pause 500/speak Maru \"Sim.\"/pause 1000/speak Maru \"A propósito, eu contei a vocês dois sobre minha mais nova invenção?$3^A propósito, eu contei a vocês duas sobre minha mais nova invenção?$3#$b#Papai quase teve um colapso quando viu o que eu tinha feito no meu quarto enquanto eu ainda estava concluindo. De qualquer forma...$0\"/emote Ram 20/emote farmer 20/fade fadeout/end",
+				"rejectHand": "playMusic desolate/stopMusic/pause 500/resetVariable/question fork1 \"#...#Voltar para a primeira opção\"/fork rejectSilence/pause 500/speak Ram \"Está bem.$3\"/emote Maru 28/speak Ram \"Vamos acabar com esta excursão.$3#$b#Tião, pelo menos leve sua irmã para casa.\"/speak Sebastian \"Sim, tudo bem.$2\"/emote Maru 28/move Maru -7 0 3/move Maru 0 -13 2/move Sebastian 0 2 2/move Sebastian -10 0 3/move Sebastian 0 -8 0/pause 1000/faceDirection Sebastian 1/emote Sebastian 28/move Sebastian 0 -6 0/pause 500/speak Ram \"Vamos, @. Isso foi um erro.$2\"/emote farmer 28/fade fadeout/end",
+				"rejectSilence": "playMusic desolate/stopMusic/pause 500/resetVariable/question fork1 \"#Pegue um tomate cereja e jogue em Sebastian.#Próxima Opção\"/fork rejectTomato/playMusic Tropical Jam/playSound coin/shake Sebastian 500/speak Sebastian \"Porquê você fez isso?$a\"/speak Maru \"*Joga o último tomate cereja em Sebastian*$h\"/playSound coin/jump Sebastian 2/pause 300/speak Sebastian \"Agora você vai pagar por isso!\"/emote Sebastian 16/emote Maru 32/pause 500/move Maru 0 5 1/move Sebastian 0 5 3/pause 300/move Maru 1 0 1/move Sebastian -1 0 3/playSound slosh/shake Maru 500/speak Sebastian \"*Joga água em Maru*$h\"/pause 300/playSound slosh/shake Sebastian 500/speak Maru \"Haha! Tome isso!$h\"/pause 300/positionOffset Ram 20 0/speak Ram \"*segura sua mão*$1\"/faceDirection Sebastian 0/speak Sebastian \"*Pega um tomate cereja escondido no bolso e joga*$h\"/playSound coin/jump farmer 2/faceDirection Sebastian 3/move farmer 2 0 2/move farmer 0 6 3/faceDirection Sebastian 1/move Ram 3 0 2/move Ram 0 5 3/speak Ram \"Vamos nos unir, @!$1\"/move Maru 0 -1 1/move Maru 1 0 2/emote Maru 8/speak Sebastian \"Vamos mana, vamos dar a eles tudo o que temos!$h^Vamos mana, vamos dar a elas tudo o que temos!$h\"/faceDirection Maru 1/emote Maru 32/emote Sebastian 32/speak Ram \"Nós vamos ensinar àqueles dois quem é que manda!$1\"/emote Ram 32/emote farmer 32/pause 800/message \"Depois de um longo dia, é hora de ir para casa e se secar.\"/fade fadeout/end"
+			}
+		},
+		{
+			"LogName": "Robin 14 Heart Fixed Event",
+			"Action": "EditData",
+			"Target": "Data/Events/Beach",
+			"When": {
+				"14HeartFix": "True"
+			},
+			"Entries": {
+				"32391290/f Ram 3500/t 600 1800/w sunny": "none/47 24/farmer 47 24 2 Maru 47 11 2 Sebastian 45 11 2 Ram 47 10 2/skippable/positionOffset farmer 0 -12/move Maru 0 12 2/faceDirection farmer 0 false/speak Maru \"Aproveitando a brisa do mar, @?\"/faceDirection farmer 2 false/pause 1600/faceDirection farmer 0 false/pause 500/speak Maru \"Mamãe escolheu um bom dia para um piquenique, não foi?\"/pause 800/faceDirection farmer 2 false/move Maru -1 0 1/move Maru 0 1 2/speak Maru \"Quando eu era criança, queria construir um carro anfíbio e explorar o que havia no fundo do oceano.#$b#Parece bobo agora que estou mais velha.$s\"/question fork2 \"#Não deixe que seus sonhos sejam sonhos Maru!#Não é uma ideia boba. Você é uma inventora incrível. Eu não me surpreenderia se você construísse um amanhã.#Crianças são engraçadas, eu acho.\"/fork Maru_Mean/friendship Maru 250/speak Maru \"Obrigada.#$b#Mas agora tenho outros sonhos. Há muito na Vila Pelicanos para explorar.#$b#E se você continuar insistindo em entrar nas minas, terei que criar alguns dispositivos para garantir que você chegue em casa com segurança.$h\"/move Sebastian 0 13 2/pause 500/animate Sebastian true true 1000 16 21 22/pause 3000/speak Maru \"*tosse*#$b#Apaga isso Sebastian!$a\"/stopAnimation Sebastian 14/pause 500/faceDirection Sebastian 1/speak Sebastian \"Desculpa.$a\"/speak Maru \"Por que você se deu ao trabalho de aparecer se tudo que você vai fazer é fumar?$a\"/speak Sebastian \"Eu não sei. Mamãe me pediu, então eu acho que...$2\"/speak Maru \"E quando foi a última vez que você se importou com alguma coisa?$a\"/faceDirection Sebastian 2/pause 500/resetVariable/question fork2 \"#Ele veio, não foi, Maru? E ele é... fami... De qualquer forma, sua mãe queria que estivessemos aqui.#Seja legal, Maru.#...\"/fork sayNothing/friendship Sebastian 250/speak Sebastian \"...$2\"/speak Maru \"...$2\"/speak Sebastian \"...$0\"/move Ram 0 13 2/move Ram 1 0 1/move Ram 0 1 2/pause 500/faceDirection Ram 3/faceDirection farmer 1 false/positionOffset farmer 10 0/animate farmer false true 1000 101/animate Ram true true 1000 25/pause 1000/stopAnimation farmer 4/stopAnimation Ram 12/pause 500/faceDirection farmer 2 false/faceDirection Ram 2/pause 500/speak Ram \"Obrigada a todos por terem vindo.$6\"/pause 500/speak Ram \"Eu trouxe a comida, então vamos nos preparar, certo?\"/playMusic SettlingIn/move Ram 0 -2 0/move Ram -1 0 3/move Ram 0 -3 0/move Ram 1 0 2/viewport move 5 -5 500/move farmer 3 0 1/move farmer 0 -5 0/move farmer -1 0 2/move Maru 0 -4 0/move Maru 1 0 1/move Sebastian 5 0 1/move Sebastian 0 -4 3/pause 800/textAboveHead Sebastian \"Você quer meus dentes-de-leão, Maru?\"/pause 3000/emote Maru 20/pause 500/emote Ram 32/pause 500/fade fadeout/globalFadeToClear 0.005/pause 300/speak Maru \"Essa foi uma excelente refeição!$h#$b#Você mesma fez, mãe?\"/pause 500/speak Sebastian \"Confesso que estava gostoso.$4\"/speak Ram \"Obrigada pessoal.$1#$b#Eu posso ter feito isso, mas @ foi quem plantou tudo isso.$n\"/pause 1500/speak Sebastian \"Então, por que você queria que nos reuníssemos aqui?\"/speak Ram \"Somos uma família, Tião. Eu queria que nós começássemos a agir como uma.#$b#Isso é pedir muito?$2\"/speak Sebastian \"Bem...\"/pause 1000/resetVariable/question fork1 \"Você tem 4 opções para escolher. Use 'Próxima Opção' para ver as outras opções.#Pegue um tomate cereja e jogue em Sebastian#Próxima Opção\"/fork rejectTomato/playMusic Tropical Jam/playSound coin/shake Sebastian 500/speak Sebastian \"Porquê você fez isso?$a\"/speak Maru \"*Joga o último tomate cereja em Sebastian*$h\"/playSound coin/jump Sebastian 2/pause 300/speak Sebastian \"Agora você vai pagar por isso!\"/emote Sebastian 16/emote Maru 32/pause 500/move Maru 0 5 1/move Sebastian 0 5 3/pause 300/move Maru 1 0 1/move Sebastian -1 0 3/playSound slosh/shake Maru 500/speak Sebastian \"*Joga água em Maru*$h\"/pause 300/playSound slosh/shake Sebastian 500/speak Maru \"Haha! Tome isso!$h\"/pause 300/positionOffset Ram 20 0/speak Ram \"*segura sua mão*$1\"/faceDirection Sebastian 0/speak Sebastian \"*Pega um tomate cereja escondido no bolso e joga*$h\"/playSound coin/jump farmer 2/faceDirection Sebastian 3/move farmer 2 0 2/move farmer 0 6 3/faceDirection Sebastian 1/move Ram 3 0 2/move Ram 0 5 3/speak Ram \"Vamos nos unir, @!$1\"/move Maru 0 -1 1/move Maru 1 0 2/emote Maru 8/speak Sebastian \"Vamos mana, vamos dar a eles tudo o que temos!$h^Vamos mana, vamos dar a elas tudo o que temos!$h\"/faceDirection Maru 1/emote Maru 32/emote Sebastian 32/speak Ram \"Nós vamos ensinar àqueles dois quem é que manda!$1\"/emote Ram 32/emote farmer 32/pause 800/message \"Depois de um longo dia, é hora de ir para casa e se secar.\"/fade fadeout/end",
+				"sayNothing": "playMusic desolate/speak Sebastian \"Eu acho que isso foi um erro.$a#$b#Estou indo embora.$n\"/pause 500/speak Maru \"...\"/move Ram 0 2 2/faceDirection Sebastian 0/emote Sebastian 40/faceDirection Sebastian 2/speak Sebastian \"*Resmungando* Acho que vou ficar um pouco.\"/move Ram 0 11 2/move Ram 1 0 1/move Ram 0 1 2/pause 500/faceDirection Ram 3/faceDirection farmer 1 false/positionOffset farmer 10 0/animate farmer false true 1000 101/animate Ram true true 1000 25/pause 1000/stopAnimation farmer 4/stopAnimation Ram 12/pause 500/faceDirection farmer 2 false/faceDirection Ram 2/pause 500/speak Ram \"Obrigada a todos por terem vindo.$6\"/pause 500/speak Ram \"Eu trouxe a comida, então vamos nos preparar, certo?\"/playMusic SettlingIn/move Ram 0 -2 0/move Ram -1 0 3/move Ram 0 -3 0/move Ram 1 0 2/viewport move 5 -5 500/move farmer 3 0 1/move farmer 0 -5 0/move farmer -1 0 2/move Maru 0 -4 0/move Maru 1 0 1/move Sebastian 5 0 1/move Sebastian 0 -4 3/pause 800/textAboveHead Sebastian \"Você quer meus dentes-de-leão, Maru?\"/pause 3000/emote Maru 20/pause 500/emote Ram 32/pause 500/fade fadeout/globalFadeToClear 0.005/pause 300/speak Maru \"Essa foi uma excelente refeição!$h#$b#Você mesma fez, mãe?\"/pause 500/speak Sebastian \"Confesso que estava gostoso.$4\"/speak Ram \"Obrigada pessoal.$1#$b#Eu posso ter feito isso, mas @ foi quem plantou tudo isso.$n\"/pause 1500/speak Sebastian \"Então, por que você queria que nos reuníssemos aqui?\"/speak Ram \"Somos uma família, Tião. Eu queria que nós começássemos a agir como uma.#$b#Isso é pedir muito?$2\"/speak Sebastian \"Bem...\"/pause 1000/resetVariable/question fork1 \"Você tem 4 opções para escolher. Use 'Próxima Opção' para ver as outras opções.#Pegue um tomate cereja e jogue em Sebastian#Próxima Opção\"/fork rejectTomato/playMusic Tropical Jam/playSound coin/shake Sebastian 500/speak Sebastian \"Porquê você fez isso?$a\"/speak Maru \"*Joga o último tomate cereja em Sebastian*$h\"/playSound coin/jump Sebastian 2/pause 300/speak Sebastian \"Agora você vai pagar por isso!\"/emote Sebastian 16/emote Maru 32/pause 500/move Maru 0 5 1/move Sebastian 0 5 3/pause 300/move Maru 1 0 1/move Sebastian -1 0 3/playSound slosh/shake Maru 500/speak Sebastian \"*Joga água em Maru*$h\"/pause 300/playSound slosh/shake Sebastian 500/speak Maru \"Haha! Tome isso!$h\"/pause 300/positionOffset Ram 20 0/speak Ram \"*segura sua mão*$1\"/faceDirection Sebastian 0/speak Sebastian \"*Pega um tomate cereja escondido no bolso e joga*$h\"/playSound coin/jump farmer 2/faceDirection Sebastian 3/move farmer 2 0 2/move farmer 0 6 3/faceDirection Sebastian 1/move Ram 3 0 2/move Ram 0 5 3/speak Ram \"Vamos nos unir, @!$1\"/move Maru 0 -1 1/move Maru 1 0 2/emote Maru 8/speak Sebastian \"Vamos mana, vamos dar a eles tudo o que temos!$h^Vamos mana, vamos dar a elas tudo o que temos!$h\"/faceDirection Maru 1/emote Maru 32/emote Sebastian 32/speak Ram \"Nós vamos ensinar àqueles dois quem é que manda!$1\"/emote Ram 32/emote farmer 32/pause 800/message \"Depois de um longo dia, é hora de ir para casa e se secar.\"/fade fadeout/end",
+				"Maru_Mean": "playMusic desolate/speak Maru \"Sim, apenas um sonho bobo.$s#$b#*suspiro*#$b#Acho que só temos que esperar a mamãe aparecer agora.\"/pause 500/move Sebastian 0 13 2/pause 500/animate Sebastian true true 1000 16 21 22/pause 3000/speak Maru \"*tosse*#$b#Apaga isso Sebastian!$a\"/stopAnimation Sebastian 14/pause 500/faceDirection Sebastian 1/speak Sebastian \"Desculpa.$a\"/speak Maru \"Por que você se deu ao trabalho de aparecer se tudo que você vai fazer é fumar?$a\"/speak Sebastian \"Eu não sei. Mamãe me pediu, então eu acho que...$2\"/speak Maru \"E quando foi a última vez que você se importou com alguma coisa?$a\"/faceDirection Sebastian 2/pause 500/resetVariable/question fork2 \"#Ele veio, não foi, Maru? E ele é... fami... De qualquer forma, sua mãe queria que estivessemos aqui.#Seja legal, Maru.#...\"/fork sayNothing/friendship Sebastian 250/speak Sebastian \"...$2\"/speak Maru \"...$2\"/speak Sebastian \"...$0\"/move Ram 0 13 2/move Ram 1 0 1/move Ram 0 1 2/pause 500/faceDirection Ram 3/faceDirection farmer 1 false/positionOffset farmer 10 0/animate farmer false true 1000 101/animate Ram true true 1000 25/pause 1000/stopAnimation farmer 4/stopAnimation Ram 12/pause 500/faceDirection farmer 2 false/faceDirection Ram 2/pause 500/speak Ram \"Obrigada a todos por terem vindo.$6\"/pause 500/speak Ram \"Eu trouxe a comida, então vamos nos preparar, certo?\"/playMusic SettlingIn/move Ram 0 -2 0/move Ram -1 0 3/move Ram 0 -3 0/move Ram 1 0 2/viewport move 5 -5 500/move farmer 3 0 1/move farmer 0 -5 0/move farmer -1 0 2/move Maru 0 -4 0/move Maru 1 0 1/move Sebastian 5 0 1/move Sebastian 0 -4 3/pause 800/textAboveHead Sebastian \"Você quer meus dentes-de-leão, Maru?\"/pause 3000/emote Maru 20/pause 500/emote Ram 32/pause 500/fade fadeout/globalFadeToClear 0.005/pause 300/speak Maru \"Essa foi uma excelente refeição!$h#$b#Você mesma fez, mãe?\"/pause 500/speak Sebastian \"Confesso que estava gostoso.$4\"/speak Ram \"Obrigada pessoal.$1#$b#Eu posso ter feito isso, mas @ foi quem plantou tudo isso.$n\"/pause 1500/speak Sebastian \"Então, por que você queria que nos reuníssemos aqui?\"/speak Ram \"Somos uma família, Tião. Eu queria que nós começássemos a agir como uma.#$b#Isso é pedir muito?$2\"/speak Sebastian \"Bem...\"/pause 1000/resetVariable/question fork1 \"Você tem 4 opções para escolher. Use 'Próxima Opção' para ver as outras opções.#Pegue um tomate cereja e jogue em Sebastian#Próxima Opção\"/fork rejectTomato/playMusic Tropical Jam/playSound coin/shake Sebastian 500/speak Sebastian \"Porquê você fez isso?$a\"/speak Maru \"*Joga o último tomate cereja em Sebastian*$h\"/playSound coin/jump Sebastian 2/pause 300/speak Sebastian \"Agora você vai pagar por isso!\"/emote Sebastian 16/emote Maru 32/pause 500/move Maru 0 5 1/move Sebastian 0 5 3/pause 300/move Maru 1 0 1/move Sebastian -1 0 3/playSound slosh/shake Maru 500/speak Sebastian \"*Joga água em Maru*$h\"/pause 300/playSound slosh/shake Sebastian 500/speak Maru \"Haha! Tome isso!$h\"/pause 300/positionOffset Ram 20 0/speak Ram \"*segura sua mão*$1\"/faceDirection Sebastian 0/speak Sebastian \"*Pega um tomate cereja escondido no bolso e joga*$h\"/playSound coin/jump farmer 2/faceDirection Sebastian 3/move farmer 2 0 2/move farmer 0 6 3/faceDirection Sebastian 1/move Ram 3 0 2/move Ram 0 5 3/speak Ram \"Vamos nos unir, @!$1\"/move Maru 0 -1 1/move Maru 1 0 2/emote Maru 8/speak Sebastian \"Vamos mana, vamos dar a eles tudo o que temos!$h^Vamos mana, vamos dar a elas tudo o que temos!$h\"/faceDirection Maru 1/emote Maru 32/emote Sebastian 32/speak Ram \"Nós vamos ensinar àqueles dois quem é que manda!$1\"/emote Ram 32/emote farmer 32/pause 800/message \"Depois de um longo dia, é hora de ir para casa e se secar.\"/fade fadeout/end",
+				"rejectTomato": "playMusic desolate/pause 500/resetVariable/question fork1 \"#Acho que todos podemos concordar que estamos aqui porque amamos sua mãe.#Próxima Opção\"/fork rejectDiplomacy/playMusic Cavern/speak Sebastian \"Bem, hmm...$4\"/speak Ram \"Tudo bem,Tião. Você não precisa falar.#$b#Mas eu amo muito vocês dois e @.$9\"/pause 1000/speak Maru \"Eu te amo, mãe. E você também não é tão ruim, @.\"/emote Maru 20/speak Sebastian \"De qualquer forma, obrigado pela comida.\"/pause 300/speak Sebastian \"Vamos, Maru. Eu te acompanho até em casa.\"/shake Maru 500/emote Maru 20/move Maru -7 0 3/move Maru 0 -13 0/move Sebastian 0 2 2/move Sebastian -10 0 3/move Sebastian 0 -3 0/pause 1000/faceDirection Sebastian 1/speak Sebastian \"Cuide bem da mamãe, @.$a\"/pause 2000/speak Sebastian \"Contanto que você a mantenha sorrindo como hoje, então acho que Maru estava certa.$4\"/pause 500/faceDirection Sebastian 0/pause 500/move Sebastian 0 -11 0/emote farmer 20/faceDirection farmer 3 false/faceDirection Ram 1/speak Ram \"Isso foi melhor do que o esperado.$7\"/pause 800/positionOffset Ram 20 -2/animate farmer true true 2000 101/animate Ram false true 2000 25/pause 4000/positionOffset Ram -20 2/stopAnimation Ram 4/stopAnimation farmer/speak Ram \"Eu te amo muito. Mais do que você poderia imaginar, @.$7\"/pause 500/speak Ram \"Vamos para casa, @.$9\"/move Ram -1 0 3/pause 1000/faceDirection Ram 1/speak Ram \"O que há de errado?\"/move farmer -1 0 3/emote farmer 40/question null \"#As crianças foram para casa. Ninguém mais está por perto. Talvez você e eu devêssemos ficar aqui um pouco mais.#Eu sabia, desde o primeiro dia que me mudei para cá, que você era única. Eu te amo, Robin.#Hoje foi legal. É... uma pena que tenha que acabar tão cedo.#...\"/positionOffset farmer -15 2/animate farmer true true 2000 101/animate Ram false true 2000 25/pause 3000/fade fadeout/end",
+				"rejectDiplomacy": "playMusic desolate/resetVariable/question fork1 \"#Segure a mão de Robin#Próxima Opção\"/fork rejectHand/playMusic desolate/speak Ram \"Se você não quer estar aqui-$2\"/speak Maru \"Não é isso, certo, Sebastian?$2\"/speak Sebastian \"Você não entendeu, Maru. Você nunca teve dois padrastos antes.$a^Você não entendeu, Maru. Você nunca teve uma madrasta antes.$a\"/speak Maru \"...$2\"/pause 800/speak Sebastian \"Eu pensei que @ era apenas um novo vizinho.^Eu pensei que @ era apenas uma nova vizinha.#$b#E agora ele é meu padrasto. É estranho, certo, mana?^E agora ela é minha madrasta. É estranho, né, mana?\"/emote Maru 20/emote Maru 28/speak Maru \"É estranho, mas...#$b#Mas você quase nunca me chamou de 'mana' a não ser agora, quando quer que eu concorde com você. E somos parentes de sangue.$a#$b#Então eu acho que o problema está em você, irmão.\"/emote Sebastian 12/move Sebastian 0 2 2/move Sebastian -10 0 3/move Sebastian 0 -4 0/emote farmer 28/move farmer 0 -1 3/move farmer -8 0 3/faceDirection Sebastian 1/resetVariable/question fork1 \"Você tem 3 opções para escolher. Use 'Próxima Opção' para ver as outras opções.#Sua irmã e sua mãe te amam, Sebastian. Não seja assim. Volte e vamos comer alguma sobremesa.#Próxima Opção\"/fork SebWhine2/pause 1000/move farmer 8 0 2/move farmer 0 1 2/emote farmer 28/positionOffset Ram 15 0/speak Ram \"*Segura a mão$2*\"/emote Sebastian 28/move Sebastian 0 4 2/move Sebastian 10 0 1/move Sebastian 0 -2 3/pause 1000/speak Sebastian \"Peço desculpa a vocês.$s\"/emote farmer 32/emote Ram 32/emote Maru 32/pause 2000/emote Sebastian 32/pause 500/speak Sebastian \"Cadê a sobremesa, @?$4\"/speak Ram \"Sobremesa? Do que ela está falando, querido?^Sobremesa? Do que ela está falando, querida?\"/speak Maru \"É torta de ruibarbo? Certo?$4\"/emote Maru 16/emote farmer 60/question null \"#Desculpa, Maru, a torta era uma mentira.#Umm...\"/stopMusic/speak Maru \"Não!$5\"/shake Maru 500/playMusic playful/move Sebastian 0 2 3/move Sebastian -4 0 0/move Sebastian 0 -2 1/speak Sebastian \"*segura a irmã*$2\"/pause 800/speak Sebastian \"Acho que minha irmã precisa de alguns doces imediatamente! Ou ela pode enlouquecer.$1\"/speak Ram \"O que nós faremos, @?\"/question null \"#Ok, vamos pegar uma sobremesa!#Acho que tenho ruibarbo guardado em casa. Vamos fazer uma torta!\"/speak Maru \"Isso!$1\"/emote Maru 20/faceDirection Ram 1/faceDirection farmer 3 false/speak Ram \"Eu te amo, @.\"/positionOffset Ram 0 -7/animate farmer true true 2000 101/animate Ram false true 2000 25/pause 3000/fade fadeout/end",
+				"SebWhine": "playMusic desolate/resetVariable/question fork1 \"#Sua irmã e sua mãe te amam, Sebastian. Não seja assim. Volte e vamos comer alguma sobremesa.#Próxima Opção\"/fork SebWhine2/playMusic desolate/pause 1000/move farmer 8 0 2/move farmer 0 1 2/emote farmer 28/positionOffset Ram 15 0/speak Ram \"*Segura a mão$2*\"/emote Sebastian 28/move Sebastian 0 4 2/move Sebastian 10 0 1/move Sebastian 0 -2 3/pause 1000/speak Sebastian \"Peço desculpa a vocês.$s\"/emote farmer 32/emote Ram 32/emote Maru 32/pause 2000/emote Sebastian 32/pause 500/speak Sebastian \"Cadê a sobremesa, @?$4\"/speak Ram \"Sobremesa? Do que ela está falando, querido?^Sobremesa? Do que ela está falando, querida?\"/speak Maru \"É torta de ruibarbo? Certo?$4\"/emote Maru 16/emote farmer 60/question null \"#Desculpa, Maru, a torta era uma mentira.#Umm...\"/stopMusic/speak Maru \"Não!$5\"/shake Maru 500/playMusic playful/move Sebastian 0 2 3/move Sebastian -4 0 0/move Sebastian 0 -2 1/speak Sebastian \"*segura a irmã*$2\"/pause 800/speak Sebastian \"Acho que minha irmã precisa de alguns doces imediatamente! Ou ela pode enlouquecer.$1\"/speak Ram \"O que nós faremos, @?\"/question null \"#Ok, vamos pegar uma sobremesa!#Acho que tenho ruibarbo guardado em casa. Vamos fazer uma torta!\"/speak Maru \"Isso!$1\"/emote Maru 20/faceDirection Ram 1/faceDirection farmer 3 false/speak Ram \"Eu te amo, @.\"/positionOffset Ram 0 -7/animate farmer true true 2000 101/animate Ram false true 2000 25/pause 3000/fade fadeout/end",
+				"SebWhine2": "playMusic desolate/resetVariable/question fork1 \"#Você não precisa gostar de mim, mas não continue desrespeitando sua... Por favor, seja mais gentil com sua mãe e irmã.#Próxima Opção\"/fork SebWhine3/playMusic desolate/move farmer 8 0 2/move farmer 0 1 2/emote farmer 28/positionOffset Ram 15 0/speak Ram \"*Segura a mão$2*\"/emote Sebastian 28/move Sebastian 0 4 2/move Sebastian 10 0 1/move Sebastian 0 -2 3/pause 1000/speak Sebastian \"Peço desculpa a vocês.$s\"/emote farmer 32/emote Ram 32/emote Maru 32/pause 2000/emote Sebastian 32/pause 500/speak Ram \"Chega dessa conversa séria. Vamos nos divertir!$1\"/playMusic Tropical Jam/pause 1000/speak Ram \"Você trouxe a bola de vôlei, @?\"/emote farmer 36/emote farmer 28/speak Maru \"Talvez seja melhor que você tenha esquecido, @.$3#$b#Acho que deixei algumas pistolas de água em algum lugar aqui, eu modifiquei com o Elliot no verão passado.#$b#Você achará isso muito mais divertido do que sua pistola de água comum.$1\"/speak Sebastian \"Você nunca deixa de me surpreender, Maru.$1\"/shake Sebastian 250/emote Sebastian 60/speak Sebastian \"Você faz algumas invenções divertidas.$4\"/emote Maru 20/pause 500/move Maru 0 -9 0/move Maru 2 0 0/faceDirection Maru 0/warp Maru -30 -30/move Sebastian 0 -9 0/move Sebastian -1 0 0/faceDirection Sebastian 0/warp Sebastian -25 -25/faceDirection Ram 1/faceDirection farmer 3 false/speak Ram \"Eu não vejo o Sebastian cumprimentá-la assim desde que eles eram mais jovens.#$b#O que exatamente há em você que é tão... tão... adorável?$7\"/positionOffset Ram 0 -7/animate farmer true false 2000 101/animate Ram false false 2000 25/pause 4000/speak Ram \"Eu te amo, @. E eu estou tão feliz que você faz parte da minha família!$9\"/warp Sebastian 49 11/move Sebastian 1 0 2/move Sebastian 0 2 2/warp Maru 49 11/move Maru 1 0 2/move Sebastian 0 4 0/playSound pullItemFromWater/speak Sebastian \"Maru, Não!$5#$b#Quem disse que você pode começar a atirar?$2#$b#Mamãe e @ ainda nem pegaram as armas.$4\"/move Maru 1 0 2/move Maru 0 3 2/move Sebastian 0 6 3/move Sebastian -2 0 1/move Maru 0 9 3/speak Maru \"Eu vou vencer a batalha de hoje!$1\"/faceDirection Ram 2/faceDirection farmer 2 false/speak Sebastian \"Espera. Que batalha? Eu pensei que nós estávamos-\"/speak Maru \"*Dispara água*$1\"/playSound pullItemFromWater/shake Sebastian 300/speak Sebastian \"Tudo bem, então tome isso!$1\"/playSound pullItemFromWater/shake Maru 500/speak Maru \"Tiro de sorte!$5\"/emote Ram 20/emote farmer 20/pause 800/fade fadeout/end",
+				"SebWhine3": "playMusic desolate/resetVariable/question fork1 \"#...#Voltar para a primeira opção\"/fork SebWhine/move Sebastian 0 -10 0/move farmer 8 0 2/move farmer 0 1 2/emote farmer 28/speak Maru \"Esse é o meu irmão.$2\"/pause 500/speak Ram \"Está tudo bem, @. Tenho certeza que ele virá um dia.$2#$b#Vamos tentar aproveitar o resto do nosso tempo juntos, certo, Maru?\"/pause 500/speak Maru \"Sim.\"/pause 1000/speak Maru \"A propósito, eu contei a vocês dois sobre minha mais nova invenção?$3^A propósito, eu contei a vocês duas sobre minha mais nova invenção?$3#$b#Papai quase teve um colapso quando viu o que eu tinha feito no meu quarto enquanto eu ainda estava concluindo. De qualquer forma...$0\"/emote Ram 20/emote farmer 20/fade fadeout/end",
+				"rejectHand": "playMusic desolate/pause 500/resetVariable/question fork1 \"#...#Voltar para a primeira opção\"/fork rejectSilence/pause 500/speak Ram \"Está bem.$3\"/emote Maru 28/speak Ram \"Vamos acabar com esta excursão.$3#$b#Tião, pelo menos leve sua irmã para casa.\"/speak Sebastian \"Sim, tudo bem.$2\"/emote Maru 28/move Maru -7 0 3/move Maru 0 -13 2/move Sebastian 0 2 2/move Sebastian -10 0 3/move Sebastian 0 -8 0/pause 1000/faceDirection Sebastian 1/emote Sebastian 28/move Sebastian 0 -6 0/pause 500/speak Ram \"Vamos, @. Isso foi um erro.$2\"/emote farmer 28/fade fadeout/end",
+				"rejectSilence": "playMusic desolate/pause 500/resetVariable/question fork1 \"#Pegue um tomate cereja e jogue em Sebastian.#Próxima Opção\"/fork rejectTomato/playMusic Tropical Jam/playSound coin/shake Sebastian 500/speak Sebastian \"Porquê você fez isso?$a\"/speak Maru \"*Joga o último tomate cereja em Sebastian*$h\"/playSound coin/jump Sebastian 2/pause 300/speak Sebastian \"Agora você vai pagar por isso!\"/emote Sebastian 16/emote Maru 32/pause 500/move Maru 0 5 1/move Sebastian 0 5 3/pause 300/move Maru 1 0 1/move Sebastian -1 0 3/playSound slosh/shake Maru 500/speak Sebastian \"*Joga água em Maru*$h\"/pause 300/playSound slosh/shake Sebastian 500/speak Maru \"Haha! Tome isso!$h\"/pause 300/positionOffset Ram 20 0/speak Ram \"*segura sua mão*$1\"/faceDirection Sebastian 0/speak Sebastian \"*Pega um tomate cereja escondido no bolso e joga*$h\"/playSound coin/jump farmer 2/faceDirection Sebastian 3/move farmer 2 0 2/move farmer 0 6 3/faceDirection Sebastian 1/move Ram 3 0 2/move Ram 0 5 3/speak Ram \"Vamos nos unir, @!$1\"/move Maru 0 -1 1/move Maru 1 0 2/emote Maru 8/speak Sebastian \"Vamos mana, vamos dar a eles tudo o que temos!$h^Vamos mana, vamos dar a elas tudo o que temos!$h\"/faceDirection Maru 1/emote Maru 32/emote Sebastian 32/speak Ram \"Nós vamos ensinar àqueles dois quem é que manda!$1\"/emote Ram 32/emote farmer 32/pause 800/message \"Depois de um longo dia, é hora de ir para casa e se secar.\"/fade fadeout/end"
+			}
+		},
+		//Is StopMusic causing crash when cycling too much or too quickly, or is it necessary for 14 heart event?
+		//Festival Position Data Added 11_21
+		{
+			"LogName": "Spring13Position",
+			"Action": "EditData",
+			"Target": "Data/Festivals/spring13",
+			"TextOperations": [
+				{
+					"Operation": "Append",
+					"Target": ["Entries", "Set-Up_additionalCharacters"],
+					"Value": "Ram 23 65 1",
+					"Delimiter": "/"
+				},
+				{
+					"Operation": "Append",
+					"Target": ["Entries", "MainEvent_additionalCharacters"],
+					"Value": "Ram 38 68 left",
+					"Delimiter": "/"
+				}
+			]
+		},
+		{
+			"LogName": "Spring24Position",
+			"Action": "EditData",
+			"Target": "Data/Festivals/spring24",
+			"TextOperations": [
+				{
+					"Operation": "Append",
+					"Target": ["Entries", "Set-Up_additionalCharacters"],
+					"Value": "Ram 25 34 3",
+					"Delimiter": "/"
+				},
+				{
+					"Operation": "Append",
+					"Target": ["Entries", "MainEvent_additionalCharacters"],
+					"Value": "Ram 23 27 left",
+					"Delimiter": "/"
+				}
+			]
+		},
+		{
+			"LogName": "Summer11Position",
+			"Action": "EditData",
+			"Target": "Data/Festivals/summer11",
+			"When": {
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": "False"
+			},
+			"TextOperations": [
+				{
+					"Operation": "Append",
+					"Target": ["Entries", "Set-Up_additionalCharacters"],
+					"Value": "Ram 41 13 0",
+					"Delimiter": "/"
+				},
+				{
+					"Operation": "Append",
+					"Target": ["Entries", "MainEvent_additionalCharacters"],
+					"Value": "Ram 36 6 down",
+					"Delimiter": "/"
+				}
+			]
+		},
+		{
+			"LogName": "Summer11PositionExpanded",
+			"Action": "EditData",
+			"Target": "Data/Festivals/summer11",
+			"When": {
+				"HasMod": "FlashShifter.StardewValleyExpandedCP"
+			},
+			"TextOperations": [
+				{
+					"Operation": "Append",
+					"Target": ["Entries", "Set-Up_additionalCharacters"],
+					"Value": "Ram 41 11 2",
+					"Delimiter": "/"
+				},
+				{
+					"Operation": "Append",
+					"Target": ["Entries", "MainEvent_additionalCharacters"],
+					"Value": "Ram 36 6 down",
+					"Delimiter": "/"
+				}
+			]
+		},
+		{
+			"LogName": "Summer28Position",
+			"Action": "EditData",
+			"Target": "Data/Festivals/summer28",
+			"TextOperations": [
+				{
+					"Operation": "Append",
+					"Target": ["Entries", "Set-Up_additionalCharacters"],
+					"Value": "Ram 87 40 2",
+					"Delimiter": "/"
+				}
+			]
+		},
+		{
+			"LogName": "Fall16Position",
+			"Action": "EditData",
+			"Target": "Data/Festivals/fall16",
+			"TextOperations": [
+				{
+					"Operation": "Append",
+					"Target": ["Entries", "Set-Up_additionalCharacters"],
+					"Value": "Ram 34 80 0",
+					"Delimiter": "/"
+				}
+			]
+		},
+		{
+			"LogName": "Fall27Position",
+			"Action": "EditData",
+			"Target": "Data/Festivals/fall27",
+			"When": {
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": "False"
+			},
+			"TextOperations": [
+				{
+					"Operation": "Append",
+					"Target": ["Entries", "Set-Up_additionalCharacters"],
+					"Value": "Ram 19 49 2",
+					"Delimiter": "/"
+				}
+			]
+		},
+		{
+			"LogName": "Fall27PositionExpanded",
+			"Action": "EditData",
+			"Target": "Data/Festivals/fall27",
+			"When": {
+				"HasMod": "FlashShifter.StardewValleyExpandedCP"
+			},
+			"TextOperations": [
+				{
+					"Operation": "Append",
+					"Target": ["Entries", "Set-Up_additionalCharacters"],
+					"Value": "Ram 23 53 2",
+					"Delimiter": "/"
+				}
+			]
+		},
+		{
+			"LogName": "Winter8Position",
+			"Action": "EditData",
+			"Target": "Data/Festivals/winter8",
+			"TextOperations": [
+				{
+					"Operation": "Append",
+					"Target": ["Entries", "Set-Up_additionalCharacters"],
+					"Value": "Ram 68 15 down",
+					"Delimiter": "/"
+				},
+				{
+					"Operation": "Append",
+					"Target": ["Entries", "Main-Event_additionalCharacters"],
+					"Value": "Ram 69 27 down",
+					"Delimiter": "/"
+				}
+			]
+		},
+		{
+			"LogName": "Winter25Position",
+			"Action": "EditData",
+			"Target": "Data/Festivals/winter25",
+			"TextOperations": [
+				{
+					"Operation": "Append",
+					"Target": ["Entries", "Set-Up_additionalCharacters"],
+					"Value": "Ram 34 62 2",
+					"Delimiter": "/"
+				}
+			]
+		},
+		// Festival Data
+		{
+			"LogName": "Spring13",
+			"Action": "EditData",
+			"Target": "Data/Festivals/spring13",
+			"Entries": {
+				"Ram": "A primavera é uma época movimentada do ano... então é bom ter um dia de folga para conversar com os amigos."
+			},
+			"When": {
+				"Query: '{{Spouse}}' = 'Ram'": "False"
+			}
+		},
+		{
+			"LogName": "Spring13",
+			"Action": "EditData",
+			"Target": "Data/Festivals/spring13",
+			"Entries": {
+				"Ram": "Boa sorte com a caça aos ovos!$1#$e#Eu terei uma surpresa especial para você em casa se você ganhar.$7"
+			},
+			"When": {
+				"Spouse": "Ram"
+			}
+		},
+		{
+			"LogName": "Spring24",
+			"Action": "EditData",
+			"Target": "Data/Festivals/spring24",
+			"Entries": {
+				"Ram": "Eu me sinto um pouco velha para participar da dança das flores. Talvez eu fique de fora."
+			},
+			"When": {
+				"Query: '{{Spouse}}' = 'Ram'": "False"
+			}
+		},
+		{
+			"LogName": "Spring24",
+			"Action": "EditData",
+			"Target": "Data/Festivals/spring24",
+			"Entries": {
+				"Ram": "Eu me lembro da sua primeira vez neste festival.#$b#E o quanto eu queria que você viesse me convidar para dançar. Mas também como eu estava com medo de dançar novamente.$6#$b#Obrigado, por ter entrado na minha vida.$7"
+			},
+			"When": {
+				"Spouse": "Ram"
+			}
+		},
+		{
+			"LogName": "Summer11",
+			"Action": "EditData",
+			"Target": "Data/Festivals/summer11",
+			"Entries": {
+				"Ram": "*resmunga* Oh, heh, esse é o meu estômago. Cheira tão bem que é difícil esperar pelo que vocês estão cozinhando.$6"
+			},
+			"When": {
+				"Query: '{{Spouse}}' = 'Ram'": "False"
+			}
+		},
+		{
+			"LogName": "Summer11",
+			"Action": "EditData",
+			"Target": "Data/Festivals/summer11",
+			"Entries": {
+				"Ram": "Você sabe que eu sempre me perguntei o que Lewis faria se 'algo' dele fosse colocado na sopa."
+			},
+			"When": {
+				"Spouse": "Ram"
+			}
+		},
+		{
+			"LogName": "Summer28",
+			"Action": "EditData",
+			"Target": "Data/Festivals/summer28",
+			"Entries": {
+				"Ram": "*bocejo*... Já passou da minha hora de dormir.$s#$e#Ei, você viu aquele barco de velas? Eu mesma fiz.$h"
+			},
+			"When": {
+				"Query: '{{Spouse}}' = 'Ram'": "False"
+			}
+		},
+		{
+			"LogName": "Summer28",
+			"Action": "EditData",
+			"Target": "Data/Festivals/summer28",
+			"Entries": {
+				"Ram": "*bocejo*... Já passou da minha hora de dormir.$s#$e#Ei, você viu aquele barco de velas? Eu mesma fiz.$h#$e#Mas se você quiser, podemos ir para casa e ir para a cama. Eu não sei se...#$b#O que eu disse? Acho que cochilei por um momento.$7"
+			},
+			"When": {
+				"Spouse": "Ram"
+			}
+		},
+		{
+			"LogName": "Fall16",
+			"Action": "EditData",
+			"Target": "Data/Festivals/fall16",
+			"Entries": {
+				"Ram": "A marcenaria é uma tradição antiga da qual tenho muito orgulho de fazer parte.$h"
+			},
+			"When": {
+				"Query: '{{Spouse}}' = 'Ram'": "False",
+				"EnableVeronica": "False"
+			}
+		},
+		{
+			"LogName": "Fall16",
+			"Action": "EditData",
+			"Target": "Data/Festivals/fall16",
+			"Entries": {
+				"Ram": "Uau, a marcenaria da Veronica realmente deu certo! Eu ensinei tudo o que ela sabe, é claro.$1"
+			},
+			"When": {
+				"Query: '{{Spouse}}' = 'Ram'": "False",
+				"EnableVeronica": "True"
+			}
+		},
+		{
+			"LogName": "Fall16",
+			"Action": "EditData",
+			"Target": "Data/Festivals/fall16",
+			"Entries": {
+				"Ram": "Nós vamos ganhar desta vez com certeza. Ninguém pode competir com a qualidade dos nossos produtos!"
+			},
+			"When": {
+				"Spouse": "Ram"
+			}
+		},
+		{
+			"LogName": "Fall27",
+			"Action": "EditData",
+			"Target": "Data/Festivals/fall27",
+			"Entries": {
+				"Ram": "Espero que as minhas 'surpresas' não assustem muito a Maru."
+			},
+			"When": {
+				"Query: '{{Spouse}}' = 'Ram'": "False"
+			}
+		},
+		{
+			"LogName": "Fall27",
+			"Action": "EditData",
+			"Target": "Data/Festivals/fall27",
+			"Entries": {
+				"Ram": "Apesar de ajudar a construir partes do labirinto, sempre tive muito medo de entrar nele. Mas...#$b#Se você estivesse comigo, segurando minha mão, acho que eu conseguiria. Promete não me largar, está bem?$9"
+			},
+			"When": {
+				"Spouse": "Ram"
+			}
+		},
+		{
+			"LogName": "Winter8",
+			"Action": "EditData",
+			"Target": "Data/Festivals/winter8",
+			"Entries": {
+				"Ram": "Após o divórcio, decidi deixá-la assumir a escultura de gelo.#$b#That didn't last long once I got a look at Leah's plans. I just had to join in!$1"
+			},
+			"When": {
+				"Query: '{{Spouse}}' = 'Ram'": "False",
+				"EnableVeronica": "False"
+			}
+		},
+		{
+			"LogName": "Winter8",
+			"Action": "EditData",
+			"Target": "Data/Festivals/winter8",
+			"Entries": {
+				"Ram": "Once Veronica moved to town, I had decided to let her take over doing the Ice Sculpture.#$b#Isso não durou muito quando vi o que a Leah havia planejado. Eu só tive que participar!$1"
+			},
+			"When": {
+				"Query: '{{Spouse}}' = 'Ram'": "False",
+				"EnableVeronica": "True"
+			}
+		},
+		{
+			"LogName": "Winter8",
+			"Action": "EditData",
+			"Target": "Data/Festivals/winter8",
+			"Entries": {
+				"Ram": "Não posso conversar agora, @. Leah e eu precisamos nos concentrar para terminar nossa escultura.$3#$e#Espere...#$b#Eu só quero que você saiba que estarei torcendo por você enquanto você pesca no gelo. Divirta-se, querido!$7^Eu só quero que você saiba que estarei torcendo por você enquanto você pesca no gelo. Divirta-se, querida!$7"
+			},
+			"When": {
+				"Spouse": "Ram"
+			}
+		},
+		{
+			"LogName": "Winter25",
+			"Action": "EditData",
+			"Target": "Data/Festivals/winter25",
+			"Entries": {
+				"Ram": "Brr... Está frio aqui, gostaria que alguém tivesse um pouco de chocolate quente."
+			},
+			"When": {
+				"Query: '{{Spouse}}' = 'Ram'": "False"
+			}
+		},
+		{
+			"LogName": "Winter25",
+			"Action": "EditData",
+			"Target": "Data/Festivals/winter25",
+			"Entries": {
+				"Ram": "Estou congelando!#$b#*abraça*#$b#Me abrace, por favor, e me aqueça.$9^Você está congelando!#$b#*abraça*#$b#Fique em meus braços, eu vou te aquecer.$9"
+			},
+			"When": {
+				"Spouse": "Ram"
+			}
+		},
+		// Mail & Quests
+		{
+			"LogName": "Mail",
+			"Action": "EditData",
+			"Target": "Data/Mail",
+			"Entries": {
+				"ramHeart": "@,^Encontre-me nas montanhas entre as 18:00 e as 23:00. É uma surpresa!^ -Robin",
+				"ramGiftToLeah": "Olá @!^ Espero que você venha nos visitar em breve, embora Leah possa não deixar você entrar se vocês ainda não se conhecem tão bem. Anexei algo que pode te ajudar com isso!^ -Robin%item object 196 1 %%",
+				"summer_4_1": "O aniversário da Maru está chegando e eu preciso de um pouco de quartzo para terminar de construir seu presente. Se você puder, por favor, me dê um pedaço de quartzo.^ -Robin%item quest 751 %%",
+				"ramHappy": "@,^ Estou tão feliz por você ter decidido se mudar para a fazenda de seu avô. É bom ter alguém como você, alguém com quem eu possa ficar mais próxima. Enviei este tomate para te parabenizar por ter uma fazenda de sucesso!^ -Atenciosamente, Robin%item object 256 1 %%",
+				//"winter_3_1": "Hi @^ Sebby's birthday is coming up and you picked out such a great strawberry for Maru, I was hoping you could find a nice Frozen Tear for him during one of your mining escapades.^ -Robin%item quest 752 %%",
+				"ramThinking": "@,^ Desde que você me deu aquele buquê, não consigo tirar você da cabeça. É tão ruim que eu quase perdi um dedo na minha serra ontem. De qualquer forma, só queria que você soubesse que estou pensando em você, talvez um pouco demais. Espero que você tambem esteja pensando em mim, independente do que faça.^ -Com amor, Robin",
+				"ramSpaghetti": "Olá @,^ As crianças estavam aqui outro dia, então eu preparei um pouco de espaguete. Eu tava afim de fazer mais espaguete, então pensei em preparar um pouco para você.^ -Robin%item object 224 1 %%"
+			}
+		},
+		{
+			"LogName": "Farm_Mail",
+			"Action": "EditData",
+			"Target": "Data/Events/Farm",
+			"Entries": {
+				"3560078/f Ram 2500/x ramHeart": "null",
+				"3560079/f Ram 500/x ramGiftToLeah": "null",
+				"3560080/f Ram 2000/x ramHappy": "null",
+				"3560081/f Ram 2250/x ramThinking": "null",
+				"3560082/f Ram 1250/x ramSpaghetti": "null"
+			}
+		},
+		{
+			"LogName": "Quests",
+			"Action": "EditData",
+			"Target": "Data/Quests",
+			"Entries": {
+				"751": "ItemDelivery/Um presente para Maru/Robin gostaria de um pedaço de quartzo para poder terminar de construir o presente da Maru./Entregue um quartzo para Robin./Ram 80/-1/250/-1/true/Muito obrigada, @!$1#$b#O presente da Maru vai ficar ótimo com isso!"
+				//"752": "ItemDelivery/A gift for Sebastian/Robin would like a shiny Frozen Tear to give to Sebastian/Deliver a Frozen Tear to Robin./Ram 84/-1/250/-1/true/Thanks @!$1#$b#I'm sure this will make Sebastian's day!",
+			}
+		},
+		{
+			"LogName": "CSFiles",
+			"Action": "EditData",
+			"Target": "Strings/StringsfromCSFiles",
+			"Entries": {
+				//"NPC.cs.3962": "...!! I'll accept this. Thank you.$l#$e#I'm glad the feeling's mutual.$l/...!! I'll accept this. Thank you.$l#$e#I'm glad the feeling's mutual$l",
+				//"NPC.cs.3963": "...You want to get more serious? I feel the same way.$l#$e#I thought it was just me. But I'm happy to know that you like me too.$l",
+				//"NPC.cs.3980": "...!!! $l#$b#I accept!! $h#$b#...$l#$b#Give me 3 days, alright? Now to build a custom altar for us or...$h",
+				"NPC.cs.4001": "Querido... Você me faz tão feliz, eu queria te dar algo especial para mostrar o quanto eu te amo.^Querida... Você me faz tão feliz, eu queria te dar algo especial para mostrar o quanto eu te amo.#$b#A Emily também disse que te daria mais energia, embora pudesse ser apenas história.$6#$b#Se importa em verificar se é verdade?$9",
+				"NPC.cs.4439": "Faz tanto tempo desde que o Sebastian e a Maru nasceram. Pergunto-me como que será cuidar deste novo bebê.$s",
+				"NPC.cs.4440": "{0}, espero que a adoção chegue logo. Eu já encontrei um cinzel de brinquedo para o bebê.$l",
+				"NPC.cs.4441": "{0}, eu assinei os papéis da adoção. Esta família está prestes a ficar maior.$l",
+				"NPC.cs.4442": "Ugh... Nada de queijo de cabra hoje. Estou tão enjoada, só de olhar para isso me dá vontade de vomitar.$s",
+				"NPC.cs.4443": "Estou grávida... E você ainda está me pedindo para fazer o SEU café da manhã?$s",
+				"NPC.cs.4444": "{0}, vamos ter um filho em breve.$l",
+				"NPC.cs.4445": "{0}, eu estou grávida. Ei, não desmaie em cima de mim...$l",
+				"NPC.cs.4446": "Só estou com vontade de dormir hoje. Não se preocupe.$a",
+				"NPC.cs.4447": "{0}, vamos ter um filho em breve.$l",
+				"NPC.cs.4448": "{0}, Estou tão feliz que você está grávida do nosso filho. Mal posso esperar para conhecê-los!$1#$b#Eu deveria começar a trabalhar em seu berço. Você quer ajudar?$1",
+				"NPC.cs.4449": "Ser mãe é chato, às vezes... só não tenho vontade de me levantar da cama. Pelo menos as crianças ainda são muito jovens para responder, diferente do Sebastian.$a"
+			},
+			"When": {
+				"Spouse": "Ram"
+			}
+		},
+		{
+			"LogName": "CSFiles",
+			"Action": "EditData",
+			"Target": "Strings/StringsfromCSFiles",
+			"Entries": {
+				"Utility.cs.5377": "@... %spouse... #$b# Como prefeito da Vila Pelicanos e portador regional do selo matrimonial, eu os declaro mulher e..., bem, mulher!$h",
+				"Utility.cs.5371": "@... %spouse... #$b#Como prefeito da Vila Pelicanos e portador regional do selo matrimonial, eu os declaro marido e mulher!$h"
+			},
+			"When": {
+				"Relationship:Ram": "Engaged"
+			}
+		},
+		// Got the above idea to fix the marriage issue from Stardew Valley Expanded. Not really sure why there was an issue in the first place but that should hopefully fix it.
+		// Movie Information (WIP - Haven't reached this in game myself. Probably Works)
+		/* The CSFiles before I changed them. Left this here in case of future edits, rather than having to search for all of these individual strings again.
+		{
+			"LogName": "CSFiles",
+			"Action": "EditData",
+			"Target": "Strings/StringsfromCSFiles",
+			"Entries": {
+			"NPC.cs.3962": "...!! I'll accept this. Thank you.$l#$e#I didn't know you felt the same.$l/...!! I'll accept this. Thank you.$l#$e#I didn't know you felt the same.$l",
+				"NPC.cs.3963": "...You want to get more serious? I feel the same way.$l#$e#I'm kind of nervous. Aren't you?$l",
+				"NPC.cs.3980": "...!!! $l#$b#I accept!! $h#$b#...$l#$b#I'll set everything up. We'll have the ceremony in 3 days, okay?$h",
+				"NPC.cs.4001": "Honey... I wanted to give you that fruit as a symbol of my love.$l",
+				"NPC.cs.4439": "I wonder how much the new baby will change things?$s",
+				"NPC.cs.4440": "{0}, I hope our adoption request gets approved. I want a baby.$l",
+				"NPC.cs.4441": "{0}, I filed our adoption papers. Now all we can do is cross our fingers and wait.$l",
+				"NPC.cs.4442": "Ugh... I feel a little nauseated this morning.$s",
+				"NPC.cs.4443": "I'm pregnant... can't you make your own breakfast?$s",
+				"NPC.cs.4444": "{0}, vamos ter um filho em breve.$l",
+				"NPC.cs.4445": "{0}, I'm pregnant. Isn't it wonderful?$l",
+				"NPC.cs.4446": "Só estou com vontade de dormir hoje. Não se preocupe.$a",
+				"NPC.cs.4447": "{0}, vamos ter um filho em breve.$l",
+				"NPC.cs.4448": "{0}, can't you tell? You're pregnant.$l",
+				"NPC.cs.4449": "Being a parent is annoying, sometimes... I just don't feel like getting up.$a",
+			},
+			"When": {
+			"Spouse": "Ram"
+			},
+		}*/
+		// Movies Fixed 11_21
+		{
+			"LogName": "Robin Concession Tastes",
+			"Action": "EditData",
+			"Target": "Data/ConcessionTastes",
+			"Entries": {
+				"Ram": {
+					"Name": "Ram",
+					"LovedTags": ["Stardrop Sorbet", "Salted Peanuts"],
+					"LikedTags": ["Sweet", "Gourmet", "Salty", "Sandwich", "Hot", "Healthy"],
+					"DislikedTags": ["Candy", "Black Licorice", "Joja"]
+				}
+			}
+		},
+		{
+			"LogName": "Robin Movie Reactions",
+			"Action": "EditData",
+			"Target": "Data/MoviesReactions",
+			"Entries": {
+				"Ram": {
+					"NPCName": "Ram",
+					"Reactions": [
+						{
+							"Tag": "action",
+							"Response": "love",
+							"Whitelist": [],
+							"SpecialResponses": null,
+							"ID": "reaction_0"
+						},
+						{
+							"Tag": "winter_movie_0",
+							"Response": "love",
+							"Whitelist": [],
+							"SpecialResponses": {
+								"BeforeMovie": {
+									"ResponsePoint": null,
+									"Script": "",
+									"Text": "Esse era o tipo de filme que Demetrius odiava."
+								},
+								"DuringMovie": null,
+								"AfterMovie": {
+									"ResponsePoint": null,
+									"Script": "",
+									"Text": "Obrigada pelo filme, @. Foi bom assistir esse tipo de filme sem todas as críticas.$h"
+								}
+							},
+							"ID": "reaction_1"
+						},
+						{
+							"Tag": "love",
+							"Response": "like",
+							"Whitelist": [],
+							"SpecialResponses": {
+								"BeforeMovie": {
+									"ResponsePoint": null,
+									"Script": "",
+									"Text": "Eu tenho me sentido meio sem graça ultimamente, então um filme cheio de ação é exatamente o que eu preciso."
+								},
+								"DuringMovie": null,
+								"AfterMovie": {
+									"ResponsePoint": null,
+									"Script": "",
+									"Text": "Estou muito empolgada! Isso foi ótimo.$h"
+								}
+							},
+							"ID": "reaction_2"
+						},
+						{
+							"Tag": "like",
+							"Response": "like",
+							"Whitelist": [],
+							"SpecialResponses": {
+								"BeforeMovie": {
+									"ResponsePoint": null,
+									"Script": "",
+									"Text": "Eu não tenho certeza sobre o que é esse filme, mas eu não ligo! É bom sair de casa."
+								},
+								"DuringMovie": null,
+								"AfterMovie": {
+									"ResponsePoint": null,
+									"Script": "",
+									"Text": "Foi muito divertido, @. Estou feliz por termos feito isso."
+								}
+							},
+							"ID": "reaction_3"
+						}
+					]
+				}
+			}
+		},
+		{
+			"LogName": "Robin Movie Reactions",
+			"Action": "EditData",
+			"Target": "Data/MoviesReactions",
+			"Entries": {
+				"Ram": {
+					"NPCName": "Ram",
+					"Reactions": [
+						{
+							"Tag": "action",
+							"Response": "love",
+							"Whitelist": [],
+							"SpecialResponses": null,
+							"ID": "reaction_0"
+						},
+						{
+							"Tag": "winter_movie_0",
+							"Response": "love",
+							"Whitelist": [],
+							"SpecialResponses": {
+								"BeforeMovie": {
+									"ResponsePoint": null,
+									"Script": "",
+									"Text": "Esse filme me deixa muito emocionada. Prometa que não vai me julgar se eu chorar.$7"
+								},
+								"DuringMovie": null,
+								"AfterMovie": {
+									"ResponsePoint": null,
+									"Script": "",
+									"Text": "Obrigada pelo encontro, amor. Eu gosto muito daquele filme!$h"
+								}
+							},
+							"ID": "reaction_1"
+						},
+						{
+							"Tag": "love",
+							"Response": "like",
+							"Whitelist": [],
+							"SpecialResponses": {
+								"BeforeMovie": {
+									"ResponsePoint": null,
+									"Script": "",
+									"Text": "Eu tenho me sentido meio sem graça ultimamente, então um filme cheio de ação é exatamente o que eu preciso."
+								},
+								"DuringMovie": null,
+								"AfterMovie": {
+									"ResponsePoint": null,
+									"Script": "",
+									"Text": "Estou muito empolgada! Isso foi ótimo.$h"
+								}
+							},
+							"ID": "reaction_2"
+						},
+						{
+							"Tag": "like",
+							"Response": "like",
+							"Whitelist": [],
+							"SpecialResponses": {
+								"BeforeMovie": {
+									"ResponsePoint": null,
+									"Script": "",
+									"Text": "Eu não tenho certeza sobre o que é esse filme, mas eu não ligo! É bom sair de casa."
+								},
+								"DuringMovie": null,
+								"AfterMovie": {
+									"ResponsePoint": null,
+									"Script": "",
+									"Text": "Foi muito divertido, @. Estou feliz por termos feito isso."
+								}
+							},
+							"ID": "reaction_3"
+						}
+					]
+				}
+			},
+			"When": {
+				"Spouse": "Ram"
+			}
+		},
+		// Movies_Invite_Test_11_21
+		{
+			"Action": "EditData",
+			"Target": "Strings/Characters",
+			"Entries": {
+				"MovieInvite_Spouse_Ram": "Você leu minha mente, estou querendo ver esse filme há algum tempo.$6#$b#Vai ser romântico.$9"
+			}
+		},
+		{
+			"Action": "EditData",
+			"Target": "Strings/Characters",
+			"Entries": {
+				"MovieInvite_Spouse_Ram": "Isso parece romântico. Vou pedir ao Sebastian para tomar de conta.$9#$b#Não se preocupe, ele não vai fumar.$4"
+			},
+			"When": {
+				"HasValue:{{ChildNames |valueAt=0}}": "True"
+			}
+		},
+		// Addded 11_21
+		// Expanded Compatability
+		{
+			"LogName": "Robin Dialogue Expanded Compatibility",
+			"Action": "EditData",
+			"Target": "Characters/dialogue/Ram",
+			"Entries": {
+				"mountain_28_24": "Eu amo as montanhas. O ar fresco e a vista são insuperáveis!$1#$b#Também posso ver a Maru e o Sebastian quando venho aqui.$0#$b#Sinto falta de viver com eles, mas acho que as coisas são melhores do jeito que estão agora.$2",
+				"Town_51_90": "Encontrei um ovo que sobrou da caça aos ovos.#$b#Não se preocupe, não está podre, é de plástico.#$e#Vamos abri-lo e ver o que tem dentro. *Abre* Ah, apenas um pedaço de papel. Gostaria de saber se Pierre escondeu para a Abigail encontrar?#$e#Bem, boa noite!$1#$e#Huh? O que disse? Parecia um rabisco para mim, talvez não fosse do Pierre, mas de uma Pessoa das Sombras.#$e#Dizia: \"Hora de Fechar Por enquanto. Uma Concha Vazia não Encontra paz\"$2"
+			},
+			"When": {
+				"HasMod": "FlashShifter.StardewValleyExpandedCP"
+			}
+		},
+		{
+			"LogName": "Robin Schedule Expanded",
+			"Action": "EditData",
+			"Target": "Characters/schedules/Ram",
+			"Entries": {
+				"Mon": "800 Forest 40 13 0/1200 HaleyHouse 15 16 2/1530 Beach 40 36 2/2100 LeahHouse 13 5 2",
+				"Tue": "630 Mountain 28 24 2/1100 Hospital 2 17 0/1520 Saloon 4 19 2/2000 LeahHouse 13 5 2",
+				//"Wed": "900 AnimalShop 14 16 0/1100 ScienceHouse 6 20 0/1500 Forest 92 20 1/2000 LeahHouse 13 5 2",
+				//"Thu": "1000 Blacksmith 4 15 0/1400 SeedShop 15 20 0/1600 Town 49 24 0/2000 LeahHouse 13 5 2",
+				"Fri": "800 Mountain 28 24 2/1300 SeedShop 27 13 2/1700 Forest 41 10 2/2100 LeahHouse 13 5 2",
+				"Sat": "1130 HaleyHouse 4 15 2/1500 Town 44 89 3/1700 Saloon 4 19 2/2300 LeahHouse 13 5 2",
+				"Sun": "700 Mountain 28 24 2/1130 SebastianRoom 8 6 0/1500 Town 45 78 2/1800 LeahHouse 13 5 2",
+				"spring_1": "800 SeedShop 15 20 0/1000 Town 45 78 2/1500 Forest 112 40 2/1900 LeahHouse 13 5 2",
+				"spring_14": "700 Mountain 28 24 2/1130 SebastianRoom 8 6 0/1500 Town 45 78 2/1800 LeahHouse 13 5 2/2200 Town 51 90 2"
+				//"marriage_Mon": "800 Forest 92 22 1/1000 ScienceHouse 4 4 2/1300 ScienceHouse 6 20 0/1400 SebastianRoom 8 6 0/1800 BusStop -1 23 3",
+				//"marriage_Fri": "800 Forest 92 22 1/1000 ScienceHouse 6 20 0/1500 Saloon 4 19 2/2100 BusStop -1 23 3",
+			},
+			"When": {
+				"HasMod": "FlashShifter.StardewValleyExpandedCP"
+			}
+		},
+		// Expanded Events Compatability
+		{
+			"LogName": "Ram4HeartforExpanded",
+			"Action": "EditData",
+			"Target": "Data/Events/Forest",
+			"Entries": {
+				"336474/f Ram 1000/t 600 1800/w sunny": "FlowerDance/39 13/Ram 38 12 2 farmer 60 16 3/skippable/showFrame Ram 40/animate Ram false true 600 43 41 43 42 46 47 43 41 43 42/pause 400/move farmer -12 0 3/move farmer 0 -4 3/pause 10000/stopAnimation Ram 40/stopMusic/screenFlash 1.8/showFrame Ram 0/pause 1200/move Ram 1 0 1/showFrame Ram 19/pause 1200/showFrame Ram 4/speak Ram \"O que você está fazendo aqui @?!$3#$b#Há quanto tempo você estava parado aí?$2\"/move farmer -8 0 3 false/pause 500/move Ram -1 0 3/pause 350/emote Ram 60/faceDirection Ram 1/speak Ram \"Estou sozinha desde o divórcio. Gosto de dançar, mas não há ninguém com quem dançar.$2#$b#Eu estava sozinha esta noite, então pensei em vir aqui e dançar onde ninguém me visse.$2\"/question fork1 \"Eu sou patética, não sou?#Não, você não é.#Sim, você não é meio velha para estar dançando a 'dança da flor'?#Por que dançar sozinha? Nós podemos dançar juntos!#Se seus amigos não dançam, então eles não são meus amigos.\"/fork danceInsultRam/speak Ram \"Sério? Obrigada. Umm... Já que estamos aqui, você quer dançar comigo?$6\"/emote farmer 32/pause 500/playMusic event1/animate farmer false true 600 26 27 26 27 28 27 28 27 30 31 30 31 26 27 26 27 28 27 28 27/animate Ram false true 600 43 41 43 42 46 47 43 41 43 42/pause 7500/fade fadeOut/end",
+				"danceInsultRam": "playMusic event1/speak Ram \"Sim, você tem razão. Estou tão envergonhada. Sou uma mulher adulta, está na hora de agir como uma.$2\"/emote Ram 28/emote farmer 32/pause 500/fade fadeout/end"
+			},
+			"When": {
+				"HasMod": "FlashShifter.StardewValleyExpandedCP"
+			}
+		},
+		{
+			"LogName": "Ram6HeartforExpanded",
+			"Action": "EditData",
+			"Target": "Data/Events/ScienceHouse",
+			"Entries": {
+				"336473/f Ram 1500/t 900 2200": "echos/5 18/farmer 6 24 0 Ram 3 22 1 Sebastian 5 22 3 Demetrius 22 20 1/skippable/emote Sebastian 12/emote Ram 28/speak Sebastian \"Por que você não vê que eu não sou preguiçoso? Faço muitos trabalhos de programação. Eu ganho um bom dinheiro.$a\"/speak Ram \"Sebastian, eu acredito em você! Mas estou preocupada que você esteja definhando no porão.$2\"/move Demetrius -18 0 1/move Demetrius 0 1 2/pause 200/speak Demetrius \"Eu ouvi gritos. O que está acontecendo?\"/speak Sebastian \"Nada. Estou indo para o meu quarto.\"/move Sebastian 1 0 2/pause 500/question fork2 \"Mamãe não acha que meu trabalho é 'real'. Você concorda que é isso que ela está dizendo, certo?#Não, ela só está preocupada que você passe todo o seu tempo no porão.#Não é sobre o que você faz para viver, Sebastian. Sua mãe está apenas preocupada com as cobranças que podem estar te dominando.#Os pais simplesmente não entendem!\"/fork ninetiesDis/pause 1400/speak Sebastian \"Estou bem mãe. Estou bem com a minha vida do jeito que está.$s\"/emote Sebastian 28/move Sebastian 2 0 1/move Sebastian 0 -2 0/move Sebastian 4 0 1/move Sebastian 0 2 2/warp Sebastian -30 -30/speak Ram \"Tião...$2#$b#Obrigada, @. Sinto muito que você teve que ver isso.\"/speak Demetrius \"Não se preocupe, Robin. Um dia ele vai ver o quão orgulhosa dele você realmente está.$h\"/speak Ram \"Obrigada, Demetrius. Acho que eu já vou indo.#$b#Quer que eu te acompanhe até a saída, @?\"/move Ram 3 0 2/warp Sebastian 12 22 0/move Sebastian 0 -2 0/move Sebastian -4 0 3/move Sebastian 0 2 3/faceDirection Ram 1/speak Sebastian \"Mãe... Estou feliz que você se importe, mas lembre-se de respeitar o estilo de vida que escolhi.$h\"/speak Ram \"Claro. Eu te amo Sebastian, e estou muito orgulhosa de você.$1\"/emote Ram 32/emote Sebastian 32/faceDirection farmer 2/warp farmer -25 -25/fade fadeout/end",
+				"ninetiesDis": "pause 1400/speak Sebastian \"@ entende. Obrigado @.$s\"/emote Sebastian 28/move Sebastian 2 0 1/move Sebastian 0 -2 0/move Sebastian 4 0 1/move Sebastian 0 2 2/warp Sebastian -30 -30/speak Ram \"Tião...$2#$b#Lamento que você tenha que ver isso, @. Talvez eu seja velha demais para entender a geração mais jovem.\"/speak Demetrius \"Não se preocupe Robin. Um dia ele vai ver o quão orgulhosa dele você realmente está, mesmo que vocês dois não possam se entender agora.$h\"/speak Ram \"Obrigada, Demetrius. Acho que eu já vou indo.#$b#Quer que eu te acompanhe até a saída, @?\"/move Ram 3 0 2/warp Sebastian 12 22 0/move Sebastian 0 -2 0/move Sebastian -4 0 3/move Sebastian 0 2 3/faceDirection Ram 1/speak Sebastian \"Mãe... Estou feliz que você se importe, mas lembre-se de respeitar o estilo de vida que escolhi.$h\"/speak Ram \"Claro. Eu te amo Sebastian, e estou muito orgulhosa de você.$1\"/emote Ram 32/emote Sebastian 32/faceDirection farmer 2/warp farmer -25 -25/fade fadeout/end"
+			},
+			"When": {
+				"HasMod": "FlashShifter.StardewValleyExpandedCP"
+			}
+		},
+		{
+			"LogName": "Ram8HeartCorrectedforExpanded",
+			"Action": "EditData",
+			"Target": "Data/Events/Mountain",
+			"Entries": {
+				"336471/f Ram 2000/t 600 1400/w sunny": "none/11 30/Ram 6 29 3 Harvey -3000 -3000 2 farmer 15 40 2/skippable/move farmer 0 -11 0/move farmer -8 0 3/positionOffset farmer 0 5/emote Ram 8/pause 1000/faceDirection Ram 1 false/pause 200/speak Ram \"Ei, @! O que você está fazendo aqui fora?$1\"/pause 1000/emote Ram 16/pause 1000/question fork1 \"Você acha que poderia me dar uma mão em um projeto em que estou trabalhando?#Sim#Não\"/fork nohelpRam/speak Ram \"Obrigada! Me siga. Primeiro precisamos cortar um pedaço específico de madeira...$1\"/pause 200/move Ram 0 -1 0/move Ram 6 0 1/move Ram 0 -2 0/warp Ram -30 -30/positionOffset farmer 0 -5/move farmer 5 0 1/move farmer 0 -3 0/warp farmer -25 -25/pause 2400/playSound ow/pause 800/playMusic playful/warp Ram 12 26 2/move Ram -2 0 1/warp farmer 12 26 2/emote farmer 12/move farmer -1 0 3/positionOffset farmer 0 20/emote Ram 28/speak Ram \"Eu sinto muito, @!$2\"/question fork2 \"Eu deveria ter sido mais cuidadosa. Você me perdoa?#Não se preocupe, foi minha culpa. Minha mão escorregou.#Perdoar e esquecer, certo?#Não. Foi sua culpa. Estou indo embora!\"/fork noforgiveRam/speak Ram \"Obrigada.$0\"/speak Ram \"*pega no pulso* Tem certeza que está bem? Sua mão quase foi serrada.\"/pause 3500/move Ram -1 0 3/shake Ram 2400/speak Ram \"Hm...$6\"/emote Ram 60/pause 200/speak Ram \"Talvez você devesse ir ver Harvey, só por precaução. Você está sangrando um pouco.\"/globalFade/viewport -1000 -1000/playMusic none/changeLocation Hospital/playMusic sweet/warp Ram 15 8/warp Harvey 15 6/warp farmer 14 6/positionOffset farmer 0 20/faceDirection Ram 0/faceDirection Harvey 3/faceDirection farmer 1 false/pause 200/viewport 15 7/pause 200/speak Harvey \"Então você se machucou usando uma serra, certo? Vamos dar uma olhada.#$b#Receio que sua 'namorada' precise sair enquanto eu te examino.\"/question fork1 \"O quê você responde?#Está tudo bem, ela pode ficar.#Uh, ela não é minha namorada. De qualquer forma, ele está certo. Você se importaria de sair Robin?#Uh, nós não estamos, hum, bem... Tudo bem se ela ficar -- se ela quiser, claro.\"/fork rejectHospitalRam/speak Harvey \"Oh, desculpe. *risos*$h\"/speak Harvey \"Coloquei um anti-séptico no seu corte. E você parece estar em dia com suas vacinas, então apenas mantenha um curativo e você ficará bem.$0\"/faceDirection Harvey 2/pause 700/faceDirection Harvey 3/question fork1 \"Então, o que aconteceu?#Eu estava brincando com a serra. Foi minha culpa, doutor.#Foi a Robin quem fez isso comigo! É tudo culpa dela!#Ninguém tem culpa, doutor. Acidentes acontecem.\"/fork blameRam/speak Harvey \"Ok, você parece bem, então você está livre para ir. Eu sugiro que você tenha mais cuidado com ferramentas elétricas.#$b#Se precisar de mais ajuda médica, é só marcar uma consulta!$h\"/move Harvey 0 1 2/move Harvey -5 0 3/move Harvey 0 5 0/doAction 10 13/move Harvey 0 8 2/warp Harvey -30 -30 0/move Ram 0 -2 3/speak Ram \"Estou feliz que você esteja bem, @. Eu estava muito preocupada. Eu vou te acompanhar até sua casa.\"/move farmer 0 1 2/move farmer -4 0 3/move farmer 0 5 0/move farmer 0 7 0/warp farmer -25 -25/move Ram 0 1 2/move Ram -5 0 3/move Ram 0 6 2/emote Ram 28/pause 2400/emote Ram 20/pause 200/move Ram 0 7 2/warp Ram -20 -20/fade fadeout/end",
+				"nohelpRam": "speak Ram \"Certo, até mais tarde!$1\"/positionOffset farmer 0 -5/move farmer 7 0 1 false/move farmer 0 11 2 false/warp farmer -30 -30/pause 200/fade fadeout/end",
+				"noforgiveRam": "positionOffset farmer 0 -20/move farmer 0 9 2/move farmer 3 0 2/move farmer 0 5 2/warp farmer -30 -30/emote Ram 28/fade fadeout/end"
+			},
+			"When": {
+				"HasMod": "FlashShifter.StardewValleyExpandedCP"
+			}
+		},
+		{
+			"LogName": "Ram8HeartHospitalForkCorrectedforExpanded",
+			"Action": "EditData",
+			"Target": "Data/Events/Hospital",
+			"Entries": {
+				"rejectHospitalRam": "speak Ram \"Certo, me avise se houver algo que eu possa fazer.\"/move Ram 0 -1 0/move Ram -5 0 3/move Ram 0 5 2/doAction 10 13/move Ram 0 7 2/warp Ram -30 -30/speak Harvey \"%Além de um pequeno corte, você está ileso.\"/fade fadeout/end",
+				"blameRam": "emote Ram 28/speak Harvey \"Se isso for verdade, sugiro que você mantenha distância dela, @. Deixe-me saber se você tiver quaisquer outros problemas, caso contrário, você pode ir.\"/fade fadeout/end"
+			},
+			"When": {
+				"HasMod": "FlashShifter.StardewValleyExpandedCP"
+			}
+		},
+		{
+			"LogName": "Ram10Heart",
+			"Action": "EditData",
+			"Target": "Data/Events/Mountain",
+			"Entries": {
+				"336475/f Ram 2500/t 1800 2300": "starshoot/15 10/Ram 9 8 2 farmer 0 13 1/skippable/move farmer 9 0 1/move farmer 0 -3 0/pause 200/speak Ram \"Oi, @! Eu sei que está um pouco frio lá fora, mas não há nada como estar nas montanhas à noite.#$b#Já faz um tempo que quero te mostrar como que é.#$b#Não se preocupe, vou acender uma fogueira para não morrermos congelados.\"/addBigProp 9 9 146/addLantern 0 9 9 1/pause 2400/doAction 9 9/pause 20/speak Ram \"Aqui vamos nós.\"/pause 200/move farmer -1 0 3/move farmer 0 -2 0/move farmer 0 0 1/move Ram 0 0 3/pause 2400/speak Ram \"Se você ficar tão perto, não sei se precisaremos de uma fogueira para nos mantermos aquecidos.$9\"/move Ram 1 0 3/speak Ram \"Depois do meu divórcio, eu não achava que fosse possível amar novamente.$2#$b#E então você se mudou para a cidade.$1#$b#A maneira como você cuidou de sua fazenda me impressionou. E quando você não precisava de nenhum trabalho em sua fazenda, você ainda vinha, mesmo que apenas para dizer oi.$0\"/move Ram -1 0 3/speak Ram \"*segura as mãos* Você dançou comigo na floresta. Você me confortou quando eu estava tendo problemas com Sebastian.#$b#E você quase me deu sua mão quando tentou me ajudar com meu projeto de marcenaria.\"/pause 20/faceDirection Ram 1 false/faceDirection Ram 3 false/speak Ram \"Eu te amo, @.$7\"/pause 200/question fork1 \"Como você se sente?#Eu também te amo.#Eu acho que você não entendeu direito. Eu só quero ser seu amigo.\"/fork rejectRam/positionOffset farmer 10 0/positionOffset Ram 0 -4/animate Ram true false 5000 25/animate farmer false false 5000 101/pause 2400/stopAnimation farmer/move Ram 1 0 3/speak Ram \"Acho que isso é o começo de algo grande!$1\"/speak Ram \"Aqui, tome um pouco de chocolate. Vou pegar alguns marshmallows para assar também.\"/pause 2400/question null \"Tem certeza que quer ficar comigo? Uma mãe solteira com 2 filhos e 2 casamentos.#Claro! Acho você incrível!#Sim. Você é incrível e linda. Faremos uma, grande, misturada e feliz família!\"/playMusic musicboxsong/speak Ram \"...$7\"/move farmer 1 0 1/positionOffset farmer 10 0/positionOffset Ram 0 -2/animate Ram true true 5000 25/animate farmer false true 5000 101/pause 2400/fade fadeout/end",
+				"rejectRam": "stopMusic/speak Ram \"Oh, me desculpe. Uh... Vou indo então. Desculpa...\"/faceDirection Ram 1/move Ram 1 0 1/move Ram 0 2 2/move Ram -4 0 3/move Ram 0 2 3/move Ram -1 0 2/move Ram 0 10 2/pause 200/faceDirection Ram 0/pause 1000/faceDirection Ram 2/pause 100/faceDirection farmer 2/emote Ram 28/pause 1000/move Ram 0 5 2/fade fadeout/end"
+			},
+			"When": {
+				"HasMod": "FlashShifter.StardewValleyExpandedCP"
+			}
+		},
+		// MissCoriel's NPC Unique Courtship Response
+		{
+			"LogName": "Robin Romance Messages",
+			"Action": "EditData",
+			"Target": "Characters/dialogue/Ram",
+			"Entries": {
+				"give_flowersA": "Ah.$6#$b# Claro que vou namorar com você.$6#$b#*sussurra* eu gosto muito de você, @...$7",
+				"give_flowersB": "Elas são lindas. Para quem são?#$b#São para mim? Sério?!$9#$b#Sim, eu vou namorar com você, @! Estou tão feliz que você tenha se sentido da mesma forma que eu.$9",
+				"give_pendant": "...$2#$b#Tem certeza?$7#$b#Eu disse a mim mesma que não deveria me casar com você. Não tenho muita sorte nesse departamento.$7#$b#Mas se você sente o mesmo...#$b#Claro que eu vou! Me dê 3 dias, ok?$9#$b#Agora eu vou construir um altar personalizado para nós, ou...$h",
+				"stardrop_gift": "Querido... Você me faz tão feliz, eu queria te dar algo especial para mostrar o quanto eu te amo.^Querida... Você me faz tão feliz, eu queria te dar algo especial para mostrar o quanto eu te amo.#$b#A Emily também disse que te daria mais energia, embora pudesse ser apenas história.$6#$b#Se importa em verificar se é verdade?$9",
+				"reject_two_heartA": "Desculpa, @. Acho que não nos conhecemos o suficiente para isso.$2",
+				"reject_two_heartB": "Desculpa, @. Não acho que seja uma boa ideia.$2",
+				"reject_four_heartA": "Desculpa, @. Ainda não estou pronta para ter outro relacionamento.$2",
+				"reject_four_heartB": "Desculpa, @. Não sei se, ou mesmo quando, estarei pronta para esse tipo de relacionamento novamente.$2",
+				"engageA": "Você já está noivo.$3^Você já está noiva.$3#$B#Em vez disso, invista seu tempo em algo produtivo.$0",
+				"engageB": "Você já está noivo.$3^Você já está noiva.$3#$B#Agora vá ter uma conversa séria com sua noiva e resolva quaisquer problemas que vocês dois estejam tendo.$0^Agora vá ter uma conversa séria com seu noivo e resolva quaisquer problemas que vocês dois estejam tendo.$0",
+				"marriedA": "Eu não vou ser sua amante.$3#$b#Se você não tem nenhum negócio relacionado a carpintaria, então é melhor você sair.",
+				"marriedB": "Você acha que estou desesperada? Não vai rolar, @.",
+				"refusal_no_heartsA": "Haha. Boa piada.$1#$b#Espera, está falando sério? A gente nem se conhece!$3",
+				"refusal_no_heartsB": "Eu não acredito em amor à primeira vista, @. Melhor levar suas declarações para outro lugar.$3",
+				"refusal_knownA": "Sinto muito @, mas não.$2",
+				"refusal_knownB": "Não posso. Por favor, não...$3#$b#Por favor, vamos deixar as coisas do jeito que estão.$2",
+				"refusal_botherA": "Não importa quantas vezes você pergunte. A resposta ainda é não.$3",
+				"refusal_botherB": "Você não entendeu o que eu disse? Eu te disse não.#$b#Não importa o quanto implore, não é não.$3",
+				//Added 11_21
+				"rejectNPCA": "Você está brincando comigo?$3",
+				"rejectNPCB": "Eu não tenho tempo para isso.$3",
+				"birthdayLoveA": "Mal posso esperar para comer isso! Obrigada, @.$1",
+				"birthdayLoveB": "Isso parece delicioso! Obrigada, @.$1",
+				"birthdayLikeA": "Obrigada, @. Eu posso fazer bom uso disso.",
+				"birthdayLikeB": "Obrigada, @. Você me conhece bem.",
+				"birthdayDislikeA": "Ugh, por quê? Isso é alguma piada de mau gosto, @?$3",
+				"birthdayDislikeB": "Sim, isto é, uh, ótimo.$2",
+				"birthdayNeutralA": "Obrigada pelo presente, @.",
+				"birthdayNeutralB": "Ei, você se lembrou! Obrigada pelo presente, @."
+			},
+			"When": {
+				"HasMod": "misscoriel.UCRFix"
+			}
+		},
+		{
+			"LogName": "Engaged to Robin",
+			"Target": "Characters/dialogue/Ram",
+			"Action": "EditData",
+			"When": {
+				"Relationship:Ram": "Engaged",
+				"HasMod": "misscoriel.UCRFix"
+			},
+			"Entries": {
+				"give_flowersA": "...!!$9#$b#Também estou ansiosa pelo casamento, @. Não vejo a hora de ser sua esposa.$9",
+				"give_flowersB": "Elas são lindas, @.$6#$b#Eu vou ter que colocá-las em um vaso. Embora eu não tenha certeza se eu tenho algum vaso...#$b#Mas você tem. Por que eu não voua na sua casa esta noite, sabe, para pegar um vaso?$9",
+				"marriedA": "Acho que um pingente é suficiente. Mas...#$b#Acho que vou aceitá-lo, mas o que você me deu primeiro é o que eu sempre vou amar.$6",
+				"marriedB": "Ouvi dizer que o caminho para o coração de uma mulher é por meio de ferramentas elétricas, não cópias caras de pingentes que ela já possui.$1",
+				"engageA": "Nós nos separamos?#$b#Não?#$b# Então por que você está propondo novamente?$3",
+				"engageB": "Eu sinto Muito. Mas é um não.$3#$b#Isso te assustou, idiota?#$b#Bom. Já estamos noivos. Não se esqueça disso de novo.",
+				//Added 11_21 (also added marriedB, marriedA was givependant before this change.)
+				"birthdayLoveA": "Isso parece delicioso! Você acha que poderíamos ter isso no nosso casamento?$1#$b#Acho que não, os nossos hóspedes podem não gostar de uma receita tão requintada.$0#$b#Ainda assim, muito obrigada, @.$1",
+				"birthdayLoveB": "Isso parece delicioso! Você acha que poderíamos ter isso no nosso casamento?$1#$b#Acho que não, não podemos sair mudando os planos.$0#$b#Ainda assim, muito obrigada, @.$1",
+				"birthdayLikeA": "Obrigada, @. Eu posso fazer bom uso disso.",
+				"birthdayLikeB": "Obrigada, @. Você me conhece bem.",
+				"birthdayDislikeA": "Ugh, por quê? Isso é alguma piada de mau gosto, @?$3",
+				"birthdayDislikeB": "Sim, isto é, uh, ótimo.$2",
+				"birthdayNeutralA": "Obrigada pelo presente, @.",
+				"birthdayNeutralB": "Ei, você se lembrou! Obrigada pelo presente, @."
+			}
+		},
+		{
+			"LogName": "Married to Robin",
+			"Target": "Characters/dialogue/Ram",
+			"Action": "EditData",
+			"When": {
+				"Relationship:Ram": "Married",
+				"HasMod": "misscoriel.UCRFix"
+			},
+			"Entries": {
+				"give_flowersA": "Isso vai deixar meu quarto muito mais bonito. Obrigada, @!$6#$b#*abraça*$6#$b#Estou tão feliz por você ainda ser tão romântico.$6",
+				"give_flowersB": "Você não devia, @!$6#$b#Não, sério, você não deveria ter feito isso. Você sabe quanto custam as flores? Você deveria, considerando que você as cultiva.$3#$b#Valeu a pena porque você me ama muito? Tudo bem, você ganhou, @.$0#$b#Sério, obrigada pelas flores, pelo o pensamento, e por todo o amor que você continua a me dar. Eu também te amo.$9",
+				"marriedA": "Mais pingentes. Que... especial.$3",
+				"marriedB": "Estou curiosa, @. Como você se sentiria se eu tivesse alguns pingentes de reposição por aí?$3",
+				//Added 11_21 (check gender switch command)
+				"birthdayLoveA": "Você é o melhor marido. Eu adoro isso, @!$1^Você é a melhor esposa. Eu adoro isso, @!$1",
+				"birthdayLoveB": "Podemos comer isso juntos, se você quiser, @.$6#$b#Estou tão feliz por ter um marido que me conhece tão bem.$9^Estou tão feliz por ter uma esposa que me conhece tão bem.$9",
+				"birthdayLikeA": "Obrigada, @.#$b#Não há ninguém com quem eu prefira passar meu aniversário se não for você.$2",
+				"birthdayLikeB": "É uma ferramenta elétrica? É, não é?$2#$b#Ah, Bem.$4#$b#Ainda assim é um grande presente. Obrigada, @.$2",
+				"birthdayDislikeA": "Se você ao menos pudesse se lembrar do nosso aniversário de casamento...$2",
+				"birthdayDislikeB": "É oficial, Demetrius sabe dar presentes melhor do que você. *suspiro*$2",
+				"birthdayNeutralA": "Obrigada pelo presente, @.",
+				"birthdayNeutralB": "Ei, você se lembrou! Obrigada pelo presente, @."
+			}
+		},
+		//Gender Neutrality Unique Courtship Support
+		{
+			"LogName": "Married to RobinGN",
+			"Target": "Characters/dialogue/Ram",
+			"Action": "EditData",
+			"When": {
+				"Relationship:Ram": "Married",
+				"HasMod": "misscoriel.UCRFix",
+				"HasMod |contains=Hana.GenderNeutralityMod": "True"
+			},
+			"Entries": {
+				"birthdayLoveA": "Você é o melhor cônjugue. Eu adoro isso, @!$1",
+				"birthdayLoveB": "Podemos comer isso juntos, se você quiser, @.$6#$b#Estou tão feliz por ter um cônjugue que me conhece tão bem.$9"
+			}
+		},
+		//Pregnancy Role Support Added 11_21
+		{
+			"LogName": "NPC Dispositions",
+			"Action": "EditData",
+			"Target": "Data/NPCDispositions",
+			"When": {
+				"HasMod": "kdau.PregnancyRole",
+				"EnableFemaleFarmerPregnancy": "True"
+			},
+			"Entries": {
+				"Ram": "adult/neutral/outgoing/positive/female/datable/null/Town/fall 21/PregnancyRole make Sebastian 'filho' Maru 'filha'/LeahHouse 13 5 2/Robin"
+			}
+		},
+		//Check below against original strings. Should reflect female farmer being pregnant and male farmer adopting.
+		{
+			"LogName": "CSFiles",
+			"Action": "EditData",
+			"Target": "Strings/StringsfromCSFiles",
+			"When": {
+				"HasMod": "kdau.PregnancyRole",
+				"EnableFemaleFarmerPregnancy": "True",
+				"Spouse": "Ram"
+			},
+			"Entries": {
+				"NPC.cs.4439": "Faz tanto tempo desde que o Sebastian e a Maru nasceram. Pergunto-me como que será cuidar deste novo bebê.$s",
+				"NPC.cs.4440": "{0}, espero que a adoção chegue logo. Eu já encontrei um cinzel de brinquedo para o bebê.$l",
+				"NPC.cs.4441": "{0}, eu assinei os papéis da adoção. Esta família está prestes a ficar maior.$l",
+				"NPC.cs.4442": "Ugh... Nada de queijo de cabra hoje. Estou tão enjoada, só de olhar para isso me dá vontade de vomitar.$s",
+				"NPC.cs.4443": "Estou grávida... E você ainda está me pedindo para fazer o SEU café da manhã?$s",
+				"NPC.cs.4444": "{0}, vamos ter um filho em breve.$l",
+				"NPC.cs.4445": "{0}, eu estou grávida. Ei, não desmaie em cima de mim...$l",
+				"NPC.cs.4446": "Só estou com vontade de dormir hoje. Não se preocupe.$a",
+				"NPC.cs.4447": "{0}, vamos ter um filho em breve.$l",
+				"NPC.cs.4448": "{0}, Estou tão feliz que você está grávida do nosso filho. Mal posso esperar para conhecê-los!$1#$b#Eu deveria começar a trabalhar em seu berço. Você quer ajudar?$1",
+				"NPC.cs.4449": "Ser mãe é chato, às vezes... só não tenho vontade de me levantar da cama. Pelo menos as crianças ainda são muito jovens para responder, diferente do Sebastian.$a"
+			}
+		},
+		//Gender Neutral Support Added 11_21 - Old Version: "NPC.cs.4448": "{0}, can't you tell? You're pregnant. Wait, how did that happen? If you're reading this, you either did a thing or more likely this is an error within the mod$1",
+		{
+			"LogName": "Robin 14 Heart Event",
+			"Action": "EditData",
+			"Target": "Data/Events/Beach",
+			"When": {
+				"HasMod": "Hana.GenderNeutralityMod"
+			},
+			"Entries": {
+				"rejectDiplomacy": "playMusic desolate/stopMusic/resetVariable/question fork1 \"#Segure a mão de Robin#Próxima Opção\"/fork rejectHand/playMusic desolate/speak Ram \"Se você não quer estar aqui-$2\"/speak Maru \"Não é isso, certo, Sebastian?$2\"/speak Sebastian \"Você não entendeu, Maru. Você nunca teve dois padrastos antes.$a^Você não entendeu, Maru. Você nunca teve uma madrasta antes.$a\"/speak Maru \"...$2\"/pause 800/speak Sebastian \"Eu pensei que @ era apenas uma nova pessoa na vizinhança.#$b#E agora @ faz parte da minha família. É estranho, certo, mana?\"/emote Maru 20/emote Maru 28/speak Maru \"É estranho, mas...#$b#Mas você quase nunca me chamou de 'mana' a não ser agora, quando quer que eu concorde com você. E somos parentes de sangue.$a#$b#Então eu acho que o problema está em você, irmão.\"/emote Sebastian 12/move Sebastian 0 2 2/move Sebastian -10 0 3/move Sebastian 0 -4 0/emote farmer 28/move farmer 0 -1 3/move farmer -8 0 3/faceDirection Sebastian 1/resetVariable/question fork1 \"Você tem 3 opções para escolher. Use 'Próxima Opção' para ver as outras opções.#Sua irmã e sua mãe te amam, Sebastian. Não seja assim. Volte e vamos comer alguma sobremesa.#Próxima Opção\"/fork SebWhine2/pause 1000/move farmer 8 0 2/move farmer 0 1 2/emote farmer 28/positionOffset Ram 15 0/speak Ram \"*Segura a mão$2*\"/emote Sebastian 28/move Sebastian 0 4 2/move Sebastian 10 0 1/move Sebastian 0 -2 3/pause 1000/speak Sebastian \"Peço desculpa a vocês.$s\"/emote farmer 32/emote Ram 32/emote Maru 32/pause 2000/emote Sebastian 32/pause 500/speak Sebastian \"Cadê a sobremesa, @?$4\"/speak Ram \"Sobremesa? Do que ela está falando, querido?^Sobremesa? Do que ela está falando, querida?\"/speak Maru \"É torta de ruibarbo? Certo?$4\"/emote Maru 16/emote farmer 60/question null \"#Desculpa, Maru, a torta era uma mentira.#Umm...\"/stopMusic/speak Maru \"Não!$5\"/shake Maru 500/playMusic playful/move Sebastian 0 2 3/move Sebastian -4 0 0/move Sebastian 0 -2 1/speak Sebastian \"*segura a irmã*$2\"/pause 800/speak Sebastian \"Acho que minha irmã precisa de alguns doces imediatamente! Ou ela pode enlouquecer.$1\"/speak Ram \"O que nós faremos, @?\"/question null \"#Ok, vamos pegar uma sobremesa!#Acho que tenho ruibarbo guardado em casa. Vamos fazer uma torta!\"/speak Maru \"Isso!$1\"/emote Maru 20/faceDirection Ram 1/faceDirection farmer 3 false/speak Ram \"Eu te amo, @.\"/positionOffset Ram 0 -7/animate farmer true true 2000 101/animate Ram false true 2000 25/pause 3000/fade fadeout/end"
+			}
+		},
+		{
+			"LogName": "Robin 14 Heart Fixed Event",
+			"Action": "EditData",
+			"Target": "Data/Events/Beach",
+			"When": {
+				"14HeartFix": "True",
+				"HasMod": "Hana.GenderNeutralityMod"
+			},
+			"Entries": {
+				"rejectDiplomacy": "playMusic desolate/resetVariable/question fork1 \"#Segure a mão de Robin#Próxima Opção\"/fork rejectHand/playMusic desolate/speak Ram \"Se você não quer estar aqui-$2\"/speak Maru \"Não é isso, certo, Sebastian?$2\"/speak Sebastian \"Você não entendeu, Maru. Você nunca teve dois padrastos antes.$a^Você não entendeu, Maru. Você nunca teve uma madrasta antes.$a\"/speak Maru \"...$2\"/pause 800/speak Sebastian \"Eu pensei que @ era apenas uma nova pessoa na vizinhança.#$b#E agora @ faz parte da minha família. É estranho, certo, mana?\"/emote Maru 20/emote Maru 28/speak Maru \"É estranho, mas...#$b#Mas você quase nunca me chamou de 'mana' a não ser agora, quando quer que eu concorde com você. E somos parentes de sangue.$a#$b#Então eu acho que o problema está em você, irmão.\"/emote Sebastian 12/move Sebastian 0 2 2/move Sebastian -10 0 3/move Sebastian 0 -4 0/emote farmer 28/move farmer 0 -1 3/move farmer -8 0 3/faceDirection Sebastian 1/resetVariable/question fork1 \"Você tem 3 opções para escolher. Use 'Próxima Opção' para ver as outras opções.#Sua irmã e sua mãe te amam, Sebastian. Não seja assim. Volte e vamos comer alguma sobremesa.#Próxima Opção\"/fork SebWhine2/pause 1000/move farmer 8 0 2/move farmer 0 1 2/emote farmer 28/positionOffset Ram 15 0/speak Ram \"*Segura a mão$2*\"/emote Sebastian 28/move Sebastian 0 4 2/move Sebastian 10 0 1/move Sebastian 0 -2 3/pause 1000/speak Sebastian \"Peço desculpa a vocês.$s\"/emote farmer 32/emote Ram 32/emote Maru 32/pause 2000/emote Sebastian 32/pause 500/speak Sebastian \"Cadê a sobremesa, @?$4\"/speak Ram \"Sobremesa? Do que ela está falando, querido?^Sobremesa? Do que ela está falando, querida?\"/speak Maru \"É torta de ruibarbo? Certo?$4\"/emote Maru 16/emote farmer 60/question null \"#Desculpa, Maru, a torta era uma mentira.#Umm...\"/stopMusic/speak Maru \"Não!$5\"/shake Maru 500/playMusic playful/move Sebastian 0 2 3/move Sebastian -4 0 0/move Sebastian 0 -2 1/speak Sebastian \"*segura a irmã*$2\"/pause 800/speak Sebastian \"Acho que minha irmã precisa de alguns doces imediatamente! Ou ela pode enlouquecer.$1\"/speak Ram \"O que nós faremos, @?\"/question null \"#Ok, vamos pegar uma sobremesa!#Acho que tenho ruibarbo guardado em casa. Vamos fazer uma torta!\"/speak Maru \"Isso!$1\"/emote Maru 20/faceDirection Ram 1/faceDirection farmer 3 false/speak Ram \"Eu te amo, @.\"/positionOffset Ram 0 -7/animate farmer true true 2000 101/animate Ram false true 2000 25/pause 3000/fade fadeout/end"
+			}
+		},
+		{
+			"LogName": "Winter25",
+			"Action": "EditData",
+			"Target": "Data/Festivals/winter25",
+			"When": {
+				"HasMod": "Hana.GenderNeutralityMod",
+				"Spouse": "Ram"
+			},
+			"Entries": {
+				"Ram": "Está congelando.#$b#*abraça*#$b#Vamos nos abraçar e nos aquecer.$9"
+			}
+		},
+		{
+			"LogName": "CSFiles",
+			"Action": "EditData",
+			"Target": "Strings/StringsfromCSFiles",
+			"When": {
+				"HasMod": "Hana.GenderNeutralityMod",
+				"Relationship:Ram": "Engaged"
+			},
+			"Entries": {
+				"Utility.cs.5377": "@... %spouse... #$b# Como prefeito da Vila Pelicanos e portador regional do selo matrimonial, eu os declaro {{SpouseNoun}} e mulher!$h",
+				"Utility.cs.5371": "@... %spouse... #$b# Como prefeito da Vila Pelicanos e portador regional do selo matrimonial, eu os declaro {{SpouseNoun}} e mulher!$h"
+			}
+		},
+		//Expanded Compatability Dialogue & Misc (may not be GS and Gender Neutrality Supported) Directly edits and may contain spoilers from Expanded mod. ***********************************************************************************
+		{
+			"LogName": "ExpandedSupportPossibleSpoiler1",
+			"Action": "EditData",
+			"Target": "Strings/SpecialOrderStrings",
+			"When": {
+				"EnableVeronica": "True",
+				"EnableExpandedSupport": "True",
+				"HasMod": "FlashShifter.StardewValleyExpandedCP"
+			},
+			"Entries": {
+				"Robin3_Text": "Se eu juntar esses materiais, Verônica vai reformar a antiga cabana do meu avô. Há um baú lá dentro onde posso deixá-los."
+			}
+		},
+		{
+			//Event #4 - Quest Complete - Fonz note: Ensure %Robin > %Veronica doesn't mess anything up
+			"LogName": "ExpandedSupportPossibleSpoiler2",
+			"Action": "EditData",
+			"Target": "data/events/farm",
+			"When": {
+				"EnableVeronica": "True",
+				"EnableExpandedSupport": "True",
+				"HasMod": "FlashShifter.StardewValleyExpandedCP"
+			},
+			"Entries": {
+				"2554906/n ShedRepaired": "continue/-500 -500/farmer 6 24 0 Robin 7 18 2/skippable/pause 1000/speak Robin \"Eu verifiquei todos os materiais que você reuniu, bom trabalho!$1#$b#Você fez a sua parte, agora eu faço a minha. Eu trabalho rápido, então o galpão deve ser reformado amanhã!$0\"/pause 500/emote farmer 32/pause 300/end dialogue Robin \"%Verônica está ocupada.\""
+			}
+		},
+		{
+			"LogName": "ExpandedSupportPossibleSpoiler3",
+			"Action": "EditData",
+			"Target": "Data/Mail",
+			"When": {
+				"EnableVeronica": "True",
+				"EnableExpandedSupport": "True",
+				"HasMod": "FlashShifter.StardewValleyExpandedCP"
+			},
+			"Entries": {
+				"robinKitchenLetter": "Olá, @^^Gostaria de me desculpar por fazer piada com a cabana do seu avô quando nos conhecemos. A casinha dele é incrível!^^Mas saiba que você pode precisar de mais espaço um dia. É aí que posso ajudar. Se você me trouxer alguns materiais e pagar uma taxa, posso ampliar sua casa.^(Continua na próxima página)^^A primeira expansão que ofereço é uma cozinha. Com uma cozinha, você poderá cozinhar todas as receitas que aprender!^^Enfim, espero que esteja começando a se sentir em casa no Vale do Orvalho!^^Veronica, ^Carpinteira do Vale do Orvalho[#]Serviços da Veronica"
+			}
+		},
+		{
+			"LogName": "ExpandedSupportPossibleSpoiler4",
+			"Action": "EditData",
+			"Target": "Data/Events/Town",
+			"When": {
+				"EnableVeronica": "True",
+				"EnableExpandedSupport": "True",
+				"HasMod": "FlashShifter.StardewValleyExpandedCP"
+			},
+			"Entries": {
+				"2000001_Graveyard": "pause 750/speak Victor \"...$2\"/pause 600/stopAnimation Victor/pause 1000/move Victor 0 0 1/pause 1000/showFrame Victor 43/pause 1500/playMusic echos/pause 850/speak Victor \"Este é o túmulo do meu gato. Seu nome era Dewey.$2#$b#Encomendei Verônica para esculpir esta lápide para ele, em sua memória.$6#$b#Dewey desapareceu logo depois que minha mãe e eu nos mudamos para o vale da cidade de Zuzu.$2\"/pause 150/emote farmer 60/pause 300/speak Victor \"Ele tinha acabado de completar dois anos. Nós... não sabemos o que aconteceu com ele.$2#$b#Quando ele desapareceu, fiquei arrasado. A cidade inteira saiu para ajudar a encontrá-lo, mas ninguém teve sorte.$2\"/pause 1100/speak Victor \"Depois de várias semanas... aceitamos que ele provavelmente não voltaria.$2\"/pause 1250/shake Victor 1500/pause 1000/speak Victor \"Eu deveria estar lá para ele. Ele deve ter ficado tão assustado, sozinho em um lugar estranho...$2\"/pause 1000/speak Victor \"Espero que, se ele estiver por aí, encontre o caminho de casa, não importa quanto tempo leve.$2\"/pause 800/showFrame Victor 4/pause 750/speak Victor \"Eu estarei aqui quando ele vier.$6\"/pause 1000/globalFade/viewport -1000 -1000/pause 700/mail VictorDewey/friendship Victor 40/end dialogue Victor \"Eu normalmente não falo com ninguém no cemitério.$0\""
+			}
+		},
+		{
+			//VICTOR 12 HEART EVENT - part 2
+			"LogName": "ExpandedSupportPossibleSpoiler5",
+			"Action": "EditData",
+			"Target": "Data/Events/Mountain",
+			"When": {
+				"EnableVeronica": "True",
+				"EnableExpandedSupport": "True",
+				"HasMod": "FlashShifter.StardewValleyExpandedCP"
+			},
+			"Entries": {
+				"2000006/O Victor/e 2000005/w sunny/t 1200 1700": "spring_day_ambient/-500 -500/farmer 81 17 2 Victor 90 26 2 Linus 30 9 3 Dwarf 120 1 2/addTemporaryActor Dewey 16 32 -100 -100 2/addTemporaryActor Luna 16 32 -100 -100 2/animate Victor false false 100 16 16 17 17 16 16 17 17 16 16 17 17 18 18 17 17 17 17 17 17 18 17 18 17 18 17 18 17 18 18 18 18 17 17 18 18 17 17 16 16 17 17 16 16 17 17 16 16 17 17 18 18 17 17 18 18 17 17 16 16 17 17 18 18 17 17 18 18 19 19 19 19 19 19 19/skippable/viewport 82 20 true/viewport move 1 1 6500 true/move farmer 0 4 2/move farmer 3 0 1/move farmer 0 1 2/move farmer 3 0 1/move farmer 0 4 2/pause 200/faceDirection farmer 1 true/pause 500/playSound bob/stopAnimation Victor/pause 500/faceDirection Victor 3 true/pause 250/speak Victor \"Ei. Você veio!$1\"/pause 500/move Victor -1 0 3/pause 500/speak Victor \"Estou fazendo medições com este novo dispositivo de engenharia chamado 'Caixa de ferramentas do casper'.$0#$b#Foi projetado recentemente por um feiticeiro melhor do mundo.$3\"/pause 750/speak Victor \"Aqui. Deixe-me mostrar-lhe como funciona.$1\"/pause 850/move farmer 1 0 1/move farmer 0 1 2 true/pause 250/faceDirection Victor 2 true/pause 250/move farmer 1 0 0/pause 500/speak Victor \"Um feixe invisível é projetado do dispositivo até entrar em contato com um objeto.$0#$b#A distância é então retransmitida para o console, com precisão surpreendente!$3\"/pause 1000/faceDirection Victor 1 true/pause 800/playSound pickUpItem/showFrame Victor 52/pause 300/showFrame Victor 53/pause 800/speak Victor \"Eu pressiono esses botões aqui no console.$3\"/pause 1000/playSound toolSwap/pause 700/playSound toolSwap/pause 500/viewport move 1 0 4000 true/pause 400/showFrame Victor 54/pause 200/showFrame Victor 53/pause 400/faceDirection farmer 1 true/pause 1500/showFrame Victor 54/pause 200/showFrame Victor 53/pause 1800/playSound cameraNoise/glow 79 255 255/pause 1000/viewport move -1 0 4000 true/pause 1000/showFrame Victor 54/pause 200/showFrame Victor 53/pause 1300/faceDirection farmer 0 true/pause 1000/showFrame Victor 52/pause 400/showFrame Victor 4 true/playSound bob/pause 950/faceDirection Victor 2 true/pause 500/speak Victor \"Tecnologia incrível, não é?$3#$b#Caixa de ferramentas de casper não são baratos. Tenho sorte que meu amigo do trabalho me emprestou um! Certamente ajuda quando estou no trabalho.$1\"/pause 800/speak Victor \"Ei. Há algo que você pode me dar uma mão com.$3\"/pause 350/globalFade/viewport -1000 -1000/stopMusic/pause 1500/playMusic nightTime/pause 1750/ambientLight 120 150 130/addLantern 735 88 25 1/warp farmer 86 25/warp Victor 87 25/faceDirection farmer 1 true/faceDirection Victor 3 true/viewport 87 25 true/pause 800/speak Victor \"Acho que essas são todas as medidas e cálculos que eu precisava.$0#$b#Eu realmente aprecio você ficar comigo o dia todo. Sua ética de trabalho é incrível.$3\"/pause 250/emote farmer 32/pause 150/speak Victor \"Desculpe por mantê-lo fora tão tarde. Vamos para casa-\"/pause 150/doAction 87 17/pause 400/doAction 87 17/faceDirection farmer 0 true/pause 350/faceDirection Victor 0 true/pause 200/emote Victor 16 true/doAction 87 17/pause 300/speak Victor \"Gah! Isso é um monstro das minas!?$7\"/pause 500/viewport move 0 -1 1500/move farmer 0 -1 0/pause 1000/speak Victor \"V-você vai me proteger, @!?$7\"/pause 700/doAction 87 17/pause 600/doAction 87 17/warp Dewey 87 18/move Dewey 0 4 2/pause 450/showFrame Dewey 16/pause 150/showFrame Dewey 17/pause 150/showFrame Dewey 18/pause 400/playSound cat/pause 1750/message \"é só um gato...\"/pause 1350/move Victor 0 -1 0/pause 400/faceDirection farmer 1 true/stopMusic/pause 250/speak Victor \"Oi...$0#$b#Você parece familiar...$0\"/pause 1000/speak Victor \"...$7\"/playMusic cm:Lament/pause 1200/speak Victor \"Dewey!$9#$b#$b#Você está... você está bem!?$9\"/pause 400/faceDirection farmer 1 true/pause 450/playSound cat/pause 400/shake Victor 99999/speak Victor \"Dewey! Oh meu Yoba!$9\"/shake Victor 1/playSound cat/showFrame Dewey 0 true/jump Dewey/pause 700/faceDirection farmer 0 true/pause 700/showFrame Dewey 16/pause 100/showFrame Dewey 17/showFrame Dewey 18/speak Victor \"O-onde você esteve!? Eu pensei...$10\"/pause 500/animate Dewey false false 200 20 21 22 23 22 21 20/pause 2400/showFrame Dewey 12/pause 200/showFrame Dewey 8/pause 850/playSound cat/jump Dewey/pause 1250/doAction 87 17/pause 600/doAction 87 17/pause 200/faceDirection farmer 0 true/pause 100/warp Luna 86 17/move Luna 0 5 2 true/pause 1700/faceDirection Dewey 3 true/pause 200/faceDirection Dewey 2 true/pause 300/showFrame Dewey 16 true/pause 200/showFrame Dewey 17 true/pause 200/showFrame Dewey 18 true/pause 200/showFrame Luna 16 true/pause 100/showFrame Luna 17 true/pause 100/showFrame Luna 18/playSound cat/pause 1000/speak Victor \"O-oh? Seu amigo?$11#$b#Heh...$8\"/pause 500/playSound cat/pause 700/playSound cat/pause 1250/speak Victor \"V-você quer voltar para casa?$11#$b#Seu amigo pode vir também.$8\"/pause 800/showFrame Luna 4 true/pause 700/playSound cat/pause 1000/showFrame Dewey 12 true/pause 1200/playSound cat/jump Dewey/pause 900/ShowFrame Luna 8 true/pause 400/move Luna 0 -5 0 true/pause 1000/showFrame Dewey 8 true/pause 1400/warp Luna -50 -50/doAction 87 17/pause 1300/showFrame Dewey 4 true/pause 200/showFrame Dewey 0 true/pause 1000/move Dewey 0 2 2 true/pause 200/faceDirection farmer 1 true/pause 500/playSound cat/pause 350/shake Victor 500/pause 500/speak Victor \"Ei... essa é minha perna.$8\"/pause 400/playSound cat/pause 1300/faceDirection Dewey 1 true/pause 200/faceDirection Dewey 0 true/pause 400/move Dewey 0 -3 0 true/pause 200/faceDirection farmer 0 true/pause 350/speak Victor \"D-Dewey!? Onde você está indo?$9\"/pause 2000/faceDirection Dewey 1 true/pause 200/faceDirection Dewey 2 true/pause 1500/playSound cat/pause 2500/faceDirection Dewey 1 true/pause 200/faceDirection Dewey 0 true/pause 500/move Dewey 0 -3 0/warp Dewey -31 -31/doAction 87 17/pause 1200/shake Victor 750/pause 750/faceDirection farmer 1 true/pause 850/speak Victor \"Estou feliz que você está bem amiguinho...$11\"/pause 1000/faceDirection Victor 3 true/pause 1000/speak Victor \"Vamos. Vamos para casa.$8\"/pause 500/globalFade/viewport -1000 -1000/pause 400/stopMusic/pause 1250/end dialogue Victor \"Não consegui dormir bem ontem à noite. Eu estava pensando em Dewey.$2#$e#Estou apenas feliz que ele está bem...$0#$b#E ele não está sozinho.$3#$e#Eu me pergunto que tipo de aventuras Dewey e seu amigo têm. Você acha que vamos vê-los novamente no futuro?$1#$e#Oh. Contratei Verônica para remover o memorial de Dewey.$3\""
+			}
+		},
+		/*
+		//Adds Robin end dialogue - Fonz note: This needs to be checked. Might be broken by my change? Either use this or both Victor 4 and 12.
+		{ 
+			"LogName": "ExpandedSupportPossibleSpoiler6",
+			"Action": "EditData",
+			"Target": "Data/Events/Town",
+			"Entries": {
+				"2500108/e 2500107": "none/-500 -500/farmer -100 -100 0/pause 50/end dialogue Ram \"Hi @. I removed Dewey's memorial from the graveyard, as requested from your husband.$0#$b#I'm happy he got closure and Dewey's okay.$0#$e#I'll keep my eye out for any cats mucking around!$1\""
+			}
+			"When": {
+				"EnableVeronica": "True",
+				"EnableExpandedSupport": "True",
+				"HasMod": "FlashShifter.StardewValleyExpandedCP",
+			},
+		},	 
+		*/
+		{
+			//SLIME HUTCH EGGS
+			"LogName": "ExpandedSupportPossibleSpoiler7",
+			"Action": "EditData",
+			"Target": "Data/Events/farm",
+			"When": {
+				"EnableVeronica": "True",
+				"EnableExpandedSupport": "True",
+				"HasMod": "FlashShifter.StardewValleyExpandedCP"
+			},
+			"Entries": {
+				"690006/n slimeHutchBuilt/H": "continue/64 15/farmer 64 16 2 MarlonFay 66 15 0/broadcastEvent/pause 1000/speak MarlonFay \"Verônica me disse que agora você tem uma Casa de Gosmas!$1#$b#Eu gostava de criar slime na sua idade. É um ótimo hobby... mas perigoso.$1#$b#Como você acha que eu perdi esse olho?$2\"/shake MarlonFay 1000/showFrame MarlonFay 16/textAboveHead MarlonFay \"Hah!\"/pause 1000/textAboveHead MarlonFay \"Apenas brincando.\"/showFrame MarlonFay 17/pause 700/showFrame MarlonFay 8/pause 800/speak MarlonFay \"Aqui, eu tenho algo para você.\"/itemAboveHead slimeEgg/pause 1000/pause 1000/pause 1300/awardFestivalPrize slimeEgg/pause 300/faceDirection farmer 2 true/pause 500/speak MarlonFay \"É um ovo de slime. Você pode colocar isso dentro de uma incubadora de lodo para chocar.#$b#Agora, dê uma boa olhada naquele ovo. Da próxima vez que você estiver caçando slime, mantenha os olhos abertos para mais ovos. Eles são raros, mas as slimes os derrubam de vez em quando.#$b#Colete ovos de diferentes slimes para adicionar alguma variedade ao seu rebanho!\"/pause 500/end"
+			}
+		},
+		{
+			//Ripped verbatim from Expanded, used to apply to Ram (Robin) so as to match what it's supposed to do. Might customize it later.
+			"LogName": "ExpandedSupportPossibleSpoiler8",
+			"Action": "EditData",
+			"Target": "characters/dialogue/ram",
+			"When": {
+				"EnableExpandedSupport": "True",
+				"HasMod": "FlashShifter.StardewValleyExpandedCP"
+			},
+			"Entries": {
+				"ClaireMovie": "Eu nunca vi o teatro lotado assim.$0"
+			}
+		},
+		{
+			"LogName": "ExpandedSupportPossibleSpoiler9",
+			"Action": "EditData",
+			"Target": "characters/dialogue/demetrius",
+			"When": {
+				"EnableVeronica": "True",
+				"EnableExpandedSupport": "True",
+				"HasMod": "FlashShifter.StardewValleyExpandedCP"
+			},
+			"Entries": {
+				"election": "A Joja Co. tem um histórico de tratar mal o meio ambiente. E agora Morris é nosso prefeito...$2#$e#Robin e Verônica estão preocupadas que sua carpintaria seja substituída por uma alternativa mais barata...$2"
+			}
+		},
+		{
+			//Unique Veronica dialogue for election from Expanded - One of the best things about coming out here was escaping the city.#$e#Just goes to show that you need to appreciate the good things in your life while you have them.
+			"LogName": "ExpandedSupportPossibleSpoiler10",
+			"Action": "EditData",
+			"Target": "characters/dialogue/robin",
+			"When": {
+				"EnableVeronica": "True",
+				"EnableExpandedSupport": "True",
+				"HasMod": "FlashShifter.StardewValleyExpandedCP"
+			},
+			"Entries": {
+				"election": "Uma das melhores coisas de vir para cá foi fugir da cidade.$2#$e#Com as mudanças que virão para nossa cidade em breve, isso mostra que precisamos apreciar as coisas boas em nossas vidas enquanto ainda as temos.$4"
+			}
+		},
+		{
+			//Hopefully this doesn't mess anything up - Adds Robin to the election options from expanded.
+			"LogName": "ExpandedSupportPossibleSpoiler10",
+			"Action": "EditData",
+			"Target": "characters/dialogue/Ram",
+			"When": {
+				"EnableVeronica": "True",
+				"EnableExpandedSupport": "True",
+				"HasMod": "FlashShifter.StardewValleyExpandedCP"
+			},
+			"Entries": {
+				"election": "Se eu quisesse que as estradas fossem desenvolvidas fora da casa que construí, eu teria feito isso sozinho...$3#$e#Receio que Morris tente fazer meus negócios de carpintaria falir...$2"
+			}
+		},
+		{
+			//Demetrius Fountain event
+			"LogName": "ExpandedSupportPossibleSpoiler11",
+			"Action": "EditData",
+			"Target": "data/events/town",
+			"When": {
+				"EnableVeronica": "True",
+				"EnableExpandedSupport": "True",
+				"HasMod": "FlashShifter.StardewValleyExpandedCP"
+			},
+			"Entries": {
+				"1000015/m 60000/w sunny/z winter/z fall/z spring/t 900 1700": "springtown/-500 -500/farmer 19 39 0 Demetrius 27 29 0 Jodi 21 24 1 Caroline 23 24 3 Penny 47 33 2/skippable/showFrame Penny 18/pause 600/viewport 26 29 true/pause 250/textAboveHead Demetrius \"A fonte está deslumbrante hoje.\"/move farmer 0 -10 1/move farmer 1 0 1/emote farmer 8/pause 800/move Demetrius 0 0 3/pause 300/textAboveHead Demetrius \"Olá!\"/pause 1000/move farmer 5 0 1/pause 300/speak Demetrius \"Oi, @!$1#$b#O tempo está impressionante, você não acha?$0\"/pause 800/move Demetrius 0 0 0/pause 1200/speak Demetrius \"Você sabia que esta fonte tem trinta anos?$0#$b#Ela é mantida e reparada por um técnico de Grampleton.$1\"/pause 500/move Demetrius 0 0 3/pause 500/speak Demetrius \"Você está progredindo seu cultivo de sua fazenda?$1#$b#Não o visitei desde que você me permitiu montar meu experimento na caverna, pelo qual ainda sou grato!$0\"/pause 200/speak Demetrius \"$q -1 null#(Como a fazenda está indo)#$r -1 0 demetrius_event1#Verônica fez diversas construções na minha fazenda!#$r -1 0 demetrius_event2#Estou automatizando a fazenda com aspersores.#$r -1 0 demetrius_event3#Eu tenho focado em aprimorar minhas habilidades de espada e pesca.\"/pause 1100/speak Demetrius \"Estou feliz que você se instalou no vale. Cuidar de uma fazenda deve ser um trabalho braçal esmagador.$0\"/pause 800/speak Demetrius \"Falando sobre o Vale...$0\"/pause 200/speak Demetrius \"$q -1 null#Você sabe como o nosso vale recebeu esse nome?#$r -1 0 demetrius_event4#Nosso vale recebeu o nome de coisas espaciais?#$r -1 0 demetrius_event5#Porque orvalho... ou estrela? Alguma coisa? Não sei.#$r -1 0 demetrius_event6#De onde vem esse nome?\"/pause 800/speak Demetrius \"Há mil anos atrás, uma enorme chuva de meteoros bombardeou periodicamente esta área específica da República de Ferngill.$0#$b#Claro, naquela época, a República nem existia.$3#$b#Os meteoros eram tão abundantes que seus rastros pareciam fibras esticadas pelo céu.$0#$b#Os meteoritos pareciam pequenas gotas nas trilhas, como o orvalho da manhã em uma teia de aranha. Então nossos ancestrais chamavam esses chuveiros de 'Orvalho de Seda das Estrelas'.$0#$b#Quando a República de Ferngill foi estabelecida há 150 anos, a Admission Union nomeou este vale como 'Vale do Orvalho' em homenagem aos nossos ancestrais.$0#$b#Você já se perguntou por que suas colheitas estão sempre saudáveis? Ou por que eles produzem tão facilmente produtos de alta qualidade?$0#$b#Isso é por causa da chuva de meteoros! O solo no vale é extremamente fértil. Possui uma abundância de nutrientes como nitrogênio, fósforo e potássio!$1#$b#Há também uma alta concentração de minerais presentes no solo, incluindo zinco, manganês, boro, ferro, enxofre, cobalto, cobre, magnésio e assim por diante.$0#$b#Você pode cultivar praticamente qualquer coisa com facilidade graças ao solo fértil. É a razão pela qual tantos agricultores estabeleceram seu sustento no Vale do Orvalho!$1\"/pause 100/emote Demetrius 32/pause 100/question fork0 \"#Aprendi algo novo! Obrigado!#Você fala demais.\"/fork 1000015_InformativeConversation/stopMusic/pause 500/emote Demetrius 28/pause 1000/speak Demetrius \"Peço desculpas, @. Não era minha intenção divagar assim...$2#$b#Me emociono quando tenho a oportunidade de ensinar coisas novas a alguém.$2\"/pause 700/emote Demetrius 28/pause 1000/speak Demetrius \"Bom... é sempre um prazer falar com você, @.$2\"/pause 200/globalFade/viewport -1000 -1000/pause 700/friendship Demetrius -375/end dialogue Demetrius \"Desculpa ter ocupado tanto do seu tempo na fonte, @. Isso não vai acontecer novamente.$2#$e#%Demetrius parece triste.\""
+			}
+		},
+		/*
+		{			 //ROBIN EVENT - Fonz Note: Leaving untouched for now, not sure how best to deal with this or even if it needs to be dealt with.
+			"LogName": "ExpandedSupportPossibleSpoiler12",
+			"Action": "EditData",
+			"Target": "data/events/backwoods",
+			"When": {
+				"EnableVeronica": "True",
+				"EnableExpandedSupport": "True",
+				"HasMod": "FlashShifter.StardewValleyExpandedCP",
+			},
+			"Entries": {
+			"1000029/w sunny/m 500000/t 600 1130/z winter/z fall/z spring": "summer_day_ambient/-500 -500/farmer 14 39 0 Robin 14 26 1/skippable/pause 500/viewport 19 28 true/pause 400/textAboveHead Robin \"*pant* *pant*...\"/move farmer 0 -10 0/pause 650/move Robin 0 0 2/emote Robin 16/pause 150/speak Robin \"Good morning, @.$0#$b#I just finished my morning jog!$1\"/pause 1250/speak Robin \"I got a good look at your farm. The progress you've made is amazing!$1\"/pause 1100/speak Robin \"I see that the buildings I constructed for you are still holding up. I hope they're serving you well!$0\"/pause 500/question fork0 \"#You did a great job constructing them.#The buildings aren't that great.\"/fork 1000029_WonderfulJob/pause 500/emote Robin 16/pause 350/emote Robin 28/pause 600/speak Robin \"Oh... I'm sorry, @. I... Umm...$2\"/pause 500/move Robin 0 0 0/pause 1000/emote Robin 28/pause 500/speak Robin \"Well... Umm I'm going to go. I'll see you around...$2\"/pause 500/globalFade/viewport -1000 -1000/pause 700/friendship Robin -625/end dialogue Robin \"I'm sorry the buildings haven't been meeting your standards, @.$2#$b#I'll be extra meticulous next time if you choose to contract me to build something new...$2\"",
+			"1000029_WonderfulJob": "pause 600/speak Robin \"That's great to hear!$1\"/pause 2000/speak Robin \"I wasn't here in the valley yet when your grandpa was working the farm.$0#$b#I think Sebastian was maybe around two or three years old when your grandpa retired.$5\"/pause 1500/speak Robin \"It's incredible how beautiful the farmland is now.$1#$b#I remember reading about it when it was mentioned in the news! That was a while ago.$0#$b#I hope you get another interview, @. You've made a lot more progress since then.$1\"/pause 600/emote farmer 32/pause 200/emote Robin 32/pause 1250/speak Robin \"I'm going to go home and shower. Drop by later if you need anything!$0\"/pause 500/globalFade/viewport -1000 -1000/pause 700/end dialogue Robin \"Hey, thanks for all the business you've given me, @.#$b#It's amazing to see my buildings get good use out of them.$1\""
+			},
+		},
+		*/
+		{
+			//DEMETRIUS EVENT DIALOGUE ADDITIONS
+			"LogName": "ExpandedSupportPossibleSpoiler13",
+			"Action": "EditData",
+			"Target": "characters/dialogue/Demetrius",
+			"When": {
+				"EnableVeronica": "True",
+				"EnableExpandedSupport": "True",
+				"HasMod": "FlashShifter.StardewValleyExpandedCP"
+			},
+			"Entries": {
+				"demetrius_event1": "Verônica me contou sobre alguns novos edifícios que ela construiu em sua fazenda. Eu espero que eles estejam trabalhando para você!$1"
+			}
+		},
+		// Don't even get me started on what this needs in terms of support :sigh:
+		{
+			//edits out Lewis' mayor status from Haley's 14 hrt event
+			"LogName": "ExpandedSupportPossibleSpoiler14",
+			"Action": "EditData",
+			"Target": "data/events/town",
+			"When": {
+				"HasSeenEvent": "6665293",
+				"EnableVeronica": "True",
+				"EnableExpandedSupport": "True",
+				"HasMod": "FlashShifter.StardewValleyExpandedCP"
+			},
+			"Entries": {
+				"6184644/e 8675611/O Haley/A haleyCakewalk2/t 600 1500/w sunny/i 220": "ragtime/-100 -100/farmer 29 60 2 Haley 27 64 2 Marnie 27 66 1 Caroline 29 66 1 Emily 31 66 2 Jodi 31 68 2 Lewis 25 68 1 Ram 25 70 1 Jas 31 70 3 Vincent 29 70 3 Pam 27 70 0 Clint 27 68 0 Penny 31 64 2 Pierre 25 66 1 Gus 35 66 3 Evelyn 23 67 1 George 24 67 1/removeQuest 127/removeItem 220/specificTemporarySprite haleyCakeWalk/beginSimultaneousCommand/advancedMove Marnie true 2 0 2 0 0 2 0 2 -2 0 -2 0 0 -2 0 -2/advancedMove Caroline true 2 0 0 2 0 2 -2 0 -2 0 0 -2 0 -2 2 0/advancedMove Emily true 0 2 0 2 -2 0 -2 0 0 -2 0 -2 2 0 2 0/advancedMove Jodi true 0 2 -2 0 -2 0 0 -2 0 -2 2 0 2 0 0 2/advancedMove Jas true -2 0 -2 0 0 -2 0 -2 2 0 2 0 0 2 0 2/advancedMove Vincent true -2 0 0 -2 0 -2 2 0 2 0 0 2 0 2 -2 0/advancedMove Pam true 0 -2 0 -2 2 0 2 0 0 2 0 2 -2 0 -2 0/advancedMove Clint true 0 -2 2 0 2 0 0 2 0 2 -2 0 -2 0 0 -2/endSimultaneousCommand/viewport 29 68 true/move farmer 0 4 3/pause 1000/addObject 28 64 220/playSound coin/faceDirection farmer 3/faceDirection Haley 1/speak Haley \"Ei! Ah, ainda bem! Você trouxe o bolo!...\"/showFrame Haley 23/playSound slimeHit/pause 400/showFrame Haley 4/pause 500/showFrame Haley 23/playSound slimeHit/pause 400/showFrame Haley 4/pause 1000/speak Haley \"Parece ótimo, obrigada, @.\"/faceDirection Haley 2/faceDirection farmer 2/speak Haley \"Tem bastante gente aqui, né?\"/emote farmer 32/speak Marnie \"Ehh... Haley? Quando vamos parar? M... Minhas pernas... *respira* *respira*$s\"/jump Haley/pause 500/speak Haley \"Opa! hora de parar!$h\"/showFrame Haley 19/playMusic none/playSound whistle/shake Haley 500/stopAdvancedMoves next/pause 500/showFrame Haley 0/pause 1000/playMusic distantBanjo/pause 2000/speak Haley \"Tudo bem! Todos em seus lugares, por favor.\"/textAboveHead Emily \"\"Já estou!\"/jump Vincent/textAboveHead Marnie \"Certo\"/textAboveHead Pam \"Tudo bem\"/faceDirection Pam 0 true/faceDirection Marnie 0 true/faceDirection Vincent 0 true/faceDirection Jas 0 true/faceDirection Marnie 0 true/faceDirection Clint 0 true/faceDirection Emily 0 true/faceDirection Caroline 0 true/faceDirection Jodi 0 true/pause 1000/speak Haley \"Seu número determina qual bolo você ganhará!#$b#Certo, vamos ver quem ganhou qual...\"/move Haley 0 -1 1/move Haley 6 0 2/move Haley 0 2 2/speak Haley \"Certo, vamos ver... #$b#Caroline, qual seu número? Certo, você ganhou...#$b#O 'Pão de Cenoura-da-caverna do Lewis, com fibra extra!\"/emote Marnie 28 true/textAboveHead Caroline \"Ah, maravilha\"/pause 1000/speak Haley \"Emily, você ganhou...#$b#Cupcakes fortes de chocolate da Pam, com creme de manteiga de bourbon envelhecido.\"/emote Emily 32/textAboveHead Gus \"Nossa!\"/pause 1000/speak Pam \"Você deu sorte.$h\"/pause 500/speak Haley \"Próxima, Jas, você ganhou...#$b#Rábano Grelhado do Clint.\"/emote Jas 28 true/pause 200/speak Clint \"É uma velha receita de família. Assei direto na fornalha.#$b#Ah, um... eu posso ter queimado o fundo um pouco, então... uh... você pode ter que descascar uma camada carbonizada. Mas o resto é totalmente comestível.\"/pause 200/emote Jas 28/pause 500/speak Haley \"Uh... certo, próximo, Vincent, você ganhou...#$b#Creme Triplo de açucar e morango da Robin!\"/jump Vincent/textAboveHead Jodi \"Essa não...\"/pause 800/jump Vincent/pause 800/jump Vincent/pause 800/speak Haley \"A seguir, Jodi. Voce vai levar para casa...#$b#Bolo de veludo vermelho orgânico de Emily... colorido com beterraba!\"/pause 200/textAboveHead Jodi \"Delícia!\"/pause 800/viewport move 0 -1 1500/move Haley 0 -2 3/move Haley -5 0 2/speak Haley \"...e por último, mas não menos importante: Pam! Você é a sortuda vencedora do bolo de chocolate de luxo do meu marido.^...e por último, mas não menos importante: Pam! Você é a sortuda vencedora do bolo de chocolate de luxo da minha esposa.\"/pause 500/textAboveHead Pam \"Obrigada, criança\"/pause 1000/speak Haley \"Obrigada a todos por participarem, nós conseguimos juntar 5,000g!\"/pause 500/speak George \"Por que o dinheiro, afinal? Você vai comprar outra bolsa?\"/pause 200/faceDirection Haley 1/speak Haley \"Hm, não... na verdade, é para a Penny.\"/faceDirection Penny 3/faceDirection farmer 1 true/emote Penny 8/speak Haley \"Penny, outro dia eu ouvi você conversando com Jas e Vincent sobre seus livros escolares. Parece que você precisa de ajuda...\"/jump Penny/pause 500/textAboveHead Penny \"Novos livros!\"/pause 800/faceDirection Penny 2/speak Penny \"Vocês ouviram, Jas, Vince? Vamos ter novos livros!\"/emote Jas 20 true/emote Vincent 28/pause 500/faceDirection Penny 3/speak Penny \"Haley... eu nem sei como agradecer, muito obrigada.$h#$b#...para ambos!$h\"/emote farmer 32/viewport move -1 0 3000/advancedMove George false 0 -5 24 0/advancedMove Evelyn false 1 0 0 -5 24 0/move Haley 2 0 2/pause 2000/faceDirection Ram 0/faceDirection Pierre 2/speak Ram \"Ei Lewis... já que estamos financiando a educação sem tocar nos cofres da cidade, você estará reduzindo nosso imposto sobre negócios, certo?$h\"/pause 500/showFrame Lewis 26/jump Lewis/playSound Duck/positionOffset Lewis -4 0/pause 30/positionOffset Lewis -4 0/pause 30/positionOffset Lewis -4 0/pause 30/positionOffset Lewis -4 0/pause 30/positionOffset Lewis -4 0/pause 30/positionOffset Lewis -4 0/pause 30/positionOffset Lewis -4 0/pause 30/positionOffset Lewis -4 0/pause 30/positionOffset Lewis -4 0/pause 30/positionOffset Lewis -4 0/pause 30/positionOffset Lewis -4 0/pause 30/positionOffset Lewis -4 0/pause 30/positionOffset Lewis -4 0/pause 30/positionOffset Lewis -4 0/pause 30/positionOffset Lewis -4 0/pause 30/positionOffset Lewis -4 0/pause 30/positionOffset Lewis -4 0/advancedMove Ram false 0 -1 3 100/advancedMove Pierre false 0 1 3 100/pause 1500/end dialogue Haley \"Foi um grande sucesso! Obrigada por me ajudar, amor.\""
+			}
+		},
+		{
+			//Add SVE characters to Leah art show event
+			"LogName": "ExpandedSupportPossibleSpoiler15",
+			"Action": "EditData",
+			"Target": "data/events/Town",
+			"When": {
+				"EnableVeronica": "True",
+				"EnableExpandedSupport": "True",
+				"HasMod": "FlashShifter.StardewValleyExpandedCP"
+			},
+			"Entries": {
+				"53/e 55/t 1500 1700": "none/-100 -100/farmer 28 57 1 Sophia 34 66 0 Andy 37 60 3 Olivia 30 65 0 Victor 29 65 0 Susan 27 63 1 Evelyn 37 58 3 Gus 30 56 2 Pam 31 56 2 Vincent 27 55 2 Jas 26 55 2 George 37 59 3 Leah 32 61 1 Shane 34 61 3 Ram 27 61 1 Demetrius 28 61 3 Emily 30 58 2 Clint 31 59 3 Harvey 34 57 2 Lewis 35 59 3 Marnie 35 58 3 Elliott 31 63 3 Maru 33 57 2 Sebastian 35 62 1 Abigail 35 63 1 Sam 36 61 2 Penny 37 62 3 Pierre 32 65 1 Caroline 33 65 3 Haley 28 59 1 Alex 28 58 1/specificTemporarySprite leahShow/skippable/animate LeahEx false true 100 4 5/viewport 33 60 true/move farmer 1 0 1/faceDirection Sebastian 2 true/faceDirection Alex 0 true/move farmer 1 0 1/faceDirection Sebastian 1 true/faceDirection Maru 3 true/move farmer 2 0 1/faceDirection Alex 1 true/faceDirection Maru 2 true/move farmer 0 1 2/faceDirection Shane 0 true/faceDirection Emily 2 true/move farmer 0 1 2/faceDirection Shane 3 true/move farmer 0 1 2/faceDirection Emily 0/move Shane 1 0 2/faceDirection Leah 0/speak Leah \"@! Você está aqui!$h#$b#Certo... está na hora de começar, me deseje sorte!$l\"/pause 300/faceDirection Leah 2/pause 800/faceDirection Leah 1/faceDirection Leah 2/faceDirection Leah 3/faceDirection Leah 2/speak Leah \"Hm... certo, atenção por favor!\"/faceDirection Sebastian 3 true/faceDirection Emily 1/faceDirection Demetrius 1 true/faceDirection Elliott 0/faceDirection Pierre 0 true/faceDirection Caroline 0 true/faceDirection Shane 3/faceDirection Sam 3 true/faceDirection Abigail 3/speak Leah \"Obrigada por terem vindo aqui.$l\"/faceDirection Leah 1/speak Leah \"Como alguns de vocês sabem, eu vim para esta cidade porque queria inspirar-me nos belos cenários que rodeiam o vale.\"/faceDirection Leah 3/speak Leah \"Eu realmente sinto que estou em casa aqui.$h#$b#Bem, hora de introduzir minhas esculturas agora.\"/playMusic jaunty/move Leah -3 0 0/faceDirection farmer 3 true/faceDirection Marnie 3 true/faceDirection Emily 3 true/faceDirection Demetrius 0/move Leah 0 -1 0/speak Leah \"Eu ainda não dei nome à esta, ela começou como um exercício de anatomia humana, mas acabei transformando-a nisto no final.#$b#Sua expressão é intencionalmente oculta... ela está com vergonha? Alegre? Com dor? Vocês que decidem!\"/pause 1500/move Leah 0 1 2/faceDirection Demetrius 2 true/faceDirection Haley 2 true/faceDirection farmer 2/faceDirection Emily 2 true/faceDirection Clint 2 true/pause 500/speak Leah \"Este é chamado de 'Espaço Nulo Pós-Dimensional'. Representa o limite da imaginação humana.$u#$b#A forma e a cor chegaram até mim vividamente quando eu estava em um 'estado de transe'.\"/pause 1500/move Leah 3 0 2/faceDirection Demetrius 1 true/move Leah 0 1 1/faceDirection Haley 1/speak Leah \"Eu chamo este de 'Cabeça de Ovos', queria criar uma estátua humanóide animatrônica para brincar com a capacidade do espectador de atribuir adequadamente a personalidade a uma entidade física. \"/pause 1500/move Leah 0 -1 0/pause 300/faceDirection Leah 2/speak Leah \"E o último é chamado de 'Escultura em Madeira 3'. É uma celebração do meu material de escultura favorito... madeira.\"/faceDirection Leah 3/faceDirection Leah 1/faceDirection Leah 2/speak Leah \"Bem, essas são minhas esculturas!$l#$b#Ah! E mais uma coisa.\"/faceDirection Leah 0/speak Leah \"Eu gostaria de agradecer especialmente você, @.#$b#Ele me deu a idéia para esse show, e a coragem para continuar, eu sei que parece extravagante, mas é verdade.^Eu gostaria de agradecer especialmente você, @.#$b#Ela me deu a idéia para esse show, e a coragem para continuar, eu sei que parece extravagante, mas é verdade.\"/faceDirection Emily 1/faceDirection Shane 3 true/faceDirection Haley 1/faceDirection Elliott 3/pause 400/speak Lewis \"Estou orgulhoso de você, Leah! Eventos como esse realmente dão vida à nossa pequena cidade!$h\"/pause 100/textAboveHead Gus \"Que beleza!\"/faceDirection Leah 3/speak Demetrius \"Eu amo arte, Leah! 'Espaço Nulo Pós-Dimensional' é o meu favorito.$h\"/textAboveHead Ram \"Belo uso da madeira!\"/speak Penny \"É tudo muito lindo!$h\"/faceDirection Leah 1/emote Leah 32/faceDirection Leah 2/pause 600/speak Olivia \"Muito bonito, Leah!$3\"/pause 200/speak Leah \"Obrigada, todos!$h\"/faceDirection Leah 0/emote Leah 20/pause 500/speak Lewis \"Agora vamos começar a licitar essas maravilhosas peças de arte... uma adição maravilhosa à sua casa!$h#$b#Eu ouvi 5000G pela rosinha?\"/jump Demetrius/mail afterArtShow/viewport move 2 0 8000/pause 5000/globalFade/viewport -1000 -1000/end dialogue Leah \"Nossa! Estou exausta.#$b#Foi um sucesso, não foi?$h\""
+			}
+		},
+		{
+			//Adjusts deluxe bed position
+			"LogName": "ExpandedSupportPossibleSpoiler16",
+			"Action": "EditData",
+			"Target": "data/events/sciencehouse",
+			"When": {
+				"EnableVeronica": "True",
+				"EnableExpandedSupport": "True",
+				"HasMod": "FlashShifter.StardewValleyExpandedCP"
+			},
+			"Entries": {
+				"1053978/n robinDeluxeBed": "distantBanjo/-1000 -1000/farmer -100 -100 0 Robin 5 20 3 Demetrius 8 20 3 Maru 8 18 2 Sebastian 3 23 0/skippable/addTemporaryActor DeluxeBed 48 63 3 21 2 false/positionOffset Robin 75 0/viewport 5 20 true/pause 3000/speak Robin \"Voalá! Minha nova invenção.$h#$b#É uma cama de dossel de luxo, feita com a melhor madeira locald.\"/pause 400/emote Demetrius 8/speak Demetrius \"Um... Veronica? Pra que tantas? Parece um uso ineficiente de madeira.$s\"/emote Robin 12/faceDirection Robin 1/speak Robin \"Se chama 'Beleza', aquela coisa que a maioria acha agradável aos olhos, entende?$6\"/emote Demetrius 8/speak Demetrius \"Hmm, entendi... Mas não podemos deixar que isso supere a utilidade e eficiência do receptáculo de sono.\"/pause 500/jump Robin/pause 500/speak Robin \"Sabe, às vezes parece que você está sendo deliberadamente obtuso só para me irritar. É isso que você está fazendo?$3\"/pause 100/animate Demetrius true true 100 18/shake Demetrius 1000/emote Maru 28 true/emote Sebastian 12 true/jump Demetrius/pause 1000/stopAnimation Demetrius/pause 400/warp farmer 6 24/playSound doorClose/move farmer 0 -1 0/faceDirection Robin 2 true/faceDirection Demetrius 2 true/faceDirection Sebastian 1/speak Robin \"Ei @, entre.\"/move farmer 0 -2 0/speak Robin \"Dê uma olhada, é a cama que fiz com um pouco daquelas madeiras que você coletou.\"/faceDirection farmer 3/faceDirection Robin 3 true/faceDirection Demetrius 3/pause 300/speak Robin \"Então, o que achou?\"/quickQuestion #A estética está perfeita#Parece um exagero(break)faceDirection Sebastian 0 true\\textAboveHead Sebastian \"Bem isso\"\\emote Robin 20 true\\emote Demetrius 12\\pause 2000\\move Demetrius 14 0 1 true\\pause 500\\speak Demetrius \"*ahem*... Bem... Se alguém precisar de mim, estarei por perto...$5\"(break)emote Demetrius 32\\speak Demetrius \"Mentes geniais trabalham juntos...$h\"\\emote Robin 12 \\speak Robin \"Que seja...$3#$b#Preciso ir...$3\"/pause 1000/speak Robin \"Agora que tenho um protótipo, posso começar a vendê-los na loja.\"/faceDirection Robin 2/speak Robin \"Ei... elas podem ficar boas na sua casa, @! O que você me diz... vai querer meia dúzia?\"/faceDirection farmer 2 true/startJittering/animate farmer false true 100 94/jump farmer/pause 200/textAboveHead Maru \"Tia!\"/pause 1000/fade/viewport -1000 -1000/end"
+			}
+		},
+		{
+			"LogName": "ExpandedSupportPossibleSpoiler17",
+			"Action": "EditData",
+			"Target": "Strings/StringsFromMaps",
+			"When": {
+				"EnableVeronica": "True",
+				"EnableExpandedSupport": "True",
+				"HasMod": "FlashShifter.StardewValleyExpandedCP"
+			},
+			"Entries": {
+				"SophiaHouse.53": "A estátua da galinha tem uma pequena engravura:^^'Veronica'",
+				"Ice-Festival.8": "Veronica construiu um castelo de arei...gelo? Surpreendente",
+				"ScienceHouseSVE.4": "É a bancada de trabalho da Veronica.",
+				"ScienceHouseSVE.6": "Veronica está criando jarros de conserva."
+			}
+		},
+		//This is hell you're walking into. Surely there's a simpler way, right? Expanded/GS/Gender Neutrality Support Combined
+		{
+			//edits out Lewis' mayor status from Haley's 14 hrt event
+			"LogName": "ExpandedSupportPossibleSpoiler14GN",
+			"Action": "EditData",
+			"Target": "data/events/town",
+			"When": {
+				"HasSeenEvent": "6665293",
+				"EnableVeronica": "True",
+				"EnableExpandedSupport": "True",
+				"HasMod": "FlashShifter.StardewValleyExpandedCP",
+				"HasMod |contains=Hana.GenderNeutralityMod": "True"
+			},
+			"Entries": {
+				"6184644/e 8675611/O Haley/A haleyCakewalk2/t 600 1500/w sunny/i 220": "ragtime/-100 -100/farmer 29 60 2 Haley 27 64 2 Marnie 27 66 1 Caroline 29 66 1 Emily 31 66 2 Jodi 31 68 2 Lewis 25 68 1 Ram 25 70 1 Jas 31 70 3 Vincent 29 70 3 Pam 27 70 0 Clint 27 68 0 Penny 31 64 2 Pierre 25 66 1 Gus 35 66 3 Evelyn 23 67 1 George 24 67 1/removeQuest 127/removeItem 220/specificTemporarySprite haleyCakeWalk/beginSimultaneousCommand/advancedMove Marnie true 2 0 2 0 0 2 0 2 -2 0 -2 0 0 -2 0 -2/advancedMove Caroline true 2 0 0 2 0 2 -2 0 -2 0 0 -2 0 -2 2 0/advancedMove Emily true 0 2 0 2 -2 0 -2 0 0 -2 0 -2 2 0 2 0/advancedMove Jodi true 0 2 -2 0 -2 0 0 -2 0 -2 2 0 2 0 0 2/advancedMove Jas true -2 0 -2 0 0 -2 0 -2 2 0 2 0 0 2 0 2/advancedMove Vincent true -2 0 0 -2 0 -2 2 0 2 0 0 2 0 2 -2 0/advancedMove Pam true 0 -2 0 -2 2 0 2 0 0 2 0 2 -2 0 -2 0/advancedMove Clint true 0 -2 2 0 2 0 0 2 0 2 -2 0 -2 0 0 -2/endSimultaneousCommand/viewport 29 68 true/move farmer 0 4 3/pause 1000/addObject 28 64 220/playSound coin/faceDirection farmer 3/faceDirection Haley 1/speak Haley \"Ei! Ah, ainda bem! Você trouxe o bolo!...\"/showFrame Haley 23/playSound slimeHit/pause 400/showFrame Haley 4/pause 500/showFrame Haley 23/playSound slimeHit/pause 400/showFrame Haley 4/pause 1000/speak Haley \"Parece ótimo, obrigada, @.\"/faceDirection Haley 2/faceDirection farmer 2/speak Haley \"Tem bastante gente aqui, né?\"/emote farmer 32/speak Marnie \"Ehh... Haley? Quando vamos parar? M... Minhas pernas... *respira* *respira*$s\"/jump Haley/pause 500/speak Haley \"Opa! hora de parar!$h\"/showFrame Haley 19/playMusic none/playSound whistle/shake Haley 500/stopAdvancedMoves next/pause 500/showFrame Haley 0/pause 1000/playMusic distantBanjo/pause 2000/speak Haley \"Tudo bem! Todos em seus lugares, por favor.\"/textAboveHead Emily \"Já estou!\"/jump Vincent/textAboveHead Marnie \"Certo\"/textAboveHead Pam \"Tudo bem\"/faceDirection Pam 0 true/faceDirection Marnie 0 true/faceDirection Vincent 0 true/faceDirection Jas 0 true/faceDirection Marnie 0 true/faceDirection Clint 0 true/faceDirection Emily 0 true/faceDirection Caroline 0 true/faceDirection Jodi 0 true/pause 1000/speak Haley \"Seu número determina qual bolo você ganhará!#$b#Certo, vamos ver quem ganhou qual...\"/move Haley 0 -1 1/move Haley 6 0 2/move Haley 0 2 2/speak Haley \"Certo, vamos ver... #$b#Caroline, qual seu número? Certo, você ganhou...#$b#O 'Pão de Cenoura-da-caverna do Lewis, com fibra extra!\"/emote Marnie 28 true/textAboveHead Caroline \"Ah, maravilha\"/pause 1000/speak Haley \"Emily, você ganhou...#$b#Cupcakes fortes de chocolate da Pam, com creme de manteiga de bourbon envelhecido.\"/emote Emily 32/textAboveHead Gus \"Nossa!\"/pause 1000/speak Pam \"Você deu sorte.$h\"/pause 500/speak Haley \"Próxima, Jas, você ganhou...#$b#Rábano Grelhado do Clint.\"/emote Jas 28 true/pause 200/speak Clint \"É uma velha receita de família. Assei direto na fornalha.#$b#Ah, um... eu posso ter queimado o fundo um pouco, então... uh... você pode ter que descascar uma camada carbonizada. Mas o resto é totalmente comestível.\"/pause 200/emote Jas 28/pause 500/speak Haley \"Uh... certo, próximo, Vincent, você ganhou...#$b#Creme Triplo de açucar e morango da Robin!\"/jump Vincent/textAboveHead Jodi \"Essa não...\"/pause 800/jump Vincent/pause 800/jump Vincent/pause 800/speak Haley \"A seguir, Jodi. Voce vai levar para casa...#$b#Bolo de veludo vermelho orgânico de Emily... colorido com beterraba!\"/pause 200/textAboveHead Jodi \"Delícia!\"/pause 800/viewport move 0 -1 1500/move Haley 0 -2 3/move Haley -5 0 2/speak Haley \"...e por último, mas não menos importante: Pam! Você é a sortuda vencedora do bolo de chocolate de luxo do meu {{SpouseNoun}}.\"/pause 500/textAboveHead Pam \"Obrigada, criança\"/pause 1000/speak Haley \"Obrigada a todos por participarem, nós conseguimos juntar 5,000g!\"/pause 500/speak George \"Por que o dinheiro, afinal? Você vai comprar outra bolsa?\"/pause 200/faceDirection Haley 1/speak Haley \"Hm, não... na verdade, é para a Penny.\"/faceDirection Penny 3/faceDirection farmer 1 true/emote Penny 8/speak Haley \"Penny, outro dia eu ouvi você conversando com Jas e Vincent sobre seus livros escolares. Parece que você precisa de ajuda...\"/jump Penny/pause 500/textAboveHead Penny \"Novos livros!\"/pause 800/faceDirection Penny 2/speak Penny \"Vocês ouviram, Jas, Vince? Vamos ter novos livros!\"/emote Jas 20 true/emote Vincent 28/pause 500/faceDirection Penny 3/speak Penny \"Haley... eu nem sei como agradecer, muito obrigada.$h#$b#...para ambos!$h\"/emote farmer 32/viewport move -1 0 3000/advancedMove George false 0 -5 24 0/advancedMove Evelyn false 1 0 0 -5 24 0/move Haley 2 0 2/pause 2000/faceDirection Ram 0/faceDirection Pierre 2/speak Ram \"Ei Lewis... já que estamos financiando a educação sem tocar nos cofres da cidade, você estará reduzindo nosso imposto sobre negócios, certo?$h\"/pause 500/showFrame Lewis 26/jump Lewis/playSound Duck/positionOffset Lewis -4 0/pause 30/positionOffset Lewis -4 0/pause 30/positionOffset Lewis -4 0/pause 30/positionOffset Lewis -4 0/pause 30/positionOffset Lewis -4 0/pause 30/positionOffset Lewis -4 0/pause 30/positionOffset Lewis -4 0/pause 30/positionOffset Lewis -4 0/pause 30/positionOffset Lewis -4 0/pause 30/positionOffset Lewis -4 0/pause 30/positionOffset Lewis -4 0/pause 30/positionOffset Lewis -4 0/pause 30/positionOffset Lewis -4 0/pause 30/positionOffset Lewis -4 0/pause 30/positionOffset Lewis -4 0/pause 30/positionOffset Lewis -4 0/pause 30/positionOffset Lewis -4 0/advancedMove Ram false 0 -1 3 100/advancedMove Pierre false 0 1 3 100/pause 1500/end dialogue Haley \"Foi um grande sucesso! Obrigada por me ajudar, amor.\""
+			}
+		},
+		{
+			//Add SVE characters to Leah art show event
+			"LogName": "ExpandedSupportPossibleSpoiler15GN",
+			"Action": "EditData",
+			"Target": "data/events/Town",
+			"When": {
+				"EnableVeronica": "True",
+				"EnableExpandedSupport": "True",
+				"HasMod": "FlashShifter.StardewValleyExpandedCP",
+				"HasMod |contains=Hana.GenderNeutralityMod": "True"
+			},
+			"Entries": {
+				"53/e 55/t 1500 1700": "none/-100 -100/farmer 28 57 1 Sophia 34 66 0 Andy 37 60 3 Olivia 30 65 0 Victor 29 65 0 Susan 27 63 1 Evelyn 37 58 3 Gus 30 56 2 Pam 31 56 2 Vincent 27 55 2 Jas 26 55 2 George 37 59 3 Leah 32 61 1 Shane 34 61 3 Ram 27 61 1 Demetrius 28 61 3 Emily 30 58 2 Clint 31 59 3 Harvey 34 57 2 Lewis 35 59 3 Marnie 35 58 3 Elliott 31 63 3 Maru 33 57 2 Sebastian 35 62 1 Abigail 35 63 1 Sam 36 61 2 Penny 37 62 3 Pierre 32 65 1 Caroline 33 65 3 Haley 28 59 1 Alex 28 58 1/specificTemporarySprite leahShow/skippable/animate LeahEx false true 100 4 5/viewport 33 60 true/move farmer 1 0 1/faceDirection Sebastian 2 true/faceDirection Alex 0 true/move farmer 1 0 1/faceDirection Sebastian 1 true/faceDirection Maru 3 true/move farmer 2 0 1/faceDirection Alex 1 true/faceDirection Maru 2 true/move farmer 0 1 2/faceDirection Shane 0 true/faceDirection Emily 2 true/move farmer 0 1 2/faceDirection Shane 3 true/move farmer 0 1 2/faceDirection Emily 0/move Shane 1 0 2/faceDirection Leah 0/speak Leah \"@! Você está aqui!$h#$b#Certo... está na hora de começar, me deseje sorte!$l\"/pause 300/faceDirection Leah 2/pause 800/faceDirection Leah 1/faceDirection Leah 2/faceDirection Leah 3/faceDirection Leah 2/speak Leah \"Hm... certo, atenção por favor!\"/faceDirection Sebastian 3 true/faceDirection Emily 1/faceDirection Demetrius 1 true/faceDirection Elliott 0/faceDirection Pierre 0 true/faceDirection Caroline 0 true/faceDirection Shane 3/faceDirection Sam 3 true/faceDirection Abigail 3/speak Leah \"Obrigada por terem vindo aqui.$l\"/faceDirection Leah 1/speak Leah \"Como alguns de vocês sabem, eu vim para esta cidade porque queria inspirar-me nos belos cenários que rodeiam o vale.\"/faceDirection Leah 3/speak Leah \"Eu realmente sinto que estou em casa aqui.$h#$b#Bem, hora de introduzir minhas esculturas agora.\"/playMusic jaunty/move Leah -3 0 0/faceDirection farmer 3 true/faceDirection Marnie 3 true/faceDirection Emily 3 true/faceDirection Demetrius 0/move Leah 0 -1 0/speak Leah \"Eu ainda não dei nome à esta, ela começou como um exercício de anatomia humana, mas acabei transformando-a nisto no final.#$b#Sua expressão é intencionalmente oculta... ela está com vergonha? Alegre? Com dor? Vocês que decidem!\"/pause 1500/move Leah 0 1 2/faceDirection Demetrius 2 true/faceDirection Haley 2 true/faceDirection farmer 2/faceDirection Emily 2 true/faceDirection Clint 2 true/pause 500/speak Leah \"Este é chamado de 'Espaço Nulo Pós-Dimensional'. Representa o limite da imaginação humana.$u#$b#A forma e a cor chegaram até mim vividamente quando eu estava em um 'estado de transe'.\"/pause 1500/move Leah 3 0 2/faceDirection Demetrius 1 true/move Leah 0 1 1/faceDirection Haley 1/speak Leah \"Eu chamo este de 'Cabeça de Ovos', queria criar uma estátua humanóide animatrônica para brincar com a capacidade do espectador de atribuir adequadamente a personalidade a uma entidade física. \"/pause 1500/move Leah 0 -1 0/pause 300/faceDirection Leah 2/speak Leah \"E o último é chamado de 'Escultura em Madeira 3'. É uma celebração do meu material de escultura favorito... madeira.\"/faceDirection Leah 3/faceDirection Leah 1/faceDirection Leah 2/speak Leah \"Bem, essas são minhas esculturas!$l#$b#Ah! E mais uma coisa.\"/faceDirection Leah 0/speak Leah \"Eu gostaria de agradecer especialmente você, @.#$b#Você me deu a idéia para esse show, e a coragem para continuar, eu sei que parece extravagante, mas é verdade.\"/faceDirection Emily 1/faceDirection Shane 3 true/faceDirection Haley 1/faceDirection Elliott 3/pause 400/speak Lewis \"\"Estou orgulhoso de você, Leah! Eventos como esse realmente dão vida à nossa pequena cidade!$h\"/pause 100/textAboveHead Gus \"Que beleza!\"/faceDirection Leah 3/speak Demetrius \"Eu amo arte, Leah! 'Espaço Nulo Pós-Dimensional' é o meu favorito.$h\"/textAboveHead Ram \"Belo uso da madeira!\"/speak Penny \"É tudo muito lindo!$h\"/faceDirection Leah 1/emote Leah 32/faceDirection Leah 2/pause 600/speak Olivia \"Muito bonito, Leah!$3\"/pause 200/speak Leah \"Obrigada, todos!$h\"/faceDirection Leah 0/emote Leah 20/pause 500/speak Lewis \"Agora vamos começar a licitar essas maravilhosas peças de arte... uma adição maravilhosa à sua casa!$h#$b#Eu ouvi 5000G pela rosinha?\"/jump Demetrius/mail afterArtShow/viewport move 2 0 8000/pause 5000/globalFade/viewport -1000 -1000/end dialogue Leah \"Nossa! Estou exausta.#$b#Foi um sucesso, não foi?$h\""
+			}
+		}
+	]
+}
+// Issues fixed by MissCoriel on Stardew Modding Discord

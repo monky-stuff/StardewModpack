@@ -1,0 +1,26 @@
+{
+   "Name": "Xtardew Valley - SVE version",
+   "Author": "Pseudodiego",
+   "Version": "3.1.1",
+   "Description": "Add Sexual Content to Stardew Valley",
+   "UniqueID": "Pseudodiego.XtardewValley",
+   "MinimumApiVersion": "3.0",
+   "UpdateKeys": [ "Nexus:4399" ],
+   "ContentPackFor": {
+      "UniqueID": "Pathoschild.ContentPatcher"
+   },
+      "Dependencies": [
+	{
+      "UniqueID": "FlashShifter.StardewValleyExpandedCP",
+      "IsRequired": true
+   },
+   {
+      "UniqueID": "Parrot.RomRas",
+      "IsRequired": false
+   },
+    {
+      "UniqueID": "Nom0ri.RomRas",
+      "IsRequired": false
+   },
+]
+}

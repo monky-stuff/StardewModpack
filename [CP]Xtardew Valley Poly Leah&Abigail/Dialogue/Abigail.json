@@ -1,0 +1,38 @@
+{
+    "Changes": [
+        {
+            "LogName": "Abigail",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Abigail",
+            "Entries": {
+                "Introduction": "Ah, é verdade... ouvi dizer que alguém novo estava se mudando para aquela fazenda antiga.#$e#É meio uma pena, na verdade. Eu gostava de explorar aqueles campos abandonados com a Leah.$9",
+                "Mon4": "Estou com vontade de visitar o lago...#$b#...mas só fica realmente bom quando está chovendo.",
+                "Wed4": "Minha aula favorita? Artes midiáticas são divertidas...#$b#Não faço ideia do que faria com isso como carreira, porém.#$b#Talvez a Leah possa me dar alguns conselhos.",
+                "Thu2": "Sebastian, Sam e eu costumávamos ser bons amigos. Mas meio que nos afastamos quando crescemos.$6",
+                "Fri2": "Vou para o saloon com a Leah esta noite. É meio que uma tradição de sexta-feira, eu acho.",
+                "Fri4": "É noite de salão. Quer se juntar a nós esta noite?#$e#Acho que gostaria que você estivesse lá também.",
+                "summer_Mon8": "Costumava achar que Pelican Town era meio sem graça, mas com Leah e você, estou começando a amar estar aqui.$h",
+                "summer_Fri2": "Leah é alguns anos mais velha do que eu, mas sinto que posso ser verdadeiramente eu mesma perto dela.#$e#Me pergunto se é isso que ter uma irmã é.",
+                "summer_Sat10": "Este pode ser o melhor verão da minha vida.$l#$e#Mas passar tempo com você e Leah no outono parece ainda melhor.$l",
+                "fall_Wed8": "Me pergunto se vão me deixar projetar algumas das características do labirinto do Espírito da Noite um dia.#$e#Tenho algumas ideias, vou pedir para Leah desenhá-las para mim.",
+                "fall_Thu4": "Leah é uma das poucas pessoas que realmente me entendem.#$e#Bem, você também meio que me entende.$h",
+                "fall_Thu10": "Tive um sonho interessante ontem à noite, com Leah e você nele.#$e#Foi um bom sonho.$h",
+                "fall_Fri10": "Costumava me sentir sozinha nesta época do ano, mas não mais.$l#$e#@, quais são seus planos para o futuro?",
+                "winter_Sat6": "Minha aula favorita? Artes midiáticas são divertidas...#$b#Não faço ideia do que faria com isso como carreira, porém.#$b#Talvez a Leah possa me dar alguns conselhos.",
+                "winter_Sat10": "Obrigada por não ficar estranho depois do lance com o tabuleiro de espíritos.$l#$e#Estava seriamente preocupada que você nunca mais fosse falar comigo.$l",
+                "fall_Tue2": "Leah é basicamente minha melhor amiga.#$e#Nós temos sido tão próximas desde que ela se mudou para o vale.",
+                "Thu6": "Aprendi a tocar bateria bastante facilmente quando criança. Meu próprio conjunto está guardado, porém.",
+                "Event_Cave_2": "Entendo... acho que é normal ter medo... especialmente quando se tem algo a perder.$l"
+            }
+        },
+        {
+            "LogName": "Abigail Marriage",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/MarriageDialogueAbigail",
+            "Entries": {
+                "Rainy_Day_0": "#$c .5#Acho que vou pegar meu bom e velho caderno de esboços hoje e pintar algo com a Leah. Tenho algumas ideias de bestas míticas que podem ser divertidas.#O escuro... a chuva... me anima.$l",
+                "Rainy_Day_1": "Ei, lembra quando tocamos aquele dueto perto do lago? Esse tempo me lembra daquele dia.#$e#$c .5#Você ainda carrega aquela mini harpa por aí? Aquela me surpreendeu. Onde você aprendeu a tocar, aliás?#Você realmente me surpreendeu com aquela mini-harpa... eu nunca esperava isso. Acho que é por isso que gosto tanto de você.$l"
+            }
+        }
+    ]
+}

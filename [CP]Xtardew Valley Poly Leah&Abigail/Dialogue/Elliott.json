@@ -1,0 +1,15 @@
+{
+    "Changes": [
+        {
+            "LogName": "Elliott",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Elliott",
+            "Entries": {
+                "Fri2": "Parece que Olivia tem uma bela coleção de livros.#$e#Eu me pergunto se ela me mostraria.",
+                "Sun4": "Para mim, a beleza só existe na mente. Palavras, pensamentos e música são suficientes para mim.$h#$e#E você, @?",
+                "summer_Fri2": "A vida ao redor do vale é tão tranquila, eu realmente gosto disso.",
+                "spring_15": "Espero que você esteja se dando bem nesta primavera @."
+            }
+        }
+    ]
+}

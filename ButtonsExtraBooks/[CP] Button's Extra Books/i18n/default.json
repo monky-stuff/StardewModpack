@@ -1,0 +1,68 @@
+{
+	// POWER LIST //
+	"Power.Luck.Name": "Beginner's Luck",
+	"Power.Luck.Description": "Luck stat permanently increased by a minor amount.",
+	
+	"Power.ExtraGifts.Name": "Book of Altruism",
+	"Power.ExtraGifts.Description": "Villagers will accept more than two gifts per week.",
+	
+	"Power.TreesIgnoreSeason.Name": "Winter Forestry",
+	"Power.TreesIgnoreSeason.Description": "Trees grow year-round.",
+	
+	"Power.ArtisanMachines.Name": "Artisans Guild Manual",
+	"Power.ArtisanMachines.Description": "Machines produce artisan goods much quicker.",
+	
+	"Power.GiantCrops.Name": "Big Melons",
+	"Power.GiantCrops.Description": "Giant crops have a higher chance of growing overnight.",
+	
+	"Power.Popularity.Name": "Friendship 202",
+	"Power.Popularity.Description": "Your friends are more likely to send you gifts in the mail.",
+	
+	"Power.BusDriving.Name": "Bus Driving for Dummies",
+	"Power.BusDriving.Description": "You can drive the bus to Calico Desert yourself.",
+	
+	"Power.QiNotebook.Name": "Mr. Qi's Notebook",
+	"Power.QiNoteBook.Description": "Increased odds of finding random Qi gems.",
+	
+	"Power.PetGifts.Name": "Pawsitive Reinforcement",
+	"Power.PetGifts.Description": "Your pets are more likely to bring you better gifts.",
+	
+	// BOOK ITEMS //
+	"Book.Luck.Name": "Beginner's Luck",
+	"Book.Luck.Description": "Read this book to gain a permanent, minor increase to your luck stat.",
+	
+	"Book.ExtraGifts.Name": "Book of Altruism",
+	"Book.ExtraGifts.Description": "After reading this book, villagers will accept more than two gifts per week from you.",
+	
+	"Book.TreesIgnoreSeason.Name": "Winter Forestry",
+	"Book.TreesIgnoreSeason.Description": "Reading this book will teach you how to grow trees during the winter season.",
+	
+	"Book.ArtisanMachines.Name": "Artisans Guild Manual",
+	"Book.ArtisanMachines.Description": "The techniques contained within this book will help you produce artisan goods much quicker.",
+	
+	"Book.GiantCrops.Name": "Big Melons!",
+	"Book.GiantCrops.Description": "You will be more likely to grow giant crops after reading this book.",
+	
+	"Book.Popularity.Name": "Friendship 202",
+	"Book.Popularity.Description": "Your friends will be more likely to send you gifts.",
+	
+	"Book.BusDriving.Name": "Bus Driving for Dummies",
+	"Book.BusDriving.Description": "This book contains all the information you need to drive a bus, more or less.",
+	
+	"Book.QiNotebook.Name": "Mr. Qi's Notebook",
+	"Book.QiNotebook.Description": "These notes will help you find more random Qi gems.",
+	
+	"Book.PetGifts.Name": "Pawsitive Reinforcement",
+	"Book.PetGifts.Description": "This book will teach you how to train your pets to bring you better gifts.",
+	
+	// MAIL //
+	"Mail.ArtisanGrange.Text": "The Ferngill Republic Artisans Guild is proud to recognize your commitment to quality artisanal goods. To show our appreciation of your recent display at the Stardew Valley Fair, we are enclosing a manual that we hope will help you more efficiently utilize your machinery.",
+	"Mail.ArtisanGrange.Title": "Artisans Guild",
+	
+	// MISC DIALOGUE CHANGES //
+	"Dialogue.EnoughGifts": "You've given {0} enough gifts for now!",
+	
+	// DEBUG //
+	"Debug.Book.RemoveAll.Name": "BEB Power Removal",
+	"Debug.Book.RemoveAll.Description": "Removes all powers granted to you by Button's Extra Books and refunds you their corresponding books.",
+}

@@ -1,0 +1,13 @@
+{
+    "Changes": [
+        {
+            "LogName": "Caroline",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Caroline",
+            "Entries": {
+                "Fri4": "Abby vai para o salão com a Leah nas noites de sexta. Talvez você possa se juntar a elas?",
+                "Tue4": "A Jodi e eu somos amigas próximas há vários anos.#$b#Fico feliz que a Abby tenha alguém assim também. A Leah é como uma irmã mais velha para ela."
+            }
+        }
+    ]
+}

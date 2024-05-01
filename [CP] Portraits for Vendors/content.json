@@ -1,0 +1,787 @@
+{
+	"Format":"2.0.0",
+
+	"DynamicTokens":[
+		{
+			"Name": "MovieRandom",
+			"Value": "{{Random:Default, Shift |key=MovieShift}}"
+		},
+		{
+			"Name": "JojaRandom",
+			"Value": "{{Random:Default, Shift |key=JojaShift}}"
+		},
+		{
+			"Name": "MouseFriends",
+			"Value": "{{Random:Beanie, Hamster, Bow, Dipper, Flower, Goggles, Headband, Link, Marlon, Default, Post, Red, Sailor, Strawhat, Wizard |key=MouseFriends}}"
+		},
+	],
+
+	"ConfigSchema":
+		{
+			"HatMouse": {
+				"AllowValues": "true, false",
+				"Default": true,
+			},
+			"Raccoon":
+				{
+					"AllowValues": "true, false",
+					"Default": true,
+				},
+			"DesertTrader":{
+				"AllowValues": "true, false",
+				"Default": true,
+				},
+			"Casino":
+				{
+					"AllowValues": "true, false",
+					"Default": true,
+				},
+			"VolcanoDwarf":
+				{
+					"AllowValues": "true, false",
+					"Default": true,
+				},
+			"IslandTrader":
+				{
+					"AllowValues": "true, false",
+					"Default": true,
+				},
+			"Traveler":
+				{
+					"AllowValues": "true, false",
+					"Default": true,
+				},
+			"Bookseller":
+				{
+					"AllowValues": "true, false",
+					"Default": true,
+				},
+			"StarToken":
+				{
+					"AllowValues": "true, false",
+					"Default": true,
+				},
+			"DecorBoat":
+				{
+					"AllowValues": "true, false",
+					"Default": true,
+				},
+			"MagicBoat":
+				{
+					"AllowValues": "true, false",
+					"Default": true,
+				},
+			"EggShop":
+				{
+					"AllowValues": "true, false",
+					"Default": true,
+				},
+			"PierreFestival":
+				{
+					"AllowValues": "true, false",
+					"Default": true,
+				},
+			"JojaCashier":
+				{
+					"AllowValues": "true, false",
+					"Default": true,
+					"Section": "JojaMart"
+				},
+			"JojaShift":
+				{
+					"AllowValues": "true, false",
+					"Default": false,
+					"Section": "JojaMart"
+				},	        
+			"MovieTicket":
+				{
+					"AllowValues": "true, false",
+					"Default": true,
+					"Section": "Theater"
+				},
+			"MovieConcession":
+				{
+					"AllowValues": "true, false",
+					"Default": true,
+					"Section": "Theater"
+				},
+			"MovieShift":
+				{
+					"AllowValues": "true, false",
+					"Default": false,
+					"Section": "Theater"
+				},			
+		},
+
+	"Changes":[
+// DEFAULT VENDOR SETUP
+		{
+			"Action": "Load",
+			"Target": "Mods/DolphINaF.VendorPortraits/IslandTrader, Mods/DolphINaF.VendorPortraits/EggShop, Mods/DolphINaF.VendorPortraits/MagicBoat, Mods/DolphINaF.VendorPortraits/DecorBoat, Mods/DolphINaF.VendorPortraits/HatMouse, Mods/DolphINaF.VendorPortraits/DesertTrader, Mods/DolphINaF.VendorPortraits/JojaCashier, Mods/DolphINaF.VendorPortraits/VolcanoDwarf, Mods/DolphINaF.VendorPortraits/Casino, Mods/DolphINaF.VendorPortraits/StarToken, Mods/DolphINaF.VendorPortraits/Raccoon, Mods/DolphINaF.VendorPortraits/Bookseller, Mods/DolphINaF.VendorPortraits/Traveler, Mods/DolphINaF.VendorPortraits/TravelerIce, Mods/DolphINaF.VendorPortraits/TravelerDesert, Mods/DolphINaF.VendorPortraits/MovieConcessionCC, Mods/DolphINaF.VendorPortraits/MovieTicketCC, Mods/DolphINaF.VendorPortraits/MovieConcessionJoja, Mods/DolphINaF.VendorPortraits/MovieTicketJoja",
+			"FromFile": "assets/{{TargetWithoutPath}}/{{TargetWithoutPath}}_Default.png",
+		},
+		{
+			"LogName": "Island Trader",
+			"Action": "EditData",
+			"Target": "Data/Shops",
+			"TargetField": [ "IslandTrade", "Owners", "#0" ],
+			"Entries": {"Portrait": "Mods/DolphINaF.VendorPortraits/IslandTrader"},
+			"When": {"IslandTrader": true}		
+		},
+		{
+			"LogName": "Egg Peddler",
+			"Action": "EditData",
+			"Target": "Data/Shops",
+			"TargetField": [ "DesertFestival_EggShop", "Owners", "#0" ],
+			"Entries": {"Portrait": "Mods/DolphINaF.VendorPortraits/EggShop"},
+			"When": {"EggShop": true}		
+		},
+		{
+			"LogName": "Magic Peddler Day 1",
+			"Action": "EditData",
+			"Target": "Data/Shops",
+			"TargetField": [ "Festival_NightMarket_MagicBoat_Day1", "Owners", "#1" ],
+			"Entries": {"Portrait": "Mods/DolphINaF.VendorPortraits/MagicBoat"},
+			"When": {"MagicBoat": true}		
+		},
+		{
+			"LogName": "Magic Peddler Day 2",
+			"Action": "EditData",
+			"Target": "Data/Shops",
+			"TargetField": [ "Festival_NightMarket_MagicBoat_Day2", "Owners", "#1" ],
+			"Entries": {"Portrait": "Mods/DolphINaF.VendorPortraits/MagicBoat"},
+			"When": {"MagicBoat": true}
+		},
+		{
+			"LogName": "Magic Peddler Day 3",
+			"Action": "EditData",
+			"Target": "Data/Shops",
+			"TargetField": [ "Festival_NightMarket_MagicBoat_Day3", "Owners", "#1" ],
+			"Entries": {"Portrait": "Mods/DolphINaF.VendorPortraits/MagicBoat"},
+			"When": {"MagicBoat": true}
+		},
+		{
+			"LogName": "Decoration Seller",
+			"Action": "EditData",
+			"Target": "Data/Shops",
+			"TargetField": [ "Festival_NightMarket_DecorationBoat", "Owners", "#1" ],
+			"Entries": {"Portrait": "Mods/DolphINaF.VendorPortraits/DecorBoat"},
+			"When": {"DecorBoat": true}
+		},
+		{
+			"LogName": "Hat Mouse",
+			"Action": "EditData",
+			"Target": "Data/Shops",
+			"TargetField": [ "HatMouse", "Owners", "#0" ],
+			"Entries": {"Portrait": "Mods/DolphINaF.VendorPortraits/HatMouse"},
+			"When": {"HatMouse": true}
+		},
+		{
+			"LogName": "Raccoon",
+			"Action": "EditData",
+			"Target": "Data/Shops",
+			"TargetField": [ "Raccoon", "Owners", "#0" ],
+			"Entries": {
+				"Portrait": "Mods/DolphINaF.VendorPortraits/Raccoon",
+				"Dialogues":  [
+					{
+						"Id": "Default",
+						"Condition": null,
+						"Dialogue": null,
+						"RandomDialogue": [
+							"{{i18n:Raccoon1}}",
+							"{{i18n:Raccoon2}}",
+							"{{i18n:Raccoon3}}",
+						],
+					}
+				],
+			},
+			"When": {"Raccoon": true}
+		},
+		{
+			"LogName": "Traveling Merchant",
+			"Action": "EditData",
+			"Target": "Data/Shops",
+			"TargetField": [ "Traveler", "Owners", "#2" ],
+			"Entries": {"Portrait": "Mods/DolphINaF.VendorPortraits/Traveler"},
+			"When": {"Traveler": true}
+		},
+		{
+			"LogName": "Traveling Merchant at Desert Festival",
+			"Action": "EditData",
+			"Target": "Data/Shops",
+			"TargetField": [ "Traveler", "Owners", "#2" ],
+			"Entries": {"Portrait": "Mods/DolphINaF.VendorPortraits/TravelerDesert"},
+			"When": {
+				"Traveler": true,
+				"Season": "Spring",
+				"Day": "15, 16, 17"
+			}
+		},
+		{
+			"LogName": "Traveling Merchant at Ice Festival",
+			"Action": "EditData",
+			"Target": "Data/Shops",
+			"TargetField": [ "Festival_FestivalOfIce_TravelingMerchant", "Owners", "#0" ],
+			"Entries": {
+				"Portrait": "Mods/DolphINaF.VendorPortraits/TravelerIce",
+			    "Dialogues": [
+					{
+						"Id": "Default",
+						"Condition": null,
+						"Dialogue": "{{i18n:TravelerIce}}",
+						"RandomDialogue": null
+					}
+				],
+			},
+			"When": {"Traveler": true}
+		},
+		{
+			"LogName": "Bookseller",
+			"Action": "EditData",
+			"Target": "Data/Shops",
+			"TargetField": [ "Bookseller", "Owners", "#0" ],
+			"Entries": {"Portrait": "Mods/DolphINaF.VendorPortraits/Bookseller"},
+			"When": {"Bookseller": true}
+		},
+		{
+			"LogName": "Bookseller Trade",
+			"Action": "EditData",
+			"Target": "Data/Shops",
+			"TargetField": [ "BooksellerTrade", "Owners", "#0" ],
+			"Entries": {"Portrait": "Mods/DolphINaF.VendorPortraits/Bookseller"},
+			"When": {"Bookseller": true}
+		},
+		{
+			"LogName": "Desert Trader Portrait",
+			"Action": "EditData",
+			"Target": "Data/Shops",
+			"TargetField": [ "DesertTrade", "Owners", "#1" ],
+			"Entries": {"Portrait": "Mods/DolphINaF.VendorPortraits/DesertTrader"},
+			"When": {"DesertTrader": true}
+		},		
+		{
+			"LogName": "Joja Cashier",
+			"Action": "EditData",
+			"Target": "Data/Shops",
+			"TargetField": [ "Joja", "Owners", "#0" ],
+			"Entries": {
+				"Portrait": "Mods/DolphINaF.VendorPortraits/JojaCashier",
+				"Dialogues":  [
+					{
+						"Id": "Default",
+						"Condition": null,
+						"Dialogue": null,
+						"RandomDialogue": [
+							"{{i18n:JojaCashier1}}",
+							"{{i18n:JojaCashier2}}",
+							"{{i18n:JojaCashier3}}",
+							"{{i18n:JojaCashier4}}",
+						],
+					}
+				],
+			},
+			"When": {
+				"JojaCashier": true,
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": false			
+			},
+		},
+		{
+			"LogName": "Concession Worker in CC Theater",
+			"Action": "EditData",
+			"Target": "Data/Shops",
+			"TargetField": [ "Concessions", "Owners", "#0" ],
+			"Entries": {"Portrait": "Mods/DolphINaF.VendorPortraits/MovieConcessionCC"},
+			"When": {
+				"MovieConcession": true,
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": false
+			}
+		},
+		{
+			"LogName": "Box Office in CC Theater",
+			"Action": "EditData",
+			"Target": "Data/Shops",
+			"TargetField": [ "BoxOffice", "Owners", "#0" ],
+			"Entries": {"Portrait": "Mods/DolphINaF.VendorPortraits/MovieTicketCC"},
+			"When": {"MovieTicket": true}
+		},
+		{
+			"LogName": "Concession Worker in Joja Theater",
+			"Action": "EditData",
+			"Target": "Data/Shops",
+			"TargetField": [ "Concessions", "Owners", "#0" ],
+			"Entries": {"Portrait": "Mods/DolphINaF.VendorPortraits/MovieConcessionJoja"},
+			"When": {
+				"MovieConcession": true,
+				"HasFlag": "ccMovieTheaterJoja"
+			}
+		},
+		{
+			"LogName": "Box Office in Joja Theater",
+			"Action": "EditData",
+			"Target": "Data/Shops",
+			"TargetField": [ "BoxOffice", "Owners", "#0" ],
+			"Entries": {"Portrait": "Mods/DolphINaF.VendorPortraits/MovieTicketJoja"},
+			"When": {
+				"MovieTicket": true,
+				"HasFlag": "ccMovieTheaterJoja"
+			}
+		},
+		{
+			"LogName": "Volcano Dwarf",
+			"Action": "EditData",
+			"Target": "Data/Shops",
+			"TargetField": [ "VolcanoShop", "Owners", "#0" ],
+			"Entries": {"Portrait": "Mods/DolphINaF.VendorPortraits/VolcanoDwarf"},
+			"When": {"VolcanoDwarf": true}
+		},
+		{
+			"LogName": "Casino Vendor",
+			"Action": "EditData",
+			"Target": "Data/Shops",
+			"TargetField": [ "Casino", "Owners", "#0" ],
+			"Entries": {
+				"Portrait": "Mods/DolphINaF.VendorPortraits/Casino",	
+				"Dialogues":  [
+					{
+						"Id": "Default",
+						"Condition": null,
+						"Dialogue": null,
+						"RandomDialogue": [
+							"{{i18n:CasinoVendor1}}",
+							"{{i18n:CasinoVendor2}}",
+							"{{i18n:CasinoVendor3}}",
+							"{{i18n:CasinoVendor4}}",
+						],
+					}
+				],
+			},
+			"When": {"Casino": true}
+		},
+		{
+			"LogName": "Star Token Changer",
+			"Action": "EditData",
+			"Target": "Data/Shops",
+			"TargetField": [ "Festival_StardewValleyFair_StarTokens", "Owners", "#0" ],
+			"Entries": {
+				"Portrait": "Mods/DolphINaF.VendorPortraits/StarToken",	
+			    "Dialogues": [
+					{
+						"Id": "Default",
+						"Condition": null,
+						"Dialogue": "{{i18n:StarToken}}",
+						"RandomDialogue": null
+					}
+				],
+			},
+			"When": {"StarToken": true}
+		},
+		
+// VENDOR RANDOMIZATIONS
+		{
+			"LogName": "Joja Clerk Portrait Shift",
+			"Action": "EditImage",
+			"Target": "Mods/DolphINaF.VendorPortraits/JojaCashier",
+			"FromFile": "assets/{{TargetWithoutPath}}/{{TargetWithoutPath}}_{{JojaRandom}}.png",
+			"When": {
+				"JojaShift": true,
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": false,
+				"HasMod |contains=LemurKat.JulietHouse.NPC": false				
+			}
+		},	
+		{
+			"LogName": "Joja Theater Staff Portrait Shift",
+			"Action": "EditImage",
+			"Target": "Mods/DolphINaF.VendorPortraits/MovieConcessionJoja, Mods/DolphINaF.VendorPortraits/MovieTicketJoja",
+			"FromFile": "assets/{{TargetWithoutPath}}/{{TargetWithoutPath}}_{{MovieRandom}}.png",
+			"When": {
+				"MovieShift": true,
+			}
+		},
+		{
+			"LogName": "CC Theater Staff Portrait Shift",
+			"Action": "EditImage",
+			"Target": "Mods/DolphINaF.VendorPortraits/MovieConcessionCC, Mods/DolphINaF.VendorPortraits/MovieTicketCC",
+			"FromFile": "assets/{{TargetWithoutPath}}/{{TargetWithoutPath}}_{{MovieRandom}}.png",
+			"When": {
+				"MovieShift": true,
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": false,
+				"HasMod |contains=LemurKat.JulietHouse.NPC": false
+			}
+		},				
+		{  
+			"LogName": "Joja Clerk Sprite Shift",
+			"Action": "EditImage",
+			"Target": "Maps/townInterior",
+			"FromFile": "assets/JojaCashier/Sprites/JojaCashier_{{JojaRandom}}.png",
+			"ToArea": { "X": 352, "Y": 944, "Width": 32, "Height": 32 },
+			"When": {
+				"HasFile:{{FromFile}}": true,
+				"JojaShift": true,
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": false,
+				"HasMod |contains=LemurKat.JulietHouse.NPC": false	
+			}
+		},
+		{   
+			"LogName": "CC Theater Staff Sprite Shift 1",
+			"Action": "EditImage",
+			"Target": "Maps/MovieTheater_TileSheet",
+			"FromFile": "assets/MovieConcessionCC/Sprites/MovieConcessionCC_{{MovieRandom}}.png",
+			"FromArea": { "X": 0, "Y": 16, "Width": 48, "Height": 16 },
+			"ToArea": { "X": 192, "Y": 176, "Width": 48, "Height": 16 },
+			"When": {
+				"HasFile:{{FromFile}}": true,
+				"MovieShift": true,
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": false,
+				"HasMod |contains=LemurKat.JulietHouse.NPC": false
+			}
+		},			
+		{   
+			"LogName": "CC Theater Staff Sprite Shift 2",
+			"Action": "EditImage",
+			"Target": "Maps/MovieTheater_TileSheet",
+			"FromFile": "assets/MovieConcessionCC/Sprites/MovieConcessionCC_{{MovieRandom}}.png",
+			"FromArea": { "X": 48, "Y": 0, "Width": 16, "Height": 32 },
+			"ToArea": { "X": 240, "Y": 160, "Width": 16, "Height": 32 },
+			"When": {
+				"HasFile:{{FromFile}}": true,
+				"MovieShift": true,
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": false,
+				"HasMod |contains=LemurKat.JulietHouse.NPC": false
+			}
+		},
+		{   
+			"LogName": "Joja Theater Staff Sprite Shift 1",
+			"Action": "EditImage",
+			"Target": "Maps/MovieTheaterJoja_TileSheet",
+			"FromFile": "assets/MovieConcessionJoja/Sprites/MovieConcessionJoja_{{MovieRandom}}.png",
+			"FromArea": { "X": 0, "Y": 16, "Width": 48, "Height": 16 },
+			"ToArea": { "X": 192, "Y": 176, "Width": 48, "Height": 16 },
+			"When": {
+				"HasFile:{{FromFile}}": true,
+				"MovieShift": true,
+			}
+		},			
+		{   
+			"LogName": "Joja Theater Staff Sprite Shift 2",
+			"Action": "EditImage",
+			"Target": "Maps/MovieTheaterJoja_TileSheet",
+			"FromFile": "assets/MovieConcessionJoja/Sprites/MovieConcessionJoja_{{MovieRandom}}.png",
+			"FromArea": { "X": 48, "Y": 0, "Width": 16, "Height": 32 },
+			"ToArea": { "X": 240, "Y": 160, "Width": 16, "Height": 32 },
+			"When": {
+				"HasFile:{{FromFile}}": true,
+				"MovieShift": true,
+			}
+		},
+// Hippie Desert Trader Support
+		{
+			"LogName": "Hippie Desert Trader Support",
+			"Action": "EditImage",
+			"Target": "Mods/DolphINaF.VendorPortraits/DesertTrader",
+			"FromFile": "assets/{{TargetWithoutPath}}/{{TargetWithoutPath}}_Hippie.png",
+			"When": {"HasMod": "CP.Hippie.Trailer.Trader"}
+		},	
+// Hat Mouse and Friends Support
+		{
+			"LogName": "Hat Mouse and Friends Support",
+			"Action": "EditImage",
+			"Target": "Mods/DolphINaF.VendorPortraits/HatMouse",
+			"FromFile": "assets/{{TargetWithoutPath}}/{{TargetWithoutPath}}_{{MouseFriends}}.png",
+			"When": {"HasMod": "Dora.HatMouseAndFriends"}
+		},	
+// Dwarf Portrait Replacement Support
+		{
+			"LogName": "Dwarf Portrait Replacement",
+			"Action": "EditImage",
+			"Target": "Mods/DolphINaF.VendorPortraits/VolcanoDwarf",
+			"FromFile": "assets/{{TargetWithoutPath}}/{{TargetWithoutPath}}_Alter.png",
+			"When": {"HasMod": "LavenderSkelly.DwarfPortraitReplacement"}
+		},
+// Stardew Valley Expanded Support
+		{
+			"LogName": "CC Concession Portrait if SVE",
+			"Action": "EditData",
+			"Target": "Data/Shops",
+			"TargetField": [ "Concessions", "Owners", "#0" ],
+			"Entries": {
+				"Portrait": null,
+				"Id": "Any",
+				"Name": "Any"
+			},
+			"When": {
+				"MovieConcession": true,
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": true
+			}
+		},
+// Juliet and Jessie Support
+		{
+			"LogName": "CC Concession Portrait if Juliet",
+			"Action": "EditImage",
+			"Target": "Mods/DolphINaF.VendorPortraits/MovieConcessionCC",
+			"FromFile": "assets/{{TargetWithoutPath}}/{{TargetWithoutPath}}_Juliet.png",
+			"When": {
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": false,
+				"HasMod |contains=LemurKat.JulietHouse.NPC": true,
+			}
+		},
+		{
+			"LogName": "CC Concession Portrait if Kevin",
+			"Action": "EditImage",
+			"Target": "Mods/DolphINaF.VendorPortraits/MovieConcessionCC",
+			"FromFile": "assets/{{TargetWithoutPath}}/{{TargetWithoutPath}}_Kevin.png",
+			"When": {
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": false,				
+				"HasMod |contains=LemurKat.JulietHouse.NPC": true,	
+				"DayOfWeek": "Friday, Saturday, Sunday"
+			}
+		},
+		{
+			"LogName": "CC Concession Portrait if Kevin",
+			"Action": "EditImage",
+			"Target": "Mods/DolphINaF.VendorPortraits/MovieConcessionCC",
+			"FromFile": "assets/{{TargetWithoutPath}}/{{TargetWithoutPath}}_Kevin.png",
+			"When": {
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": false,				
+				"HasMod |contains=LemurKat.JulietHouse.NPC": true,	
+				"DayOfWeek": "Tuesday, Thursday",
+				"spouse": "Juliet"
+			}
+		},
+		{
+			"LogName": "CC Concession Portrait if Kevin",
+			"Action": "EditImage",
+			"Target": "Mods/DolphINaF.VendorPortraits/MovieConcessionCC",
+			"FromFile": "assets/{{TargetWithoutPath}}/{{TargetWithoutPath}}_Kevin.png",
+			"When": {
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": false,				
+				"HasMod |contains=LemurKat.JulietHouse.NPC": true,	
+				"Weather": "rain"
+			}
+		},
+		{
+			"LogName": "Joja Cashiers",
+			"Action": "EditData",
+			"Target": "Data/Shops",
+			"TargetField": [ "Joja", "Owners", "#0" ],
+			"Entries": {
+				"Portrait": null,
+				"Id": "Any",
+				"Name": "Any",
+			},
+			"When": {
+				"JojaCashier": true,
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": false,	
+				"HasMod |contains=LemurKat.JulietHouse.NPC": true
+			}
+		},
+        {
+            "LogName": "JojaMart Shop Tile Property",
+			"Action": "EditMap",
+            "Target": "Maps/JojaMart",
+            "MapTiles": [
+                {
+                    "Position": { "X": 10, "Y": 24},
+                    "Layer": "Buildings",
+                    "SetProperties": {
+                        "Action": "OpenShop Joja none 0900 2300 9 25 1 1"
+                    }
+                },
+				{
+                    "Position": { "X": 10, "Y": 25},
+                    "Layer": "Buildings",
+                    "SetProperties": {
+                        "Action": "OpenShop Joja none 0900 2300 9 25 1 1"
+                    }
+                }
+            ],
+			"When": {
+				"JojaCashier": true,
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": false,	
+				"HasMod |contains=LemurKat.JulietHouse.NPC": true
+			}			
+        },
+		{
+			"LogName": "Load Shane's JojaMart Uniform",
+			"Action": "Load",
+			"Target": "Portraits/Shane_JojaMart",
+			"FromFile": "assets/JojaCashier/JojaCashier_Shane.png",
+			"Priority": "Low",
+			"When": {"JojaCashier": true}
+		},		
+		{
+			"LogName": "Shane's JojaMart Uniform",
+			"Action": "EditData",
+			"Target": "Data/Characters",
+			"TargetField": [ "Shane", "Appearance", "#0" ],
+			"Entries": {"Portrait": "Portraits/Shane_JojaMart"},	
+			"When": {"JojaCashier": true}
+		},
+        {
+            "LogName": "Jessie in Joja",
+			"Action": "EditImage",
+			"Target": "Portraits/Jessie",
+			"FromFile": "assets/JojaCashier/JojaCashier_Jessie.png",
+			"Update": "OnLocationChange",
+			"When": {
+				"JojaCashier": true,
+				"LocationName": "JojaMart",
+				"HasMod |contains=LemurKat.JulietHouse.NPC": true
+			}			
+		},
+		
+// VARIOUS VANILLA CHARACTERS
+		{
+			"LogName": "Pierre at Dance of the Moonlight Jellies",
+			"Action": "EditData",
+			"Target": "Data/Shops",
+			"TargetField": [ "Festival_DanceOfTheMoonlightJellies_Pierre", "Owners", "#0" ],
+			"Entries": {
+				"Portrait": null,	
+			    "Dialogues": [
+					{
+						"Id": "Default",
+						"Condition": null,
+						"Dialogue": "{{i18n:PierreJellyfish}}",
+						"RandomDialogue": null
+					}
+				],
+				"Id": "Pierre",
+				"Name": "Pierre"
+			},
+			"When": {"PierreFestival": true}
+		},
+		{
+			"LogName": "Pierre at Egg Festival",
+			"Action": "EditData",
+			"Target": "Data/Shops",
+			"TargetField": [ "Festival_EggFestival_Pierre", "Owners", "#0" ],
+			"Entries": {
+				"Portrait": null,
+			    "Dialogues": [
+					{
+						"Id": "Default",
+						"Condition": null,
+						"Dialogue": "{{i18n:PierreEgg}}",
+						"RandomDialogue": null
+					}
+				],
+				"Id": "Pierre",
+				"Name": "Pierre"
+			},
+			"When": {"PierreFestival": true}
+		},	
+		{
+			"LogName": "Pierre at Feast of the Winter Star",
+			"Action": "EditData",
+			"Target": "Data/Shops",
+			"TargetField": [ "Festival_FeastOfTheWinterStar_Pierre", "Owners", "#0" ],
+			"Entries": {
+				"Portrait": null,	
+			    "Dialogues": [
+					{
+						"Id": "Default",
+						"Condition": null,
+						"Dialogue": "{{i18n:PierreFeast}}",
+						"RandomDialogue": null
+					}
+				],
+				"Id": "Pierre",
+				"Name": "Pierre"
+			},
+			"When": {"PierreFestival": true}
+		},	
+		{
+			"LogName": "Pierre at Flower Festival",
+			"Action": "EditData",
+			"Target": "Data/Shops",
+			"TargetField": [ "Festival_FlowerDance_Pierre", "Owners", "#0" ],
+			"Entries": {
+				"Portrait": null,	
+			    "Dialogues": [
+					{
+						"Id": "Default",
+						"Condition": null,
+						"Dialogue": "{{i18n:PierreFlower}}",
+						"RandomDialogue": null
+					}
+				],
+				"Id": "Pierre",
+				"Name": "Pierre"
+			},
+			"When": {"PierreFestival": true}
+		},	
+		{
+			"LogName": "Pierre at Luau",
+			"Action": "EditData",
+			"Target": "Data/Shops",
+			"TargetField": [ "Festival_Luau_Pierre", "Owners", "#0" ],
+			"Entries": {
+				"Portrait": null,
+			    "Dialogues": [
+					{
+						"Id": "Default",
+						"Condition": null,
+						"Dialogue": "{{i18n:PierreLuau |FarmName={{FarmName}}}}",
+						"RandomDialogue": null
+					}
+				],
+				"Id": "Pierre",
+				"Name": "Pierre"
+			},
+			"When": {"PierreFestival": true}
+		},
+		{
+			"LogName": "Pierre at Spirit's Eve",
+			"Action": "EditData",
+			"Target": "Data/Shops",
+			"TargetField": [ "Festival_SpiritsEve_Pierre", "Owners", "#0" ],
+			"Entries": {
+				"Portrait": null,
+			    "Dialogues": [
+					{
+						"Id": "Default",
+						"Condition": null,
+						"Dialogue": "{{i18n:PierreSpirit}}",
+						"RandomDialogue": null
+					}
+				],
+				"Id": "Pierre",
+				"Name": "Pierre"
+			},
+			"When": {"PierreFestival": true}
+		},	
+		{
+			"LogName": "Clinic",
+			"Action": "EditData",
+			"Target": "Data/Shops",
+			"TargetField": [ "Hospital", "Owners", "#0" ],
+			"Entries": {
+			    "Dialogues": [
+					{
+						"Id": "Default",
+						"Condition": null,
+						"Dialogue": "{{i18n:Clinic}}",
+						"RandomDialogue": null
+					}
+				],
+			},
+		},
+		{
+			"LogName": "Alex's Ice Cream Stand",
+			"Action": "EditData",
+			"Target": "Data/Shops",
+			"TargetField": [ "IceCreamStand", "Owners", "#2" ],
+			"Entries": {
+			    "Dialogues": [
+					{
+						"Id": "Default",
+						"Condition": null,
+						"Dialogue": "{{i18n:AlexIceCream}}",
+						"RandomDialogue": null
+					}
+				],
+			},
+		},
+	],
+}

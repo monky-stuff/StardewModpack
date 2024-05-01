@@ -1,0 +1,17 @@
+{
+	"Changes":[
+
+		{
+			"LogName":"Emily Marriage",
+			"Action":"EditData",
+			"Target":"Characters/Dialogue/MarriageDialogueEmily",
+			"Entries":{
+				         "Rainy_Day_4": "Está chovendo muito.#$b#Há algo calmante em fazer amor quando está chovendo.$4#$e#Não volte tarde demais hoje à noite.$4",
+						"Outdoor_4": "Bom dia! Eu estava me perguntando quando você finalmente iria sair da cama!$h#$e#Mas tudo bem... você merece uma boa noite de descanso depois de ontem à noite.$4",
+						"summer_7": "Nunca vou esquecer daquele urso que apareceu em nossa viagem de acampamento.#$b#Surpreendida por um urso durante minha primeira vez... acho que poucas pessoas podem dizer o mesmo.$1",
+						"Indoor_Night_4": "#$c .5#Eu limpei a casa toda, lavei as janelas, tirei o pó e limpei a geladeira. Foi um dia muito produtivo!#Talvez um dia, quando nos aposentarmos, você e eu possamos viajar pelo mundo, como meus pais. Pelo menos só por um pouco.$u",	
+	
+			}
+		}
+	]
+}

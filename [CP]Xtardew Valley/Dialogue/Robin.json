@@ -1,0 +1,12 @@
+{
+	"Changes":[
+		{
+			"LogName":"Robin",
+			"Action":"EditData",
+			"Target":"Characters/Dialogue/Robin",
+			"Entries":{
+				"Wed8":"O pai de Sebastian? Digamos apenas que as coisas não deram certo.$2",
+			}
+		},
+	]
+}

@@ -1,0 +1,29 @@
+{
+	"Changes":[
+		{
+			"LogName":"Abigail",
+			"Action":"EditData",
+			"Target":"Characters/Dialogue/Abigail",
+			"Entries":{
+			
+				"event_postmarriage1": "Sim, eu também espero. Talvez o prefeito saiba o que havia aqui antes da fazenda...",
+				"event_postmarriage2": "Que pena. Seria incrível ver um fantasma.",
+				"event_postmarriage3": "Sério!?$7#$b#...Ok, agora estou oficialmente assustada...$2",
+  
+			}
+		},
+		{
+			"LogName":"Abigail Marriage",
+			"Action":"EditData",
+			"Target":"Characters/Dialogue/MarriageDialogueAbigail",
+			"Entries":{
+				"Rainy_Night_1": "#$c .5#É uma boa noite para ver um fantasma...#Ei! Você parece que trabalhou bastante. Posso te ajudar a relaxar de alguma forma?#$e#Se quiser, eu... eu posso te fazer um oral quando estivermos na cama...$4^Você tem trabalhado duro? Você fica fofo quando está um pouco cansado.$h",
+				"Indoor_Night_1": "Você está pronto para ir para a cama em breve? Eu liguei o cobertor elétrico para nós...$l#$b#Talvez eu deva desligá-lo na verdade... eu quero fazer amor esta noite, mas sempre acabamos suados depois...$4",
+				"Indoor_Night_5": "Ei! Me conta sobre o seu dia. Aconteceu alguma coisa emocionante?$h",
+				"summer_8": "Desculpe pelo cheiro... acho que vamos ter que parar de fazer amor enquanto estiver tão quente.#$b#.....#$b#Brincadeira! Hahaha, você deveria ter visto sua cara.$1",	
+				
+				
+			}
+		}
+	]
+}

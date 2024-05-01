@@ -1,0 +1,14 @@
+{
+	"Changes":[
+
+		{
+			"LogName":"Penny Marriage",
+			"Action":"EditData",
+			"Target":"Characters/Dialogue/MarriageDialoguePenny",
+			"Entries":{
+				"Indoor_Day_0": "Está tão tranquilo aqui. Eu costumava ter pesadelos horríveis, mas agora durmo como um bebê.#$b#Principalmente nos dias em que fazemos amor.$4",	
+	
+			}
+		}
+	]
+}

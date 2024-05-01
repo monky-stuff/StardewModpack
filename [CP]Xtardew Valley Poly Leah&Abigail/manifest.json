@@ -1,0 +1,12 @@
+{
+   "Name": "XtardewValleyPolyLeah&Abigail",
+   "Author": "Pseudodiego",
+   "Version": "1.0.0",
+   "Description": "Xtardew Poly Romance between Leah, Abigail and the farmer",
+   "UniqueID": "Pseudodiego.LAtardewValley",
+   "MinimumApiVersion": "3.0",
+   "UpdateKeys": [],
+   "ContentPackFor": {
+      "UniqueID": "Pathoschild.ContentPatcher"
+   }
+}

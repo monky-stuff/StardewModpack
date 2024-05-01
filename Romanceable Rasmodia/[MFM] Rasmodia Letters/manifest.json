@@ -1,0 +1,27 @@
+﻿{
+	"Name": "[MFM] Rasmodia Letters",
+	"Author": "Nom0ri",
+	"Version": "1.0.0",
+	"Description": "Rasmodia compatibility for MFM mails",
+	"UniqueID": "Nom0ri.RasmodiaMFM",
+	"MinimumApiVersion": "3.8.0",
+    "UpdateKeys": ["Nexus:???"],
+	"Dependencies": [
+		{
+			"UniqueID": "Nom0ri.RomRas",
+			"IsRequired": true
+		},
+		{
+			"UniqueID": "Digus.MailServicesMod",
+			"IsRequired": false
+		},
+		{
+			"UniqueID": "MoreFish",
+			"IsRequired": false
+		}
+	],
+	"ContentPackFor": {
+		"UniqueID": "DIGUS.MailFrameworkMod",
+        "MinimumVersion": "1.10.1"
+	}
+}

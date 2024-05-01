@@ -1,0 +1,102 @@
+{
+  
+// Lines for the Casino Vendor, highly disapproving of the farmer being there
+  "CasinoVendor1": "Oh, kau. Ke sini cuma mau window shop saja, kan?",
+  "CasinoVendor2": "Tentunya kau tahu gold-mu tak ada harganya di sini?",
+  "CasinoVendor3": "Dulu kami memberi Kartu Anggota Club tidak ke sembarang orang.",
+  "CasinoVendor4": "Semua barang bisa dibeli… Selama kau pantas mendapatkannya.",
+  
+// Line for the Traveling Merchant during Festival of Ice
+  "TravelerIce": "Aah, latar sempurna untuk barang-barangku yang paling langka! Hari ini saja, teman.",
+
+// Lines for the Raccoon. "Bobo" is what she calls you.
+  "Raccoon1": "Kami ada bibit, bobo.",
+  "Raccoon2": "Mau bibit, bobo?",
+  "Raccoon3": "Bibit ini kamu tak punya, mungkin.",  
+  
+// Lines for the Joja Cashiers, friendly but canned. "Join us and thrive" is a reference to JojaMart's "Join Us. Thrive" slogan so the awkwardness is intentional,
+  "JojaCashier1": "Selamat datang di JojaMart! Apa kabar?",
+  "JojaCashier2": "Jangan lupa, untuk anggota JojaMart: barang lebih, harga rendah!",
+  "JojaCashier3": "Bergabung dan makmurlah dengan segala penawaran spesial dari kami!",
+  "JojaCashier4": "Semoga hari Anda istimewa. Sudah siap check out?",
+  
+// Line for the Star Token Exchanger at the Stardew Valley Fair
+  "StarToken": "Hai! Tukar star token dengan hadiah terbaik di seantero Pekan Raya ini!",
+  
+// Lines for Pierre at various festivals
+  "PierreJellyfish": "Barang langka yang bersinar bak ubur-ubur bulan! Jangan kelewatan!",
+  "PierreEgg": "Barang eksklusif! Dapatkan sebelum hari ini selesai kalau tidak mau kelewatan!",
+  "PierreFeast": "Barang meriah yang menghangatkan hari liburmu! Dapatkan sebelum kehabisan!",
+  "PierreFlower": "Bunga-bunga cantik untuk mempesona pasangan dansamu! Ambil sebelum dansa terakhir!",
+  "PierreLuau": "Hiasan eksotis untuk membuat Kebun {{FarmName}} jadi perbincangan kota! Dapatkan selagi sempat!",
+  "PierreSpirit": "Hiasan seram untuk membangun lumbung paling angker! Dapatkan sebelum lenyap!",
+
+// Line for the clinic, made generic because it could be spoken by either Harvey or Maru.
+  "Clinic": "Kami sedia tonik kesehatan dan energi.",
+  
+// Alex  
+  "AlexIceCream": "Mau es krim dingin untuk melawan panas?",
+
+	
+// Descriptions for Generic Mod Config Menu
+  "config.HatMouse.name": "Tikus Topi",
+  "config.HatMouse.description": "Mengaktifkan potret tikus topi di Hutan Cindersap.",
+
+  "config.Raccoon.name": "Rakun",
+  "config.Raccoon.description": "Mengaktifkan potret rakun pedagang di Hutan Cindersap.",
+
+  "config.DesertTrader.name": "Pedagang Gurun",
+  "config.DesertTrader.description": "Mengaktifkan potret pedagang di Gurun Calico.",
+  
+  "config.Casino.name": "Vendor Kasino",
+  "config.Casino.description": "Mengaktifkan potret penukar Qi Coin di Kasino Gurun.",
+  
+  "config.VolcanoDwarf.name": "Dwarf Gunung Berapi",
+  "config.VolcanoDwarf.description": "Mengaktifkan potret dwarf pedagang di lantai 5 Dungeon Gunung Berapi.",
+  
+  "config.IslandTrader.name": "Pedagang Pulau",
+  "config.IslandTrader.description": "Mengaktifkan potret burung perdagang di Pulau Ginger.",
+  
+  "config.Traveler.name": "Pedagang Keliling",
+  "config.Traveler.description": "Mengaktifkan potret pedagang keliling yang muncul tiap Jumat dan Minggu di Hutan Cindersap.",
+  
+  "config.Bookseller.name": "Penjual Buku",
+  "config.Bookseller.description": "Mengaktifkan potret penjual buku yang datang ke kota dua kali semusim.",
+
+  "config.StarToken.name": "Penukar Star Token",
+  "config.StarToken.description": "Mengaktifkan potret penukar Star Token di Pekan Raya Stardew Valley.",
+  
+  "config.DecorBoat.name": "Penjual Dekorasi",
+  "config.DecorBoat.description": "Mengaktifkan potret penjual dekorasi di Pasar Malam.",
+  
+  "config.MagicBoat.name": "Penjaja Sihir",
+  "config.MagicBoat.description": "Mengaktifkan potret penjaja sihir di Pasar Malam.",
+  
+  "config.EggShop.name": "Penukar Telur",
+  "config.EggShop.description": "Mengaktifkan potret penukar Telur Calico di Festival Gurun.",
+  
+  "config.PierreFestival.name": "Pierre di festival",
+  "config.PierreFestival.description": "Mengaktifkan potret untuk kios Pierre di semua festival",
+  
+  "config.section.JojaMart.name": "Kasir JojaMart",
+  
+  "config.JojaCashier.name": "Potret", 
+  "config.JojaCashier.description": "Selalu non-aktif kalau ada SVE.",
+  
+  "config.JojaShift.name": "Shift acak",
+  "config.JojaShift.description": "Membuat kasir bertukar acak tiap hari antara kasir default dan kasir alternatif. Selalu non-aktif kalau ada SVE.",
+  
+  "config.section.Theater.name": "Staff Teater",
+  
+  "config.MovieTicket.name": "Petugas Tiket",
+  "config.MovieTicket.description": "Mengaktifkan potret petugas tiket di teater film.",
+  
+  "config.MovieConcession.name": "Petugas Makanan",
+  "config.MovieConcession.description": "Mengaktifkan potret petugas makanan di teater film.",
+  
+  "config.MovieShift.name": "Shift acak",
+  "config.MovieShift.description": "Membuat para staff bertukar tugas secara acak tiap hari. Selalu non-aktif kalau ada SVE.",
+  
+}
+
+

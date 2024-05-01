@@ -1,0 +1,102 @@
+{
+  
+// Lines for the Casino Vendor, highly disapproving of the farmer being there
+  "CasinoVendor1": "Oh, it's you. Here to do window shopping, I presume?",
+  "CasinoVendor2": "You do realize your gold has no value here, right?",
+  "CasinoVendor3": "We used to be more discerning about who receives a Club Card.",
+  "CasinoVendor4": "All items are for sale… So long as you earn them.",
+  
+// Line for the Traveling Merchant during Festival of Ice
+  "TravelerIce": "Ah, the perfect backdrop for some of my rarest finds! Today only, friend.",
+  
+// Lines for the Raccoon. "Bobo" is what she calls you.
+  "Raccoon1": "We have seeds, bobo.",
+  "Raccoon2": "Want some seeds, bobo?",
+  "Raccoon3": "You don't have these seeds, maybe.",  
+  
+// Lines for the Joja Cashiers, friendly but canned. "Join us and thrive" is a reference to JojaMart's "Join Us. Thrive" slogan so the awkwardness is intentional,
+  "JojaCashier1": "Welcome to JojaMart! How are you today?",
+  "JojaCashier2": "Remember, as a JojaMart member, you get more for less!",
+  "JojaCashier3": "Join us and thrive on our special offers for select items!",
+  "JojaCashier4": "I hope you're having a great day. Are you ready to check out?",
+  
+// Line for the Star Token Exchanger at the Stardew Valley Fair
+  "StarToken": "Heya! Trade your star tokens here to snag the best loot the Fair's got to offer!",
+  
+// Lines for Pierre at various festivals
+  "PierreJellyfish": "Rare items that shine just like a Moonlight Jelly! Don't miss out!",
+  "PierreEgg": "Exclusive items on sale! Get them before the day ends, or you'll miss out!",
+  "PierreFeast": "Festive goodies to warm your holiday! Grab yours while they last!",
+  "PierreFlower": "Beautiful flowers to charm your dance partner! Pick them up before the last dance!",
+  "PierreLuau": "Exotic decorations to make {{FarmName}} Farm the talk of the town! Grab them while you can!",
+  "PierreSpirit": "Spooky decorations for building the scariest barn! Get them before they vanish!",
+
+// Line for the clinic, made generic because it could be spoken by either Harvey or Maru.
+  "Clinic": "We have a selection of health and energy tonics.",
+  
+// Alex  
+  "AlexIceCream": "How about some cool ice cream to beat the heat?",
+
+	
+// Descriptions for Generic Mod Config Menu
+  "config.HatMouse.name": "Hat Mouse",
+  "config.HatMouse.description": "Enables portrait for the hat mouse in the Cindersap Forest.",
+
+  "config.Raccoon.name": "Raccoon",
+  "config.Raccoon.description": "Enables portrait for the unlockable raccoon trader in Cindersap Forest.",
+    
+  "config.DesertTrader.name": "Desert Trader",
+  "config.DesertTrader.description": "Enables portrait for the desert trader.",
+  
+  "config.Casino.name": "Casino Vendor",
+  "config.Casino.description": "Enables portrait for the Qi Coins exchanger at the hidden Desert Casino.",
+  
+  "config.VolcanoDwarf.name": "Volcano Dwarf",
+  "config.VolcanoDwarf.description": "Enables portrait for the Dwarf trader found on floor 5 of the Volcano Dungeon.",
+  
+  "config.IslandTrader.name": "Island Trader",
+  "config.IslandTrader.description": "Enables portrait for the unlockable bird trader on Ginger Island.",
+
+  "config.Traveler.name": "Traveling Merchant",
+  "config.Traveler.description": "Enables portrait for the traveling merchant who appears on Fridays and Sundays in Cindersap Forest.",
+  
+  "config.Bookseller.name": "Bookseller",
+  "config.Bookseller.description": "Enables portrait for the bookseller who visits town twice a season.",
+  
+  "config.StarToken.name": "Star Token Exchanger",
+  "config.StarToken.description": "Enables portrait for the Star Token exchanger at the Stardew Valley Fair.",
+  
+  "config.DecorBoat.name": "Decoration Seller",
+  "config.DecorBoat.description": "Enables portrait for the decoration seller at the Night Market.",
+  
+  "config.MagicBoat.name": "Magic Peddler",
+  "config.MagicBoat.description": "Enables portrait for the magic peddler at the Night Market.",
+  
+  "config.EggShop.name": "Egg Peddler",
+  "config.EggShop.description": "Enables portrait for the Calico Egg peddler at the Desert Festival.",  
+  
+  "config.PierreFestival.name": "Pierre at the festivals",
+  "config.PierreFestival.description": "Enables portraits for Pierre’s stall during all festivals.",
+  
+  "config.section.JojaMart.name": "JojaMart Cashier",
+  
+  "config.JojaCashier.name": "Enable portrait", 
+  "config.JojaCashier.description": "Is always disabled if using SVE.",
+  
+  "config.JojaShift.name": "Randomise shift",
+  "config.JojaShift.description": "Makes the cashier randomly swap between the default cashier and an alternate every day. Is always disabled if using SVE.",
+  
+  "config.section.Theater.name": "Cinema Staff",
+  
+  "config.MovieTicket.name": "Box Office Clerk",
+  "config.MovieTicket.description": "Enables portrait for the cinema’s box office clerk.",
+  
+  "config.MovieConcession.name": "Concession Attendant",
+  "config.MovieConcession.description": "Enables portrait for the cinema's concession stand attendant.",
+  
+  "config.MovieShift.name": "Randomise shift",
+  "config.MovieShift.description": "Makes the staff members randomly switch duties every day. Is always disabled if using SVE.",
+  
+}
+
+

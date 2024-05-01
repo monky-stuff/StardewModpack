@@ -1,0 +1,102 @@
+{
+  
+// Lines for the Casino Vendor, highly disapproving of the farmer being there
+  "CasinoVendor1": "Ach, du. Willst du nur Schaufensterbummel, oder?",
+  "CasinoVendor2": "Du verstehst doch, dass dein Gold keine Werte hier hat, oder?",
+  "CasinoVendor3": "Früher waren unsere Clubkartenerhalter viel anspruchsvoller.",
+  "CasinoVendor4": "Alles kann gekauft werden… Solange du dir es verdient hast.",
+  
+// Line for the Traveling Merchant during Festival of Ice
+  "TravelerIce": "Ach, die perfekte Kulisse für einige meiner seltensten Funde! Nur für heute, mein Freund.",
+
+// Lines for the Raccoon. "Bobo" is what she calls you.
+  "Raccoon1": "Wir haben Samen, bobo.",
+  "Raccoon2": "Willst du Samen, bobo?",
+  "Raccoon3": "Du hast diesen Samen noch nicht, vielleicht.",  
+  
+// Lines for the Joja Cashiers, friendly but canned. "Join us and thrive" is a reference to JojaMart's "Join Us. Thrive" slogan so the awkwardness is intentional
+  "JojaCashier1": "Herzlich Willkommen in JojaMart! Wie geht es dir heute?",
+  "JojaCashier2": "Vergiss nicht, mit JojaMart Mitgliedschaft bekommst du Rabatte!",
+  "JojaCashier3": "Schließ dich uns an und gedeihe mit unseren Waren im Angebot!",
+  "JojaCashier4": "Hoffentlich geht es dir heute gut. Sonst noch etwas?",
+  
+// Line for the Star Token Exchanger at the Stardew Valley Fair
+  "StarToken": "Hallo! Tausche hier deine Sternenmarken ein, um die beste Beute des Fests zu schnappen!",
+  
+// Lines for Pierre at various festivals
+  "PierreJellyfish": "Seltene Waren, die wie eine Mondlichtqualle strahlen! Verpasst es nicht!",
+  "PierreEgg": "Exklusive Waren zu verkaufen! Holt sie, bevor der Sonnenuntergang!",
+  "PierreFeast": "Festliche Leckereien, um dein Fest zu erwärmen! Holt sie, bevor alles ausverkauft ist!",
+  "PierreFlower": "Bezaubere deinen Tanzpartner mit diesen schönen Blumen! Pflücke sie, bevor der letzte Tanz!",
+  "PierreLuau": "Exotische Dekorationen um {{FarmName}} Hof das Stadtgespräch  zu machen! Holt sie, solange du kannst!",
+  "PierreSpirit": "Gruselige Dekorationen für die gruseligste Scheune! Hol sie, bevor sie verschwinden!",
+
+// Line for the clinic, made generic because it could be spoken by either Harvey or Maru.
+  "Clinic": "Herzlich Willkommen! Wir haben eine Auswahl von Gesundheits- und Energietonika.",
+  
+// Alex  
+  "AlexIceCream": "Kaltes Eis für so einen heißen Tag. Wie gefällt es dir?",
+
+	
+// Descriptions for Generic Mod Config Menu
+  "config.HatMouse.name": "Hutmaus",
+  "config.HatMouse.description": "Das Porträt der Hutmaus in Zundersaftwald ermöglichen.",
+
+  "config.Raccoon.name": "Waschbär",
+  "config.Raccoon.description": "Das Porträt des freischaltbaren Händlerwaschbärs in Zundersaftwald ermöglichen.",
+  
+  "config.DesertTrader.name": "Wüstenhändler",
+  "config.DesertTrader.description": "Das Porträt des Wüstenhändlers ermöglichen.",
+  
+  "config.Casino.name": "Casinoanbieter",
+  "config.Casino.description": "Das Porträt des Qi-Coin-Austauschers in der Wüstencasino ermöglichen.",
+  
+  "config.VolcanoDwarf.name": "Vulkanzwerg",
+  "config.VolcanoDwarf.description": "Das Porträt des Zwergischen Händlers im 5. Etage des Vulkankerkers ermöglichen.",
+  
+  "config.IslandTrader.name": "Inselhändler",
+  "config.IslandTrader.description": "Das Porträt des freischaltbaren Händlervogels auf der Ingwerinsel ermöglichen.",
+  
+  "config.Traveler.name": "Reisender Händler",
+  "config.Traveler.description": "Das Porträt des reisenden Händlers, der Freitags und Sonntags in Zundersaftwald kommt, ermöglichen.",
+
+  "config.Bookseller.name": "Buchhändler",
+  "config.Bookseller.description": "Das Porträt des Buchhändlers, der die Stadt zweimal in der Jahreszeit besucht, ermöglichen.",
+  
+  "config.StarToken.name": "Sternenmarker Austauscher",
+  "config.StarToken.description": "Das Porträt des Sternenmarker Austauschers in Sternentautaler Volksfest ermöglichen.",
+  
+  "config.DecorBoat.name": "Dekorationsverkaufer",
+  "config.DecorBoat.description": "Das Porträt des Dekorationsverkaufers vom Nachtmarkt ermöglichen.",
+  
+  "config.MagicBoat.name": "Zauberhändler",
+  "config.MagicBoat.description": "Das Porträt des Zauberhändlers vom Nachtmarkt ermöglichen.",
+
+  "config.EggShop.name": "Calico-Eiverkaufer",
+  "config.EggShop.description": "Das Porträt des Calico-Eiverkaufers in der Wüstenfestival ermöglichen.",
+  
+  "config.PierreFestival.name": "Pierres Festporträts",
+  "config.PierreFestival.description": "Porträts von Pierres Stände in allen Feste ermöglichen.",
+  
+  "config.section.JojaMart.name": "JojaMart Kassierer",
+  
+  "config.JojaCashier.name": "Porträt ermöglichen", 
+  "config.JojaCashier.description": "Wird immer gesperrt, wenn man SVE benutzt.",
+  
+  "config.JojaShift.name": "Schichten randomisieren",
+  "config.JojaShift.description": "Wechselt der Kassierer zufällig zwischen dem Standardkassierer und einem anderen. Wird immer gesperrt, wenn man SVE benutzt.",
+  
+  "config.section.Theater.name": "Kinopersonal",
+  
+  "config.MovieTicket.name": "Abendkassenangestellter",
+  "config.MovieTicket.description": "Das Porträt des Kinoabendkassenangestellten ermöglichen.",
+  
+  "config.MovieConcession.name": "Imbissstandbetreuer",
+  "config.MovieConcession.description": "Das Porträt des Kinoimbissstandbetreuers ermöglichen.",
+  
+  "config.MovieShift.name": "Schichten randomisieren",
+  "config.MovieShift.description": "Bewirkt, dass die beiden Mitarbeiter nach dem Zufallsprinzip ihre Aufgaben wechseln. Wird immer gesperrt, wenn man SVE benutzt.",
+  
+}
+
+

@@ -1,0 +1,12 @@
+{
+    "Changes": [
+        {
+            "Action": "EditData",
+            "Target": "Data/mail",
+            "Entries": {
+                "NQR.Wizard1.Complete": "[letterbg 2]{{i18n:NoQi.mail.text}} %item craftingRecipe Transmute_(IR) %%[#]{{i18n:NoQi.mail1.title}}",
+                "NQR.Wizard2.Complete": "[letterbg 2]{{i18n:NoQi.mail.text}} %item craftingRecipe Transmute_(RA) %%[#]{{i18n:NoQi.mail2.title}}"
+            }
+        }
+    ]
+}

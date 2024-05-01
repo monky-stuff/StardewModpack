@@ -1,0 +1,1486 @@
+{
+    "Format": "2.0",
+
+"DynamicTokens": [
+		{
+			"Name": "Festival",
+			"Value": ""
+		},
+		{
+			"Name": "Festival",
+			"Value": "_FlowerDance",
+			"When": {
+				"DayEvent |contains=flower dance": true,
+				"LocationName |contains=Temp, forest": true
+			}
+		},
+
+	],	
+
+    "Changes": [
+//Leah
+
+
+        {
+            "Action": "EditData",
+            "Target": "Data/Characters",
+            "Entries": {
+                "Leah·": {
+                    "DisplayName": "Leah·", 
+                    "SocialTab": "HiddenAlways",
+					"CanSocialize": "FALSE",
+					"IntroductionsQuest": false,
+					"PerfectionScore": false,
+                    "EndSlideShow": false,
+					"Home": [
+                        {
+                            "Id": "Default",
+                            "Location": "Town",
+                            "Tile": { "X": -5000, "Y": -5000 },
+                            "Direction": "Left"
+                        },
+				]
+                },
+            },
+        },
+
+{
+      "Action": "Load",
+      "Target": "Portraits/Leah·",
+      "FromFile": "portrait/LeahNude.png"
+    },
+
+
+    {
+      "Action": "Load",
+      "Target": "Characters/Leah·",
+      "FromFile": "sprite/LeahNude.png"
+    },
+	   
+//WItch	   
+
+        {
+            "Action": "EditData",
+            "Target": "Data/Characters",
+            "Entries": {
+                "Witch·": {
+                    "DisplayName": "Witch·", 
+                    "SocialTab": "HiddenAlways",
+					"CanSocialize": "FALSE",
+					"IntroductionsQuest": false,
+					"PerfectionScore": false,
+                    "EndSlideShow": false,
+					"Home": [
+                        {
+                            "Id": "Default",
+                            "Location": "Town",
+                            "Tile": { "X": -5000, "Y": -5000 },
+                            "Direction": "Left"
+                        },
+				]
+                },
+            },
+        },
+		
+		{
+      "Action": "Load",
+      "Target": "Portraits/Witch·",
+      "FromFile": "portrait/WizardNude.png"
+    },
+
+
+    {
+      "Action": "Load",
+      "Target": "Characters/Witch·",
+      "FromFile": "sprite/WizardNude.png"
+    },
+	
+	
+	
+	{
+	"Action": "EditImage",
+	"Target": "Portraits/Wizard",
+	"FromFile": "portraitNonNude/WitchBase.png"
+	},
+	
+	{
+	"Action": "Load",
+	"Target": "Portraits/Wizard_Beach",
+	"FromFile": "portraitNonNude/WitchBeach.png"
+	},
+
+	{
+	"Action": "EditImage",
+	"Target": "Portraits/Wizard",
+	"FromFile": "portraitNonNude/WitchFlowerDance.png",
+	"When": {
+		"Festival": "_FlowerDance"
+	},
+	"Update": "OnLocationChange"
+	},
+	
+	{
+	"Action": "EditImage",
+	"Target": "Characters/Wizard",
+	"FromFile": "spriteNonNude/WitchFlowerDance.png",
+	"When": {
+		"Festival": "_FlowerDance"
+	},
+	"Update": "OnLocationChange"
+	},
+	
+
+	   
+//Emily
+
+        {
+            "Action": "EditData",
+            "Target": "Data/Characters",
+            "Entries": {
+                "Emily·": {
+                    "DisplayName": "Emily·", 
+                    "SocialTab": "HiddenAlways",
+					"CanSocialize": "FALSE",
+					"IntroductionsQuest": false,
+					"PerfectionScore": false,
+                    "EndSlideShow": false,
+					"Home": [
+                        {
+                            "Id": "Default",
+                            "Location": "Town",
+                            "Tile": { "X": -5000, "Y": -5000 },
+                            "Direction": "Left"
+                        },
+				]
+                },
+            },
+        },
+
+	    {
+
+      "Action": "Load",
+      "Target": "Portraits/Emily·",
+      "FromFile": "portrait/EmilyNude.png"
+
+    },
+
+
+    {
+
+      "Action": "Load",
+      "Target": "Characters/Emily·",
+      "FromFile": "sprite/EmilyNude.png"
+
+    },
+
+
+
+//Penny
+
+        {
+            "Action": "EditData",
+            "Target": "Data/Characters",
+            "Entries": {
+                "Penny·": {
+                    "DisplayName": "Penny·", 
+                    "SocialTab": "HiddenAlways",
+					"CanSocialize": "FALSE",
+					"IntroductionsQuest": false,
+					"PerfectionScore": false,
+                    "EndSlideShow": false,
+					"Home": [
+                        {
+                            "Id": "Default",
+                            "Location": "Town",
+                            "Tile": { "X": -5000, "Y": -5000 },
+                            "Direction": "Left"
+                        },
+				]
+ 
+                },
+            },
+        },
+
+	    {
+      "Action": "Load",
+      "Target": "Portraits/Penny·",
+      "FromFile": "portrait/PennyNude.png"
+    },
+
+
+    {
+
+      "Action": "Load",
+      "Target": "Characters/Penny·",
+      "FromFile": "sprite/PennyNude.png"
+
+    },
+	
+	
+//Abigail
+
+        {
+            "Action": "EditData",
+            "Target": "Data/Characters",
+            "Entries": {
+                "Abigail·": {
+                    "DisplayName": "Abigail·", 
+                    "SocialTab": "HiddenAlways",
+					"CanSocialize": "FALSE",
+					"IntroductionsQuest": false,
+					"PerfectionScore": false,
+                    "EndSlideShow": false,
+					"Home": [
+                        {
+                            "Id": "Default",
+                            "Location": "Town",
+                            "Tile": { "X": -5000, "Y": -5000 },
+                            "Direction": "Left"
+                        },
+				]
+                },
+            },
+        },
+
+	    {
+
+      "Action": "Load",
+      "Target": "Portraits/Abigail·",
+      "FromFile": "portrait/AbigailNude.png"
+
+    },
+
+
+    {
+
+      "Action": "Load",
+      "Target": "Characters/Abigail·",
+      "FromFile": "sprite/AbigailNude.png"
+
+    },
+	
+	//Sophia
+
+        {
+            "Action": "EditData",
+            "Target": "Data/Characters",
+            "Entries": {
+                "Sophia·": {
+                    "DisplayName": "Sophia·", 
+                    "SocialTab": "HiddenAlways",
+					"CanSocialize": "FALSE",
+					"IntroductionsQuest": false,
+					"PerfectionScore": false,
+                    "EndSlideShow": false,
+					"Home": [
+                        {
+                            "Id": "Default",
+                            "Location": "Town",
+                            "Tile": { "X": -5000, "Y": -5000 },
+                            "Direction": "Left"
+                        },
+				]
+
+                },
+            },
+        },
+
+	    {
+
+      "Action": "Load",
+      "Target": "Portraits/Sophia·",
+      "FromFile": "portrait/SophiaNude.png"
+
+    },
+
+
+    {
+
+      "Action": "Load",
+      "Target": "Characters/Sophia·",
+      "FromFile": "sprite/SophiaNude.png"
+
+    },
+
+	//Caroline
+
+        {
+            "Action": "EditData",
+            "Target": "Data/Characters",
+            "Entries": {
+                "Caroline·": {
+                    "DisplayName": "Caroline·", 
+                    "SocialTab": "HiddenAlways",
+					"CanSocialize": "FALSE",
+					"IntroductionsQuest": false,
+					"PerfectionScore": false,
+                    "EndSlideShow": false,
+					"Home": [
+                        {
+                            "Id": "Default",
+                            "Location": "Town",
+                            "Tile": { "X": -5000, "Y": -5000 },
+                            "Direction": "Left"
+                        },
+				]
+                 },
+            },
+        },
+
+	    {
+
+      "Action": "Load",
+      "Target": "Portraits/Caroline·",
+      "FromFile": "portrait/CarolineNude.png"
+
+    },
+
+
+    {
+
+      "Action": "Load",
+      "Target": "Characters/Caroline·",
+      "FromFile": "sprite/CarolineNude.png"
+
+    },
+	
+	
+		//Jodi
+
+        {
+            "Action": "EditData",
+            "Target": "Data/Characters",
+            "Entries": {
+                "Jodi·": {
+                    "DisplayName": "Jodi·", 
+                    "SocialTab": "HiddenAlways",
+					"CanSocialize": "FALSE",
+					"IntroductionsQuest": false,
+					"PerfectionScore": false,
+                    "EndSlideShow": false,
+					"Home": [
+                        {
+                            "Id": "Default",
+                            "Location": "Town",
+                            "Tile": { "X": -5000, "Y": -5000 },
+                            "Direction": "Left"
+                        },
+				]					
+                },
+            },
+        },
+
+	    {
+
+      "Action": "Load",
+      "Target": "Portraits/Jodi·",
+      "FromFile": "portrait/JodiNude.png"
+
+    },
+
+
+    {
+
+      "Action": "Load",
+      "Target": "Characters/Jodi·",
+      "FromFile": "sprite/JodiNude.png"
+
+    },
+	
+	//Sandy
+
+        {
+            "Action": "EditData",
+            "Target": "Data/Characters",
+            "Entries": {
+                "Sandy·": {
+                    "DisplayName": "Sandy·", 
+                    "SocialTab": "HiddenAlways",
+					"CanSocialize": "FALSE",
+					"IntroductionsQuest": false,
+					"PerfectionScore": false,
+                    "EndSlideShow": false,
+					"Home": [
+                        {
+                            "Id": "Default",
+                            "Location": "Town",
+                            "Tile": { "X": -5000, "Y": -5000 },
+                            "Direction": "Left"
+                        },
+				]
+                },
+            },
+        },
+
+	    {
+
+      "Action": "Load",
+      "Target": "Portraits/Sandy·",
+      "FromFile": "portrait/SandyNude.png"
+
+    },
+
+
+    {
+
+      "Action": "Load",
+      "Target": "Characters/Sandy·",
+      "FromFile": "sprite/SandyNude.png"
+    },
+
+	//Claire
+
+        {
+            "Action": "EditData",
+            "Target": "Data/Characters",
+            "Entries": {
+                "Claire·": {
+                    "DisplayName": "Claire·", 
+                    "SocialTab": "HiddenAlways",
+					"CanSocialize": "FALSE",
+					"IntroductionsQuest": false,
+					"PerfectionScore": false,
+                    "EndSlideShow": false,
+					"Home": [
+                        {
+                            "Id": "Default",
+                            "Location": "Town",
+                            "Tile": { "X": -5000, "Y": -5000 },
+                            "Direction": "Left"
+                        },
+				]
+                },
+            },
+        },
+
+	    {
+
+      "Action": "Load",
+      "Target": "Portraits/Claire·",
+      "FromFile": "portrait/ClaireNude.png"
+
+    },
+
+
+    {
+
+      "Action": "Load",
+      "Target": "Characters/Claire·",
+      "FromFile": "sprite/ClaireNude.png"
+
+    },
+	
+	
+		//Olivia
+
+        {
+            "Action": "EditData",
+            "Target": "Data/Characters",
+            "Entries": {
+                "Olivia·": {
+                    "DisplayName": "Olivia·", 
+                    "SocialTab": "HiddenAlways",
+					"CanSocialize": "FALSE",
+					"IntroductionsQuest": false,
+					"PerfectionScore": false,
+                    "EndSlideShow": false,
+					"Home": [
+                        {
+                            "Id": "Default",
+                            "Location": "Town",
+                            "Tile": { "X": -5000, "Y": -5000 },
+                            "Direction": "Left"
+                        },
+				]
+                },
+            },
+        },
+
+	    {
+
+      "Action": "Load",
+      "Target": "Portraits/Olivia·",
+      "FromFile": "portrait/OliviaNude.png"
+
+    },
+
+
+    {
+
+      "Action": "Load",
+      "Target": "Characters/Olivia·",
+      "FromFile": "sprite/OliviaNude.png"
+
+    },
+	
+	
+			//Haley
+
+        {
+            "Action": "EditData",
+            "Target": "Data/Characters",
+            "Entries": {
+                "Haley·": {
+                    "DisplayName": "Haley·", 
+                    "SocialTab": "HiddenAlways",
+					"CanSocialize": "FALSE",
+					"IntroductionsQuest": false,
+					"PerfectionScore": false,
+                    "EndSlideShow": false,
+					"Home": [
+                        {
+                            "Id": "Default",
+                            "Location": "Town",
+                            "Tile": { "X": -5000, "Y": -5000 },
+                            "Direction": "Left"
+                        },
+				]
+                },
+            },
+        },
+
+	    {
+
+      "Action": "Load",
+      "Target": "Portraits/Haley·",
+      "FromFile": "portrait/HaleyNude.png"
+
+    },
+
+
+    {
+
+      "Action": "Load",
+      "Target": "Characters/Haley·",
+      "FromFile": "sprite/HaleyNude.png"
+
+    },
+	
+	
+				//Maru
+
+        {
+            "Action": "EditData",
+            "Target": "Data/Characters",
+            "Entries": {
+                "Maru·": {
+                    "DisplayName": "Maru·", 
+                    "SocialTab": "HiddenAlways",
+					"CanSocialize": "FALSE",
+					"IntroductionsQuest": false,
+					"PerfectionScore": false,
+                    "EndSlideShow": false,
+					"Home": [
+                        {
+                            "Id": "Default",
+                            "Location": "Town",
+                            "Tile": { "X": -5000, "Y": -5000 },
+                            "Direction": "Left"
+                        },
+				]
+                 },
+            },
+        },
+
+	    {
+
+      "Action": "Load",
+      "Target": "Portraits/Maru·",
+      "FromFile": "portrait/MaruNude.png"
+
+    },
+
+
+    {
+
+      "Action": "Load",
+      "Target": "Characters/Maru·",
+      "FromFile": "sprite/MaruNude.png"
+
+    },
+	
+	
+	
+//Robin
+        {
+            "Action": "EditData",
+            "Target": "Data/Characters",
+            "Entries": {
+                "Robin·": {
+                    "DisplayName": "Robin·", 
+                    "SocialTab": "HiddenAlways",
+					"CanSocialize": "FALSE",
+					"IntroductionsQuest": false,
+					"PerfectionScore": false,
+                    "EndSlideShow": false,
+					"Home": [
+                        {
+                            "Id": "Default",
+                            "Location": "Town",
+                            "Tile": { "X": -5000, "Y": -5000 },
+                            "Direction": "Left"
+                        },
+				]
+                },
+            },
+        },
+
+	    {
+
+      "Action": "Load",
+      "Target": "Portraits/Robin·",
+      "FromFile": "portrait/RobinNude.png"
+
+    },
+
+
+    {
+
+      "Action": "Load",
+      "Target": "Characters/Robin·",
+      "FromFile": "sprite/RobinNude.png"
+
+    },
+//Scarlett
+
+        {
+            "Action": "EditData",
+            "Target": "Data/Characters",
+            "Entries": {
+                "Scarlett·": {
+                    "DisplayName": "Scarlett·", 
+                    "SocialTab": "HiddenAlways",
+					"CanSocialize": "FALSE",
+					"IntroductionsQuest": false,
+					"PerfectionScore": false,
+                    "EndSlideShow": false,
+					"Home": [
+                        {
+                            "Id": "Default",
+                            "Location": "Town",
+                            "Tile": { "X": -5000, "Y": -5000 },
+                            "Direction": "Left"
+                        },
+				]
+                },
+            },
+        },
+
+	    {
+
+      "Action": "Load",
+      "Target": "Portraits/Scarlett·",
+      "FromFile": "portrait/ScarlettNude.png"
+
+    },
+
+
+    {
+
+      "Action": "Load",
+      "Target": "Characters/Scarlett·",
+      "FromFile": "sprite/ScarlettNude.png"
+
+    },
+	
+
+	
+	
+//NON Nude	
+
+        {
+            "Action": "EditData",
+            "Target": "Data/Characters",
+            "Entries": {
+                "Witch··": {
+                    "DisplayName": "Witch··", 
+                    "SocialTab": "HiddenAlways",
+					"CanSocialize": "FALSE",
+					"IntroductionsQuest": false,
+					"PerfectionScore": false,
+                    "EndSlideShow": false,
+					"Home": [
+                        {
+                            "Id": "Default",
+                            "Location": "Town",
+                            "Tile": { "X": -5000, "Y": -5000 },
+                            "Direction": "Left"
+                        },
+				]
+                },
+            },
+        },
+
+	    {
+
+      "Action": "Load",
+      "Target": "Portraits/Witch··",
+      "FromFile": "portraitNonNude/Wizard.png"
+
+    },
+
+
+    {
+
+      "Action": "Load",
+      "Target": "Characters/Witch··",
+      "FromFile": "spriteNonNude/Wizard.png"
+
+    },
+	
+//LEAh
+
+        {
+            "Action": "EditData",
+            "Target": "Data/Characters",
+            "Entries": {
+                "Leah··": {
+                    "DisplayName": "Leah··", 
+                    "SocialTab": "HiddenAlways",
+					"CanSocialize": "FALSE",
+					"IntroductionsQuest": false,
+					"PerfectionScore": false,
+                    "EndSlideShow": false,
+					"Home": [
+                        {
+                            "Id": "Default",
+                            "Location": "Town",
+                            "Tile": { "X": -5000, "Y": -5000 },
+                            "Direction": "Left"
+                        },
+				]
+                },
+            },
+        },
+
+	    {
+
+      "Action": "Load",
+      "Target": "Portraits/Leah··",
+      "FromFile": "portraitNonNude/Leah.png"
+
+    },
+
+
+    {
+
+      "Action": "Load",
+      "Target": "Characters/Leah··",
+      "FromFile": "spriteNonNude/Leah.png"
+
+    },
+	   
+//Emily
+
+        {
+            "Action": "EditData",
+            "Target": "Data/Characters",
+            "Entries": {
+                "Emily··": {
+                    "DisplayName": "Emily··", 
+                    "SocialTab": "HiddenAlways",
+					"CanSocialize": "FALSE",
+					"IntroductionsQuest": false,
+					"PerfectionScore": false,
+                    "EndSlideShow": false,
+					"Home": [
+                        {
+                            "Id": "Default",
+                            "Location": "Town",
+                            "Tile": { "X": -5000, "Y": -5000 },
+                            "Direction": "Left"
+                        },
+				]
+                },
+            },
+        },
+
+	    {
+
+      "Action": "Load",
+      "Target": "Portraits/Emily··",
+      "FromFile": "portraitNonNude/Emily.png"
+
+    },
+
+
+    {
+
+      "Action": "Load",
+      "Target": "Characters/Emily··",
+      "FromFile": "spriteNonNude/Emily.png"
+
+    },
+
+
+
+//Penny
+
+        {
+            "Action": "EditData",
+            "Target": "Data/Characters",
+            "Entries": {
+                "Penny··": {
+                    "DisplayName": "Penny··", 
+                    "SocialTab": "HiddenAlways",
+					"CanSocialize": "FALSE",
+					"IntroductionsQuest": false,
+					"PerfectionScore": false,
+                    "EndSlideShow": false,
+					"Home": [
+                        {
+                            "Id": "Default",
+                            "Location": "Town",
+                            "Tile": { "X": -5000, "Y": -5000 },
+                            "Direction": "Left"
+                        },
+				]
+                },
+            },
+        },
+
+	    {
+
+      "Action": "Load",
+      "Target": "Portraits/Penny··",
+      "FromFile": "portraitNonNude/Penny.png"
+
+    },
+
+
+    {
+
+      "Action": "Load",
+      "Target": "Characters/Penny··",
+      "FromFile": "spriteNonNude/Penny.png"
+
+    },
+	
+	
+//Abigail
+
+        {
+            "Action": "EditData",
+            "Target": "Data/Characters",
+            "Entries": {
+                "Abigail··": {
+                    "DisplayName": "Abigail··", 
+                    "SocialTab": "HiddenAlways",
+					"CanSocialize": "FALSE",
+					"IntroductionsQuest": false,
+					"PerfectionScore": false,
+                    "EndSlideShow": false,
+					"Home": [
+                        {
+                            "Id": "Default",
+                            "Location": "Town",
+                            "Tile": { "X": -5000, "Y": -5000 },
+                            "Direction": "Left"
+                        },
+				]
+                },
+            },
+        },
+
+	    {
+
+      "Action": "Load",
+      "Target": "Portraits/Abigail··",
+      "FromFile": "portraitNonNude/Abigail.png"
+
+    },
+
+
+    {
+
+      "Action": "Load",
+      "Target": "Characters/Abigail··",
+      "FromFile": "spriteNonNude/Abigail.png"
+
+    },
+	
+	//Sophia
+
+        {
+            "Action": "EditData",
+            "Target": "Data/Characters",
+            "Entries": {
+                "Sophia··": {
+                    "DisplayName": "Sophia··", 
+                    "SocialTab": "HiddenAlways",
+					"CanSocialize": "FALSE",
+					"IntroductionsQuest": false,
+					"PerfectionScore": false,
+                    "EndSlideShow": false,
+					"Home": [
+                        {
+                            "Id": "Default",
+                            "Location": "Town",
+                            "Tile": { "X": -5000, "Y": -5000 },
+                            "Direction": "Left"
+                        },
+				]
+                },
+            },
+        },
+
+	    {
+
+      "Action": "Load",
+      "Target": "Portraits/Sophia··",
+      "FromFile": "portraitNonNude/Sophia.png"
+
+    },
+
+
+    {
+
+      "Action": "Load",
+      "Target": "Characters/Sophia··",
+      "FromFile": "spriteNonNude/Sophia.png"
+
+    },
+
+	//Caroline
+
+        {
+            "Action": "EditData",
+            "Target": "Data/Characters",
+            "Entries": {
+                "Caroline··": {
+                    "DisplayName": "Caroline··", 
+                    "SocialTab": "HiddenAlways",
+					"CanSocialize": "FALSE",
+					"IntroductionsQuest": false,
+					"PerfectionScore": false,
+                    "EndSlideShow": false,
+					"Home": [
+                        {
+                            "Id": "Default",
+                            "Location": "Town",
+                            "Tile": { "X": -5000, "Y": -5000 },
+                            "Direction": "Left"
+                        },
+				]
+                },
+            },
+        },
+
+	    {
+
+      "Action": "Load",
+      "Target": "Portraits/Caroline··",
+      "FromFile": "portraitNonNude/Caroline.png"
+
+    },
+
+
+    {
+
+      "Action": "Load",
+      "Target": "Characters/Caroline··",
+	 "When": 
+    {
+       "HasMod |contains=Nom0ri.RomRas": "true",
+    },
+      "FromFile": "spriteNonNude/CarolineWitch.png"
+
+    },
+	
+	    {
+
+      "Action": "Load",
+      "Target": "Characters/Caroline··",
+	 "When": 
+    {
+       "HasMod |contains=Nom0ri.RomRas": "false",
+    },
+      "FromFile": "spriteNonNude/CarolineWizard.png"
+
+    },
+	
+	
+		//Jodi
+
+        {
+            "Action": "EditData",
+            "Target": "Data/Characters",
+            "Entries": {
+                "Jodi··": {
+                    "DisplayName": "Jodi··", 
+                    "SocialTab": "HiddenAlways",
+					"CanSocialize": "FALSE",
+					"IntroductionsQuest": false,
+					"PerfectionScore": false,
+                    "EndSlideShow": false,
+					"Home": [
+                        {
+                            "Id": "Default",
+                            "Location": "Town",
+                            "Tile": { "X": -5000, "Y": -5000 },
+                            "Direction": "Left"
+                        },
+				]
+                },
+            },
+        },
+
+	    {
+
+      "Action": "Load",
+      "Target": "Portraits/Jodi··",
+      "FromFile": "portraitNonNude/Jodi.png"
+
+    },
+
+
+    {
+
+      "Action": "Load",
+      "Target": "Characters/Jodi··",
+      "FromFile": "spriteNonNude/Jodi.png"
+
+    },
+	
+	//Sandy
+
+        {
+            "Action": "EditData",
+            "Target": "Data/Characters",
+            "Entries": {
+                "Sandy··": {
+                    "DisplayName": "Sandy··", 
+                    "SocialTab": "HiddenAlways",
+					"CanSocialize": "FALSE",
+					"IntroductionsQuest": false,
+					"PerfectionScore": false,
+                    "EndSlideShow": false,
+					"Home": [
+                        {
+                            "Id": "Default",
+                            "Location": "Town",
+                            "Tile": { "X": -5000, "Y": -5000 },
+                            "Direction": "Left"
+                        },
+				]
+                },
+            },
+        },
+
+	    {
+
+      "Action": "Load",
+      "Target": "Portraits/Sandy··",
+      "FromFile": "portraitNonNude/Sandy.png"
+
+    },
+
+
+    {
+
+      "Action": "Load",
+      "Target": "Characters/Sandy··",
+      "FromFile": "spriteNonNude/Sandy.png"
+
+    },
+
+	//Claire
+
+        {
+            "Action": "EditData",
+            "Target": "Data/Characters",
+            "Entries": {
+                "Claire··": {
+                    "DisplayName": "Claire··", 
+                    "SocialTab": "HiddenAlways",
+					"CanSocialize": "FALSE",
+					"IntroductionsQuest": false,
+					"PerfectionScore": false,
+                    "EndSlideShow": false,
+					"Home": [
+                        {
+                            "Id": "Default",
+                            "Location": "Town",
+                            "Tile": { "X": -5000, "Y": -5000 },
+                            "Direction": "Left"
+                        },
+				]
+                },
+            },
+        },
+
+	    {
+
+      "Action": "Load",
+      "Target": "Portraits/Claire··",
+      "FromFile": "portraitNonNude/Claire.png"
+
+    },
+
+
+    {
+
+      "Action": "Load",
+      "Target": "Characters/Claire··",
+      "FromFile": "spriteNonNude/Claire.png"
+
+    },
+	
+	
+		//Olivia
+
+        {
+            "Action": "EditData",
+            "Target": "Data/Characters",
+            "Entries": {
+                "Olivia··": {
+                    "DisplayName": "Olivia··", 
+                    "SocialTab": "HiddenAlways",
+					"CanSocialize": "FALSE",
+					"IntroductionsQuest": false,
+					"PerfectionScore": false,
+                    "EndSlideShow": false,
+					"Home": [
+                        {
+                            "Id": "Default",
+                            "Location": "Town",
+                            "Tile": { "X": -5000, "Y": -5000 },
+                            "Direction": "Left"
+                        },
+				]
+                },
+            },
+        },
+
+	    {
+
+      "Action": "Load",
+      "Target": "Portraits/Olivia··",
+      "FromFile": "portraitNonNude/Olivia.png"
+
+    },
+
+
+    {
+
+      "Action": "Load",
+      "Target": "Characters/Olivia··",
+      "FromFile": "spriteNonNude/Olivia.png"
+
+    },
+	
+	
+			//Haley
+
+        {
+            "Action": "EditData",
+            "Target": "Data/Characters",
+            "Entries": {
+                "Haley··": {
+                    "DisplayName": "Haley··", 
+                    "SocialTab": "HiddenAlways",
+					"CanSocialize": "FALSE",
+					"IntroductionsQuest": false,
+					"PerfectionScore": false,
+                    "EndSlideShow": false,
+					"Home": [
+                        {
+                            "Id": "Default",
+                            "Location": "Town",
+                            "Tile": { "X": -5000, "Y": -5000 },
+                            "Direction": "Left"
+                        },
+				]
+                },
+            },
+        },
+
+	    {
+
+      "Action": "Load",
+      "Target": "Portraits/Haley··",
+      "FromFile": "portraitNonNude/Haley.png"
+
+    },
+
+
+    {
+
+      "Action": "Load",
+      "Target": "Characters/Haley··",
+      "FromFile": "spriteNonNude/Haley.png"
+
+    },
+	
+	
+				//Maru
+
+        {
+            "Action": "EditData",
+            "Target": "Data/Characters",
+            "Entries": {
+                "Maru··": {
+                    "DisplayName": "Maru··", 
+                    "SocialTab": "HiddenAlways",
+					"CanSocialize": "FALSE",
+					"IntroductionsQuest": false,
+					"PerfectionScore": false,
+                    "EndSlideShow": false,
+					"Home": [
+                        {
+                            "Id": "Default",
+                            "Location": "Town",
+                            "Tile": { "X": -5000, "Y": -5000 },
+                            "Direction": "Left"
+                        },
+				]
+ 
+                },
+            },
+        },
+
+	    {
+
+      "Action": "Load",
+      "Target": "Portraits/Maru··",
+      "FromFile": "portraitNonNude/Maru.png"
+
+    },
+
+
+    {
+
+      "Action": "Load",
+      "Target": "Characters/Maru··",
+      "FromFile": "spriteNonNude/Maru.png"
+
+    },
+	
+	
+//Scarlett
+
+        {
+            "Action": "EditData",
+            "Target": "Data/Characters",
+            "Entries": {
+                "Scarlett··": {
+                    "DisplayName": "Scarlett··", 
+                    "SocialTab": "HiddenAlways",
+					"CanSocialize": "FALSE",
+					"IntroductionsQuest": false,
+					"PerfectionScore": false,
+                    "EndSlideShow": false,
+					"Home": [
+                        {
+                            "Id": "Default",
+                            "Location": "Town",
+                            "Tile": { "X": -5000, "Y": -5000 },
+                            "Direction": "Left"
+                        },
+				]
+                },
+            },
+        },
+
+	    {
+
+      "Action": "Load",
+      "Target": "Portraits/Scarlett··",
+      "FromFile": "portraitNonNude/Scarlett.png"
+
+    },
+
+
+    {
+
+      "Action": "Load",
+      "Target": "Characters/Scarlett··",
+      "FromFile": "spriteNonNude/Scarlett.png"
+
+    },
+	
+//Robin
+	
+        {
+            "Action": "EditData",
+            "Target": "Data/Characters",
+            "Entries": {
+                "Robin··": {
+                    "DisplayName": "Robin··", 
+                    "SocialTab": "HiddenAlways",
+					"CanSocialize": "FALSE",
+					"IntroductionsQuest": false,
+					"PerfectionScore": false,
+                    "EndSlideShow": false,
+					"Home": [
+                        {
+                            "Id": "Default",
+                            "Location": "Town",
+                            "Tile": { "X": -5000, "Y": -5000 },
+                            "Direction": "Left"
+                        },
+				]
+                },
+            },
+        },
+	
+	    {
+
+      "Action": "Load",
+      "Target": "Characters/Robin··",
+      "FromFile": "spriteNonNude/Robin.png"
+
+    },
+	
+	
+	    {
+
+      "Action": "Load",
+      "Target": "Portraits/Robin··",
+      "FromFile": "portraitNonNude/Robin.png"
+
+    },
+	
+	//Sex sprites
+	   		{
+            "Action": "EditImage",
+            "Target": "Characters/LeahExMale",
+            "FromFile": "SexSprite/LeahExFemale.png",       
+		},
+
+	  	  	   {
+          "Action": "Load",
+          "Target": "Characters/HaleyBJ",
+         "FromFile": "SexSprite/HaleyBJ.png",
+      },
+	  
+	  	  	  	   {
+          "Action": "Load",
+          "Target": "Characters/ScarlettBJ",
+         "FromFile": "SexSprite/ScarlettBJ.png",
+      },
+	  
+	  	  	   {
+          "Action": "Load",
+          "Target": "Characters/Claire3",
+         "FromFile": "SexSprite/Claire3.png",
+      },
+	   
+	   
+	 {
+       "Action": "EditImage",
+       "Target": "Characters/Farmer/farmer_base",
+       "FromFile": "SexSprite/farmer_base.png",
+       },
+	   
+	   	   	 {
+       "Action": "Load",
+       "Target": "Characters/Caroline1",
+       "FromFile": "SexSprite/Caroline1.png",
+       },
+	   	   	   	 {
+       "Action": "Load",
+       "Target": "Characters/Caroline3",
+       "FromFile": "SexSprite/Caroline3.png",
+       },
+	   
+	   	  	   	 {
+       "Action": "Load",
+       "Target": "Characters/Olivia3",
+       "FromFile": "SexSprite/Olivia3.png",
+       },
+	   	   	  	   	 {
+       "Action": "Load",
+       "Target": "Characters/Olivia4",
+       "FromFile": "SexSprite/Olivia4.png",
+       },
+
+	   	   
+	    {
+       "Action": "Load",
+       "Target": "Characters/Pennysophi",
+       "FromFile": "SexSprite/Pennysophi.png",
+       },
+	   	    {
+       "Action": "Load",
+       "Target": "Characters/MaruEvent1",
+       "FromFile": "SexSprite/MaruEvent1.png",
+       },
+
+	   	{
+       "Action": "Load",
+       "Target": "Characters/Ghouse",
+       "FromFile": "SexSprite/Ghouse.png",
+       },
+	   	   	{
+       "Action": "Load",
+       "Target": "Characters/ScarlettFirst",
+       "FromFile": "SexSprite/ScarlettFirst.png",
+       },
+	   	   	   	{
+       "Action": "Load",
+       "Target": "Characters/CarolineJodi1",
+       "FromFile": "SexSprite/CarolineJodi1.png",
+       },
+	    {
+       "Action": "Load",
+       "Target": "Characters/GhouseS",
+       "FromFile": "SexSprite/GhouseS.png",
+       },
+	   {
+       "Action": "Load",
+       "Target": "Characters/Haleytenh",
+       "FromFile": "SexSprite/Haleytenh.png",
+       },
+	    {
+       "Action": "Load",
+       "Target": "Characters/HaleyPolaroid",
+       "FromFile": "SexSprite/HaleyPolaroid.png",
+       },
+	   	   {
+       "Action": "Load",
+       "Target": "Characters/Witch1",
+       "FromFile": "SexSprite/Witch1.png",
+       },
+	   
+	   	   	   {
+       "Action": "Load",
+       "Target": "Characters/Witch3",
+       "FromFile": "SexSprite/Witch3.png",
+       },
+	   
+	   		    {
+       "Action": "Load",
+       "Target": "Characters/Jodi3",
+       "FromFile": "SexSprite/Jodi3.png",
+       },
+	   
+		    {
+       "Action": "Load",
+       "Target": "Characters/AbigailLeah1",
+       "FromFile": "SexSprite/AbigailLeah1.png",
+       },
+	   
+	   		    {
+       "Action": "Load",
+       "Target": "Characters/Marusucc",
+       "FromFile": "SexSprite/Marusucc.png",
+       },
+	   	   		    {
+       "Action": "Load",
+       "Target": "Characters/ScarlettSex",
+       "FromFile": "SexSprite/ScarlettSex.png",
+       },
+
+	    {
+       "Action": "Load",
+       "Target": "Characters/AbigailLeah2",
+       "FromFile": "SexSprite/AbigailLeah2.png",
+       },	   
+
+
+
+
+
+	],
+}

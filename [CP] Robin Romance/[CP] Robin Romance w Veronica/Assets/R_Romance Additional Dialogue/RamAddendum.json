@@ -1,0 +1,336 @@
+{
+	"Changes": [
+		{
+			"LogName": "Caroline Dialogue Addendum",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Caroline",
+			"Entries": {
+				"Tue4": "Veronica e eu estavamos conversamos sobre a vida amorosa de Lewis. Nós achamos que ele e...#$e#Na verdade, deixa pra lá, não é certo ficar falando da vida dos outros.$s",
+				"summer_Tue4": "Veronica e eu estavamos conversamos sobre a vida amorosa de Lewis. Nós achamos que ele e...#$e#Na verdade, deixa pra lá, não é certo ficar falando da vida dos outros.$s"
+			},
+			"When": {
+				"Hearts:Robin": "2, 3, 4, 5, 6",
+				"EnableVeronica": "True",
+				"DisableOnlyNonFamily": "False"
+			}
+		},
+
+		{
+			"LogName": "Demetrius Dialogue Addendum",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Demetrius",
+			"Entries": {
+				"Wed8_inlaw_Ram": "Olá @.#$b#Não precisa ficar nervoso.$h^Não precisa ficar nervosa.$h#$b#Mesmo depois de tudo o que aconteceu, fico feliz que Robin tenha encontrado um pouco de felicidade com você.#$b#E é bom não ter ninguém reclamando dos experimentos que faço em casa.$n",
+				"Fri4_inlaw_Ram": "Robin tem um temperamento explosivo. É melhor ficar do lado bom dela. Mas eu suspeito que você já sabe disso muito bem.#$e#... Agora, se pudéssemos quantificar seus níveis de humor, talvez pudéssemos modelar as flutuações usando uma curva senoidal...$u"
+			},
+			"When": {
+				"DisableOnlyFamily": "False"
+			}
+		},
+
+		{
+			"LogName": "Emily Dialogue Addendum",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Emily",
+			"Entries": {
+				"Fri6": "Veronica e Marnie amam animais. Talvez um dia eu consiga convencê-las a administrar um santuário animal comigo.#$b#Você pode participar também @, se você quiser.$u"
+			},
+			"When": {
+				"EnableVeronica": "True",
+				"DisableOnlyNonFamily": "False"
+			}
+		},
+
+		{
+			"LogName": "Veronica Dialogue at 6 Hearts for Emily",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Robin",
+			"Entries": {
+				"Sun6": "Uma das razões pelas quais adoro carpintaria é porque ela permite que minha mente divague.#$b#Mesmo que meus pensamentos tendam a ser pesados, quando saio para trabalhar com a madeira, posso simplesmente liberar meu estresse e me concentrar em algo diferente da negatividade que gosta de me oprimir.#$e#Haha, sim, essa última parte tem a cara da Emily.$2"
+			},
+			"When": {
+				"Hearts:Emily": "6, 7, 8",
+				"EnableVeronica": "True"
+			}
+		},
+
+		{
+			"LogName": "Jodi Dialogue Addendum",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Jodi",
+			"Entries": {
+				"Fri4": "Veronica pediu que eu a ensinasse a cozinhar. Estou tentando o melhor que posso, mas acho que pode ser uma causa perdida.$s"
+			},
+			"When": {
+				"Hearts:Robin": "4, 5, 6, 7",
+				"EnableVeronica": "True",
+				"DisableOnlyNonFamily": "False"
+			}
+		},
+
+		{
+			"LogName": "Leah Dialogue Addendum",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Leah",
+			"Entries": {
+				"Wed4": "Pode parecer bobo para você, mas Robin e eu nos unimos por causa do nosso amor por queijo de cabra. Foi assim que nos tornamos amigas.#$b#Poucas pessoas apreciam isso.$u",
+				"summer_Sun6": "O que devo fazer em um dia tão quente e preguiçoso? *suspiro*#$e#Alguma ideia?",
+				"Tue_inlaw_Ram": "Espero que não se importe que eu apareça com tanta frequência. Robin e eu nos divertimos muito trabalhando em nossos projetos juntas.#$q 44542/44543 former_roomie_followup#%Como você responde?#$r 44542 20 former_roomie_ecstatic#Você é bem vindo a qualquer hora!#$r 44542 10 former_roomie_positive#Não há problema.#$r 44543 -10 former_roomie_negative#Você vem com muita frequência.",
+				"former_roomie_ecstatic": "Obrigada, @!$h",
+				"former_roomie_positive": "Obrigada, @!$h",
+				"former_roomie_negative": "Desculpa, vou parar de vir aqui.$s",
+				"former_roomie_followup": "$p 44542#Mal posso esperar para trabalhar com Robin em nosso novo projeto! Vejo você na sua casa @!$h|Oi @. Não se preocupe, não vou passar por aqui tão cedo.$s"
+			},
+			"When": {
+				"DisableOnlyNonFamily": "False"
+			}
+		},
+		{
+			"LogName": "Leah Dialogue Addendum Robin is not Spouse",
+			"Action": "EditData",
+			"Target": "Characters/dialogue/Leah",
+			"Entries": {
+				"Sun4": "Robin é uma ótima colega de quarto. Muitas vezes trabalhamos em esculpir diferentes peças de arte juntas!$h",
+				"summer_Sun4": "Robin é uma ótima colega de quarto. Muitas vezes trabalhamos em esculpir diferentes peças de arte juntas!$h"
+			},
+			"When": {
+				"Query: '{{Spouse}}' = 'Ram'": "False",
+				"DisableOnlyNonFamily": "False"
+			}
+		},
+		{
+			"LogName": "Marnie Dialogue Addendum",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Marnie",
+			"Entries": {
+				"winter_Wed": "Você sabia que a Verônica é uma amante dos animais? Sempre que ela visita ou ajuda Robin a trabalhar na fazenda, os animais ficam apaixonados por ela.$h#$b#Para uma carpinteira, ela tem um toque surpreendentemente delicado quando se trata de animais."
+			},
+			"When": {
+				"EnableVeronica": "True",
+				"DisableOnlyNonFamily": "False"
+			}
+		},
+
+		{
+			"LogName": "Maru Dialogue Addendum",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Maru",
+			"Entries": {
+				"Mon8": "No começo foi difícil, mas agora acho que estamos todos muito mais felizes.$s#$b#Mamãe e papai não estavam felizes e, mesmo que o divórcio tenha sido difícil para a família, estamos todos melhores agora.$n",
+				"Tue4": "Desde que mamãe se mudou, tenho 30% menos aparelhos quebrados e aparelhos espalhados por aí.$h#$b#Ela sempre teve a tendência de pegar e brincar com coisas que não sabia como operar.$n",
+				"fall_21": "Fiz uma lixadeira personalizada para o aniversário da mamãe.#$q 43447/43448 MRam_bday_followup#Você acha que ela vai gostar, @?#$r 43447 10 MRam_bday_yes#Sim#$r 43448 0 MRam_bday_no#Não",
+				"MRam_bday_yes": "Eu espero que sim.$h",
+				"MRam_bday_no": "Ah não, eu deveria ter feito outra coisa?$s",
+				"MRam_bday_followup": "$p 43447#Mamãe realmente amou aquela lixadeira, mas o que devo fazer para superá-la este ano?$s|Eu já fiz uma lixadeira personalizada para a mamãe no aniversário dela, mas o que devo fazer este ano?$s",
+				"fall_Tue8": "@, eu simplesmente amo a aparência das árvores no outono!#$e#Eu sei que você também gosta.",
+				"Tue4_inlaw_Ram": "É estranho ter um padrasto. Acho que deve ser assim que o Sebastian se sentia.$s^É estranho ter uma madrasta. Acho que deve ser assim que o Sebastian se sentia.$s"
+			},
+			"When": {
+				"DisableOnlyFamily": "False"
+			}
+		},
+
+		{
+			"LogName": "Maru Dialogue Post 14 Heart Event",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Maru",
+			"Entries": {
+				"Tue4_inlaw_Ram": "Quando você se mudou para a cidade, eu nunca poderia imaginar que seríamos parte da mesma família.#$b#Mas você é muito gentil e cuida de tantas pessoas -- especialmente de mim e da mamãe.#$b#Obrigado por ser tão gentil conosco, pai.$h^Obrigado por ser tão gentil conosco, mãe.$h",
+				"winter_Thu": "Ei! E aí?#$e#É uma boa hora para explorar as cavernas.#$e#Talvez eu possa ir com você algum dia? Poderia ser divertido.#$b#Só não deixe a minha mãe descobrir.",
+				"summer_Sun6": "Algum dia serei uma inventora a nível internacional.$u#$e#Você tem sorte de ser meu parente!#$b#...só estou brincando.",
+				"fall_Fri6": "O Sebastian me pediu ajuda outro dia em um projeto no qual ele estava trabalhando.#$b#Eu sei. Eu também não acreditei.$$h"
+			},
+			"When": {
+				"HasSeenEvent": "32391290",
+				"Spouse": "Ram",
+				"DisableOnlyFamily": "False"
+			}
+		},
+
+		{
+			"LogName": "Maru Dialogue 6-9 Hearts Veronica",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Maru",
+			"Entries": {
+				"fall_Tue8": "Veronica ficava me perguntando se eu gostava de alguém. Quando perguntei a ela a mesma coisa, ela se calou e começou a polir o balcão.$u"
+			},
+			"When": {
+				"Hearts:Robin": "6, 7, 8, 9",
+				"EnableVeronica": "True",
+				"DisableOnlyFamily": "False"
+			}
+		},
+
+		{
+			"LogName": "Sebastian Dialogue Addendum",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Sebastian",
+			"Entries": {
+				"Mon2": "Por que todo mundo pergunta como estou? Eles não percebem que meus pais já se separaram uma vez?$a",
+				"Mon8": "Ei, @.#$q 37155/37156 secretSebquestion_followup#Posso confiar um segredo a você?#$r 37155 10 secretSeb_listen#Sim#$r 37156 0 secretSeb_reject#Não",
+				"secretSeb_listen": "Demetrius é um cara muito legal. Mesmo que ele esteja divorciado da mãe, ele ainda me trata da mesma forma que trata a Maru.$u",
+				"secretSeb_reject": "Oh. Está bem então.$s",
+				"secretSebquestion_followup": "$p 37155#Pedi ao Demetrius para testar um dos programas que escrevi. Comparado com a mãe, havia muito menos problemas envolvidos.|Eae, @.$s",
+				"Fri6": "Tenho sofrido desde que a mãe se mudou. Toda vez que ela tem um problema no computador, eu tenho que ir até a casa da Leah para corrigi-lo.$a#$b#E se você acha que talvez eu deva tentar ajudá-la pelo telefone, então sugiro que você tente para ver se vai dar certo.$h",
+				"Thu8_inlaw_Ram": "Acho que você é tecnicamente meu padrasto agora. Isso é...estranho.$a^Acho que você é tecnicamente minha madrasta agora. Isso é...estranho.$a"
+			},
+			"When": {
+				"DisableOnlyFamily": "False"
+			}
+		},
+
+		{
+			"LogName": "Sebastian Dialogue Post 14 Heart Event",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Sebastian",
+			"Entries": {
+				"Thu8_inlaw_Ram": "Mamãe não me importuna tanto quanto fazia antes de vocês dois se casarem. Você deve estar fazendo alguma coisa muito boa com ela, certo?$h",
+				//"winter_Tue6": "I was just remembering that time that I nearly screamed at mom for throwing away my old comic collection.#$b#Seems like a long time ago.#$e#Since you married mom, I haven't had to worry about things like that.#$b#She communicates better and I don't yell as often.#$b#It's... nice.$h",
+				"winter_Tue6": "Você se lembra quando eu te contei sobre minha mãe jogando fora minha velha coleção de quadrinhos?#$b#Bem, foi há um tempo atrás. Mas o que importa é que eles apareceram do nada outro dia.#$b#Acho que Maru pode tê-los pegado no lixo e guardado para mim.#$b#Mesmo que ela não diga nada sobre isso.$s",
+				"winter_Thu6": "Eu deveria aprender a cozinhar. Isso seria útil.#$b#Você poderia me ensinar algumas receitas, @? Eu perguntaria a mamãe, mas...#$b#Acho que seria mais fácil aprender com você.",
+				"fall_Mon4": "Você deve está ganhando muito dinheiro com sua fazenda, não é?#$e#Acho que devo arrumar um emprego logo...$s#$b#Se você quiser criar uma loja digital para sua fazenda, ficarei feliz em administrá-la para você.$0"
+			},
+			"When": {
+				"HasSeenEvent": "32391290",
+				"Spouse": "Ram",
+				"DisableOnlyFamily": "False"
+			}
+		},
+
+		//********************************Gender Neutral Compatability********************************
+
+		{
+			"LogName": "Maru Dialogue Post 14 Heart Event",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Maru",
+			"Entries": {
+				"Tue4_inlaw_Ram": "Quando você se mudou para a cidade, eu nunca poderia imaginar que seríamos parte da mesma família.#$b#Mas você é muito gentil e cuida de tantas pessoas -- especialmente de mim e da mamãe.#$b#Obrigado por ser tão gentil conosco."
+			},
+			"When": {
+				"HasSeenEvent": "32391290",
+				"Spouse": "Ram",
+				"DisableOnlyFamily": "False",
+				"HasMod": "Hana.GenderNeutralityMod"
+			}
+		},
+
+		{
+			"LogName": "Sebastian Dialogue Addendum",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Sebastian",
+			"Entries": {
+				"Thu8_inlaw_Ram": "Acho que você é tecnicamente meu parente agora. Isso é...estranho.$a"
+			},
+			"When": {
+				"DisableOnlyFamily": "False",
+				"HasMod": "Hana.GenderNeutralityMod"
+			}
+		}
+
+		/*
+    
+    Events.json
+    "BirthMessage_Adoption": "During the night, the adoption agency dropped off your new baby {0}.",
+        "BirthMessage_PlayerMother": "During the night, you gave birth to a baby {0}.",
+        "BirthMessage_SpouseMother": "During the night, {1} gave birth to a baby {0}.",
+        "BirthMessage_SpouseNaming_Male": "{0} is naming your baby boy.",
+        "BirthMessage_SpouseNaming_Female": "{0} is naming your baby girl.",
+        "BabyNamingTitle_Male": "What should we name him?",
+        "BabyNamingTitle_Female": "What should we name her?",
+        "HaveBabyQuestion": "Should we have a baby, {0}?",
+        "HaveBabyQuestion_Adoption": "Should we adopt a baby, {0}?",
+        "HaveBabyAnswer_Yes": "Yes",
+        "HaveBabyAnswer_No": "Not now...",
+        "HavePlayerBabyQuestion": "Do you want to have a baby with {0}?",
+        "HavePlayerBabyQuestion_Adoption": "Do you want to adopt a baby with {0}?",
+        
+    ExtraDialogue.json
+    "NewChild_SecondChild1": "Just look at our little family... We've come a long way, haven't we?",
+        "NewChild_SecondChild2": "Two beautiful children... We've come a long way, haven't we?",
+        "NewChild_Adoption": "It's so wonderful to welcome little {0} into our life.",
+        "NewChild_FirstChild": "Everything went well, and now little {0} is part of the family. We're very fortunate.",
+        "Spouse_KitchenBlocked": "You've got a bunch of your stuff blocking the kitchen... I guess you're not getting dinner tonight.$a",
+        "Spouse_MonstersInHouse": "Um... Honey? Why are there monsters in the house?",
+        
+        "Farm_RobinWorking_ReadyTomorrow": "Your new {0} will be finished tomorrow! I bet you and Robin are pretty excited!",
+        "Farm_RobinWorking1": "Your new {0} will be ready in {1} days. Do you mind if I stay for dinner tonight?",
+        "Farm_RobinWorking2": "Your new {0} will be ready in {1} days. I'm going to be working on this thing day and night!",
+        
+        "Robin_HouseUpgrade_Accepted": "Thank you! I'll get started tomorrow. I should be finished in around three days.",
+        "Robin_PamUpgrade_Accepted": "That's so generous of you! I'll start working on the upgrade tomorrow. It should take around three days.",
+        
+        "Mines_PlayerKilled_Robin": "...I found you unconscious in the mines. Robin was on the verge of tears when you didn't come home.#$b#She asked me to search the mines to make sure you were okay.#$b#Be a little more careful next time, for both of your sakes, okay?$s",
+        
+        "Mines_PlayerKilled_Maru_Spouse": "...I found you unconscious in the mines. You were gone so long I started to get worried about you!#$b#Be a little more careful next time, okay?$s",
+        "Mines_PlayerKilled_Maru_NotSpouse": "...I found you unconscious in the mines. I was hunting for minerals and I almost stepped on your head!#$b#Be a little more careful next time, okay?$s",
+        
+        "Robin_UpgradeConstruction_Festival": "Okay, I'll start working on your {1} upgrade the day after tomorrow. I always take festivals off.$h",
+        "Robin_UpgradeConstruction": "Okay, I'll start working on your {1} upgrade first thing tomorrow morning!$h",
+        "Robin_NewConstruction_Festival": "Okay, I'll start working on your new {0} the day after tomorrow. I always take festivals off.$h",
+        "Robin_NewConstruction": "Okay, I'll start working on your new {0} first thing tomorrow morning!$h",
+        "Robin_Instant": "This {0} is pre-fabricated, so there's no construction time! Convenient, isn't it?$h",
+        
+        
+        StringsFromCSFiles
+        
+        "Event.cs.1499": "Hey, @. I'm your secret gift-giver this year.#$b#Here, open it.$h",
+        "Event.cs.1500": "It's not much, but I hope you like it.$h",
+        "Event.cs.1501": "Hi. So, I'm your secret gift-giver this year.#$b#Well? Open it!"
+        "Event.cs.1818": "Hmm... I see you laying on a cot... It looks like a hospital. {0} is there to keep you company while you recover. What a nice friend.",
+        "Event.cs.1820": "Ahh... Indeed. I see you in a room, having a conversation with a man.",
+        "Event.cs.1821": "Ahh... Indeed. I see you in a room, having a conversation with a lady.",
+        "Event.cs.1823": "..  Oh! It's {0}. You seem to be close friends.",
+        "Event.cs.1825": "Hmm... I see you sitting in a plush chair by the fire... you're surrounded by luxury, yet filled with lonely desperation.",
+        "Event.cs.1826": "...Oh? It seems you'll be leaving more than a few heartbroken... Are you playing games with those who put their trust in you? Hmm... ",
+        "Event.cs.1827": "Now I see you and {0} in a field of grass. You seem happy.",
+        "Event.cs.1829": "Now I see you and {0} in a dimly lit room. You look serious... but not unhappy. Something important must be happening.",
+        "Event.cs.1831": "Ooo... It's dark, and I see you and a certain young man. He looks a little bashful, but happy to be with you.",
+        "Event.cs.1832": "Ooo... It's dark, and I see you and a certain young man. He looks quite hopeful, and eager to spend time with you.",
+        "Event.cs.1833": "Ooo... It's dark, and I see you and a certain young lady. She looks a little bashful, but happy to be with you.",
+        "Event.cs.1834": "Ooo... It's dark, and I see you and a certain young lady. She looks quite hopeful, and eager to spend time with you.",
+        "Event.cs.1837": "Hmmm... now what's this young man's name? ... I believe it starts with an '{0}'.",
+        "Event.cs.1838": "Hmmm... now what's this young lady's name? ... I believe it starts with an '{0}'.",
+        "Event.cs.1843": "Interesting... I see you and {0} working together on a farm. You seem very pleased about something.",
+        "Event.cs.1845": "Now I see you, middle-aged, walking through town at dusk. You pause at a window to see a family having dinner. You hang your head and hurry off into the darkness.",
+        "Event.cs.1846": "The crystal ball has moved on... Now I see you harvesting a plump, ripe melon. You're on a wonderful looking farm, bursting with life!",
+        "Event.cs.1847": "The crystal ball has moved on... I see you somewhere dark... but there you are, inspecting a marvelous gemstone! It's glittering in the light of a small lantern.",
+        "Event.cs.1848": "The crystal ball has moved on... AH! You're in combat! There's something dreadful bearing down on you from the dark, but you seem more than ready to face it.",
+        "Event.cs.1849": "The crystal ball has moved on... Now I see you relaxing on the riverbanks, holding a fishing pole. Oh! Looks like something big is on the line!",
+        "Event.cs.1850": "The crystal ball has moved on... It's you... in the forest. You spot some rare and delicious mushrooms hidden beneath a clump of grass... what a find!",
+        "Event.cs.1851": "The crystal ball has moved on... I see you in a golden room... grinning about something. Oh, I see... You're playing some kind of game and you just can't lose!",
+        "Event.cs.1852": "Ah... the crystal ball has gone dim. That's all I can do for you, young one.",
+        "Event.cs.1853": "Now, just keep in mind that the future isn't set in stone! Whatever I've told you today can still be changed, if you set your heart on it. Farewell.",
+        
+        "Game1.cs.2782": "The wedding was wonderful... wasn't it, dear?$h#$e#Well, we can't forget about the farm... time to get to work.",
+        
+        "NPC.cs.3926": "Be patient, I still have a lot of work to do. If Robin were to help out, it might be done a little quicker.",
+        "NPC.cs.3927": "Your house should be ready tomorrow. I'm sure you and Robin are eager to have the place to yourself again.",
+        
+        "NPC.cs.4274": "You remembered my birthday? I'm impressed. Thanks.$h",
+        "NPC.cs.4275": "A birthday gift? That's very kind of you! I love it.$h",
+        "NPC.cs.4276": "Oh, is it my birthday today? I guess it is. Thanks. This is nice.$h/Oh, is it my birthday today? I guess it is. Thanks. This is nice.$h",
+        "NPC.cs.4277": "You remembered my birthday! Thank you. This is great.$h",
+        "NPC.cs.4278": "It's my birthday and you give me this? Is this some kind of joke?$s/It's my birthday and you give me this? Is this some kind of joke?$s",
+        "NPC.cs.4279": "Oh... It's for my birthday? ... Thanks.$s/Oh... It's for my birthday? ... Thanks.$s",
+        "NPC.cs.4280": "For my birthday? Thanks.",
+        "NPC.cs.4281": "Oh, a birthday gift! Thank you./Oh, a birthday gift! Thank you.",
+        
+        "NPC.cs.4406": "I just feel like sleeping today.$a",
+        
+        "Utility.cs.5367": "When @ first arrived in Pelican Town, no one knew if he'd fit in with our community...#$b#But from this day forward, @ is going to be as much a part of this town as any of us!$h#$b#It is my great honor on this day {0} of {1}, to unite @ and %spouse in the bonds of marriage.",
+        "Utility.cs.5369": "When @ first arrived in Pelican Town, no one knew if she'd fit in with our community...#$b#But from this day forward, @ is going to be as much a part of this town as any of us!$h#$b#It is my great honor on this day {0} of {1}, to unite @ and %spouse in the bonds of marriage.",
+        "Utility.cs.5370": "Well, let's get right to it!",
+        "Utility.cs.5371": "@... %spouse... #$b# As the mayor of Pelican Town, and regional bearer of the matrimonial seal, I now pronounce you husband and... well, husband!$h",
+        "Utility.cs.5373": "@... %spouse... #$b# As the mayor of Pelican Town, and regional bearer of the matrimonial seal, I now pronounce you husband and wife!$h",
+        "Utility.cs.5375": "@... %spouse... #$b# As the mayor of Pelican Town, and regional bearer of the matrimonial seal, I now pronounce you wife and... well, wife!$h",
+        "Utility.cs.5377": "@... %spouse... #$b# As the mayor of Pelican Town, and regional bearer of the matrimonial seal, I now pronounce you wife and husband!$h",
+        "Utility.cs.5379": "You may kiss.",
+        "Utility.cs.5381": "Life is going to be different from now on...",
+        "Utility.cs.5383": "...But the future looks bright!",
+        
+    
+    
+    
+    */
+	]
+}

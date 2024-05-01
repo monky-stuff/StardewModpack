@@ -1,0 +1,51 @@
+{
+    "Changes": [
+    {
+        "LogName": "LeoMainland",
+        "Action": "EditData",
+        "Target": "Characters/Dialogue/LeoMainland",
+        "Entries":
+        {
+            "4": "Eu vi uma grande manga flutuando no céu. Linus me disse que era um balão de ar quente!$u#$b#Eu pensei que apenas pássaros pudessem voar...",
+             "18": "Quando cheguei, Linus fez para mim um terno de folhas, como o dele...#$b#Mas eu parecia engraçado... como uma manga felpuda!$h#$e#Acho que' vou ficar com as minhas penas.",
+             "LeoDeparture": "Preciso encontrar um lugar para morar...$s#$b#Mas eu tenho um plano... Vou contar com meus amigos.",
+             "Mon": "Ei, @. Que bom ver você de volta à ilha, como nos velhos tempos. Isso é divertido!#$e#Sabe, eu estava com medo quando você chegou... Eu sabia que minha vida era sobre mudar.$u",
+             "Mon8": "Finalmente falei com a velhinha! Sabe? Aquela que pesca?#$b#Acontece que o nome dela? É Birdie! Haha!$h#$e#Eu não deveria ter sido tão tímido dela. Ela é muito legal, na verdade.",
+             "Mon10": "É engraçado... Estou feliz por estar visitando aqui na ilha, mas também sinto um pouco de falta da minha nova casa.#$e#Eu me pergunto o que todo mundo está fazendo em Stardew Valley.",
+             "Tue": "A Srta. Penny está fazendo o seu melhor para me atualizar na escola. Ela é muito legal...#$e#...Felizmente, eu me lembro de algumas coisas da minha antiga, antiga vida... antes de me lavar na ilha... então não é tão difícil quanto poderia ser.#$e#Miss Penny diz que está impressionada com o quanto eu sei!",
+             "Tue8": "Eu realmente gosto de ler. Se ao menos eu tivesse alguns livros quando morava na Ilha Ginger...#$e#A senhorita Penny encontrou para mim um livro sobre pássaros de todo o mundo. Existem tantos livros diferentes tipos que eu nunca conheci!",
+             "Tue10": "Tenho certeza que Jas e Vincent acharam que eu era estranho, no começo. Eu acidentalmente gritei na mesa da escola algumas vezes... isso não ajudou.$s#$e#Foi uma grande mudança para todos. Mas agora somos bons amigos!$h",
+             "Qua": "Entre Linus e Miss Penny, vou aprender tudo o que há para aprender!$h#$e#O prefeito Lewis diz que estou no caminho certo para me tornar um 'cidadão completo'.. .seja lá o que isso signifique.",
+             "Wed8": "Quando os trens passam por trás da minha casa na árvore, o barulho me assustou da primeira vez, mas não mais.#$e#Eles são barulhentos, mas tão emocionantes! Aonde você acha que eles vão?",
+             "Quarta10": "Tantas coisas que Vincent come no almoço saem de... caixas de plástico. São comida mesmo?",
+            "Thi": "Você já notou todos os pássaros interessantes que vivem aqui?#$e#Se você ouvir com atenção, eles podem lhe dizer algo.",
+             "Thu8": "No começo foi ruim... deixar a ilha e pisar em uma terra estranha.$s#$e#Mas, depois de um tempo me acostumei.#$b#Sou um pessoa muito flexível!$h",
+             "Thu10": "No começo eu me senti um estranho aqui. Mas fiz muitos amigos!$h#$b#Pela primeira vez, sinto que pertenço...",
+             "Sex": "Linus tem me ensinado sobre toda a comida selvagem do vale. Há muitas coisas boas por aqui!$h#$e#Mas... eu meio que sinto falta de comer nozes douradas no café da manhã todas as manhãs ...$s",
+             "Fri8": "Tio Linus diz que eu deveria 'cozinhar' meu peixe antes de comê-lo...$s#$b#Estou tendo dificuldades para me acostumar com isso... tão seco...$s",
+             "Fri10": "Acho que estou ficando grande e forte. Estou comendo muito mais ultimamente e posso correr mais rápido e pular mais alto do que antes.",
+             "Sat": "Talvez um dia eu visite a cidade de Zuzu...$u#$b#Mas ainda não estou nem perto de estar pronto. Este mundo já é tão estranho para mim, e estou muito confortável aqui agora!$h",
+             "Sat8": "Ahhhh... eu e Willy vamos acordar bem cedo amanhã para visitar a Ilha Ginger.#$b#Mal posso esperar para contar aos papagaios todas as minhas aventuras desta semana!$h",
+             "Sat10": "@? Hum... estou com um pouco de vergonha de perguntar...$u#$b#Mas... você acha que Jas gostaria de um cara como eu?$u#$b# Ou sou muito estranho?$s#$e#Hahaha... quem se importa. Um dia vou descobrir.$h",
+             "Sun": "Sabe, Stardew Valley pode ser meu novo lar... mas a ilha sempre será meu lar também.#$e#É bom poder voltar e visitar.",
+             "Sun8": "Eu peguei um peixe na lateral do barco do Willy esta manhã.$h#$e#Era só um pequenino. Eu o joguei de volta para sua casa.",
+             "Sun10": "Os papagaios querem que eu lhe agradeça por todas as nozes douradas que você encontrou. Eles estão gostando muito delas.$h",
+             "summer_Mon8":"Vincent disse que quer se mudar para minha cabana aqui na Ilha Ginger.$h#$e#A mãe dele não deixa. Haha, talvez algum dia.",			
+            "summer_Tue10":"Eu me pergunto se há outros como eu... vivendo em suas próprias ilhas. E se eles estiverem sozinhos?$u#$e#Eu nunca estive sozinho, mas agora entendo que as coisas estavam' não eram do jeito que deveriam ter sido.$u",
+"summer_Fri10":"Muitas pessoas estão falando sobre seu fim de semana. Eu entendo o que é, mas por que é tão importante?",
+"summer_Sat10": "No início, pensei que não havia mais espaço em meu coração para mais família...#$b#...mas acontece que há muito mais espaço! Você, tio Linus, Willy, todos.,, $h#$e#Eu tenho duas famílias agora.",
+             "fall_Tue": "Tomei banho na fonte termal! É tão bom ficar tudo limpo.$h",
+             "fall_Wed": "As folhas! Elas são tão lindas!#$e#Por que as árvores não mudam de cor na Ilha Ginger?",
+"fall_Thu10":"Minhas meias estão molhadas. Antigamente... eu secava meus pés na areia quente. O que eu faço agora?$u",
+"fall_Sat10":"Até os peixes no vale mudam de estação para estação. É tão interessante.#$b#Na ilha, eles são sempre os mesmos.",
+"winter_Wed": "Então... f-f-frio.$3#$e#Tio Linus diz que vou me acostumar com isso.$3",
+             "winter_Wed10": "O frio não é tão ruim se você tiver uma fogueira. Tio Linus me ensinou.",
+             "winter_Thu": "Os pássaros deste vale não se importam tanto com o frio.#$e#Tenho um pouco de inveja dos casacos quentes deles...$s",
+             "winter_Fri": "Linus me ensinou como fazer um peixe especial esfregado com frutas e especiarias...#$b#Ele diz que se eu comer o suficiente, isso me manterá aquecido neste inverno!$h",
+             "winter_Sun8": "Ahhhh, é bom fazer uma pausa do frio em Stardew Valley.#$e#Ainda assim, será divertido quando eu puder voltar e brincar na neve.",
+             "spring_1_2": "Ahh, dormi bem ontem à noite. Você está pronto para um novo ano?#$e#Estou animado para ver o vale amanhã quando voltar.",
+             "winter_28_2": "Amanhã é ano novo, certo? Willy disse que a neve pode ter derretido quando eu voltar para o vale.#$e#Mas não há muitas mudanças por aqui. Eu costumava esquecer às vezes.",
+
+        }
+    }]
+}

@@ -1,0 +1,13 @@
+{
+	"Changes":[
+		{
+			"LogName":"Lewis",
+			"Action":"EditData",
+			"Target":"Characters/Dialogue/Lewis",
+			"Entries":{
+				"Sun2":"Leah e Elliott se mudaram para cá cerca de um ano antes de você. Você já conversou muito com eles?",
+  
+			}
+		},
+	]
+}

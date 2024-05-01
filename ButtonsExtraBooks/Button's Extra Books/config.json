@@ -1,0 +1,14 @@
+{
+  "AlwaysAvailable": false,
+  "EnableLuck": true,
+  "LuckAmount": 0.025,
+  "EnableExtraGifts": true,
+  "EnableTreesIgnoreSeason": true,
+  "EnableArtisanMachines": true,
+  "ArtisanMachinesGrangeMustWin": true,
+  "ArtisanMachinesPercentDecrease": 20,
+  "EnableGiantCrops": true,
+  "GiantCropsPercent": 5,
+  "EnablePopularity": true,
+  "DebugBook": false
+}

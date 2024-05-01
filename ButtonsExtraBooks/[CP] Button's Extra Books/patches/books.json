@@ -1,0 +1,253 @@
+{
+	"Changes": [
+		// BEGINNER'S LUCK //
+		{
+			"Action": "EditData",
+            "Target": "Data/Objects",
+            "Entries": {
+                "{{ModId}}_Book_Luck": {
+                    "Name": "{{ModId}}_Book_Luck",
+                    "DisplayName": "{{i18n: Book.Luck.Name}}",
+                    "Description": "{{i18n: Book.Luck.Description}}",
+                    "Type": "asdf",
+                    "Category": -102,
+                    "Price": 500,
+                    "Texture": "Mods/{{ModId}}/Books",
+					"SpriteIndex": 1,
+					"ContextTags": [
+						"color_green",
+						"book_item"
+					],
+				},
+			},
+			"When": {
+				"Spiderbuttons.ButtonsExtraBooksCore/ConfigEnableLuck": true
+			},
+		},
+		
+		// BOOK OF ALTRUISM //
+		{
+			"Action": "EditData",
+			"Target": "Data/Objects",
+			"Entries": {
+				"{{ModId}}_Book_ExtraGifts": {
+                    "Name": "{{ModId}}_Book_ExtraGifts",
+                    "DisplayName": "{{i18n: Book.ExtraGifts.Name}}",
+                    "Description": "{{i18n: Book.ExtraGifts.Description}}",
+                    "Type": "asdf",
+                    "Category": -102,
+                    "Price": 500,
+                    "Texture": "Mods/{{ModId}}/Books",
+					"SpriteIndex": 2,
+					"ContextTags": [
+						"color_white",
+						"book_item"
+					],
+				},
+			},
+			"When": {
+				"Spiderbuttons.ButtonsExtraBooksCore/ConfigEnableExtraGifts": true
+			},
+		},
+		
+		// WINTER FORESTRY //
+		{
+			"Action": "EditData",
+			"Target": "Data/Objects",
+			"Entries": {
+				"{{ModId}}_Book_TreesIgnoreSeason": {
+                    "Name": "{{ModId}}_Book_TreesIgnoreSeason",
+                    "DisplayName": "{{i18n: Book.TreesIgnoreSeason.Name}}",
+                    "Description": "{{i18n: Book.TreesIgnoreSeason.Description}}",
+                    "Type": "asdf",
+                    "Category": -102,
+                    "Price": 500,
+                    "Texture": "Mods/{{ModId}}/Books",
+					"SpriteIndex": 3,
+					"ContextTags": [
+						"color_light_cyan",
+						"book_item"
+					],
+				},
+			},
+			"When": {
+				"Spiderbuttons.ButtonsExtraBooksCore/ConfigEnableTreesIgnoreSeason": true
+			},
+		},
+		
+		// ARTISANS GUILD MANUAL //
+		{
+			"Action": "EditData",
+			"Target": "Data/Objects",
+			"Entries": {
+				"{{ModId}}_Book_ArtisanMachines": {
+                    "Name": "{{ModId}}_Book_ArtisanMachines",
+                    "DisplayName": "{{i18n: Book.ArtisanMachines.Name}}",
+                    "Description": "{{i18n: Book.ArtisanMachines.Description}}",
+                    "Type": "asdf",
+                    "Category": -102,
+                    "Price": 500,
+                    "Texture": "Mods/{{ModId}}/Books",
+					"SpriteIndex": 4,
+					"ContextTags": [
+						"color_brown",
+						"book_item"
+					],
+				},
+			},
+			"When": {
+				"Spiderbuttons.ButtonsExtraBooksCore/ConfigEnableArtisanMachines": true
+			},
+		},
+
+		// BIG MELONS! //
+		{
+			"Action": "EditData",
+			"Target": "Data/Objects",
+			"Entries": {
+				"{{ModId}}_Book_GiantCrops": {
+					"Name": "{{ModId}}_Book_GiantCrops",
+					"DisplayName": "{{i18n: Book.GiantCrops.Name}}",
+					"Description": "{{i18n: Book.GiantCrops.Description}}",
+					"Type": "asdf",
+					"Category": -102,
+					"Price": 500,
+					"Texture": "Mods/{{ModId}}/Books",
+					"SpriteIndex": 5,
+					"ContextTags": [
+						"color_dark_purple",
+						"book_item"
+					],
+				},
+			},
+			"When": {
+				"Spiderbuttons.ButtonsExtraBooksCore/ConfigEnableGiantCrops": true
+			},
+		},
+
+		// FRIENDSHIP 202 //
+		{
+			"Action": "EditData",
+			"Target": "Data/Objects",
+			"Entries": {
+				"{{ModId}}_Book_Popularity": {
+					"Name": "{{ModId}}_Book_Popularity",
+					"DisplayName": "{{i18n: Book.Popularity.Name}}",
+					"Description": "{{i18n: Book.Popularity.Description}}",
+					"Type": "asdf",
+					"Category": -102,
+					"Price": 500,
+					"Texture": "Mods/{{ModId}}/Books",
+					"SpriteIndex": 6,
+					"ContextTags": [
+						"color_pink",
+						"book_item"
+					],
+				},
+			},
+			"When": {
+				"Spiderbuttons.ButtonsExtraBooksCore/ConfigEnablePopularity": true
+			},
+		},
+
+		// BUS DRIVING FOR DUMMIES //
+		{
+			"Action": "EditData",
+			"Target": "Data/Objects",
+			"Entries": {
+				"{{ModId}}_Book_BusDriving": {
+					"Name": "{{ModId}}_Book_BusDriving",
+					"DisplayName": "{{i18n: Book.BusDriving.Name}}",
+					"Description": "{{i18n: Book.BusDriving.Description}}",
+					"Type": "asdf",
+					"Category": -102,
+					"Price": 500,
+					"Texture": "Mods/{{ModId}}/Books",
+					"SpriteIndex": 8,
+					"ContextTags": [
+						"color_yellow",
+						"book_item"
+					],
+				},
+			},
+			"When": {
+				"Spiderbuttons.ButtonsExtraBooksCore/ConfigEnablePopularity": true
+			},
+		},
+
+		// MR. QI'S NOTEBOOK //
+		{
+			"Action": "EditData",
+			"Target": "Data/Objects",
+			"Entries": {
+				"{{ModId}}_Book_QiNotebook": {
+					"Name": "{{ModId}}_Book_QiNotebook",
+					"DisplayName": "{{i18n: Book.QiNotebook.Name}}",
+					"Description": "{{i18n: Book.QiNotebook.Description}}",
+					"Type": "asdf",
+					"Category": -102,
+					"Price": 500,
+					"Texture": "Mods/{{ModId}}/Books",
+					"SpriteIndex": 9,
+					"ContextTags": [
+						"color_cyan",
+						"book_item"
+					],
+				},
+			},
+			"When": {
+				"Spiderbuttons.ButtonsExtraBooksCore/ConfigEnableQiNotebook": true
+			},
+		},
+
+		// PAWSITIVE REINFORCEMENT //
+		{
+			"Action": "EditData",
+			"Target": "Data/Objects",
+			"Entries": {
+				"{{ModId}}_Book_PetGifts": {
+					"Name": "{{ModId}}_Book_PetGifts",
+					"DisplayName": "{{i18n: Book.PetGifts.Name}}",
+					"Description": "{{i18n: Book.PetGifts.Description}}",
+					"Type": "asdf",
+					"Category": -102,
+					"Price": 500,
+					"Texture": "Mods/{{ModId}}/Books",
+					"SpriteIndex": 10,
+					"ContextTags": [
+						"color_gray",
+						"book_item"
+					],
+				},
+			},
+			"When": {
+				"Spiderbuttons.ButtonsExtraBooksCore/ConfigEnablePetGifts": true
+			},
+		},
+		
+		// BEB POWER REMOVAL //
+		{
+			"Action": "EditData",
+			"Target": "Data/Objects",
+			"Entries": {
+				"{{ModId}}_Debug_RemoveAll": {
+                    "Name": "{{ModId}}_Debug_RemoveAll",
+                    "DisplayName": "{{i18n: Debug.Book.RemoveAll.Name}}",
+                    "Description": "{{i18n: Debug.Book.RemoveAll.Description}}",
+                    "Type": "asdf",
+                    "Category": -102,
+                    "Price": 50,
+                    "Texture": "Mods/{{ModId}}/Books",
+					"SpriteIndex": 0,
+					"ContextTags": [
+						"color_dark_pink",
+						"book_item"
+					],
+				},	
+            },
+			"When": {
+				"Spiderbuttons.ButtonsExtraBooksCore/ConfigEnableDebugBook": true
+			},
+		}
+	]
+}

@@ -1,0 +1,27 @@
+{
+    "Changes": [
+        {
+            "LogName": "Leah",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Leah",
+            "Entries": {
+                "Tue2": "Eu estava me perguntando há um tempo se alguém se mudaria para aquela fazenda. Às vezes, eu e Abigail íamos lá.#$b#Mas é legal que você tenha se mudado!",
+                "Tue6": "Eu fiz uma pequena pintura para a Abby pendurar no quarto dela. #$b#Ela gosta de coisas incomuns, mas eu também gosto disso nela.",
+                "Wed2": "Você se deu bem com a Abigail, né?#$b#Talvez nós possamos sair juntos no próximo festival.",
+                "summer_Sun4": "A vida no vale floresce no verão, é legal ver isso.#$e#É claro, também é legal te ver sempre.",
+                "fall_Sat4": "Ei! E o que você achou das minhas decorações de outono?$h#$e#Você deveria ter algumas decorações de Noite do Espírito para sua fazenda. Abby e eu podemos te ajudar com isso!",
+                "winter_Thu4": "Espero que a Abby esteja bem. Ontem, ela teve uma conversa bem séria com os pais dela...$2"
+            }
+        },
+        {
+            "LogName": "Leah Marriage",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/MarriageDialogueLeah",
+            "Entries": {
+                "spring_25": "Algumas pessoas dizem que a beleza é experimentada na mente. Elas pensam que as palavras mais se assemelham aos nossos pensamentos e são melhores para criar beleza.#$e#Mas... será que também não pensamos em imagens? E não são os pensamentos baseados em imagens geralmente mais poderosos?#$b#...Não sei. O que você acha?$u",
+                "summer_12": "O festival de ontem foi tão legal. Eu amo o senso de comunidade no vale.",
+                "winter_4": "Hmm... eu me pergunto como o Linus está lidando com todo esse frio naquela pequena barraca? Você acha que talvez ele apreciaria uma refeição quente nossa?"
+            }
+        }
+    ]
+}
