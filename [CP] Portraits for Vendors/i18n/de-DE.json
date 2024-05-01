@@ -84,7 +84,7 @@
   "config.JojaCashier.description": "Wird immer gesperrt, wenn man SVE benutzt.",
   
   "config.JojaShift.name": "Schichten randomisieren",
-  "config.JojaShift.description": "Wechselt der Kassierer zufällig zwischen dem Standardkassierer und einem anderen. Wird immer gesperrt, wenn man SVE benutzt.",
+  "config.JojaShift.description": "Bewirkt, dass die Kassierer täglich rotiert. Wird immer gesperrt, wenn man SVE benutzt.",
   
   "config.section.Theater.name": "Kinopersonal",
   
@@ -95,7 +95,7 @@
   "config.MovieConcession.description": "Das Porträt des Kinoimbissstandbetreuers ermöglichen.",
   
   "config.MovieShift.name": "Schichten randomisieren",
-  "config.MovieShift.description": "Bewirkt, dass die beiden Mitarbeiter nach dem Zufallsprinzip ihre Aufgaben wechseln. Wird immer gesperrt, wenn man SVE benutzt.",
+  "config.MovieShift.description": "Bewirkt, dass die Positionen des Theaterpersonals täglich rotieren. Wird immer gesperrt, wenn man SVE benutzt.",
   
 }
 

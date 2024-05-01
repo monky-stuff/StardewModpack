@@ -1,0 +1,101 @@
+{
+// Traduit par Fs_echo7	
+ 
+// Lines for the Casino Vendor, highly disapproving of the farmer being there
+  "CasinoVendor1": "Oh, c'est vous. Ici pour faire du lèche-vitrine, je présume ?",
+  "CasinoVendor2": "Vous réalisez que votre or n'a aucune valeur ici, n'est-ce pas ?",
+  "CasinoVendor3": "Nous étions autrefois plus sélectifs sur qui recevait une carte du Club.",
+  "CasinoVendor4": "Tous les articles sont à vendre… À condition que vous les méritiez.",
+ 
+// Line for the Traveling Merchant during Festival of Ice
+  "TravelerIce": "Ah, le décor parfait pour certaines de mes trouvailles les plus rares ! Aujourd'hui seulement, mon ami.",
+ 
+// Lines for the Raccoon. "Bobo" is what she calls you.
+  "Raccoon1": "J'ai des graines, bobo.",
+  "Raccoon2": "Envie de quelques graines, bobo ?",
+  "Raccoon3": "Tu n'as peut-être pas ces graines, bobo.",
+ 
+// Lines for the Joja Cashiers, friendly but canned. "Join us and thrive" is a reference to JojaMart's "Join Us. Thrive" slogan so the awkwardness is intentional,
+  "JojaCashier1": "Bienvenue à JojaMart ! Comment allez-vous aujourd'hui ?",
+  "JojaCashier2": "N'oubliez pas, en tant que membre de JojaMart, vous obtenez plus pour moins cher !",
+  "JojaCashier3": "Rejoignez-nous et prospérez avec nos offres spéciales sur certains articles !",
+  "JojaCashier4": "J'espère que vous passez une bonne journée. Êtes-vous prêt à passer en caisse ?",
+ 
+// Line for the Star Token Exchanger at the Stardew Valley Fair
+  "StarToken": "Salut ! Échangez vos jetons étoile ici pour obtenir les meilleurs butins que la Foire a à offrir !",
+ 
+// Lines for Pierre at various festivals
+  "PierreJellyfish": "Des articles rares qui brillent comme les méduses lunaires ! Ne manquez pas ça !",
+  "PierreEgg": "Des articles exclusifs en vente ! Achetez-les avant la fin de la journée, sinon vous les manquerez !",
+  "PierreFeast": "Des articles festifs pour réchauffer vos vacances ! Achetez les vôtres tant qu'il en reste !",
+  "PierreFlower": "De belles fleurs pour charmer votre partenaire de danse ! Achetez-les avant la dernière danse !",
+  "PierreLuau": "Des décorations exotiques pour faire parler de la Ferme {{FarmName}} en ville ! Achetez-les tant que vous le pouvez !",
+  "PierreSpirit": "Des décorations horrifiques pour construire la grange la plus effrayante ! Achetez-les avant qu'elles ne disparaissent !",
+ 
+// Line for the clinic, made generic because it could be spoken by either Harvey or Maru.
+  "Clinic": "Nous avons une sélection de toniques de santé et d'énergie.",
+ 
+// Alex  
+  "AlexIceCream": "Que dirais-tu de déguster une bonne glace pour te rafraîchir ?",
+ 
+ 
+// Descriptions for Generic Mod Config Menu
+  "config.HatMouse.name": "Souris à Chapeaux",
+  "config.HatMouse.description": "Active le portrait pour la souris à chapeaux dans la Forêt Sève-Cendreuse.",
+ 
+  "config.Raccoon.name": "Raton laveur",
+  "config.Raccoon.description": "Active le portrait pour le marchand raton laveur déblocable dans la Forêt Sève-Cendreuse.",
+ 
+  "config.DesertTrader.name": "Marchand du Désert",
+  "config.DesertTrader.description": "Active le portrait pour le marchand du désert.",
+ 
+  "config.Casino.name": "Vendeur du Casino",
+  "config.Casino.description": "Active le portrait pour l'échangeur de pièces Qi au casino caché du désert.",
+ 
+  "config.VolcanoDwarf.name": "Naine du Volcan",
+  "config.VolcanoDwarf.description": "Active le portrait pour la marchande naine trouvé au niveau 5 du Donjon du Volcan.",
+ 
+  "config.IslandTrader.name": "Marchand de l'Île",
+  "config.IslandTrader.description": "Active le portrait pour le marchand oiseaux déblocable sur l'Île Ginger.",
+ 
+  "config.Traveler.name": "Marchand Itinérant",
+  "config.Traveler.description": "Active le portrait pour le marchand itinérant qui apparaît les vendredis et dimanches dans la Forêt Sève-Cendreuse.",
+ 
+  "config.Bookseller.name": "Libraire",
+  "config.Bookseller.description": "Active le portrait pour le libraire qui visite la ville deux fois par saison.",
+ 
+  "config.StarToken.name": "Échangeur de jetons étoile",
+  "config.StarToken.description": "Active le portrait pour l'échangeur de jetons étoile à la Foire de Stardew Valley.",
+ 
+  "config.DecorBoat.name": "Vendeur de Décorations",
+  "config.DecorBoat.description": "Active le portrait pour le vendeur de décorations au Marché Nocturne.",
+ 
+  "config.MagicBoat.name": "Marchand Ambulant",
+  "config.MagicBoat.description": "Active le portrait pour le marchand ambulant au Marché Nocturne.",
+ 
+  "config.EggShop.name": "Marchand Oeufs",
+  "config.EggShop.description": "Active le portrait pour le marchand oeuf au Festival du Désert.",
+ 
+  "config.PierreFestival.name": "Pierre aux festivals",
+  "config.PierreFestival.description": "Active les portraits pour le stand de Pierre lors de tous les festivals.",
+ 
+  "config.section.JojaMart.name": "Caissier JojaMart",
+ 
+  "config.JojaCashier.name": "Activer le portrait du caissier jojaMart",
+  "config.JojaCashier.description": "Est toujours désactivé si vous utilisez SVE.",
+ 
+  "config.JojaShift.name": "Changement de poste aléatoire",
+  "config.JojaShift.description": "Fait en sorte que le caissier change aléatoirement entre le caissier par défaut et un alternatif chaque jour. Est toujours désactivé si vous utilisez SVE.",
+ 
+  "config.section.Theater.name": "Personnel du Théâtre",
+ 
+  "config.MovieTicket.name": "Employé de la Billetterie",
+  "config.MovieTicket.description": "Active le portrait pour l'employé de la billetterie du cinéma.",
+ 
+  "config.MovieConcession.name": "Employé de la Concession",
+  "config.MovieConcession.description": "Active le portrait pour l'employé du stand de concession du cinéma.",
+ 
+  "config.MovieShift.name": "Changement de poste aléatoire",
+  "config.MovieShift.description": "Fait en sorte que les membres du personnel changent aléatoirement de poste chaque jour. Est toujours désactivé si vous utilisez SVE."
+ 
+}

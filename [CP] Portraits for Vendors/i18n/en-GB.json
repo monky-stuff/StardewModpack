@@ -84,7 +84,7 @@
   "config.JojaCashier.description": "Is always disabled if using SVE.",
   
   "config.JojaShift.name": "Randomise shift",
-  "config.JojaShift.description": "Makes the cashier randomly swap between the default cashier and an alternate every day. Is always disabled if using SVE.",
+  "config.JojaShift.description": "Makes the cashier rotates daily. Is always disabled if using SVE.",
   
   "config.section.Theater.name": "Cinema Staff",
   
@@ -95,7 +95,7 @@
   "config.MovieConcession.description": "Enables portrait for the cinema's concession stand attendant.",
   
   "config.MovieShift.name": "Randomise shift",
-  "config.MovieShift.description": "Makes the staff members randomly switch duties every day. Is always disabled if using SVE.",
+  "config.MovieShift.description": "Makes the cinema staff rotate positions daily. Is always disabled if using SVE.",
   
 }
 

@@ -84,7 +84,7 @@
   "config.JojaCashier.description": "Selalu non-aktif kalau ada SVE.",
   
   "config.JojaShift.name": "Shift acak",
-  "config.JojaShift.description": "Membuat kasir bertukar acak tiap hari antara kasir default dan kasir alternatif. Selalu non-aktif kalau ada SVE.",
+  "config.JojaShift.description": "Membuat kasir bergilir setiap hari. Selalu non-aktif kalau ada SVE.",
   
   "config.section.Theater.name": "Staff Teater",
   
@@ -95,7 +95,7 @@
   "config.MovieConcession.description": "Mengaktifkan potret petugas makanan di teater film.",
   
   "config.MovieShift.name": "Shift acak",
-  "config.MovieShift.description": "Membuat para staff bertukar tugas secara acak tiap hari. Selalu non-aktif kalau ada SVE.",
+  "config.MovieShift.description": "Membuat posisi staf teater bergilir setiap hari. Selalu non-aktif kalau ada SVE.",
   
 }
 

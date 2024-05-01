@@ -13,8 +13,8 @@
   "EggShop": "true",
   "PierreFestival": "true",
   "JojaCashier": "true",
-  "JojaShift": "false",
+  "JojaShift": "true",
   "MovieTicket": "true",
   "MovieConcession": "true",
-  "MovieShift": "false"
+  "MovieShift": "true"
 }

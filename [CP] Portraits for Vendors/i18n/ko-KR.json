@@ -82,7 +82,7 @@
   "config.JojaCashier.description": "SVE를 사용하는 경우 항상 비활성화됩니다.",
 
   "config.JojaShift.name": "근무 교대를 무작위로 설정",
-  "config.JojaShift.description": "표준 계산원과 다른 사람 사이에서 무작위로 교체됩니다. SVE를 사용하는 경우 항상 비활성화됩니다.",
+  "config.JojaShift.description": "캐셔가 매일 교대합니다. SVE를 사용하는 경우 항상 비활성화됩니다.",
 
   "config.section.Theater.name": "극장 스태프",
 
@@ -93,7 +93,7 @@
   "config.MovieConcession.description": "영화관의 매점 담당자 초상화를 활성화합니다.",
 
   "config.MovieShift.name": "근무 교대를 무작위로 설정",
-  "config.MovieShift.description": "스태프 멤버들이 매일 무작위로 업무를 교대합니다. SVE를 사용하는 경우 항상 비활성화됩니다.",
+  "config.MovieShift.description": "극장 스태프의 포지션을 매일 교대합니다. SVE를 사용하는 경우 항상 비활성화됩니다.",
 
   
 }

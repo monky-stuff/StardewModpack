@@ -3,16 +3,91 @@
 
 	"DynamicTokens":[
 		{
-			"Name": "MovieRandom",
-			"Value": "{{Random:Default, Shift |key=MovieShift}}"
+			"Name": "Ticket",
+			"Value": "Default"
 		},
 		{
-			"Name": "JojaRandom",
-			"Value": "{{Random:Default, Shift |key=JojaShift}}"
+			"Name": "Ticket",
+			"Value": "Shift",
+			"When": {
+				"DayOfWeek": "Tuesday, Sunday",
+			    "MovieShift": true,
+			}	
+		},
+		{
+			"Name": "Ticket",
+			"Value": "Naufal",
+			"When": {
+				"DayOfWeek": "Thursday, Friday",
+			    "MovieShift": true,
+			}	
+		},
+		{
+			"Name": "Concession",
+			"Value": "Default"
+		},
+		{
+			"Name": "Concession",
+			"Value": "Naufal",
+			"When": {
+				"DayOfWeek": "Wednesday, Sunday",
+			    "MovieShift": true,
+			}	
+		},
+		{
+			"Name": "Concession",
+			"Value": "Daena",
+			"When": {
+				"DayOfWeek": "Tuesday, Friday",
+			    "MovieShift": true,
+			}	
+		},
+		{
+			"Name": "Clerk",
+			"Value": "Default"
+		},
+		{
+			"Name": "Clerk",
+			"Value": "Naufal",
+			"When": {
+				"DayOfWeek": "Tuesday, Saturday",
+				"JojaShift": true,
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": false,
+				"HasMod |contains=LemurKat.JulietHouse.NPC": false	
+			}	
+		},
+		{
+			"Name": "Clerk",
+			"Value": "Daena",
+			"When": {
+				"DayOfWeek": "Thursday, Sunday",
+				"JojaShift": true,
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": false,
+				"HasMod |contains=LemurKat.JulietHouse.NPC": false	
+			}	
+		},
+		{
+			"Name": "Clerk",
+			"Value": "Naufal",
+			"When": {
+				"DayOfWeek": "Thursday, Sunday",
+				"JojaShift": true,
+                "MovieShift": false,
+				"MovieTicket": true,
+				"HasFlag": "ccMovieTheaterJoja",
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": false,
+				"HasMod |contains=LemurKat.JulietHouse.NPC": false	
+			}
 		},
 		{
 			"Name": "MouseFriends",
-			"Value": "{{Random:Beanie, Hamster, Bow, Dipper, Flower, Goggles, Headband, Link, Marlon, Default, Post, Red, Sailor, Strawhat, Wizard |key=MouseFriends}}"
+			"Value": "{{Random:Beanie, Hamster, Bow, Dipper, Flower, Goggles, Headband, Link, Marlon, Default, Post, Red, Sailor, Strawhat, Wizard |key=MouseFriends}}",
+			"When": {"HasMod |contains=ichortower.HatMouseLacey": false}
+		},
+		{
+			"Name": "MouseFriends",
+			"Value": "{{Random:Beanie, Hamster, Bow, Dipper, Flower, Goggles, Headband, Link, Marlon, Post, Red, Sailor, Strawhat, Wizard |key=MouseFriends}}",
+			"When": {"HasMod": "ichortower.HatMouseLacey"}
 		},
 	],
 
@@ -172,7 +247,7 @@
 			"LogName": "Hat Mouse",
 			"Action": "EditData",
 			"Target": "Data/Shops",
-			"TargetField": [ "HatMouse", "Owners", "#0" ],
+			"TargetField": [ "HatMouse", "Owners", "AnyOrNone" ],
 			"Entries": {"Portrait": "Mods/DolphINaF.VendorPortraits/HatMouse"},
 			"When": {"HatMouse": true}
 		},
@@ -377,61 +452,73 @@
 			"When": {"StarToken": true}
 		},
 		
-// VENDOR RANDOMIZATIONS
+// VENDOR ROTATION
 		{
 			"LogName": "Joja Clerk Portrait Shift",
 			"Action": "EditImage",
 			"Target": "Mods/DolphINaF.VendorPortraits/JojaCashier",
-			"FromFile": "assets/{{TargetWithoutPath}}/{{TargetWithoutPath}}_{{JojaRandom}}.png",
-			"When": {
-				"JojaShift": true,
-				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": false,
-				"HasMod |contains=LemurKat.JulietHouse.NPC": false				
-			}
-		},	
+			"FromFile": "assets/{{TargetWithoutPath}}/{{TargetWithoutPath}}_{{Clerk}}.png",
+		},		
 		{
-			"LogName": "Joja Theater Staff Portrait Shift",
+			"LogName": "Joja Concession Portrait Shift",
 			"Action": "EditImage",
-			"Target": "Mods/DolphINaF.VendorPortraits/MovieConcessionJoja, Mods/DolphINaF.VendorPortraits/MovieTicketJoja",
-			"FromFile": "assets/{{TargetWithoutPath}}/{{TargetWithoutPath}}_{{MovieRandom}}.png",
-			"When": {
-				"MovieShift": true,
-			}
+			"Target": "Mods/DolphINaF.VendorPortraits/MovieConcessionJoja",
+			"FromFile": "assets/{{TargetWithoutPath}}/{{TargetWithoutPath}}_{{Concession}}.png",
 		},
 		{
-			"LogName": "CC Theater Staff Portrait Shift",
+			"LogName": "CC Concession Portrait Shift",
 			"Action": "EditImage",
-			"Target": "Mods/DolphINaF.VendorPortraits/MovieConcessionCC, Mods/DolphINaF.VendorPortraits/MovieTicketCC",
-			"FromFile": "assets/{{TargetWithoutPath}}/{{TargetWithoutPath}}_{{MovieRandom}}.png",
+			"Target": "Mods/DolphINaF.VendorPortraits/MovieConcessionCC",
+			"FromFile": "assets/{{TargetWithoutPath}}/{{TargetWithoutPath}}_{{Concession}}.png",
 			"When": {
-				"MovieShift": true,
 				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": false,
 				"HasMod |contains=LemurKat.JulietHouse.NPC": false
 			}
-		},				
+		},
+		{
+			"LogName": "Joja Ticket Portrait Shift",
+			"Action": "EditImage",
+			"Target": "Mods/DolphINaF.VendorPortraits/MovieTicketJoja",
+			"FromFile": "assets/{{TargetWithoutPath}}/{{TargetWithoutPath}}_{{Ticket}}.png",
+		},
+		{
+			"LogName": "CC Ticket Portrait Shift",
+			"Action": "EditImage",
+			"Target": "Mods/DolphINaF.VendorPortraits/MovieTicketCC",
+			"FromFile": "assets/{{TargetWithoutPath}}/{{TargetWithoutPath}}_{{Ticket}}.png",
+			"When": {
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": false,
+				"HasMod |contains=LemurKat.JulietHouse.NPC": false
+			}
+		},
+		{
+			"LogName": "CC Ticket Portrait Shift SVE",
+			"Action": "EditImage",
+			"Target": "Mods/DolphINaF.VendorPortraits/MovieTicketCC",
+			"FromFile": "assets/{{TargetWithoutPath}}/{{TargetWithoutPath}}_Naufal.png",
+			"When": {
+				"DayOfWeek": "Tuesday, Thursday, Saturday",
+			    "MovieShift": true,
+				"HasMod": "FlashShifter.StardewValleyExpandedCP, LemurKat.JulietHouse.NPC"
+			}
+		},			
 		{  
 			"LogName": "Joja Clerk Sprite Shift",
 			"Action": "EditImage",
 			"Target": "Maps/townInterior",
-			"FromFile": "assets/JojaCashier/Sprites/JojaCashier_{{JojaRandom}}.png",
+			"FromFile": "assets/JojaCashier/Sprites/JojaCashier_{{Clerk}}.png",
 			"ToArea": { "X": 352, "Y": 944, "Width": 32, "Height": 32 },
-			"When": {
-				"HasFile:{{FromFile}}": true,
-				"JojaShift": true,
-				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": false,
-				"HasMod |contains=LemurKat.JulietHouse.NPC": false	
-			}
+			"When": {"HasFile:{{FromFile}}": true,}
 		},
 		{   
 			"LogName": "CC Theater Staff Sprite Shift 1",
 			"Action": "EditImage",
 			"Target": "Maps/MovieTheater_TileSheet",
-			"FromFile": "assets/MovieConcessionCC/Sprites/MovieConcessionCC_{{MovieRandom}}.png",
+			"FromFile": "assets/MovieConcessionCC/Sprites/MovieConcessionCC_{{Concession}}.png",
 			"FromArea": { "X": 0, "Y": 16, "Width": 48, "Height": 16 },
 			"ToArea": { "X": 192, "Y": 176, "Width": 48, "Height": 16 },
 			"When": {
 				"HasFile:{{FromFile}}": true,
-				"MovieShift": true,
 				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": false,
 				"HasMod |contains=LemurKat.JulietHouse.NPC": false
 			}
@@ -440,12 +527,11 @@
 			"LogName": "CC Theater Staff Sprite Shift 2",
 			"Action": "EditImage",
 			"Target": "Maps/MovieTheater_TileSheet",
-			"FromFile": "assets/MovieConcessionCC/Sprites/MovieConcessionCC_{{MovieRandom}}.png",
+			"FromFile": "assets/MovieConcessionCC/Sprites/MovieConcessionCC_{{Concession}}.png",
 			"FromArea": { "X": 48, "Y": 0, "Width": 16, "Height": 32 },
 			"ToArea": { "X": 240, "Y": 160, "Width": 16, "Height": 32 },
 			"When": {
 				"HasFile:{{FromFile}}": true,
-				"MovieShift": true,
 				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": false,
 				"HasMod |contains=LemurKat.JulietHouse.NPC": false
 			}
@@ -454,25 +540,19 @@
 			"LogName": "Joja Theater Staff Sprite Shift 1",
 			"Action": "EditImage",
 			"Target": "Maps/MovieTheaterJoja_TileSheet",
-			"FromFile": "assets/MovieConcessionJoja/Sprites/MovieConcessionJoja_{{MovieRandom}}.png",
+			"FromFile": "assets/MovieConcessionJoja/Sprites/MovieConcessionJoja_{{Concession}}.png",
 			"FromArea": { "X": 0, "Y": 16, "Width": 48, "Height": 16 },
 			"ToArea": { "X": 192, "Y": 176, "Width": 48, "Height": 16 },
-			"When": {
-				"HasFile:{{FromFile}}": true,
-				"MovieShift": true,
-			}
+			"When": {"HasFile:{{FromFile}}": true,}
 		},			
 		{   
 			"LogName": "Joja Theater Staff Sprite Shift 2",
 			"Action": "EditImage",
 			"Target": "Maps/MovieTheaterJoja_TileSheet",
-			"FromFile": "assets/MovieConcessionJoja/Sprites/MovieConcessionJoja_{{MovieRandom}}.png",
+			"FromFile": "assets/MovieConcessionJoja/Sprites/MovieConcessionJoja_{{Concession}}.png",
 			"FromArea": { "X": 48, "Y": 0, "Width": 16, "Height": 32 },
 			"ToArea": { "X": 240, "Y": 160, "Width": 16, "Height": 32 },
-			"When": {
-				"HasFile:{{FromFile}}": true,
-				"MovieShift": true,
-			}
+			"When": {"HasFile:{{FromFile}}": true,}
 		},
 // Hippie Desert Trader Support
 		{
@@ -495,7 +575,7 @@
 			"LogName": "Dwarf Portrait Replacement",
 			"Action": "EditImage",
 			"Target": "Mods/DolphINaF.VendorPortraits/VolcanoDwarf",
-			"FromFile": "assets/{{TargetWithoutPath}}/{{TargetWithoutPath}}_Alter.png",
+			"FromFile": "assets/{{TargetWithoutPath}}/LS/{{TargetWithoutPath}}_Default.png",
 			"When": {"HasMod": "LavenderSkelly.DwarfPortraitReplacement"}
 		},
 // Stardew Valley Expanded Support

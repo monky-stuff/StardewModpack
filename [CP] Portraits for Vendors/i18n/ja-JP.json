@@ -82,7 +82,7 @@
   "config.JojaCashier.description": "SVEを使用している場合は常に無効になります。",
 
   "config.JojaShift.name": "シフトをランダムに変更する",
-  "config.JojaShift.description": "レジ係がデフォルトのレジ係と別の人物とランダムに交代します。SVEを使用している場合は常に無効になります。",
+  "config.JojaShift.description": "キャッシャーが毎日交代します。SVEを使用している場合は常に無効になります。",
 
   "config.section.Theater.name": "劇場スタッフ",
 
@@ -93,7 +93,7 @@
   "config.MovieConcession.description": "映画館の売店の係員のポートレートを有効にします。",
 
   "config.MovieShift.name": "シフトをランダムに変更する",
-  "config.MovieShift.description": "スタッフメンバーが毎日ランダムに職務を交代します。SVEを使用している場合は常に無効になります。",
+  "config.MovieShift.description": "劇場スタッフのポジションが毎日交代します。SVEを使用している場合は常に無効になります。",
 
   
 }
