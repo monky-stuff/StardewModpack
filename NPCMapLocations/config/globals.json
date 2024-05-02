@@ -6,7 +6,7 @@
   "ShowHiddenVillagers": false,
   "ShowQuests": true,
   "ShowTravelingMerchant": true,
-  "ShowMinimap": false,
+  "ShowMinimap": true,
   "LockMinimapPosition": false,
   "ShowFarmBuildings": true,
   "MinimapToggleKey": "OemPipe",

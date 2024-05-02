@@ -1,0 +1,20 @@
+{
+  "Name": "[CP]Veronnica's SVE Portraits",
+  "Author": "Veronnica",
+  "Version": "1.0.2",
+  "Description": "Replaces SVE Portraits.",
+  "UniqueID": "Veronnica.SVEPortraits",
+  "MinimumApiVersion": "3.0.0",
+  "UpdateKeys": [ "Nexus:22868" ],
+  "ContentPackFor": {
+    "UniqueID": "Pathoschild.ContentPatcher"
+  },
+  "Dependencies": [
+      {
+        "UniqueID": "FlashShifter.StardewValleyExpandedCP",
+        "IsRequired": true
+      },   
+     
+  ]
+
+}

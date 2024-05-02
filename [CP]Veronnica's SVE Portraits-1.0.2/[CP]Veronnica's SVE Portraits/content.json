@@ -1,0 +1,225 @@
+{
+    "Format": "2.0.0",
+    "Changes": [
+        
+        //Claire
+
+        {
+            "_Comment": "Claire (portrait)",
+            "Action": "EditImage",
+            "Target": "Portraits/Claire, Portraits/Claire_Winter, Portraits/Claire_Beach",
+            "FromFile": "assets/{{Target}}.png"
+        },
+        {
+            "_Comment": "Claire Joja (portrait)",
+            "Action": "EditImage",
+            "Target": "Portraits/Claire",
+            "FromFile": "assets/portraits/Claire_Joja.png",
+            "When": {
+                "LocationName": "JojaMart"
+            },
+            "Update": "OnLocationChange"
+        },
+        {
+            "_Comment": "Claire Theater (portrait)",
+            "Action": "EditImage",
+            "Target": "Portraits/Claire",
+            "FromFile": "assets/portraits/Claire_Theater.png",
+            "When": {
+                "Spouse |contains=Claire": false,
+                "DayOfWeek": "Monday, Wednesday, Thursday, Friday, Sunday",
+                "HasSeenEvent |contains=502261": false,
+                "LocationName": "MovieTheater"
+            },
+            "Update": "OnLocationChange"
+        },
+        {
+            "_Comment": "Claire Theater 2 (portrait)",
+            "Action": "EditImage",
+            "Target": "Portraits/Claire",
+            "FromFile": "assets/portraits/Claire_Theater.png",
+            "When": {
+                "Spouse": "Claire",
+                "DayOfWeek": "Monday, Wednesday, Thursday, Sunday",
+                "HasSeenEvent |contains=502261": false,
+                "LocationName": "MovieTheater"
+            },
+            "Update": "OnLocationChange"
+        },
+        {
+            "_Comment": "Claire's Theater Portraits overwritten for 14 heart event",
+            "Action": "EditImage",
+            "Target": "Portraits/Claire",
+            "FromFile": "assets/portraits/Claire.png",
+            "When": {
+                "Spouse |contains=Claire": true,
+                "LocationName": "MovieTheater",
+                "HasSeenEvent |contains=4269703": true,
+                "HasSeenEvent |contains=4269704": false,
+                "Time": "{{Range: 1600, 2000}}"
+            },
+            "Update": "OnLocationChange"
+        },
+        {
+            "_Comment": "Claire Shop (portrait)",
+            "Action": "EditImage",
+            "Target": "Mods/FlashShifter.StardewValleyExpandedCP/Claire_Vendor",
+            "FromFile": "assets/shops/joja/Claire_Vendor.png",
+            "When": {
+                "HasFile:{{FromFile}}": true
+            }
+        },
+
+        //Lance
+
+        {
+            "_Comment": "Lance (portrait)",
+            "Action": "EditImage",
+            "Target": "Portraits/Lance",
+            "FromFile": "assets/portraits/Lance.png"
+        },
+        {
+            "_Comment": "Lance Beach (portrait)",
+            "Action": "EditImage",
+            "Target": "Portraits/Lance_Beach",
+            "FromFile": "assets/portraits/Lance_Beach.png"
+        },
+        {
+            "_Comment": "Lance Winter (portrait)",
+            "Action": "EditImage",
+            "Target": "Portraits/Lance_Winter",
+            "FromFile": "assets/portraits/Lance_Winter.png"
+        },
+
+        //Magnus
+
+        {
+            "_Comment": "Magnus (portrait)",
+            "Action": "EditImage",
+            "Target": "Portraits/Wizard",
+            "FromFile": "assets/portraits/Magnus.png"
+        },
+
+        //Marlon
+
+        {
+            "_Comment": "Marlon (portrait)",
+            "Action": "EditImage",
+            "Target": "Portraits/MarlonFay",
+            "FromFile": "assets/portraits/MarlonFay.png"
+        },
+        {
+            "_Comment": "Marlon Winter(portrait)",
+            "Action": "EditImage",
+            "Target": "Portraits/MarlonFay_Winter",
+            "FromFile": "assets/portraits/MarlonFay_Winter.png"
+        },
+        {
+            "_Comment": "Marlon Shop (portrait)",
+            "Action": "EditImage",
+            "Target": "Mods/FlashShifter.StardewValleyExpandedCP/MarlonShop",
+            "FromFile": "assets/shops/Adventurers/Marlon_Shop.png",
+            "When": {
+                "Season": "Spring, Summer, Fall"
+            }
+        },
+        {
+            "_Comment": "Marlon Shop Winter (portrait)",
+            "Action": "EditImage",
+            "Target": "Mods/FlashShifter.StardewValleyExpandedCP/MarlonShop",
+            "FromFile": "assets/shops/Adventurers/Marlon_Shop_Winter.png",
+            "When": {
+                "Season": "Winter"
+            }
+        },
+
+        //Olivia
+
+        {
+            "_Comment": "Olivia (portrait)",
+            "Action": "EditImage",
+            "Target": "Portraits/Olivia",
+            "FromFile": "assets/portraits/Olivia.png"
+        },
+        {
+            "_Comment": "Olivia Beach (portrait)",
+            "Action": "EditImage",
+            "Target": "Portraits/Olivia_Beach",
+            "FromFile": "assets/portraits/Olivia_Beach.png"
+        },
+        {
+            "_Comment": "Olivia Winter (portrait)",
+            "Action": "EditImage",
+            "Target": "Portraits/Olivia_Winter",
+            "FromFile": "assets/portraits/Olivia_Winter.png"
+        },
+
+        //Sandy
+
+        {
+            "_Comment": "Sandy (portrait)",
+            "Action": "EditImage",
+            "Target": "Portraits/Sandy",
+            "FromFile": "assets/portraits/Sandy.png"
+        },
+
+        //Sophia
+
+        {
+            "_Comment": "Sophia (portrait)",
+            "Action": "EditImage",
+            "Target": "Portraits/Sophia",
+            "FromFile": "assets/portraits/Sophia.png",
+            "Update": "OnLocationChange"
+        },
+        {
+            "_Comment": "Sophia Winter (portrait)",
+            "Action": "EditImage",
+            "Target": "Portraits/Sophia_Winter",
+            "FromFile": "assets/portraits/Sophia_Winter.png",
+            "Update": "OnLocationChange"
+        },
+        {
+            "_Comment": "Sophia Beach (portrait)",
+            "Action": "EditImage",
+            "Target": "Portraits/Sophia_Beach",
+            "FromFile": "assets/portraits/Sophia_Beach.png",
+            "Update": "OnLocationChange"
+        },
+        {
+            "_Comment": "Sophia Makeup (portrait)",
+            "Action": "EditImage",
+            "Target": "Portraits/Sophia_Makeup",
+            "FromFile": "assets/portraits/Sophia_Makeup.png",
+            "Update": "OnLocationChange"
+        },
+        {
+            "_Comment": "Sophia Winter Makeup (portrait)",
+            "Action": "EditImage",
+            "Target": "Portraits/Sophia_Winter_Makeup",
+            "FromFile": "assets/portraits/Sophia_Winter_Makeup.png",
+            "Update": "OnLocationChange"
+        },
+
+        //Victor
+        
+        {
+            "_Comment": "Victor (portrait)",
+            "Action": "EditImage",
+            "Target": "Portraits/Victor",
+            "FromFile": "assets/portraits/Victor.png"
+        },
+        {
+            "_Comment": "Victor Beach (portrait)",
+            "Action": "EditImage",
+            "Target": "Portraits/Victor_Beach",
+            "FromFile": "assets/portraits/Victor_Beach.png"
+        },
+        {
+            "_Comment": "Victor Winter (portrait)",
+            "Action": "EditImage",
+            "Target": "Portraits/Victor_Winter",
+            "FromFile": "assets/portraits/Victor_Winter.png"
+        }
+    ]
+}

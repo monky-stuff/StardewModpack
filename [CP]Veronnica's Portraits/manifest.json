@@ -1,0 +1,11 @@
+{
+  "Name": "[CP]Veronnica's Portraits",
+  "Author": "Veronnica",
+  "Version": "1.1.1",
+  "Description": "Replaces Portraits.",
+  "UniqueID": "Veronnica.Portraits",
+  "UpdateKeys": ["Nexus: 21741"],
+  "ContentPackFor": {
+    "UniqueID": "Pathoschild.ContentPatcher"
+  }
+}
