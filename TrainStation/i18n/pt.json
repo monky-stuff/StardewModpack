@@ -1,0 +1,10 @@
+{
+    "NotEnoughMoney": "Você não tem dinheiro suficiente para comprar a passagem para {{DestinationName}}",
+    "MenuCancelOption": "Cancelar",
+    "NoDestinations": "Não há destinos disponíveis",
+    "ChooseDestination": "Escolha o seu destino",
+    "TrainStationDisplayName": "Estação do Vale Stardew",
+    "BoatStationDisplayName": "Loja do Willy",
+    "ArrivalMessage": "Você chegou a {{DestinationName}}",
+    "GingerIsland": "Ilha Gengibre"
+}

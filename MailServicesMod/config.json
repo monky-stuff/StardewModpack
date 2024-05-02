@@ -55,6 +55,22 @@
       "RecoverAllItems": false,
       "RecoverForFree": false,
       "DisableClearLostItemsOnRandomRecovery": false
+    },
+    "-5144746237548581432": {
+      "PlayerName": "paulista",
+      "DisableRecoveryConfigInGameChanges": false,
+      "EnableRecoveryService": false,
+      "RecoverAllItems": false,
+      "RecoverForFree": false,
+      "DisableClearLostItemsOnRandomRecovery": false
+    },
+    "2438515283191413695": {
+      "PlayerName": "DUNK KNIGHT",
+      "DisableRecoveryConfigInGameChanges": false,
+      "EnableRecoveryService": false,
+      "RecoverAllItems": false,
+      "RecoverForFree": false,
+      "DisableClearLostItemsOnRandomRecovery": false
     }
   },
   "DisableRecoveryConfigInGameChanges": false,
