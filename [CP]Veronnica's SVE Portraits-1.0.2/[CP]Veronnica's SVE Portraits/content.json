@@ -91,15 +91,6 @@
             "FromFile": "assets/portraits/Lance_Winter.png"
         },
 
-        //Magnus
-
-        {
-            "_Comment": "Magnus (portrait)",
-            "Action": "EditImage",
-            "Target": "Portraits/Wizard",
-            "FromFile": "assets/portraits/Magnus.png"
-        },
-
         //Marlon
 
         {
