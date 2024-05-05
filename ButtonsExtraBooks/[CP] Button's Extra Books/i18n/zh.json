@@ -26,6 +26,10 @@
 	
 	"Power.PetGifts.Name": "强化爪爪",
 	"Power.PetGifts.Description": "你的宠物更有可能给你带来更好的礼物。",
+
+	// TODO /////////////////////////////////////////////////
+	"Power.CheatCodes.Name": "Secret Codes for Arcade Machines",
+	"Power.CheatCodes.Description": "Start with more lives in Junimo Kart progress mode.",
 	
 	// BOOK ITEMS //
 	"Book.Luck.Name": "初学者的运气",
@@ -54,6 +58,10 @@
 	
 	"Book.PetGifts.Name": "强化爪爪",
 	"Book.PetGifts.Description": "这本书将教你如何训练你的宠物给你带来更好的礼物。",
+
+	// TODO ///////////////////////////////////////////////////////////
+	"Book.CheatCodes.Name": "Secret Codes for Arcade Machines",
+	"Book.CheatCodes.Description": "Somewhere in this book is a code that will help you finally beat Junimo Kart, you're sure of it.",
 	
 	// MAIL //
 	"Mail.ArtisanGrange.Text": "芬吉尔共和国工匠协会非常骄傲的认可您对于高品质工匠物品的奉献。为了表示对您最近在星露谷展览会展览的感谢，我们随信附赠一本手册，希望能帮助你更高效的利用机器。",

@@ -26,6 +26,10 @@
 
 	"Power.PetGifts.Name": "Renforcement Patte-ibulaire",
 	"Power.PetGifts.Description": "Vos animaux domestiques sont plus susceptibles de vous offrir de beaux cadeaux.",
+
+	// TODO /////////////////////////////////////////////////
+	"Power.CheatCodes.Name": "Secret Codes for Arcade Machines",
+	"Power.CheatCodes.Description": "Start with more lives in Junimo Kart progress mode.",
 	
 	// BOOK ITEMS //
 	"Book.Luck.Name": "Chance du Débutant",
@@ -46,7 +50,6 @@
 	"Book.Popularity.Name": "Amitiés 202",
 	"Book.Popularity.Description": "Vos amis sont plus enclins à vous envoyer des cadeaux.",
 	
-	// TODO /////////////////////////////////////////////////
 	"Book.BusDriving.Name": "La conduite du bus pour les nuls",
 	"Book.BusDriving.Description": "Ce livre contient toutes les informations nécessaires pour conduire un bus, plus ou moins.",
 
@@ -55,7 +58,10 @@
 	
 	"Book.PetGifts.Name": "Renforcement Patte-ibulaire",
 	"Book.PetGifts.Description": "Ce livre vous apprendra à dresser vos animaux domestiques pour qu'ils vous apportent de meilleurs cadeaux.",
-	///////////////////////////////////////////////////////////
+
+	// TODO ///////////////////////////////////////////////////////////
+	"Book.CheatCodes.Name": "Secret Codes for Arcade Machines",
+	"Book.CheatCodes.Description": "Somewhere in this book is a code that will help you finally beat Junimo Kart, you're sure of it.",
 
 	// MAIL //
 	"Mail.ArtisanGrange.Text": "La Guilde des Artisans de la République de Ferngill est fière de reconnaître votre engagement pour des produits artisanaux de qualité. Pour vous remercier de votre récente exposition à la Foire de Stardew Valley, nous vous joignons un manuel qui, nous l'espérons, vous aidera à utiliser plus efficacement vos machines.",

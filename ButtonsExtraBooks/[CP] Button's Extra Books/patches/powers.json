@@ -199,5 +199,26 @@
 				"Spiderbuttons.ButtonsExtraBooksCore/ConfigEnablePetGifts": true
 			},
 		},
+
+		// SECRET CODES //
+		{
+			"Action": "EditData",
+			"Target": "Data/Powers",
+			"Entries": {
+				"{{ModId}}_Power_CheatCodes": {
+					"DisplayName": "{{i18n: Power.CheatCodes.Name}}",
+					"Description": "{{i18n: Power.CheatCodes.Description}}",
+					"TexturePath": "Mods/{{ModId}}/Books",
+					"TexturePosition": {
+						"X": 48,
+						"Y": 16,
+					},
+					"UnlockedCondition": "PLAYER_STAT Current {{ModId}}_Book_CheatCodes 1",
+				}
+			},
+			"When": {
+				"Spiderbuttons.ButtonsExtraBooksCore/ConfigEnableCheatCodes": true
+			},
+		},
 	]
 }

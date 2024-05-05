@@ -180,6 +180,26 @@
 				"Spiderbuttons.ButtonsExtraBooksCore/ConfigEnablePetGifts": true
 			},
 		},
+
+		// SECRET CODES //
+		{
+			"Action": "EditData",
+			"Target": "Data/Shops",
+			"TargetField": [ "Bookseller", "Items" ],
+			"Entries": {
+				"{{ModId}}_ShopEntry_CheatCodes": {
+					"Price": "{{Spiderbuttons.ButtonsExtraBooksCore/ConfigPriceCheatCodes}}",
+					"AvailableStock": 1,
+					"AvailableStockLimit": "Player",
+					"Id": "(O){{ModId}}_Book_CheatCodes",
+					"ItemId": "(O){{ModId}}_Book_CheatCodes",
+					"Condition": 'ANY "PLAYER_STAT Current {{ModId}}_JunimoDeaths {{Spiderbuttons.ButtonsExtraBooksCore/ConfigCheatCodesRequirement}}" "{{Spiderbuttons.ButtonsExtraBooksCore/ConfigAlwaysAvailable}}"'
+				}
+			},
+			"When": {
+				"Spiderbuttons.ButtonsExtraBooksCore/ConfigEnableCheatCodes": true
+			},
+		},
 		
 		// BEB POWER REMOVAL //
 		{

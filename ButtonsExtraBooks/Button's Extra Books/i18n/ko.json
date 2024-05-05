@@ -44,6 +44,13 @@
 
   "Config.Books.PetGifts.Title": "반려동물 보강법",
 
+  // TODO /////////////////////////////////////////////////////
+  "Config.Books.CheatCodes.Title": "Secret Codes for Arcade Machines",
+  "Config.Books.CheatCodesRequirement.Name": "Junimo Kart Deaths Required",
+  "Config.Books.CheatCodesRequirement.Description": "The number of times you must die in Junimo Kart before the Secret Codes book becomes available.",
+  "Config.Books.CheatCodesBonus.Name": "Extra Lives",
+  "Config.Books.CheatCodesBonus.Description": "The number of extra lives you start Junimo Kart with.",
+
   // DEBUG SETTINGS //
   "Config.Debug.EnableDebugBook.Name": "디버그 책 활성화",
   "Config.Debug.EnableDebugBook.Description": "활성화되면 이 모드에서 추가된 모든 책과 관련 능력을 제거하는 디버그 책을 피에르에게서 구매할 수 있습니다."

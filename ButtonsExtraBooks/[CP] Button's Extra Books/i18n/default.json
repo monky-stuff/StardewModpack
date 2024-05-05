@@ -27,6 +27,9 @@
 	"Power.PetGifts.Name": "Pawsitive Reinforcement",
 	"Power.PetGifts.Description": "Your pets are more likely to bring you better gifts.",
 	
+	"Power.CheatCodes.Name": "Secret Codes for Arcade Machines",
+	"Power.CheatCodes.Description": "Start with more lives in Junimo Kart progress mode.",
+	
 	// BOOK ITEMS //
 	"Book.Luck.Name": "Beginner's Luck",
 	"Book.Luck.Description": "Read this book to gain a permanent, minor increase to your luck stat.",
@@ -54,6 +57,9 @@
 	
 	"Book.PetGifts.Name": "Pawsitive Reinforcement",
 	"Book.PetGifts.Description": "This book will teach you how to train your pets to bring you better gifts.",
+	
+	"Book.CheatCodes.Name": "Secret Codes for Arcade Machines",
+	"Book.CheatCodes.Description": "Somewhere in this book is a code that will help you finally beat Junimo Kart, you're sure of it.",
 	
 	// MAIL //
 	"Mail.ArtisanGrange.Text": "The Ferngill Republic Artisans Guild is proud to recognize your commitment to quality artisanal goods. To show our appreciation of your recent display at the Stardew Valley Fair, we are enclosing a manual that we hope will help you more efficiently utilize your machinery.",

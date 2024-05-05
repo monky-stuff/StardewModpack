@@ -224,6 +224,31 @@
 				"Spiderbuttons.ButtonsExtraBooksCore/ConfigEnablePetGifts": true
 			},
 		},
+
+		// SECRET CODES //
+		{
+			"Action": "EditData",
+			"Target": "Data/Objects",
+			"Entries": {
+				"{{ModId}}_Book_CheatCodes": {
+					"Name": "{{ModId}}_Book_CheatCodes",
+					"DisplayName": "{{i18n: Book.CheatCodes.Name}}",
+					"Description": "{{i18n: Book.CheatCodes.Description}}",
+					"Type": "asdf",
+					"Category": -102,
+					"Price": 500,
+					"Texture": "Mods/{{ModId}}/Books",
+					"SpriteIndex": 11,
+					"ContextTags": [
+						"color_green",
+						"book_item"
+					],
+				},
+			},
+			"When": {
+				"Spiderbuttons.ButtonsExtraBooksCore/ConfigEnableCheatCodes": true
+			},
+		},
 		
 		// BEB POWER REMOVAL //
 		{

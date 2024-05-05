@@ -26,6 +26,10 @@
   
     "Power.PetGifts.Name": "Refuerzo positivo",
     "Power.PetGifts.Description": "Es más probable que tus mascotas te brinden mejores regalos.",
+  
+    // TODO /////////////////////////////////////////////////
+    "Power.CheatCodes.Name": "Secret Codes for Arcade Machines",
+    "Power.CheatCodes.Description": "Start with more lives in Junimo Kart progress mode.",
     
     // BOOK ITEMS //
     "Book.Luck.Name": "Suerte del principiante",
@@ -54,6 +58,10 @@
   
     "Book.PetGifts.Name": "Refuerzo positivo",
     "Book.PetGifts.Description": "Este libro le enseñará cómo entrenar a sus mascotas para que le brinden mejores regalos.",
+  
+    // TODO //////////////////////////////////////
+    "Book.CheatCodes.Name": "Secret Codes for Arcade Machines",
+    "Book.CheatCodes.Description": "Somewhere in this book is a code that will help you finally beat Junimo Kart, you're sure of it.",
   
 	// MAIL //
 	"Mail.ArtisanGrange.Text": "El Gremio de Artesanos de la República Ferngill se enorgullece de reconocer su compromiso con los productos artesanales de calidad. Como muestra de nuestro agradecimiento por su reciente exhibición en la Feria de Stardew Valley, adjuntamos un manual que esperamos le ayude a utilizar su maquinaria de una manera más eficiente.",
