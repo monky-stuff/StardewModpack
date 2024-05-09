@@ -1083,7 +1083,7 @@
         "Lantana_Disable": false
       },
       "Entries": {
-        "MermaidLantana": "This is wonderful!!! Here's a kiss, sweetie!!! *MWAH*/66 234 238 239 394 421 577 578 595 612 611 716/Thank you, love!!!/-79 -80 -26 -12 -2 88/I don't like this. Who would?//This is seriously terrible!!! Consider therapy!!!/-81 -75 -27 -6 -5 -4 815 814 812 807/Well... thanks.../-20 -7 "
+        "MermaidLantana": "This is wonderful!!! Here's a kiss, sweetie!!! *MWAH*/66 234 238 239 394 421 577 578 595 612 611 716/Thank you, love!!!/-79 -80 -26 -12 -2 88/I don't like this. Who would?//This is seriously terrible!!! Consider therapy!!!/-81 -75 -27 -6 -5 -4 815 814 812 807/Well... thanks!/-20 -7/"
       }
     },
     {
@@ -1123,16 +1123,7 @@
       },
       "FromFile": "assets/Lantana/Dialogue.json"
     },
-    {
-      "LogName": "Dialogue",
-      "Action": "Load",
-      "Target": "Characters/Dialogue/MermaidLantana",
-      "When": {
-        "Lantana_Disable": false,
-        "PG": true
-      },
-      "FromFile": "assets/Lantana/DialoguePG.json"
-    },
+    
     {
       "LogName": "Schedule Dialogue",
       "Action": "Load",

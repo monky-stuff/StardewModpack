@@ -23,5 +23,9 @@
   "QiNotebookPercent": 1.0,
   "EnablePetGifts": true,
   "PetGiftsPrice": 15000,
+  "EnableCheatCodes": true,
+  "CheatCodesPrice": 65536,
+  "CheatCodesRequirement": 30,
+  "CheatCodesLives": 1,
   "DebugBook": false
 }

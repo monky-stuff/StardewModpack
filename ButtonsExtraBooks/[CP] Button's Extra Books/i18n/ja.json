@@ -28,8 +28,8 @@
 	"Power.PetGifts.Description": "ペットから貰えるアイテムのレア率を高める。",
 
 	// TODO /////////////////////////////////////////////////
-	"Power.CheatCodes.Name": "Secret Codes for Arcade Machines",
-	"Power.CheatCodes.Description": "Start with more lives in Junimo Kart progress mode.",
+	"Power.CheatCodes.Name": "ジュニモカートの秘密コード",
+	"Power.CheatCodes.Description": "ジュニモカートをプログレスモードで起動して、より多くのライフでスタートしよう。",
 	
 	// BOOK ITEMS //
 	"Book.Luck.Name": "ビギナーズラック",
@@ -60,8 +60,8 @@
 	"Book.PetGifts.Description": "この本には、ペットから貰えるアイテムが良くなるしつけ方法が書かれている。",
 
 	// TODO ///////////////////////////////////////////////////////////
-	"Book.CheatCodes.Name": "Secret Codes for Arcade Machines",
-	"Book.CheatCodes.Description": "Somewhere in this book is a code that will help you finally beat Junimo Kart, you're sure of it.",
+	"Book.CheatCodes.Name": "ジュニモカートの秘密コード",
+	"Book.CheatCodes.Description": "この本のどこかに、ジュニモカートのライフを調整するコードが書かれている。",
 	
 	// MAIL //
 	"Mail.ArtisanGrange.Text": "ファーンギル共和国職人ギルドは、皆様の職人技による高品質な商品へのこだわりを誇りに思います。先日のスターデューバレーまつりでの展示に感謝の意を表し、加工設備をより効率的に活用するためのマニュアルを同封いたします。",

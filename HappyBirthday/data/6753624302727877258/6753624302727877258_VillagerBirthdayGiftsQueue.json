@@ -3,11 +3,11 @@
     "hasGivenBirthdayWish": false,
     "hasGivenBirthdayGift": false
   },
-  "Emily": {
+  "Olivia": {
     "hasGivenBirthdayWish": false,
     "hasGivenBirthdayGift": false
   },
-  "Olivia": {
+  "Emily": {
     "hasGivenBirthdayWish": false,
     "hasGivenBirthdayGift": false
   },
@@ -295,6 +295,10 @@
     "hasGivenBirthdayWish": false,
     "hasGivenBirthdayGift": false
   },
+  "Leo": {
+    "hasGivenBirthdayWish": false,
+    "hasGivenBirthdayGift": false
+  },
   "DTZ.DowntownZuzuCP_Giovanni": {
     "hasGivenBirthdayWish": false,
     "hasGivenBirthdayGift": false
@@ -372,6 +376,10 @@
     "hasGivenBirthdayGift": false
   },
   "Isaac": {
+    "hasGivenBirthdayWish": false,
+    "hasGivenBirthdayGift": false
+  },
+  "Lance": {
     "hasGivenBirthdayWish": false,
     "hasGivenBirthdayGift": false
   },
